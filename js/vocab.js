@@ -73,12 +73,16 @@ const Vocab = {
     markSign(signId, correct) {
         const progress = this.getSignProgress();
         if (!progress[signId]) {
-            progress[signId] = { correct: 0, total: 0, mastered: false };
+            progress[signId] = { streak: 0, total: 0, mastered: false };
         }
         progress[signId].total++;
-        if (correct) progress[signId].correct++;
-        // Mastered after 3 correct in a row (simplified)
-        if (correct && progress[signId].correct >= 3) {
+        if (correct) {
+            progress[signId].streak++;
+        } else {
+            progress[signId].streak = 0; // reset on wrong answer
+        }
+        // Mastered after 3 correct in a row
+        if (progress[signId].streak >= 3) {
             progress[signId].mastered = true;
         }
         this.saveSignProgress(progress);

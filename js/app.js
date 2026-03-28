@@ -228,6 +228,7 @@ const App = {
 
                 // Cramming mode: <7 days to exam
                 const countdownLabel = document.querySelector('.countdown-label');
+                countdownCard.classList.remove('cramming'); // reset before re-evaluating
                 if (daysLeft <= 0) {
                     countdownLabel.textContent = "Exam day! Bonne chance!";
                     countdownCard.classList.add('cramming');
@@ -247,9 +248,8 @@ const App = {
             countdownCard.classList.add('hidden');
         }
 
-        document.getElementById('set-exam-date-btn')?.addEventListener('click', () => {
-            this.navigate('settings');
-        });
+        const examDateBtn = document.getElementById('set-exam-date-btn');
+        if (examDateBtn) examDateBtn.onclick = () => this.navigate('settings');
 
         // Review count
         const dueReviews = Storage.getDueReviews().length;
