@@ -197,8 +197,8 @@ const App = {
     renderHome() {
         // Greeting
         const hour = new Date().getHours();
-        let greeting = 'Bonjour!';
-        if (hour >= 17) greeting = 'Bonsoir!';
+        let greeting = 'Bonjour, Sara!';
+        if (hour >= 17) greeting = 'Bonsoir, Sara!';
         else if (hour < 5) greeting = 'Bonne nuit!';
         document.getElementById('greeting-text').textContent = greeting;
         document.getElementById('greeting-date').textContent =

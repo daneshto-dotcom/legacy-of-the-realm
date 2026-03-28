@@ -184,6 +184,26 @@ const Practice = {
 
         // Animate card entrance
         document.getElementById('question-card').style.animation = 'fadeInUp 0.3s ease';
+
+        // Keyboard shortcuts (A/B/C/D to select, Enter to confirm)
+        this._keyHandler = (e) => {
+            if (App.currentView !== 'practice') return;
+            const key = e.key.toUpperCase();
+            if (['A', 'B', 'C', 'D'].includes(key) && !this.answered) {
+                this.selectAnswer(key);
+            } else if (e.key === 'Enter' && !this.answered) {
+                const confirmBtn = document.getElementById('confirm-btn');
+                if (!confirmBtn.classList.contains('hidden')) {
+                    this.submitAnswer();
+                }
+            } else if ((e.key === ' ' || e.key === 'Enter') && this.answered) {
+                e.preventDefault();
+                const nextBtn = document.getElementById('next-question-btn');
+                if (nextBtn && !nextBtn.classList.contains('hidden')) nextBtn.click();
+            }
+        };
+        document.removeEventListener('keydown', this._keyHandler);
+        document.addEventListener('keydown', this._keyHandler);
     },
 
     selectAnswer(letter) {
