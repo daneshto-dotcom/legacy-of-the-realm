@@ -48,8 +48,9 @@ const Exam = {
             <div class="question-card card" id="exam-question-card">
                 <div class="question-badges">
                     <span class="topic-badge" id="exam-topic"></span>
-                    <span class="multi-badge hidden" id="exam-multi-badge">Select <span id="exam-answer-count">2</span> answers</span>
+                    <span class="multi-badge hidden" id="exam-multi-badge">Plusieurs réponses possibles</span>
                 </div>
+                <div class="sign-container hidden" id="exam-signs"></div>
                 <div class="question-text-fr" id="exam-question-fr"></div>
                 <div class="question-text-en" id="exam-question-en"></div>
             </div>
@@ -88,9 +89,17 @@ const Exam = {
         const multiBadge = document.getElementById('exam-multi-badge');
         if (q.answerCount > 1) {
             multiBadge.classList.remove('hidden');
-            document.getElementById('exam-answer-count').textContent = q.answerCount;
         } else {
             multiBadge.classList.add('hidden');
+        }
+
+        // Road sign images
+        const signContainer = document.getElementById('exam-signs');
+        if (q.signs && q.signs.length > 0) {
+            RoadSigns.render(q.signs, signContainer);
+        } else {
+            signContainer.classList.add('hidden');
+            signContainer.innerHTML = '';
         }
 
         // Question text
@@ -139,7 +148,7 @@ const Exam = {
                     }
 
                     const confirmBtn = document.getElementById('exam-confirm-btn');
-                    if (examSelected.length === q.answerCount) {
+                    if (examSelected.length >= 1) {
                         confirmBtn.classList.remove('hidden');
                         confirmBtn.onclick = () => this.submitExamAnswer(q, examSelected);
                     } else {

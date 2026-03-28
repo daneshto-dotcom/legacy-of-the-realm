@@ -82,8 +82,9 @@
                     <div class="question-card card" id="diag-question-card">
                         <div class="question-badges">
                             <span class="topic-badge" id="diag-topic"></span>
-                            <span class="multi-badge hidden" id="diag-multi-badge">Select <span id="diag-answer-count">2</span> answers</span>
+                            <span class="multi-badge hidden" id="diag-multi-badge">Plusieurs réponses possibles</span>
                         </div>
+                        <div class="sign-container hidden" id="diag-signs"></div>
                         <div class="question-text-fr" id="diag-question-fr"></div>
                         <div class="question-text-en" id="diag-question-en"></div>
                     </div>
@@ -230,8 +231,9 @@
                     <div class="question-card card" id="question-card">
                         <div class="question-badges">
                             <span class="topic-badge" id="question-topic"></span>
-                            <span class="multi-badge hidden" id="multi-badge">Select <span id="answer-count">2</span> answers</span>
+                            <span class="multi-badge hidden" id="multi-badge">Plusieurs réponses possibles</span>
                         </div>
+                        <div class="sign-container hidden" id="question-signs"></div>
                         <div class="question-text-fr" id="question-fr"></div>
                         <div class="question-text-en" id="question-en"></div>
                         <button class="tts-btn" id="tts-play-btn" title="Listen in French">🔊</button>
@@ -389,6 +391,10 @@
                                 <span class="toggle-slider"></span>
                             </label>
                         </div>
+                        <div class="setting-item">
+                            <label>Retake your 15-question baseline assessment</label>
+                            <button class="btn btn-outline" id="retake-diagnostic-btn">Retake Diagnostic</button>
+                        </div>
                     </div>
                     <div class="settings-group">
                         <h3 class="section-title">AI Tutor</h3>
@@ -456,6 +462,7 @@
     <div id="toast-container"></div>
 
     <script src="js/data.js"></script>
+    <script src="js/signs.js"></script>
     <script src="js/questions.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/tts.js"></script>

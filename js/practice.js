@@ -92,18 +92,26 @@ const Practice = {
         const multiBadge = document.getElementById('multi-badge');
         if (q.answerCount > 1) {
             multiBadge.classList.remove('hidden');
-            document.getElementById('answer-count').textContent = q.answerCount;
         } else {
             multiBadge.classList.add('hidden');
         }
 
-        // Question text
+        // Road sign images
+        const signContainer = document.getElementById('question-signs');
+        if (q.signs && q.signs.length > 0) {
+            RoadSigns.render(q.signs, signContainer);
+        } else {
+            signContainer.classList.add('hidden');
+            signContainer.innerHTML = '';
+        }
+
+        // Question text — French only during first attempt
         document.getElementById('question-fr').textContent = q.questionFr;
         const enEl = document.getElementById('question-en');
         enEl.textContent = q.questionEn;
-        enEl.style.display = settings.showEnglish ? 'block' : 'none';
+        enEl.style.display = 'none'; // English shown only in explanation/retry
 
-        // Answer options
+        // Answer options — French only during first attempt
         const optionsContainer = document.getElementById('answer-options');
         optionsContainer.innerHTML = '';
         optionsContainer.classList.add('stagger-enter');
@@ -120,7 +128,6 @@ const Practice = {
                 <div class="answer-letter">${letter}</div>
                 <div class="answer-content">
                     <div class="answer-text-fr">${option.fr}</div>
-                    ${settings.showEnglish ? `<div class="answer-text-en">${option.en}</div>` : ''}
                 </div>
                 <div class="answer-indicator"></div>
             `;
@@ -171,9 +178,9 @@ const Practice = {
             }
             this.highlightSelected();
 
-            // Show confirm button when correct number selected
+            // Show confirm button when at least 1 answer selected
             const confirmBtn = document.getElementById('confirm-btn');
-            if (this.selectedAnswers.length === q.answerCount) {
+            if (this.selectedAnswers.length >= 1) {
                 confirmBtn.classList.remove('hidden');
                 confirmBtn.style.animation = 'fadeInUp 0.2s ease';
             } else {

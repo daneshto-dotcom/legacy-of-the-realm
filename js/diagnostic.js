@@ -92,16 +92,25 @@ const Diagnostic = {
         const multiBadge = document.getElementById('diag-multi-badge');
         if (q.answerCount > 1) {
             multiBadge.classList.remove('hidden');
-            document.getElementById('diag-answer-count').textContent = q.answerCount;
         } else {
             multiBadge.classList.add('hidden');
         }
 
-        // Question text
-        document.getElementById('diag-question-fr').textContent = q.questionFr;
-        document.getElementById('diag-question-en').textContent = q.questionEn;
+        // Road sign images
+        const signContainer = document.getElementById('diag-signs');
+        if (q.signs && q.signs.length > 0) {
+            RoadSigns.render(q.signs, signContainer);
+        } else {
+            signContainer.classList.add('hidden');
+            signContainer.innerHTML = '';
+        }
 
-        // Options
+        // Question text — French only during diagnostic
+        document.getElementById('diag-question-fr').textContent = q.questionFr;
+        document.getElementById('diag-question-en').textContent = '';
+        document.getElementById('diag-question-en').style.display = 'none';
+
+        // Options — French only
         const optionsContainer = document.getElementById('diag-options');
         optionsContainer.innerHTML = '';
         const letters = ['A', 'B', 'C', 'D'];
@@ -117,7 +126,6 @@ const Diagnostic = {
                 <div class="answer-letter">${letter}</div>
                 <div class="answer-content">
                     <div class="answer-text-fr">${option.fr}</div>
-                    <div class="answer-text-en">${option.en}</div>
                 </div>
                 <div class="answer-indicator"></div>
             `;
@@ -148,8 +156,9 @@ const Diagnostic = {
             }
             this.highlightSelected();
 
+            // Show confirm button when at least 1 answer selected
             const confirmBtn = document.getElementById('diag-confirm-btn');
-            if (this.currentSelected.length === q.answerCount) {
+            if (this.currentSelected.length >= 1) {
                 confirmBtn.classList.remove('hidden');
                 confirmBtn.onclick = () => this.submitAnswer(q);
             } else {

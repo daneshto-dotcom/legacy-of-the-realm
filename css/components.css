@@ -323,6 +323,30 @@
     font-weight: 600;
 }
 
+/* Sign Images in Question Cards */
+.sign-container {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+    background: var(--bg);
+    border-radius: var(--radius-md);
+    border: 1px dashed var(--border);
+}
+
+.sign-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-image svg {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
 .question-text-fr {
     font-size: var(--font-size-lg);
     font-weight: 600;
@@ -853,8 +877,12 @@
 /* === DIAGNOSTIC ASSESSMENT === */
 .diagnostic-container {
     padding: var(--space-lg);
+    padding-bottom: calc(var(--space-xxl) + 40px);
     max-width: 480px;
     margin: 0 auto;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    flex: 1;
 }
 
 .diag-header {

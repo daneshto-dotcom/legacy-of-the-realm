@@ -10,6 +10,7 @@ const QUESTION_BANK = [
         id: 'circ-001',
         topic: 'circulation',
         difficulty: 2,
+        signs: ['speed_50', 'town_entry'],
         questionFr: "En agglomération, quelle est la vitesse maximale autorisée sauf indication contraire ?",
         questionEn: "In built-up areas, what is the default maximum speed limit?",
         options: {
@@ -37,6 +38,7 @@ const QUESTION_BANK = [
         id: 'circ-002',
         topic: 'circulation',
         difficulty: 3,
+        signs: ['speed_80'],
         questionFr: "Hors agglomération, sur une route à double sens sans séparateur central, quelle est la vitesse maximale autorisée ?",
         questionEn: "Outside built-up areas, on a two-way road without a central divider, what is the maximum speed?",
         options: {
@@ -64,6 +66,7 @@ const QUESTION_BANK = [
         id: 'circ-003',
         topic: 'circulation',
         difficulty: 2,
+        signs: ['speed_110', 'speed_130', 'highway_start'],
         questionFr: "Sur autoroute, par temps de pluie, quelle est la vitesse maximale autorisée ?",
         questionEn: "On a motorway, in rainy conditions, what is the maximum speed limit?",
         options: {
@@ -91,6 +94,7 @@ const QUESTION_BANK = [
         id: 'circ-004',
         topic: 'circulation',
         difficulty: 3,
+        signs: ['speed_130', 'highway_start'],
         questionFr: "Quelles affirmations sont vraies concernant les distances de sécurité sur autoroute ?",
         questionEn: "Which statements are true about safety distances on the motorway?",
         options: {
@@ -223,6 +227,7 @@ const QUESTION_BANK = [
         id: 'route-001',
         topic: 'route',
         difficulty: 2,
+        signs: ['dipped_headlights'],
         questionFr: "Quand doit-on allumer les feux de croisement ?",
         questionEn: "When must you turn on dipped headlights?",
         options: {
@@ -304,6 +309,7 @@ const QUESTION_BANK = [
         id: 'autr-002',
         topic: 'autres_usagers',
         difficulty: 2,
+        signs: ['pedestrian_crossing'],
         questionFr: "À l'approche d'un passage piéton, un piéton s'engage. Que devez-vous faire ?",
         questionEn: "Approaching a pedestrian crossing, a pedestrian steps onto it. What must you do?",
         options: {
@@ -333,6 +339,7 @@ const QUESTION_BANK = [
         id: 'prio-001',
         topic: 'priorite',
         difficulty: 3,
+        signs: ['priority_right'],
         questionFr: "À une intersection sans signalisation, quelle règle s'applique ?",
         questionEn: "At an intersection with no signs, which rule applies?",
         options: {
@@ -360,6 +367,7 @@ const QUESTION_BANK = [
         id: 'prio-002',
         topic: 'priorite',
         difficulty: 3,
+        signs: ['priority_road', 'yield', 'stop'],
         questionFr: "Quels panneaux indiquent que vous êtes sur une route prioritaire ?",
         questionEn: "Which signs indicate that you are on a priority road?",
         options: {
@@ -387,6 +395,7 @@ const QUESTION_BANK = [
         id: 'prio-003',
         topic: 'priorite',
         difficulty: 2,
+        signs: ['roundabout', 'yield'],
         questionFr: "Dans un rond-point (giratoire), qui a la priorité ?",
         questionEn: "In a roundabout, who has priority?",
         options: {
@@ -416,6 +425,7 @@ const QUESTION_BANK = [
         id: 'croi-001',
         topic: 'croisement_depassement',
         difficulty: 3,
+        signs: ['pedestrian_crossing', 'no_overtaking'],
         questionFr: "Quand est-il interdit de dépasser ?",
         questionEn: "When is overtaking forbidden?",
         options: {
@@ -469,6 +479,7 @@ const QUESTION_BANK = [
         id: 'arret-001',
         topic: 'arret_stationnement',
         difficulty: 2,
+        signs: ['no_parking', 'no_stopping'],
         questionFr: "Quelle est la différence entre l'arrêt et le stationnement ?",
         questionEn: "What is the difference between stopping and parking?",
         options: {
@@ -523,6 +534,7 @@ const QUESTION_BANK = [
         id: 'tunn-001',
         topic: 'tunnels_passages_niveau',
         difficulty: 2,
+        signs: ['tunnel'],
         questionFr: "Que devez-vous faire en cas de panne ou d'arrêt forcé dans un tunnel ?",
         questionEn: "What must you do in case of a breakdown or forced stop in a tunnel?",
         options: {
@@ -548,6 +560,7 @@ const QUESTION_BANK = [
         id: 'tunn-002',
         topic: 'tunnels_passages_niveau',
         difficulty: 3,
+        signs: ['level_crossing'],
         questionFr: "À un passage à niveau, les feux rouges clignotent. Que devez-vous faire ?",
         questionEn: "At a level crossing, the red lights are flashing. What must you do?",
         options: {
@@ -603,6 +616,7 @@ const QUESTION_BANK = [
         id: 'sign-002',
         topic: 'signalisation',
         difficulty: 2,
+        signs: ['traffic_light'],
         questionFr: "Un feu orange fixe signifie :",
         questionEn: "A steady amber/yellow traffic light means:",
         options: {
@@ -629,6 +643,7 @@ const QUESTION_BANK = [
         id: 'sign-003',
         topic: 'signalisation',
         difficulty: 2,
+        signs: ['no_overtaking'],
         questionFr: "Que signifie une ligne continue au milieu de la route ?",
         questionEn: "What does a continuous line in the middle of the road mean?",
         options: {
@@ -656,6 +671,7 @@ const QUESTION_BANK = [
         id: 'sign-004',
         topic: 'signalisation',
         difficulty: 3,
+        signs: ['danger'],
         questionFr: "Quelles affirmations sur les panneaux triangulaires sont correctes ?",
         questionEn: "Which statements about triangular signs are correct?",
         options: {
@@ -789,6 +805,7 @@ const QUESTION_BANK = [
         id: 'prio-004',
         topic: 'priorite',
         difficulty: 3,
+        signs: ['priority_right'],
         questionFr: "Un véhicule d'urgence (pompiers, SAMU) approche avec sirène et gyrophare. Que devez-vous faire ?",
         questionEn: "An emergency vehicle (fire truck, ambulance) approaches with siren and flashing lights. What must you do?",
         options: {
@@ -816,6 +833,7 @@ const QUESTION_BANK = [
         id: 'route-003',
         topic: 'route',
         difficulty: 2,
+        signs: ['dipped_headlights'],
         questionFr: "Quand devez-vous utiliser les feux de route (pleins phares) ?",
         questionEn: "When should you use full beam headlights?",
         options: {
@@ -894,6 +912,7 @@ const QUESTION_BANK = [
         id: 'sign-005',
         topic: 'signalisation',
         difficulty: 1,
+        signs: ['no_entry'],
         questionFr: "Que signifie un panneau rond avec un bord rouge et une barre horizontale blanche ?",
         questionEn: "What does a round sign with a red border and a white horizontal bar mean?",
         options: {
@@ -973,6 +992,7 @@ const QUESTION_BANK = [
         id: 'arret-003',
         topic: 'arret_stationnement',
         difficulty: 2,
+        signs: ['no_parking'],
         questionFr: "Le stationnement en double file est :",
         questionEn: "Double parking is:",
         options: {
@@ -1026,6 +1046,7 @@ const QUESTION_BANK = [
         id: 'prio-005',
         topic: 'priorite',
         difficulty: 2,
+        signs: ['stop'],
         questionFr: "Un panneau 'STOP' vous oblige à :",
         questionEn: "A STOP sign requires you to:",
         options: {
@@ -1059,6 +1080,7 @@ const QUESTION_BANK = [
         id: 'circ-006',
         topic: 'circulation',
         difficulty: 1,
+        signs: ['no_overtaking'],
         questionFr: "Quel panneau indique une interdiction de dépasser ?",
         questionEn: "Which sign indicates a no-overtaking zone?",
         options: {
@@ -1086,6 +1108,7 @@ const QUESTION_BANK = [
         id: 'circ-007',
         topic: 'circulation',
         difficulty: 2,
+        signs: ['speed_110'],
         questionFr: "Quelle est la vitesse maximale autorisée sur une route à chaussées séparées par un terre-plein central, hors agglomération ?",
         questionEn: "What is the maximum speed on a dual carriageway separated by a central reservation, outside built-up areas?",
         options: {
@@ -1113,6 +1136,7 @@ const QUESTION_BANK = [
         id: 'circ-008',
         topic: 'circulation',
         difficulty: 2,
+        signs: ['dipped_headlights'],
         questionFr: "Quand devez-vous allumer vos feux de croisement ?",
         questionEn: "When must you turn on your dipped headlights?",
         options: {
@@ -1165,6 +1189,7 @@ const QUESTION_BANK = [
         id: 'circ-010',
         topic: 'circulation',
         difficulty: 1,
+        signs: ['traffic_light'],
         questionFr: "Que signifie un feu orange fixe ?",
         questionEn: "What does a steady amber traffic light mean?",
         options: {
@@ -1192,6 +1217,7 @@ const QUESTION_BANK = [
         id: 'circ-011',
         topic: 'circulation',
         difficulty: 2,
+        signs: ['speed_30', 'town_entry'],
         questionFr: "Dans une zone 30, quelles règles s'appliquent ?",
         questionEn: "In a 30 km/h zone, which rules apply?",
         options: {
@@ -1326,6 +1352,7 @@ const QUESTION_BANK = [
         id: 'cond-010',
         topic: 'conducteur',
         difficulty: 2,
+        signs: ['speed_50'],
         questionFr: "Quelle est la distance de freinage approximative à 50 km/h sur route sèche ?",
         questionEn: "What is the approximate braking distance at 50 km/h on a dry road?",
         options: {
@@ -1380,6 +1407,7 @@ const QUESTION_BANK = [
         id: 'route-005',
         topic: 'route',
         difficulty: 2,
+        signs: ['no_overtaking'],
         questionFr: "Que signifie une ligne blanche continue au centre de la chaussée ?",
         questionEn: "What does a continuous white centre line on the road mean?",
         options: {
@@ -1433,6 +1461,7 @@ const QUESTION_BANK = [
         id: 'route-007',
         topic: 'route',
         difficulty: 1,
+        signs: ['danger'],
         questionFr: "Que signifie un panneau triangulaire à bord rouge ?",
         questionEn: "What does a triangular sign with a red border mean?",
         options: {
@@ -1512,6 +1541,7 @@ const QUESTION_BANK = [
         id: 'route-010',
         topic: 'route',
         difficulty: 1,
+        signs: ['highway_start'],
         questionFr: "Quelle est la fonction d'une bande d'arrêt d'urgence sur autoroute ?",
         questionEn: "What is the purpose of the hard shoulder on a motorway?",
         options: {
@@ -1595,6 +1625,7 @@ const QUESTION_BANK = [
         id: 'autr-005',
         topic: 'autres_usagers',
         difficulty: 1,
+        signs: ['pedestrian_crossing'],
         questionFr: "À l'approche d'un passage piéton, que devez-vous faire ?",
         questionEn: "When approaching a pedestrian crossing, what must you do?",
         options: {
@@ -1729,6 +1760,7 @@ const QUESTION_BANK = [
         id: 'prio-006',
         topic: 'priorite',
         difficulty: 2,
+        signs: ['priority_right'],
         questionFr: "À un carrefour sans signalisation, quelle est la règle de priorité ?",
         questionEn: "At an intersection without any signs, what is the priority rule?",
         options: {
@@ -1756,6 +1788,7 @@ const QUESTION_BANK = [
         id: 'prio-007',
         topic: 'priorite',
         difficulty: 3,
+        signs: ['roundabout', 'yield'],
         questionFr: "Dans un rond-point (carrefour giratoire), qui a la priorité ?",
         questionEn: "In a roundabout, who has priority?",
         options: {
@@ -1783,6 +1816,7 @@ const QUESTION_BANK = [
         id: 'prio-008',
         topic: 'priorite',
         difficulty: 2,
+        signs: ['yield'],
         questionFr: "Que signifie le panneau 'Cédez le passage' (triangle inversé) ?",
         questionEn: "What does the 'Give Way' sign (inverted triangle) mean?",
         options: {
@@ -1810,6 +1844,7 @@ const QUESTION_BANK = [
         id: 'prio-009',
         topic: 'priorite',
         difficulty: 2,
+        signs: ['priority_road', 'end_priority'],
         questionFr: "Sur une route avec un panneau losange jaune, avez-vous la priorité ?",
         questionEn: "On a road with a yellow diamond sign, do you have priority?",
         options: {
@@ -1837,6 +1872,7 @@ const QUESTION_BANK = [
         id: 'prio-010',
         topic: 'priorite',
         difficulty: 3,
+        signs: ['stop', 'yield', 'priority_road'],
         questionFr: "Quand la priorité à droite ne s'applique-t-elle PAS ?",
         questionEn: "When does priority to the right NOT apply?",
         options: {
@@ -1918,6 +1954,7 @@ const QUESTION_BANK = [
         id: 'croi-005',
         topic: 'croisement_depassement',
         difficulty: 3,
+        signs: ['no_overtaking', 'level_crossing'],
         questionFr: "Dans quelles situations le dépassement est-il interdit ?",
         questionEn: "In which situations is overtaking prohibited?",
         options: {
@@ -2051,6 +2088,7 @@ const QUESTION_BANK = [
         id: 'arret-006',
         topic: 'arret_stationnement',
         difficulty: 2,
+        signs: ['no_parking', 'pedestrian_crossing'],
         questionFr: "Où est-il interdit de stationner ?",
         questionEn: "Where is parking prohibited?",
         options: {
@@ -2105,6 +2143,7 @@ const QUESTION_BANK = [
         id: 'tunn-003',
         topic: 'tunnels_passages_niveau',
         difficulty: 2,
+        signs: ['tunnel', 'dipped_headlights'],
         questionFr: "Que devez-vous faire en entrant dans un tunnel éclairé en plein jour ?",
         questionEn: "What must you do when entering a lit tunnel during the day?",
         options: {
@@ -2132,6 +2171,7 @@ const QUESTION_BANK = [
         id: 'tunn-004',
         topic: 'tunnels_passages_niveau',
         difficulty: 3,
+        signs: ['tunnel'],
         questionFr: "Que devez-vous faire en cas de panne dans un tunnel ?",
         questionEn: "What must you do if you break down in a tunnel?",
         options: {
@@ -2158,6 +2198,7 @@ const QUESTION_BANK = [
         id: 'tunn-005',
         topic: 'tunnels_passages_niveau',
         difficulty: 2,
+        signs: ['level_crossing'],
         questionFr: "Quand les feux clignotent à un passage à niveau, que devez-vous faire ?",
         questionEn: "When lights are flashing at a level crossing, what must you do?",
         options: {
@@ -2185,6 +2226,7 @@ const QUESTION_BANK = [
         id: 'tunn-006',
         topic: 'tunnels_passages_niveau',
         difficulty: 2,
+        signs: ['tunnel'],
         questionFr: "Quelle distance minimale devez-vous respecter avec le véhicule devant vous dans un tunnel ?",
         questionEn: "What minimum distance must you keep from the vehicle ahead in a tunnel?",
         options: {
@@ -2211,6 +2253,7 @@ const QUESTION_BANK = [
         id: 'tunn-007',
         topic: 'tunnels_passages_niveau',
         difficulty: 1,
+        signs: ['tunnel'],
         questionFr: "Est-il permis de faire demi-tour dans un tunnel ?",
         questionEn: "Is it allowed to make a U-turn in a tunnel?",
         options: {
@@ -2267,6 +2310,7 @@ const QUESTION_BANK = [
         id: 'sign-007',
         topic: 'signalisation',
         difficulty: 2,
+        signs: ['parking'],
         questionFr: "Que signifie un panneau carré bleu avec un P blanc ?",
         questionEn: "What does a square blue sign with a white P mean?",
         options: {
@@ -2321,6 +2365,7 @@ const QUESTION_BANK = [
         id: 'sign-009',
         topic: 'signalisation',
         difficulty: 2,
+        signs: ['highway_start', 'highway_end'],
         questionFr: "Quelles couleurs sont utilisées pour les panneaux d'indication sur autoroute ?",
         questionEn: "What colours are used for motorway information signs?",
         options: {
@@ -2374,6 +2419,7 @@ const QUESTION_BANK = [
         id: 'sign-011',
         topic: 'signalisation',
         difficulty: 1,
+        signs: ['no_entry'],
         questionFr: "Que signifie un panneau rouge circulaire avec une barre blanche horizontale ?",
         questionEn: "What does a round red sign with a horizontal white bar mean?",
         options: {
@@ -2649,6 +2695,7 @@ const QUESTION_BANK = [
         id: 'croi-008',
         topic: 'croisement_depassement',
         difficulty: 2,
+        signs: ['pedestrian_crossing', 'no_overtaking'],
         questionFr: "Pouvez-vous dépasser un véhicule sur un passage piéton ?",
         questionEn: "Can you overtake a vehicle on a pedestrian crossing?",
         options: {
@@ -2704,6 +2751,7 @@ const QUESTION_BANK = [
         id: 'arret-008',
         topic: 'arret_stationnement',
         difficulty: 2,
+        signs: ['no_stopping'],
         questionFr: "Que signifie un marquage jaune en zigzag au bord de la route ?",
         questionEn: "What does a yellow zigzag marking on the road edge mean?",
         options: {
@@ -2760,6 +2808,7 @@ const QUESTION_BANK = [
         id: 'tunn-008',
         topic: 'tunnels_passages_niveau',
         difficulty: 2,
+        signs: ['level_crossing'],
         questionFr: "Quels types de feux peuvent signaler un passage à niveau ?",
         questionEn: "What types of lights can signal a level crossing?",
         options: {
@@ -2786,6 +2835,7 @@ const QUESTION_BANK = [
         id: 'tunn-009',
         topic: 'tunnels_passages_niveau',
         difficulty: 3,
+        signs: ['level_crossing'],
         questionFr: "Que faire si votre véhicule est immobilisé sur un passage à niveau ?",
         questionEn: "What should you do if your vehicle is stuck on a level crossing?",
         options: {
