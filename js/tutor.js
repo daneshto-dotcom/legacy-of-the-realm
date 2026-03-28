@@ -4,7 +4,8 @@
    ============================================ */
 
 const Tutor = {
-    ENDPOINT: null, // Set after deployment: 'https://code-de-la-route-tutor.<subdomain>.workers.dev/chat'
+    DEFAULT_ENDPOINT: 'https://code-de-la-route-tutor.saras-fdtta.workers.dev',
+    ENDPOINT: null,
     conversationHistory: [],
     isOpen: false,
     isLoading: false,
@@ -12,7 +13,7 @@ const Tutor = {
     init() {
         // Load saved endpoint from settings or use default
         const settings = Storage.getSettings();
-        this.ENDPOINT = settings.tutorEndpoint || null;
+        this.ENDPOINT = settings.tutorEndpoint || this.DEFAULT_ENDPOINT;
 
         // Create chat UI (hidden by default)
         this.createChatUI();
