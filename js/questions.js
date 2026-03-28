@@ -2857,6 +2857,186 @@ const QUESTION_BANK = [
             { wordFr: "immobilisé", wordEn: "stuck/immobilised", definition: "Unable to move" },
             { wordFr: "voies ferrées", wordEn: "railway tracks", definition: "The metal rails on which trains run" }
         ]
+    },
+
+    // ===== NEW: Balancing underserved topics (Cycles 13-15) =====
+
+    // croisement_depassement #10
+    {
+        id: 105,
+        topic: 'croisement_depassement',
+        difficulty: 2,
+        questionFr: "Vous arrivez face à face avec un véhicule sur une route étroite. Qui doit reculer ?",
+        questionEn: "You meet a vehicle head-on on a narrow road. Who must reverse?",
+        options: {
+            A: { fr: "Le véhicule qui monte", en: "The vehicle going uphill" },
+            B: { fr: "Le véhicule qui descend", en: "The vehicle going downhill" },
+            C: { fr: "Le plus petit véhicule", en: "The smaller vehicle" },
+            D: { fr: "Le dernier arrivé", en: "The last to arrive" }
+        },
+        correctAnswers: ['B'],
+        answerCount: 1,
+        explanationFr: "En cas de croisement difficile en pente, le véhicule qui descend doit reculer car il est plus facile de repartir en montant.",
+        explanationEn: "On a slope, the vehicle going downhill must reverse because it is easier to restart going uphill.",
+        trapNote: "It seems counterintuitive — the downhill vehicle reverses, not the uphill one.",
+        distractorNotes: {
+            A: { fr: "Le véhicule qui monte a la priorité.", en: "The uphill vehicle has priority." },
+            C: { fr: "La taille du véhicule n'est pas le critère.", en: "Vehicle size is not the criterion." },
+            D: { fr: "L'ordre d'arrivée n'a pas d'importance.", en: "Order of arrival doesn't matter." }
+        },
+        vocabulary: [
+            { wordFr: "reculer", wordEn: "to reverse", definition: "To drive backwards" },
+            { wordFr: "pente", wordEn: "slope", definition: "An incline in the road" }
+        ]
+    },
+
+    // croisement_depassement #11
+    {
+        id: 106,
+        topic: 'croisement_depassement',
+        difficulty: 3,
+        questionFr: "Pouvez-vous dépasser un véhicule qui tourne à gauche ?",
+        questionEn: "Can you overtake a vehicle turning left?",
+        options: {
+            A: { fr: "Oui, par la droite", en: "Yes, on the right" },
+            B: { fr: "Oui, par la gauche", en: "Yes, on the left" },
+            C: { fr: "Non, jamais", en: "No, never" },
+            D: { fr: "Oui, des deux côtés", en: "Yes, from either side" }
+        },
+        correctAnswers: ['A'],
+        answerCount: 1,
+        explanationFr: "Lorsqu'un véhicule tourne à gauche, vous pouvez le dépasser par la droite si l'espace est suffisant.",
+        explanationEn: "When a vehicle is turning left, you may overtake it on the right if there is sufficient space.",
+        trapNote: "Normally overtaking is on the left, but when a vehicle turns left, you pass on the right.",
+        distractorNotes: {
+            B: { fr: "Dépasser par la gauche un véhicule qui tourne à gauche est dangereux.", en: "Overtaking on the left a vehicle turning left is dangerous." },
+            C: { fr: "Il est possible de dépasser par la droite dans ce cas.", en: "You can overtake on the right in this case." },
+            D: { fr: "Seulement par la droite est autorisé.", en: "Only the right side is permitted." }
+        },
+        vocabulary: [
+            { wordFr: "dépasser", wordEn: "to overtake", definition: "To pass another vehicle" },
+            { wordFr: "par la droite", wordEn: "on the right", definition: "From the right side" }
+        ]
+    },
+
+    // arret_stationnement #10
+    {
+        id: 107,
+        topic: 'arret_stationnement',
+        difficulty: 2,
+        questionFr: "À quelle distance minimale d'un passage piétons est-il interdit de stationner ?",
+        questionEn: "What is the minimum distance from a pedestrian crossing where parking is prohibited?",
+        options: {
+            A: { fr: "3 mètres", en: "3 metres" },
+            B: { fr: "5 mètres", en: "5 metres" },
+            C: { fr: "10 mètres", en: "10 metres" },
+            D: { fr: "15 mètres", en: "15 metres" }
+        },
+        correctAnswers: ['B'],
+        answerCount: 1,
+        signs: ['pedestrian_crossing'],
+        explanationFr: "Il est interdit de stationner à moins de 5 mètres en amont d'un passage piétons.",
+        explanationEn: "Parking is prohibited within 5 metres before a pedestrian crossing.",
+        trapNote: "5 metres, not 3 or 10.",
+        distractorNotes: {
+            A: { fr: "3 mètres est insuffisant.", en: "3 metres is not enough." },
+            C: { fr: "10 mètres est la distance pour les intersections.", en: "10 metres applies to intersections." },
+            D: { fr: "15 mètres est trop éloigné.", en: "15 metres is too far." }
+        },
+        vocabulary: [
+            { wordFr: "stationner", wordEn: "to park", definition: "To leave a vehicle in a parked position" },
+            { wordFr: "en amont", wordEn: "before/upstream", definition: "On the approach side" }
+        ]
+    },
+
+    // arret_stationnement #11
+    {
+        id: 108,
+        topic: 'arret_stationnement',
+        difficulty: 2,
+        questionFr: "Que signifie une ligne jaune continue sur le bord du trottoir ?",
+        questionEn: "What does a continuous yellow line on the kerb mean?",
+        signs: ['no_stopping'],
+        options: {
+            A: { fr: "Stationnement interdit", en: "No parking" },
+            B: { fr: "Arrêt et stationnement interdits", en: "No stopping and no parking" },
+            C: { fr: "Stationnement payant", en: "Paid parking" },
+            D: { fr: "Stationnement limité à 30 minutes", en: "Parking limited to 30 minutes" }
+        },
+        correctAnswers: ['B'],
+        answerCount: 1,
+        explanationFr: "Une ligne jaune continue sur le bord du trottoir signifie que l'arrêt et le stationnement sont interdits.",
+        explanationEn: "A continuous yellow line on the kerb means both stopping and parking are prohibited.",
+        trapNote: "Yellow continuous = no stopping at all. A broken yellow line means no parking but stopping is allowed.",
+        distractorNotes: {
+            A: { fr: "C'est plus que le stationnement — l'arrêt aussi est interdit.", en: "It's more than parking — stopping is also banned." },
+            C: { fr: "Le stationnement payant est indiqué par d'autres marquages.", en: "Paid parking uses different markings." },
+            D: { fr: "Il n'y a pas de limite de temps — c'est totalement interdit.", en: "There's no time limit — it's completely prohibited." }
+        },
+        vocabulary: [
+            { wordFr: "ligne jaune", wordEn: "yellow line", definition: "Kerb marking indicating restrictions" },
+            { wordFr: "trottoir", wordEn: "pavement/kerb", definition: "The raised edge along a road" }
+        ]
+    },
+
+    // tunnels_passages_niveau #10
+    {
+        id: 109,
+        topic: 'tunnels_passages_niveau',
+        difficulty: 2,
+        questionFr: "Que devez-vous faire en entrant dans un tunnel éclairé ?",
+        questionEn: "What must you do when entering a lit tunnel?",
+        signs: ['tunnel', 'dipped_headlights'],
+        options: {
+            A: { fr: "Allumer les feux de croisement", en: "Turn on dipped headlights" },
+            B: { fr: "Allumer les feux de route", en: "Turn on full beam headlights" },
+            C: { fr: "Garder les feux éteints si le tunnel est éclairé", en: "Keep lights off if the tunnel is lit" },
+            D: { fr: "Allumer les feux de brouillard", en: "Turn on fog lights" }
+        },
+        correctAnswers: ['A'],
+        answerCount: 1,
+        explanationFr: "En tunnel, vous devez toujours allumer les feux de croisement, même si le tunnel est éclairé.",
+        explanationEn: "In a tunnel, you must always turn on dipped headlights, even if the tunnel is lit.",
+        trapNote: "Even in a well-lit tunnel, dipped headlights are mandatory — it's about being visible to others.",
+        distractorNotes: {
+            B: { fr: "Les feux de route éblouissent les autres conducteurs en tunnel.", en: "Full beam headlights dazzle other drivers in tunnels." },
+            C: { fr: "Les feux sont obligatoires en tunnel, même éclairé.", en: "Lights are mandatory in tunnels, even lit ones." },
+            D: { fr: "Les feux de brouillard ne sont pas adaptés aux tunnels.", en: "Fog lights are not appropriate for tunnels." }
+        },
+        vocabulary: [
+            { wordFr: "feux de croisement", wordEn: "dipped headlights", definition: "Low beam headlights" },
+            { wordFr: "éclairé", wordEn: "lit/illuminated", definition: "Having artificial lighting" }
+        ]
+    },
+
+    // tunnels_passages_niveau #11
+    {
+        id: 110,
+        topic: 'tunnels_passages_niveau',
+        difficulty: 3,
+        questionFr: "Un feu rouge clignotant à un passage à niveau signifie que :",
+        questionEn: "A flashing red light at a level crossing means:",
+        signs: ['level_crossing'],
+        options: {
+            A: { fr: "Vous pouvez passer lentement", en: "You may pass slowly" },
+            B: { fr: "Un train approche, vous devez vous arrêter", en: "A train is approaching, you must stop" },
+            C: { fr: "Le passage est fermé pour maintenance", en: "The crossing is closed for maintenance" },
+            D: { fr: "Vous devez klaxonner avant de passer", en: "You must honk before crossing" }
+        },
+        correctAnswers: ['B'],
+        answerCount: 1,
+        explanationFr: "Un feu rouge clignotant à un passage à niveau signifie qu'un train approche et que vous devez obligatoirement vous arrêter.",
+        explanationEn: "A flashing red light at a level crossing means a train is approaching and you must stop.",
+        trapNote: "Never cross when the red light is flashing — a train is on its way.",
+        distractorNotes: {
+            A: { fr: "Il est interdit de passer, même lentement.", en: "You must not cross, even slowly." },
+            C: { fr: "La maintenance est signalée autrement.", en: "Maintenance is signaled differently." },
+            D: { fr: "Klaxonner ne remplace pas l'arrêt obligatoire.", en: "Honking does not replace the mandatory stop." }
+        },
+        vocabulary: [
+            { wordFr: "clignotant", wordEn: "flashing", definition: "Blinking on and off" },
+            { wordFr: "klaxonner", wordEn: "to honk", definition: "To sound the car horn" }
+        ]
     }
 ];
 
