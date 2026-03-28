@@ -7,15 +7,16 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Code de la Route">
-    <meta name="description" content="French Driving Theory Tutor — 110 bilingual questions, 34 road signs, mock exams, spaced repetition, AI tutor. Prepare for the Code de la route exam.">
+    <meta name="description" content="French Driving Theory Tutor — 200+ bilingual questions, 35 road signs, mock exams, spaced repetition, AI tutor, dark mode. Prepare for the Code de la route exam.">
     <meta name="keywords" content="code de la route, french driving theory, ETG, exam preparation, permis de conduire">
     <meta property="og:title" content="Code de la Route — French Driving Theory Tutor">
-    <meta property="og:description" content="110 bilingual questions, 34 road signs, mock exams with timer, AI tutor. Free PWA.">
+    <meta property="og:description" content="200+ bilingual questions, 35 road signs, mock exams with timer, AI tutor, dark mode. Free PWA.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/icons/icon-512.png">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
     <title>Code de la Route</title>
+    <script>(function(){try{var s=JSON.parse(localStorage.getItem('fdtta_settings')||'{}');var t=s.theme||'auto';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','auto');}})()</script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
@@ -116,7 +117,7 @@
             </header>
 
             <!-- Content Area -->
-            <main id="content-area">
+            <main id="content-area" role="main">
                 <!-- Home View -->
                 <div id="home-view" class="view active">
                     <div class="home-greeting">
@@ -239,7 +240,7 @@
                     </div>
 
                     <!-- Question Card -->
-                    <div class="question-card card" id="question-card">
+                    <div class="question-card card" id="question-card" aria-live="polite">
                         <div class="question-badges">
                             <span class="topic-badge" id="question-topic"></span>
                             <span class="multi-badge hidden" id="multi-badge">Plusieurs réponses possibles</span>
@@ -378,6 +379,32 @@
                 <!-- Settings View -->
                 <div id="settings-view" class="view">
                     <div class="settings-group">
+                        <h3 class="section-title">Appearance</h3>
+                        <div class="setting-item">
+                            <label>Theme</label>
+                            <select id="setting-theme" class="setting-select">
+                                <option value="auto">System default</option>
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="settings-group">
+                        <h3 class="section-title">Notifications</h3>
+                        <div class="notification-card" id="notification-toggle-card">
+                            <div class="notification-icon">🔔</div>
+                            <div class="notification-body">
+                                <div class="notification-title">Study Reminders</div>
+                                <div class="notification-desc" id="notification-desc">Get daily reminders to practice</div>
+                            </div>
+                            <span class="notification-status disabled" id="notification-status">Off</span>
+                        </div>
+                        <div class="setting-item hidden" id="notification-time-setting">
+                            <label>Reminder time</label>
+                            <input type="time" id="setting-reminder-time" class="setting-input" value="19:00">
+                        </div>
+                    </div>
+                    <div class="settings-group">
                         <h3 class="section-title">Language</h3>
                         <div class="setting-item">
                             <label>Show English translations</label>
@@ -444,8 +471,9 @@
                         </div>
                     </div>
                     <div class="settings-about">
-                        <p>Code de la Route v2.3</p>
-                        <p class="text-secondary">110 questions | 34 road signs | AI tutor | Vocab flashcards</p>
+                        <p>Code de la Route v3.0</p>
+                        <p class="text-secondary" id="settings-question-count">200+ questions | 35 road signs | AI tutor | Vocab flashcards</p>
+                        <p class="text-secondary">Dark mode | Study reminders | Content sync</p>
                         <p class="text-secondary">Built with love 🇫🇷</p>
                     </div>
                 </div>
@@ -490,7 +518,7 @@
     </div>
 
     <!-- Toast Container -->
-    <div id="toast-container"></div>
+    <div id="toast-container" role="status" aria-live="polite"></div>
 
     <script src="js/data.js"></script>
     <script src="js/signs.js"></script>
@@ -502,6 +530,8 @@
     <script src="js/exam.js"></script>
     <script src="js/progress.js"></script>
     <script src="js/vocab.js"></script>
+    <script src="js/content-sync.js"></script>
+    <script src="js/notifications.js"></script>
     <script src="js/tutor.js"></script>
     <script src="js/app.js"></script>
 </body>

@@ -233,8 +233,9 @@ const Exam = {
 
         // Next question after brief delay
         setTimeout(() => {
+            if (!this.active) return;
             this.currentIndex++;
-            document.getElementById('exam-confirm-btn').classList.add('hidden');
+            document.getElementById('exam-confirm-btn')?.classList.add('hidden');
             this.loadExamQuestion();
         }, 800);
     },

@@ -35,6 +35,9 @@ const Storage = {
                     return true;
                 } catch (e2) {
                     console.error('localStorage full even after pruning:', e2);
+                    if (typeof showToast === 'function') {
+                        showToast('Storage full — some data may not be saved.', 'error');
+                    }
                     return false;
                 }
             }

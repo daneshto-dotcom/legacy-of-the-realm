@@ -7,6 +7,16 @@ const App = {
     currentView: 'home',
 
     init() {
+        // Apply theme immediately (before render to prevent flash)
+        this.applyTheme();
+
+        // Listen for OS dark mode changes (for auto theme)
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if ((Storage.getSettings().theme || 'auto') === 'auto') {
+                this.applyTheme();
+            }
+        });
+
         // Show splash screen
         setTimeout(() => {
             // Init TTS
@@ -31,6 +41,12 @@ const App = {
         // Init tutor chat
         Tutor.init();
 
+        // Init content sync (check for OTA question updates)
+        ContentSync.init();
+
+        // Init notifications
+        Notifications.init();
+
         // Listen for service worker update notifications
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.addEventListener('message', (event) => {
@@ -38,6 +54,21 @@ const App = {
                     showToast('App updated! Refresh for latest version.', 'success');
                 }
             });
+        }
+    },
+
+    // === THEME MANAGEMENT ===
+    applyTheme() {
+        const settings = Storage.getSettings();
+        const theme = settings.theme || 'auto';
+        document.documentElement.setAttribute('data-theme', theme);
+
+        // Update meta theme-color for browser chrome
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) {
+            const isDark = theme === 'dark' ||
+                (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            meta.content = isDark ? '#1E1E1E' : '#2E5984';
         }
     },
 
@@ -415,6 +446,32 @@ const App = {
     setupSettings() {
         const settings = Storage.getSettings();
 
+        // Theme selector
+        const themeSelect = document.getElementById('setting-theme');
+        themeSelect.value = settings.theme || 'auto';
+        themeSelect.addEventListener('change', () => {
+            Storage.saveSetting('theme', themeSelect.value);
+            this.applyTheme();
+            showToast(`Theme: ${themeSelect.value === 'auto' ? 'System default' : themeSelect.value}`);
+        });
+
+        // Notification toggle card
+        const notifCard = document.getElementById('notification-toggle-card');
+        if (notifCard) {
+            notifCard.addEventListener('click', () => Notifications.toggle());
+        }
+
+        // Reminder time
+        const reminderTime = document.getElementById('setting-reminder-time');
+        if (reminderTime) {
+            reminderTime.value = settings.reminderTime || '19:00';
+            reminderTime.addEventListener('change', () => {
+                Storage.saveSetting('reminderTime', reminderTime.value);
+                Notifications.reschedule();
+                showToast(`Reminder set for ${reminderTime.value}`);
+            });
+        }
+
         // Show English toggle
         const showEnglish = document.getElementById('setting-show-english');
         showEnglish.checked = settings.showEnglish;
@@ -518,6 +575,9 @@ const App = {
         document.getElementById('setting-exam-date').value = settings.examDate || '';
         document.getElementById('setting-confidence').checked = settings.confidenceEnabled;
         document.getElementById('setting-tutor-endpoint').value = settings.tutorEndpoint || '';
+        document.getElementById('setting-theme').value = settings.theme || 'auto';
+        document.getElementById('setting-reminder-time').value = settings.reminderTime || '19:00';
+        Notifications.updateUI();
     }
 };
 

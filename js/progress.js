@@ -109,7 +109,7 @@ const Progress = {
             const d = new Date(now);
             d.setDate(d.getDate() - i);
             const dateStr = d.toDateString();
-            const dayAttempts = attempts.filter(a => new Date(a.timestamp).toDateString() === dateStr);
+            const dayAttempts = attempts.filter(a => a.timestamp && new Date(a.timestamp).toDateString() === dateStr);
             const correct = dayAttempts.filter(a => a.isCorrect).length;
             days.push({
                 label: d.toLocaleDateString('en-US', { weekday: 'short' }),
