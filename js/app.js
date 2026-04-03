@@ -41,6 +41,9 @@ const App = {
         // Init tutor chat
         Tutor.init();
 
+        // Init knowledge graph (brain-search integration)
+        if (typeof Knowledge !== 'undefined') Knowledge.init();
+
         // Init content sync (check for OTA question updates)
         ContentSync.init();
 
@@ -517,6 +520,18 @@ const App = {
             showToast('Tutor endpoint updated!');
         });
 
+        // Brain-search URL
+        const brainSearchUrl = document.getElementById('setting-brain-search-url');
+        brainSearchUrl.value = settings.brainSearchUrl || '';
+        brainSearchUrl.addEventListener('change', () => {
+            Storage.saveSetting('brainSearchUrl', brainSearchUrl.value || null);
+            if (typeof Knowledge !== 'undefined') {
+                Knowledge.brainSearchUrl = brainSearchUrl.value || null;
+                if (Knowledge.brainSearchUrl) Knowledge.probeBrainSearch();
+            }
+            showToast('Brain-search URL updated!');
+        });
+
         // Export
         document.getElementById('export-data-btn').addEventListener('click', () => {
             Storage.exportData();
@@ -575,6 +590,7 @@ const App = {
         document.getElementById('setting-exam-date').value = settings.examDate || '';
         document.getElementById('setting-confidence').checked = settings.confidenceEnabled;
         document.getElementById('setting-tutor-endpoint').value = settings.tutorEndpoint || '';
+        document.getElementById('setting-brain-search-url').value = settings.brainSearchUrl || '';
         document.getElementById('setting-theme').value = settings.theme || 'auto';
         document.getElementById('setting-reminder-time').value = settings.reminderTime || '19:00';
         Notifications.updateUI();

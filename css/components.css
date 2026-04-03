@@ -1866,3 +1866,158 @@
     color: var(--text-secondary);
 }
 
+/* ============================================
+   Intersection Scenario Diagrams
+   ============================================ */
+
+.intersection-container {
+    margin-bottom: var(--space-md);
+}
+
+.intersection-scene {
+    background: var(--bg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.intersection-title {
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--primary-50);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.intersection-svg-wrapper {
+    padding: var(--space-sm);
+    display: flex;
+    justify-content: center;
+}
+
+.intersection-diagram {
+    max-width: 280px;
+    height: auto;
+    border-radius: var(--radius-sm);
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+.intersection-legend {
+    padding: var(--space-xs) var(--space-md) var(--space-sm);
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.5;
+    border-top: 1px solid var(--border-light);
+}
+
+.legend-you {
+    display: inline-block;
+    background: #2196F3;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.legend-inside {
+    display: inline-block;
+    background: #4CAF50;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.legend-emergency {
+    display: inline-block;
+    background: #D32F2F;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+/* Passage order animation */
+.passage-order {
+    opacity: 0;
+}
+
+.intersection-revealed .passage-order {
+    opacity: 1;
+}
+
+.passage-order-animate {
+    animation: orderAppear 0.4s ease forwards;
+}
+
+@keyframes orderAppear {
+    from { opacity: 0; transform: scale(0.3); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .intersection-title {
+    background: var(--surface);
+}
+
+[data-theme="dark"] .intersection-scene {
+    border-color: var(--border);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .intersection-title {
+        background: var(--surface);
+    }
+    :root:not([data-theme="light"]) .intersection-scene {
+        border-color: var(--border);
+    }
+}
+
+/* ============================================
+   Knowledge Insight Badge (Tutor Integration)
+   ============================================ */
+
+.knowledge-insight {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    margin-top: var(--space-sm);
+    background: linear-gradient(135deg, var(--primary-50), transparent);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--primary);
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.knowledge-insight-icon {
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.knowledge-insight-text {
+    flex: 1;
+}
+
+.knowledge-insight-text strong {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .knowledge-insight {
+    background: linear-gradient(135deg, rgba(46, 89, 132, 0.15), transparent);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .knowledge-insight {
+        background: linear-gradient(135deg, rgba(46, 89, 132, 0.15), transparent);
+    }
+}
+

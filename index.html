@@ -87,6 +87,7 @@
                             <span class="multi-badge hidden" id="diag-multi-badge">Plusieurs réponses possibles</span>
                         </div>
                         <div class="sign-container hidden" id="diag-signs"></div>
+                        <div class="intersection-container hidden" id="diag-intersection-scenario"></div>
                         <div class="question-text-fr" id="diag-question-fr"></div>
                         <div class="question-text-en" id="diag-question-en"></div>
                     </div>
@@ -246,6 +247,7 @@
                             <span class="multi-badge hidden" id="multi-badge">Plusieurs réponses possibles</span>
                         </div>
                         <div class="sign-container hidden" id="question-signs"></div>
+                        <div class="intersection-container hidden" id="intersection-scenario"></div>
                         <div class="question-text-fr" id="question-fr"></div>
                         <div class="question-text-en" id="question-en"></div>
                         <button class="tts-btn" id="tts-play-btn" title="Listen in French" aria-label="Listen to question in French">🔊</button>
@@ -281,6 +283,7 @@
                                 <h4>📖 Vocabulary</h4>
                                 <div id="vocab-list"></div>
                             </div>
+                            <div class="hidden" id="knowledge-insight-container"></div>
                         </div>
                         <div class="explanation-actions">
                             <button class="btn btn-primary btn-lg" id="next-question-btn">Next Question</button>
@@ -476,6 +479,10 @@
                             <label>Tutor API Endpoint</label>
                             <input type="url" id="setting-tutor-endpoint" class="setting-input setting-input-sm" placeholder="https://...workers.dev">
                         </div>
+                        <div class="setting-item">
+                            <label>Brain-Search URL (optional)</label>
+                            <input type="url" id="setting-brain-search-url" class="setting-input setting-input-sm" placeholder="http://localhost:8090">
+                        </div>
                     </div>
                     <div class="settings-group">
                         <h3 class="section-title">Data</h3>
@@ -491,9 +498,9 @@
                         </div>
                     </div>
                     <div class="settings-about">
-                        <p>Code de la Route v3.1</p>
-                        <p class="text-secondary" id="settings-question-count">200+ questions | 35 road signs | AI tutor | Vocab flashcards</p>
-                        <p class="text-secondary">Dark mode | Study reminders | Content sync</p>
+                        <p>Code de la Route v3.2</p>
+                        <p class="text-secondary" id="settings-question-count">200+ questions | 35 road signs | 10 intersection diagrams | AI tutor | Vocab flashcards</p>
+                        <p class="text-secondary">Dark mode | Study reminders | Knowledge graph | Content sync</p>
                         <p class="text-secondary">Built with love 🇫🇷</p>
                     </div>
                 </div>
@@ -542,6 +549,8 @@
 
     <script src="js/data.js"></script>
     <script src="js/signs.js"></script>
+    <script src="js/intersections.js"></script>
+    <script src="js/knowledge.js"></script>
     <script src="js/questions.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/tts.js"></script>

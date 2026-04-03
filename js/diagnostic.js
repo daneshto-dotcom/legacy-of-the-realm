@@ -105,6 +105,17 @@ const Diagnostic = {
             signContainer.innerHTML = '';
         }
 
+        // Intersection scenario diagram
+        const diagScenario = document.getElementById('diag-intersection-scenario');
+        if (diagScenario) {
+            if (q.scenario && Intersections.scenarios[q.scenario]) {
+                Intersections.render(q.scenario, diagScenario);
+            } else {
+                diagScenario.classList.add('hidden');
+                diagScenario.innerHTML = '';
+            }
+        }
+
         // Question text — French only during diagnostic
         document.getElementById('diag-question-fr').textContent = q.questionFr;
         document.getElementById('diag-question-en').textContent = '';

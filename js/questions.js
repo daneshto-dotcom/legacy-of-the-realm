@@ -340,6 +340,7 @@ const QUESTION_BANK = [
         topic: 'priorite',
         difficulty: 3,
         signs: ['priority_right'],
+        scenario: 'four_way_no_signs',
         questionFr: "À une intersection sans signalisation, quelle règle s'applique ?",
         questionEn: "At an intersection with no signs, which rule applies?",
         options: {
@@ -396,6 +397,7 @@ const QUESTION_BANK = [
         topic: 'priorite',
         difficulty: 2,
         signs: ['roundabout', 'yield'],
+        scenario: 'roundabout_yield',
         questionFr: "Dans un rond-point (giratoire), qui a la priorité ?",
         questionEn: "In a roundabout, who has priority?",
         options: {
@@ -806,6 +808,7 @@ const QUESTION_BANK = [
         topic: 'priorite',
         difficulty: 3,
         signs: ['priority_right'],
+        scenario: 'emergency_vehicle',
         questionFr: "Un véhicule d'urgence (pompiers, SAMU) approche avec sirène et gyrophare. Que devez-vous faire ?",
         questionEn: "An emergency vehicle (fire truck, ambulance) approaches with siren and flashing lights. What must you do?",
         options: {
@@ -1047,6 +1050,7 @@ const QUESTION_BANK = [
         topic: 'priorite',
         difficulty: 2,
         signs: ['stop'],
+        scenario: 'four_way_stop',
         questionFr: "Un panneau 'STOP' vous oblige à :",
         questionEn: "A STOP sign requires you to:",
         options: {
@@ -1761,6 +1765,7 @@ const QUESTION_BANK = [
         topic: 'priorite',
         difficulty: 2,
         signs: ['priority_right'],
+        scenario: 't_junction_no_signs',
         questionFr: "À un carrefour sans signalisation, quelle est la règle de priorité ?",
         questionEn: "At an intersection without any signs, what is the priority rule?",
         options: {
@@ -1789,6 +1794,7 @@ const QUESTION_BANK = [
         topic: 'priorite',
         difficulty: 3,
         signs: ['roundabout', 'yield'],
+        scenario: 'roundabout_yield',
         questionFr: "Dans un rond-point (carrefour giratoire), qui a la priorité ?",
         questionEn: "In a roundabout, who has priority?",
         options: {
@@ -1845,6 +1851,7 @@ const QUESTION_BANK = [
         topic: 'priorite',
         difficulty: 2,
         signs: ['priority_road', 'end_priority'],
+        scenario: 'priority_road',
         questionFr: "Sur une route avec un panneau losange jaune, avez-vous la priorité ?",
         questionEn: "On a road with a yellow diamond sign, do you have priority?",
         options: {
@@ -3918,7 +3925,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: 'prio-013', topic: 'priorite', difficulty: 3, signs: ['traffic_light'],
+        id: 'prio-013', topic: 'priorite', difficulty: 3, signs: ['traffic_light'], scenario: 'police_directing',
         questionFr: "Un agent de police dirige la circulation et le feu est vert. Qui devez-vous suivre ?",
         questionEn: "A police officer is directing traffic and the light is green. Who must you follow?",
         options: {
@@ -3941,7 +3948,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: 'prio-014', topic: 'priorite', difficulty: 3, signs: [],
+        id: 'prio-014', topic: 'priorite', difficulty: 3, signs: [], scenario: 'four_way_no_signs',
         questionFr: "À une intersection sans signalisation, quelle règle s'applique ?",
         questionEn: "At an intersection with no signs, which rule applies?",
         options: {
@@ -3987,7 +3994,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: 'prio-016', topic: 'priorite', difficulty: 3, signs: [],
+        id: 'prio-016', topic: 'priorite', difficulty: 3, signs: [], scenario: 'parking_exit',
         questionFr: "Vous sortez d'un parking privé. Qui a la priorité ?",
         questionEn: "You are leaving a private car park. Who has priority?",
         options: {
@@ -4056,7 +4063,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: 'prio-019', topic: 'priorite', difficulty: 2, signs: [],
+        id: 'prio-019', topic: 'priorite', difficulty: 2, signs: [], scenario: 'traffic_light_failure',
         questionFr: "À un carrefour, un feu tricolore est en panne (éteint). Quelle règle s'applique ?",
         questionEn: "At a junction, a traffic light is off (broken). Which rule applies?",
         options: {

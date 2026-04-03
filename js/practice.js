@@ -122,6 +122,17 @@ const Practice = {
             signContainer.innerHTML = '';
         }
 
+        // Intersection scenario diagram
+        const scenarioContainer = document.getElementById('intersection-scenario');
+        if (scenarioContainer) {
+            if (q.scenario && Intersections.scenarios[q.scenario]) {
+                Intersections.render(q.scenario, scenarioContainer);
+            } else {
+                scenarioContainer.classList.add('hidden');
+                scenarioContainer.innerHTML = '';
+            }
+        }
+
         // Question text — show English on retry, French-only on first attempt
         document.getElementById('question-fr').textContent = q.questionFr;
         const enEl = document.getElementById('question-en');
@@ -418,6 +429,29 @@ const Practice = {
             `).join('');
         } else {
             vocabSection.classList.add('hidden');
+        }
+
+        // Reveal intersection passage order
+        const scenarioContainer = document.getElementById('intersection-scenario');
+        if (scenarioContainer && q.scenario && Intersections.scenarios[q.scenario]) {
+            Intersections.showOrder(q.scenario, scenarioContainer);
+        }
+
+        // Knowledge insight from brain-search integration
+        const insightContainer = document.getElementById('knowledge-insight-container');
+        if (insightContainer && typeof Knowledge !== 'undefined') {
+            const insight = Knowledge.getInsight(q.topic, q.id);
+            if (insight) {
+                insightContainer.innerHTML = `
+                    <div class="knowledge-insight">
+                        <span class="knowledge-insight-icon">🧠</span>
+                        <div class="knowledge-insight-text"><strong>Dani's insight:</strong> ${insight.text}</div>
+                    </div>`;
+                insightContainer.classList.remove('hidden');
+            } else {
+                insightContainer.classList.add('hidden');
+                insightContainer.innerHTML = '';
+            }
         }
 
         // Bookmark button

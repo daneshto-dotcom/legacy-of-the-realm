@@ -135,6 +135,11 @@ const Tutor = {
                 context.topicMastery = weak.join(', ');
             }
 
+            // Enrich with knowledge graph insights
+            if (typeof Knowledge !== 'undefined') {
+                Knowledge.enrichTutorContext(context);
+            }
+
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 30000);
 
