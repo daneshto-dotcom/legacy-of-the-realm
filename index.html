@@ -195,8 +195,35 @@
                         </div>
                     </div>
 
-                    <!-- Topic Drill -->
-                    <h3 class="section-title">Topics</h3>
+                    <!-- Custom Practice -->
+                    <h3 class="section-title">Custom Practice</h3>
+                    <div class="custom-practice card" id="custom-practice">
+                        <div class="custom-practice-row">
+                            <span class="custom-label">Timer</span>
+                            <div class="timer-toggle-group">
+                                <button class="timer-chip active" data-timer="0">Off</button>
+                                <button class="timer-chip" data-timer="20">20s</button>
+                                <button class="timer-chip" data-timer="30">30s</button>
+                            </div>
+                        </div>
+                        <div class="custom-practice-row">
+                            <span class="custom-label">Questions</span>
+                            <div class="count-toggle-group">
+                                <button class="count-chip active" data-count="10">10</button>
+                                <button class="count-chip" data-count="20">20</button>
+                                <button class="count-chip" data-count="30">30</button>
+                            </div>
+                        </div>
+                        <div class="custom-practice-row">
+                            <span class="custom-label">Topics</span>
+                            <button class="btn btn-text btn-sm" id="toggle-all-topics">Select All</button>
+                        </div>
+                        <div class="topic-filter-grid" id="topic-filter-grid"></div>
+                        <button class="btn btn-primary btn-lg" id="start-custom-btn">Start Practice</button>
+                    </div>
+
+                    <!-- Topic Drill (quick access) -->
+                    <h3 class="section-title">Quick Topic Drill</h3>
                     <div class="topic-list" id="topic-list"></div>
 
                     <!-- Stats Summary -->

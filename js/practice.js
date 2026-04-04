@@ -28,6 +28,7 @@ const Practice = {
         this.retryQueue = [];
         this.isRetry = false;
         this.sessionStartTime = Date.now();
+        this.timerPerQuestion = options.timerSeconds || 0;
 
         // Select questions based on type
         const count = options.count || 10;
@@ -55,6 +56,11 @@ const Practice = {
                 } else {
                     this.sessionQuestions = getRandomQuestions(count);
                 }
+                break;
+            case 'custom':
+                const topicFilters = options.topicFilters || ETG_TOPICS.map(t => t.id);
+                const pool = QUESTION_BANK.filter(q => topicFilters.includes(q.topic));
+                this.sessionQuestions = [...pool].sort(() => Math.random() - 0.5).slice(0, count);
                 break;
             default:
                 this.sessionQuestions = getAdaptiveQuestions(count);
@@ -89,6 +95,19 @@ const Practice = {
         this.selectedAnswers = [];
         this.answered = false;
         this.renderQuestion();
+
+        // Start per-question timer if configured
+        if (this.timerPerQuestion > 0) {
+            this.startTimer(this.timerPerQuestion, () => {
+                // Timer expired — auto-submit with no answer (marked wrong)
+                if (!this.answered) {
+                    if (this.selectedAnswers.length === 0) {
+                        this.selectedAnswers = ['_timeout'];
+                    }
+                    this.submitAnswer();
+                }
+            });
+        }
     },
 
     renderQuestion() {

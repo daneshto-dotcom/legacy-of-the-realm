@@ -168,6 +168,72 @@ const App = {
         document.getElementById('end-session-btn').addEventListener('click', () => {
             Practice.endSession();
         });
+
+        // Custom practice panel
+        this.setupCustomPractice();
+    },
+
+    setupCustomPractice() {
+        // Timer chips
+        document.querySelectorAll('.timer-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                document.querySelectorAll('.timer-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+            });
+        });
+
+        // Count chips
+        document.querySelectorAll('.count-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                document.querySelectorAll('.count-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+            });
+        });
+
+        // Render topic filter grid
+        const grid = document.getElementById('topic-filter-grid');
+        if (grid) {
+            grid.innerHTML = '';
+            for (const topic of ETG_TOPICS) {
+                const chip = document.createElement('button');
+                chip.className = 'topic-filter-chip selected';
+                chip.dataset.topic = topic.id;
+                chip.innerHTML = `<span class="topic-filter-icon">${topic.icon}</span>${topic.nameEn}`;
+                chip.addEventListener('click', () => chip.classList.toggle('selected'));
+                grid.appendChild(chip);
+            }
+        }
+
+        // Toggle all topics
+        document.getElementById('toggle-all-topics')?.addEventListener('click', () => {
+            const chips = document.querySelectorAll('.topic-filter-chip');
+            const allSelected = Array.from(chips).every(c => c.classList.contains('selected'));
+            chips.forEach(c => {
+                if (allSelected) c.classList.remove('selected');
+                else c.classList.add('selected');
+            });
+            document.getElementById('toggle-all-topics').textContent = allSelected ? 'Select All' : 'Deselect All';
+        });
+
+        // Start custom practice
+        document.getElementById('start-custom-btn')?.addEventListener('click', () => {
+            const timerSecs = parseInt(document.querySelector('.timer-chip.active')?.dataset.timer || '0');
+            const count = parseInt(document.querySelector('.count-chip.active')?.dataset.count || '10');
+            const selectedTopics = Array.from(document.querySelectorAll('.topic-filter-chip.selected'))
+                .map(c => c.dataset.topic);
+
+            if (selectedTopics.length === 0) {
+                showToast('Select at least one topic');
+                return;
+            }
+
+            Practice.startSession('custom', {
+                count: count,
+                topicFilters: selectedTopics,
+                timerSeconds: timerSecs
+            });
+            this.navigate('practice');
+        });
     },
 
     navigate(viewName) {
