@@ -2596,3 +2596,113 @@
     font-weight: 600;
 }
 
+/* ============================================
+   Exam Topic Heatmap & Trend Indicators
+   ============================================ */
+
+/* Trend arrows in mastery list */
+.exam-trend-arrow {
+    display: inline-block;
+    font-size: 0.6rem;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+.exam-trend-arrow.trend-up { color: var(--success, #4CAF50); }
+.exam-trend-arrow.trend-down { color: var(--error, #E57373); }
+.exam-trend-arrow.trend-stable { color: var(--text-secondary); font-size: 0.5rem; }
+
+/* Heatmap table */
+.exam-topic-heatmap-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 12px 0;
+}
+.exam-topic-heatmap {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.7rem;
+    min-width: 360px;
+}
+.exam-topic-heatmap th,
+.exam-topic-heatmap td {
+    padding: 6px 4px;
+    text-align: center;
+    border-bottom: 1px solid var(--border, #e0e0e0);
+}
+.heatmap-topic-th {
+    text-align: left !important;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+.heatmap-date-th {
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+.heatmap-topic-cell {
+    text-align: left !important;
+    font-weight: 500;
+    white-space: nowrap;
+    color: var(--text-primary);
+}
+.heatmap-cell {
+    font-weight: 600;
+    border-radius: 4px;
+    min-width: 36px;
+}
+.heatmap-good { background: var(--success-light, #E8F5E9); color: var(--success-dark, #2E7D32); }
+.heatmap-mid { background: var(--warning-light, #FFF8E1); color: var(--warning-dark, #F57F17); }
+.heatmap-low { background: var(--error-light, #FFEBEE); color: var(--error-dark, #C62828); }
+.heatmap-none { color: var(--text-secondary); opacity: 0.5; }
+
+/* Exam recommendations */
+.exam-recommendations {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+.exam-rec-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: var(--radius-md, 12px);
+    background: var(--card-bg, #fff);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.exam-rec-decline {
+    border-left: 3px solid var(--error, #E57373);
+}
+.exam-rec-improve {
+    border-left: 3px solid var(--success, #4CAF50);
+}
+.exam-rec-icon {
+    font-size: 0.9rem;
+    width: 20px;
+    text-align: center;
+}
+.exam-rec-decline .exam-rec-icon { color: var(--error, #E57373); }
+.exam-rec-improve .exam-rec-icon { color: var(--success, #4CAF50); }
+.exam-rec-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.exam-rec-text strong {
+    font-size: 0.8rem;
+    color: var(--text-primary);
+}
+.exam-rec-text span {
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+}
+.exam-rec-action {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--primary, #2E5984);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+

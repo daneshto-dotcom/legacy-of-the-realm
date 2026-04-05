@@ -13,10 +13,13 @@ const Progress = {
         document.getElementById('progress-accuracy').textContent = `${stats.accuracy}%`;
         document.getElementById('progress-exams').textContent = exams.length;
 
-        // Mastery list
+        // Compute exam topic trends (shared between mastery + exam sections)
+        this._examTopicTrends = this._computeExamTopicTrends(exams);
+
+        // Mastery list (with exam trend indicators)
         this.renderMasteryList(mastery);
 
-        // Exam history
+        // Exam history (with topic heatmap + recommendations)
         this.renderExamHistory(exams);
 
         // Achievements
@@ -61,6 +64,7 @@ const Progress = {
                 <div class="mastery-score">
                     <div class="mastery-accuracy" style="color: ${color};">${topic.accuracy}%</div>
                     <span class="mastery-level-badge ${level.id}">${level.label}</span>
+                    ${this._getTrendArrow(topic.id || topic.topic)}
                 </div>
             `;
 
@@ -84,7 +88,19 @@ const Progress = {
             return;
         }
 
-        list.innerHTML = this.renderExamTrend(exams);
+        list.innerHTML = this.renderExamTrend(exams) + this.renderExamTopicHeatmap();
+
+        // Wire drill links on recommendation cards
+        list.querySelectorAll('.exam-rec-decline[data-topic]').forEach(card => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', () => {
+                const topicId = card.dataset.topic;
+                const count = getQuestionsByTopic(topicId).length;
+                Practice.startSession('drill', { topicFilter: topicId, count: Math.min(count, 15) });
+                App.navigate('practice');
+            });
+        });
+
         [...exams].reverse().forEach((exam) => {
             const passed = exam.passed;
             const date = new Date(exam.timestamp);
@@ -326,5 +342,164 @@ const Progress = {
                 ${bars}
             </div>
         </div>`;
+    },
+
+    // === EXAM TOPIC ANALYTICS ===
+
+    // Compute per-topic accuracy for each exam (shared state)
+    _computeExamTopicTrends(exams) {
+        // Filter exams that have per-question results (guard against old format)
+        const valid = exams.filter(e => Array.isArray(e.results) && e.results.length > 0);
+        if (valid.length < 2) return null;
+
+        const recent = valid.slice(-5);
+        const topicData = {}; // topicId -> [{correct, total, date}]
+
+        for (const exam of recent) {
+            const date = new Date(exam.timestamp);
+            const dateLabel = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            const perTopic = {};
+            for (const r of exam.results) {
+                if (!r.topic) continue;
+                if (!perTopic[r.topic]) perTopic[r.topic] = { correct: 0, total: 0 };
+                perTopic[r.topic].total++;
+                if (r.correct) perTopic[r.topic].correct++;
+            }
+            for (const topicId of ETG_TOPICS.map(t => t.id)) {
+                if (!topicData[topicId]) topicData[topicId] = [];
+                const d = perTopic[topicId];
+                topicData[topicId].push({
+                    correct: d ? d.correct : 0,
+                    total: d ? d.total : 0,
+                    date: dateLabel
+                });
+            }
+        }
+
+        return { topicData, examCount: recent.length, dates: recent.map(e => new Date(e.timestamp).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })) };
+    },
+
+    // Trend arrow for mastery list
+    _getTrendArrow(topicId) {
+        if (!this._examTopicTrends) return '';
+        const data = this._examTopicTrends.topicData[topicId];
+        if (!data || data.length < 2) return '';
+
+        // Compare latest exam to average of prior exams
+        const latest = data[data.length - 1];
+        const prior = data.slice(0, -1);
+        if (latest.total === 0) return '';
+
+        const latestAcc = latest.total > 0 ? latest.correct / latest.total : 0;
+        let priorTotal = 0, priorCorrect = 0;
+        for (const p of prior) { priorTotal += p.total; priorCorrect += p.correct; }
+        if (priorTotal === 0) return '';
+
+        const priorAcc = priorCorrect / priorTotal;
+        const diff = latestAcc - priorAcc;
+
+        if (diff > 0.1) return '<span class="exam-trend-arrow trend-up" title="Improving in exams">&#x25B2;</span>';
+        if (diff < -0.1) return '<span class="exam-trend-arrow trend-down" title="Declining in exams">&#x25BC;</span>';
+        return '<span class="exam-trend-arrow trend-stable" title="Stable in exams">&#x25B6;</span>';
+    },
+
+    // Render per-topic heatmap table after exam trend chart
+    renderExamTopicHeatmap() {
+        if (!this._examTopicTrends) {
+            return '<p class="empty-state">Take 2+ exams with the current app to see per-topic trends.</p>';
+        }
+
+        const { topicData, dates } = this._examTopicTrends;
+
+        // Header row
+        let html = '<div class="exam-topic-heatmap-wrapper"><table class="exam-topic-heatmap">';
+        html += '<thead><tr><th class="heatmap-topic-th">Topic</th>';
+        for (const d of dates) {
+            html += `<th class="heatmap-date-th">${d}</th>`;
+        }
+        html += '</tr></thead><tbody>';
+
+        // One row per topic
+        for (const topic of ETG_TOPICS) {
+            const data = topicData[topic.id] || [];
+            html += `<tr><td class="heatmap-topic-cell">${topic.icon} ${topic.nameEn}</td>`;
+            for (const d of data) {
+                if (d.total === 0) {
+                    html += '<td class="heatmap-cell heatmap-none">—</td>';
+                } else {
+                    const acc = Math.round((d.correct / d.total) * 100);
+                    const cls = acc >= 80 ? 'heatmap-good' : acc >= 50 ? 'heatmap-mid' : 'heatmap-low';
+                    html += `<td class="heatmap-cell ${cls}" title="${acc}%">${d.correct}/${d.total}</td>`;
+                }
+            }
+            html += '</tr>';
+        }
+
+        html += '</tbody></table></div>';
+
+        // Recommendations
+        html += this._renderExamRecommendations();
+
+        return html;
+    },
+
+    // Actionable recommendations based on exam topic trends
+    _renderExamRecommendations() {
+        if (!this._examTopicTrends) return '';
+
+        const { topicData } = this._examTopicTrends;
+        const improving = [];
+        const declining = [];
+
+        for (const topic of ETG_TOPICS) {
+            const data = topicData[topic.id];
+            if (!data || data.length < 2) continue;
+
+            const latest = data[data.length - 1];
+            const prior = data.slice(0, -1);
+            if (latest.total === 0) continue;
+
+            const latestAcc = Math.round((latest.correct / latest.total) * 100);
+            let priorTotal = 0, priorCorrect = 0;
+            for (const p of prior) { priorTotal += p.total; priorCorrect += p.correct; }
+            if (priorTotal === 0) continue;
+            const priorAcc = Math.round((priorCorrect / priorTotal) * 100);
+
+            const diff = latestAcc - priorAcc;
+            if (diff >= 15) improving.push({ topic, latestAcc, priorAcc, diff });
+            else if (diff <= -15) declining.push({ topic, latestAcc, priorAcc, diff: Math.abs(diff) });
+        }
+
+        if (improving.length === 0 && declining.length === 0) return '';
+
+        let html = '<div class="exam-recommendations">';
+
+        // Show declining first (actionable)
+        declining.sort((a, b) => b.diff - a.diff);
+        for (const d of declining.slice(0, 2)) {
+            html += `<div class="exam-rec-card exam-rec-decline" data-topic="${d.topic.id}">
+                <span class="exam-rec-icon">&#x25BC;</span>
+                <div class="exam-rec-text">
+                    <strong>Focus on ${d.topic.nameEn}</strong>
+                    <span>Dropped from ${d.priorAcc}% to ${d.latestAcc}%</span>
+                </div>
+                <span class="exam-rec-action">Drill</span>
+            </div>`;
+        }
+
+        // Then improving (encouragement)
+        improving.sort((a, b) => b.diff - a.diff);
+        for (const d of improving.slice(0, 1)) {
+            html += `<div class="exam-rec-card exam-rec-improve">
+                <span class="exam-rec-icon">&#x25B2;</span>
+                <div class="exam-rec-text">
+                    <strong>${d.topic.nameEn} improving!</strong>
+                    <span>Up from ${d.priorAcc}% to ${d.latestAcc}%</span>
+                </div>
+            </div>`;
+        }
+
+        html += '</div>';
+        return html;
     }
 };
