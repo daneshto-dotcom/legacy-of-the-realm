@@ -12,6 +12,10 @@ const Exam = {
     startTime: null,
     active: false,
     _answered: false, // guard against double submission
+    _overallTimer: null,
+    _overallRemaining: 0, // seconds left on overall timer
+    _questionStartTime: null, // tracks per-question time
+    _timeExpired: false, // true if overall timer ran out
 
     start(mode = 'exam') {
         this.mode = mode;
@@ -21,6 +25,8 @@ const Exam = {
         this.results = [];
         this.startTime = Date.now();
         this.active = true;
+        this._overallRemaining = EXAM_TOTAL_TIME;
+        this._timeExpired = false;
 
         // Switch views
         document.getElementById('exam-intro').classList.add('hidden');
@@ -29,6 +35,7 @@ const Exam = {
 
         // Setup exam UI inside exam-active
         this.setupExamUI();
+        this.startOverallTimer();
         this.loadExamQuestion();
     },
 
@@ -38,6 +45,7 @@ const Exam = {
             <div class="practice-header">
                 <div class="session-progress">
                     <span id="exam-count">1 / 40</span>
+                    <span id="exam-overall-timer" class="overall-timer">30:00</span>
                     <span id="exam-score-live"></span>
                 </div>
                 <button class="btn btn-text btn-sm" id="quit-exam-btn">Quit</button>
@@ -63,6 +71,7 @@ const Exam = {
             if (confirm('Are you sure you want to quit the exam?')) {
                 this.active = false;
                 this.stopExamTimer();
+                this.stopOverallTimer();
                 App.navigate('home');
                 this.resetExamView();
             }
@@ -167,12 +176,15 @@ const Exam = {
         // Confirm button hidden
         document.getElementById('exam-confirm-btn').classList.add('hidden');
 
+        // Track per-question start time
+        this._questionStartTime = Date.now();
+
         // TTS in exam mode
         if (settings.ttsEnabled) {
             TTS.speakQuestion(q);
         }
 
-        // Start 20-second timer
+        // Start per-question timer
         this.startExamTimer(() => {
             // Timer expired — guard against double submission
             if (this._answered) return;
@@ -206,12 +218,14 @@ const Exam = {
             }
         });
 
-        // Record result
+        // Record result with per-question time
+        const timeTaken = this._questionStartTime ? Math.round((Date.now() - this._questionStartTime) / 1000) : 0;
         this.results.push({
             questionId: question.id,
             topic: question.topic,
             selected,
             correct,
+            timeTaken,
         });
 
         // Record attempt
@@ -280,10 +294,72 @@ const Exam = {
         }
     },
 
+    startOverallTimer() {
+        this.stopOverallTimer();
+        const timerEl = document.getElementById('exam-overall-timer');
+        if (!timerEl) return;
+
+        this._overallTimer = setInterval(() => {
+            this._overallRemaining--;
+            const mins = Math.floor(this._overallRemaining / 60);
+            const secs = this._overallRemaining % 60;
+            timerEl.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+
+            // Color warnings
+            timerEl.classList.remove('timer-warning', 'timer-danger');
+            if (this._overallRemaining <= 120) timerEl.classList.add('timer-danger');
+            else if (this._overallRemaining <= 300) timerEl.classList.add('timer-warning');
+
+            if (this._overallRemaining <= 0) {
+                this.onOverallTimeUp();
+            }
+        }, 1000);
+    },
+
+    stopOverallTimer() {
+        if (this._overallTimer) {
+            clearInterval(this._overallTimer);
+            this._overallTimer = null;
+        }
+    },
+
+    onOverallTimeUp() {
+        this.stopOverallTimer();
+        this.stopExamTimer();
+        this._timeExpired = true;
+
+        // Auto-submit current question if unanswered
+        if (!this._answered && this.currentIndex < this.questions.length) {
+            this._answered = true;
+            const q = this.questions[this.currentIndex];
+            const selected = [];
+            document.querySelectorAll('#exam-options .answer-tile.selected').forEach(t => selected.push(t.dataset.letter));
+            const timeTaken = this._questionStartTime ? Math.round((Date.now() - this._questionStartTime) / 1000) : 0;
+            const correct = selected.sort().join(',') === [...q.correctAnswers].sort().join(',');
+            if (correct) this.correctCount++;
+            this.results.push({ questionId: q.id, topic: q.topic, selected, correct, timeTaken });
+            Storage.saveAttempt({ questionId: q.id, topic: q.topic, selectedAnswers: selected, isCorrect: correct, confidence: null, sessionType: 'exam' });
+            if (!correct) Storage.scheduleForReview(q.id, false, null);
+            this.currentIndex++;
+        }
+
+        // Mark all remaining questions as unanswered/incorrect
+        while (this.currentIndex < this.questions.length) {
+            const q = this.questions[this.currentIndex];
+            this.results.push({ questionId: q.id, topic: q.topic, selected: [], correct: false, timeTaken: 0 });
+            Storage.saveAttempt({ questionId: q.id, topic: q.topic, selectedAnswers: [], isCorrect: false, confidence: null, sessionType: 'exam' });
+            Storage.scheduleForReview(q.id, false, null);
+            this.currentIndex++;
+        }
+
+        this.showResults();
+    },
+
     showResults() {
         this.active = false;
         TTS.stop();
         this.stopExamTimer();
+        this.stopOverallTimer();
 
         const duration = Math.round((Date.now() - this.startTime) / 1000);
         const passed = this.correctCount >= EXAM_PASS_THRESHOLD;
@@ -294,6 +370,7 @@ const Exam = {
             totalQuestions: this.questions.length,
             passed,
             durationSeconds: duration,
+            timeExpired: this._timeExpired,
             results: this.results
         });
 
@@ -352,6 +429,34 @@ const Exam = {
             `;
             topicsDiv.appendChild(item);
         }
+
+        // Time analytics
+        const answeredResults = this.results.filter(r => r.timeTaken > 0);
+        const avgTime = answeredResults.length > 0
+            ? Math.round(answeredResults.reduce((sum, r) => sum + r.timeTaken, 0) / answeredResults.length)
+            : 0;
+        const durationMins = Math.floor(duration / 60);
+        const durationSecs = duration % 60;
+        const timeAnalytics = document.createElement('div');
+        timeAnalytics.className = 'time-analytics';
+        timeAnalytics.innerHTML = `
+            <h3>⏱ Temps</h3>
+            <div class="time-stats">
+                <div class="time-stat">
+                    <span class="time-stat-value">${durationMins}:${durationSecs.toString().padStart(2, '0')}</span>
+                    <span class="time-stat-label">Durée totale</span>
+                </div>
+                <div class="time-stat">
+                    <span class="time-stat-value">${avgTime}s</span>
+                    <span class="time-stat-label">Moyenne / question</span>
+                </div>
+                <div class="time-stat">
+                    <span class="time-stat-value ${this._timeExpired ? 'timer-danger' : ''}">${this._timeExpired ? 'Expiré' : `${Math.floor(this._overallRemaining / 60)}:${(this._overallRemaining % 60).toString().padStart(2, '0')}`}</span>
+                    <span class="time-stat-label">${this._timeExpired ? 'Temps écoulé' : 'Temps restant'}</span>
+                </div>
+            </div>
+        `;
+        topicsDiv.after(timeAnalytics);
 
         // Wire buttons
         document.getElementById('review-exam-mistakes-btn').onclick = () => {

@@ -37,5 +37,6 @@ function getMasteryColor(accuracy, attempts) {
 
 const EXAM_PASS_THRESHOLD = 35;
 const EXAM_TOTAL_QUESTIONS = 40;
-const EXAM_TIMER_SECONDS = 20;
+const EXAM_TIMER_SECONDS = 25;
+const EXAM_TOTAL_TIME = 1800; // 30 minutes in seconds
 const NATIONAL_PASS_RATE = 50.7;
