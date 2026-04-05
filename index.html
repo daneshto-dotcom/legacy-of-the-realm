@@ -494,6 +494,22 @@
                     <div class="settings-group">
                         <h3 class="section-title">Study</h3>
                         <div class="setting-item">
+                            <label>Timed practice mode</label>
+                            <label class="toggle">
+                                <input type="checkbox" id="setting-practice-timer">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item" id="practice-timer-speed-setting">
+                            <label>Timer per question</label>
+                            <select id="setting-practice-timer-speed" class="setting-select">
+                                <option value="15">15 seconds</option>
+                                <option value="20" selected>20 seconds</option>
+                                <option value="25">25 seconds</option>
+                                <option value="30">30 seconds</option>
+                            </select>
+                        </div>
+                        <div class="setting-item">
                             <label>Target exam date</label>
                             <input type="date" id="setting-exam-date" class="setting-input">
                         </div>

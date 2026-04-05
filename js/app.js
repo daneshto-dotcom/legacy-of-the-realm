@@ -592,6 +592,23 @@ const App = {
             Storage.saveSetting('ttsSpeed', parseFloat(ttsSpeed.value));
         });
 
+        // Practice timer
+        const practiceTimer = document.getElementById('setting-practice-timer');
+        const practiceTimerSpeed = document.getElementById('setting-practice-timer-speed');
+        const practiceTimerSpeedSetting = document.getElementById('practice-timer-speed-setting');
+        practiceTimer.checked = settings.practiceTimerEnabled || false;
+        practiceTimerSpeed.value = (settings.practiceTimerSeconds || 20).toString();
+        practiceTimerSpeedSetting.style.display = practiceTimer.checked ? '' : 'none';
+        practiceTimer.addEventListener('change', () => {
+            Storage.saveSetting('practiceTimerEnabled', practiceTimer.checked);
+            practiceTimerSpeedSetting.style.display = practiceTimer.checked ? '' : 'none';
+            showToast(practiceTimer.checked ? 'Practice timer enabled' : 'Practice timer disabled');
+        });
+        practiceTimerSpeed.addEventListener('change', () => {
+            Storage.saveSetting('practiceTimerSeconds', parseInt(practiceTimerSpeed.value));
+            showToast(`Timer set to ${practiceTimerSpeed.value}s per question`);
+        });
+
         // Exam date
         const examDate = document.getElementById('setting-exam-date');
         if (settings.examDate) examDate.value = settings.examDate;
@@ -689,6 +706,9 @@ const App = {
         document.getElementById('setting-brain-search-url').value = settings.brainSearchUrl || '';
         document.getElementById('setting-theme').value = settings.theme || 'auto';
         document.getElementById('setting-reminder-time').value = settings.reminderTime || '19:00';
+        document.getElementById('setting-practice-timer').checked = settings.practiceTimerEnabled || false;
+        document.getElementById('setting-practice-timer-speed').value = (settings.practiceTimerSeconds || 20).toString();
+        document.getElementById('practice-timer-speed-setting').style.display = settings.practiceTimerEnabled ? '' : 'none';
         Notifications.updateUI();
     }
 };

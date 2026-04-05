@@ -28,7 +28,13 @@ const Practice = {
         this.retryQueue = [];
         this.isRetry = false;
         this.sessionStartTime = Date.now();
-        this.timerPerQuestion = options.timerSeconds || 0;
+        // Timer: custom practice uses its own setting; others use global practice timer if enabled
+        if (options.timerSeconds !== undefined) {
+            this.timerPerQuestion = options.timerSeconds;
+        } else {
+            const settings = Storage.getSettings();
+            this.timerPerQuestion = settings.practiceTimerEnabled ? (settings.practiceTimerSeconds || 20) : 0;
+        }
 
         // Select questions based on type
         const count = options.count || 10;
@@ -37,7 +43,9 @@ const Practice = {
                 this.sessionQuestions = getAdaptiveQuestions(10);
                 break;
             case 'weakspots':
-                this.sessionQuestions = getWeakTopicQuestions(10, Storage.getTopicMasteryArray());
+                this.sessionQuestions = typeof getWeakSpotQuestions === 'function'
+                    ? getWeakSpotQuestions(10)
+                    : getWeakTopicQuestions(10, Storage.getTopicMasteryArray());
                 break;
             case 'review':
                 const dueReviews = Storage.getDueReviews();
@@ -553,10 +561,25 @@ const Practice = {
             verdict.innerHTML = `Session complete! ${this.sessionCorrect}/${total} (${accuracy}%)`;
         }
 
-        // Enhanced summary with time and topic breakdown
+        // Improvement indicator: compare to 7-day rolling average
+        const allAttempts = Storage.getAttempts();
+        const weekAgo = Date.now() - 7 * 86400000;
+        const weekAttempts = allAttempts.filter(a => a.timestamp && a.timestamp > weekAgo);
+        const weekAccuracy = weekAttempts.length > 0
+            ? Math.round(weekAttempts.filter(a => a.isCorrect).length / weekAttempts.length * 100) : null;
+        const delta = weekAccuracy !== null ? accuracy - weekAccuracy : null;
+        const deltaLabel = delta !== null
+            ? (delta > 0 ? `<span class="improvement-up">+${delta}%</span>` :
+               delta < 0 ? `<span class="improvement-down">${delta}%</span>` :
+               '<span class="improvement-same">=</span>') : '';
+
+        // Enhanced summary with time, improvement, and topic breakdown
         let summaryHtml = `<div class="session-summary">`;
         summaryHtml += `<div class="summary-stat"><span class="summary-label">Time</span><span class="summary-value">${timeStr}</span></div>`;
         summaryHtml += `<div class="summary-stat"><span class="summary-label">Speed</span><span class="summary-value">${total > 0 ? Math.round(durationSecs / total) : 0}s/question</span></div>`;
+        if (weekAccuracy !== null) {
+            summaryHtml += `<div class="summary-stat"><span class="summary-label">vs 7-day avg</span><span class="summary-value">${deltaLabel} (${weekAccuracy}%)</span></div>`;
+        }
         summaryHtml += `</div>`;
         summaryHtml += `<strong>Topic Breakdown:</strong><br>`;
 

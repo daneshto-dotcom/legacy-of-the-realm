@@ -14213,7 +14213,7 @@ function getExamQuestions() {
 
 /* ============================================
    Adaptive Question Selection Algorithm
-   Slot allocation: reviews > weak > unseen > random
+   Smart weighting: reviews > weak > recently-wrong > unseen > random
    ============================================ */
 function getAdaptiveQuestions(count = 10) {
     const selected = [];
@@ -14222,59 +14222,127 @@ function getAdaptiveQuestions(count = 10) {
     const mastery = Storage.getTopicMasteryArray();
     const attemptedIds = new Set(attempts.map(a => a.questionId));
 
-    // Slot allocation: 30% reviews, 30% weak topics, 20% unseen, 20% random
-    const reviewSlots = Math.round(count * 0.3);
-    const weakSlots = Math.round(count * 0.3);
-    const unseenSlots = Math.round(count * 0.2);
-    const randomSlots = count - reviewSlots - weakSlots - unseenSlots;
+    // Build per-question accuracy map from recent attempts
+    const questionAccuracy = {};
+    for (const a of attempts) {
+        if (!questionAccuracy[a.questionId]) questionAccuracy[a.questionId] = { correct: 0, total: 0 };
+        questionAccuracy[a.questionId].total++;
+        if (a.isCorrect) questionAccuracy[a.questionId].correct++;
+    }
+
+    // Slot allocation: 25% reviews, 30% weak topics, 15% recently-wrong, 15% unseen, 15% random
+    const reviewSlots = Math.round(count * 0.25);
+    const weakSlots = Math.round(count * 0.30);
+    const recentWrongSlots = Math.round(count * 0.15);
+    const unseenSlots = Math.round(count * 0.15);
+
+    function fillBucket(pool, maxSlots) {
+        const shuffled = [...pool].sort(() => Math.random() - 0.5);
+        let added = 0;
+        for (const q of shuffled) {
+            if (added >= maxSlots) break;
+            if (!usedIds.has(q.id)) {
+                selected.push(q);
+                usedIds.add(q.id);
+                added++;
+            }
+        }
+        return added;
+    }
 
     // 1. Due reviews first (highest priority)
     const dueReviews = Storage.getDueReviews();
-    const reviewQuestions = dueReviews
-        .map(r => getQuestionById(r.questionId))
-        .filter(Boolean)
-        .slice(0, reviewSlots);
-    for (const q of reviewQuestions) {
-        selected.push(q);
-        usedIds.add(q.id);
-    }
+    const reviewPool = dueReviews.map(r => getQuestionById(r.questionId)).filter(Boolean);
+    const reviewFilled = fillBucket(reviewPool, reviewSlots);
 
-    // 2. Weak topic questions (topics with lowest accuracy)
+    // 2. Weak topic questions (topics with lowest accuracy, at least some attempts)
     const sortedTopics = [...mastery].sort((a, b) => {
-        // Prioritize topics with some attempts but low accuracy
-        const aScore = a.totalAttempts > 0 ? a.accuracy : 50; // unseen gets neutral score
+        const aScore = a.totalAttempts > 0 ? a.accuracy : 50;
         const bScore = b.totalAttempts > 0 ? b.accuracy : 50;
         return aScore - bScore;
     });
     const weakTopicIds = sortedTopics.slice(0, 4).map(t => t.id || t.topic);
-    const weakPool = QUESTION_BANK
-        .filter(q => weakTopicIds.includes(q.topic) && !usedIds.has(q.id))
-        .sort(() => Math.random() - 0.5);
-    for (const q of weakPool.slice(0, weakSlots)) {
-        selected.push(q);
-        usedIds.add(q.id);
-    }
+    const weakPool = QUESTION_BANK.filter(q => weakTopicIds.includes(q.topic));
+    const weakFilled = fillBucket(weakPool, weakSlots);
 
-    // 3. Unseen questions (never attempted)
-    const unseenPool = QUESTION_BANK
-        .filter(q => !attemptedIds.has(q.id) && !usedIds.has(q.id))
-        .sort(() => Math.random() - 0.5);
-    for (const q of unseenPool.slice(0, unseenSlots)) {
-        selected.push(q);
-        usedIds.add(q.id);
+    // 3. Recently-wrong questions (answered wrong in last 100 attempts, not yet in SR review)
+    const recentAttempts = attempts.slice(-100);
+    const recentWrongIds = new Set();
+    for (let i = recentAttempts.length - 1; i >= 0; i--) {
+        if (!recentAttempts[i].isCorrect) recentWrongIds.add(recentAttempts[i].questionId);
     }
+    const recentWrongPool = [...recentWrongIds]
+        .map(id => getQuestionById(id))
+        .filter(Boolean);
+    const recentWrongFilled = fillBucket(recentWrongPool, recentWrongSlots);
 
-    // 4. Random fill for remaining slots
-    const remainingPool = QUESTION_BANK
-        .filter(q => !usedIds.has(q.id))
-        .sort(() => Math.random() - 0.5);
+    // 4. Unseen questions (never attempted — coverage gaps)
+    const unseenPool = QUESTION_BANK.filter(q => !attemptedIds.has(q.id));
+    const unseenFilled = fillBucket(unseenPool, unseenSlots);
+
+    // 5. Random fill for all remaining slots (including unfilled from other buckets)
     const needed = count - selected.length;
-    for (const q of remainingPool.slice(0, needed)) {
-        selected.push(q);
-        usedIds.add(q.id);
+    const remainingPool = QUESTION_BANK.filter(q => !usedIds.has(q.id));
+    fillBucket(remainingPool, needed);
+
+    // Final fill if still short (shouldn't happen with 540 questions)
+    while (selected.length < count) {
+        const remaining = QUESTION_BANK.filter(q => !usedIds.has(q.id));
+        if (remaining.length === 0) break;
+        const pick = remaining[Math.floor(Math.random() * remaining.length)];
+        selected.push(pick);
+        usedIds.add(pick.id);
     }
 
-    // Final fill if still short
+    return selected.sort(() => Math.random() - 0.5);
+}
+
+/* ============================================
+   Smart Weak Spots Selection
+   Targets weakest 3 topics, prefers low-accuracy questions
+   ============================================ */
+function getWeakSpotQuestions(count = 10) {
+    const mastery = Storage.getTopicMasteryArray();
+    const attempts = Storage.getAttempts();
+    const usedIds = new Set();
+    const selected = [];
+
+    // Sort by weakness: lowest accuracy first (only topics with attempts)
+    const practiced = mastery.filter(t => t.totalAttempts > 0);
+    if (practiced.length === 0) return getRandomQuestions(count);
+
+    practiced.sort((a, b) => a.accuracy - b.accuracy);
+    const weakest3 = practiced.slice(0, 3);
+
+    // Build per-question accuracy
+    const questionAcc = {};
+    for (const a of attempts) {
+        if (!questionAcc[a.questionId]) questionAcc[a.questionId] = { correct: 0, total: 0 };
+        questionAcc[a.questionId].total++;
+        if (a.isCorrect) questionAcc[a.questionId].correct++;
+    }
+
+    // Get questions from weakest topics, sorted by individual question difficulty
+    const pool = QUESTION_BANK
+        .filter(q => weakest3.some(t => (t.id || t.topic) === q.topic))
+        .map(q => {
+            const acc = questionAcc[q.id];
+            // Score: unanswered=0.5, wrong=low, right=high (we want low scores first)
+            const score = acc ? acc.correct / acc.total : 0.5;
+            return { q, score };
+        })
+        .sort((a, b) => a.score - b.score); // Hardest first
+
+    // Take hardest questions, with some shuffle within difficulty tiers
+    for (const { q } of pool) {
+        if (selected.length >= count) break;
+        if (!usedIds.has(q.id)) {
+            selected.push(q);
+            usedIds.add(q.id);
+        }
+    }
+
+    // Fill remaining with random if needed
     while (selected.length < count) {
         const remaining = QUESTION_BANK.filter(q => !usedIds.has(q.id));
         if (remaining.length === 0) break;

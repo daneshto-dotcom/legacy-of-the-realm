@@ -2582,3 +2582,17 @@
     100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
 }
 
+/* Improvement indicators in session summary */
+.improvement-up {
+    color: var(--success, #4CAF50);
+    font-weight: 700;
+}
+.improvement-down {
+    color: var(--error, #E57373);
+    font-weight: 700;
+}
+.improvement-same {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+

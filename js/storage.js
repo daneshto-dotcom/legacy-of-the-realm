@@ -325,7 +325,9 @@ const Storage = {
             ttsEnabled: true,
             ttsSpeed: 1.0,
             examDate: null,
-            confidenceEnabled: true
+            confidenceEnabled: true,
+            practiceTimerEnabled: false,
+            practiceTimerSeconds: 20
         }));
     },
 
