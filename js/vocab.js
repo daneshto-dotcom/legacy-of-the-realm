@@ -12,6 +12,14 @@ const Vocab = {
     signChoices: [],
     signCorrect: null,
     signAnswered: false,
+    activeTopic: null, // null = all topics
+
+    // === SRS CONSTANTS ===
+    SRS_INITIAL_INTERVAL: 4,       // hours for "learning"
+    SRS_KNOWN_INTERVAL: 24,        // hours for first "known"
+    SRS_INITIAL_EASE: 2.5,
+    SRS_MIN_EASE: 1.3,
+    SRS_MAX_INTERVAL_DAYS: 30,
 
     // === INIT ===
     init() {
@@ -52,12 +60,44 @@ const Vocab = {
     markWord(wordFr, status) {
         const memory = this.getMemory();
         const key = wordFr.toLowerCase();
+        const prev = memory[key] || {};
+        const ease = prev.easeFactor || this.SRS_INITIAL_EASE;
+
+        let newInterval, newEase;
+        if (status === 'learning') {
+            newInterval = this.SRS_INITIAL_INTERVAL;
+            newEase = Math.max(this.SRS_MIN_EASE, ease - 0.2);
+        } else {
+            // "known" — increase interval
+            const prevInterval = prev.interval || this.SRS_KNOWN_INTERVAL;
+            newInterval = Math.min(prevInterval * ease, this.SRS_MAX_INTERVAL_DAYS * 24);
+            newEase = Math.min(ease + 0.1, 3.0);
+        }
+
         memory[key] = {
-            status, // 'known' or 'learning'
+            status,
             lastSeen: Date.now(),
-            timesReviewed: (memory[key]?.timesReviewed || 0) + 1
+            timesReviewed: (prev.timesReviewed || 0) + 1,
+            interval: newInterval,
+            easeFactor: newEase,
+            nextReview: Date.now() + (newInterval * 3600000)
         };
         this.saveMemory(memory);
+    },
+
+    isDue(memEntry) {
+        if (!memEntry || !memEntry.nextReview) return true;
+        return Date.now() >= memEntry.nextReview;
+    },
+
+    getReviewLabel(memEntry) {
+        if (!memEntry || !memEntry.nextReview) return null;
+        const diff = memEntry.nextReview - Date.now();
+        if (diff <= 0) return 'Due';
+        const hours = Math.floor(diff / 3600000);
+        if (hours < 1) return `${Math.ceil(diff / 60000)}m`;
+        if (hours < 24) return `${hours}h`;
+        return `${Math.floor(hours / 24)}d`;
     },
 
     // === SIGN PROGRESS ===
@@ -112,30 +152,65 @@ const Vocab = {
         }
     },
 
+    // === TOPIC FILTER ===
+    renderTopicFilter() {
+        const allChip = `<button class="topic-chip ${this.activeTopic === null ? 'active' : ''}" data-topic="all">All</button>`;
+        const topicChips = ETG_TOPICS.map(t =>
+            `<button class="topic-chip ${this.activeTopic === t.id ? 'active' : ''}" data-topic="${t.id}">${t.icon} ${t.nameFr.split(' ').slice(0, 2).join(' ')}</button>`
+        ).join('');
+        return `<div class="topic-filter-bar">${allChip}${topicChips}</div>`;
+    },
+
+    wireTopicFilter() {
+        document.querySelectorAll('.topic-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const topic = chip.dataset.topic;
+                this.activeTopic = topic === 'all' ? null : topic;
+                this.renderVocabMode();
+            });
+        });
+    },
+
     // === VOCABULARY MODE ===
     renderVocabMode() {
         const container = document.getElementById('vocab-content');
-        const allVocab = this.getAllVocab();
+        let allVocab = this.getAllVocab();
         const memory = this.getMemory();
 
-        // Stats
-        const knownCount = Object.values(memory).filter(m => m.status === 'known').length;
-        const learningCount = Object.values(memory).filter(m => m.status === 'learning').length;
+        // Apply topic filter
+        if (this.activeTopic) {
+            allVocab = allVocab.filter(v => v.topic === this.activeTopic);
+        }
+
+        // Stats (filtered)
+        const knownCount = allVocab.filter(v => memory[v.wordFr.toLowerCase()]?.status === 'known').length;
+        const learningCount = allVocab.filter(v => memory[v.wordFr.toLowerCase()]?.status === 'learning').length;
         const totalCount = allVocab.length;
         const unseenCount = totalCount - knownCount - learningCount;
+        const dueCount = allVocab.filter(v => this.isDue(memory[v.wordFr.toLowerCase()])).length;
 
-        // Build deck: learning first, then unseen, then known (for review)
-        this.deck = [];
-        const learning = allVocab.filter(v => memory[v.wordFr.toLowerCase()]?.status === 'learning');
-        const unseen = allVocab.filter(v => !memory[v.wordFr.toLowerCase()]);
-        const known = allVocab.filter(v => memory[v.wordFr.toLowerCase()]?.status === 'known');
+        // SRS deck ordering: due first (oldest-due-first), then unseen, then not-yet-due
+        const now = Date.now();
+        const due = allVocab.filter(v => {
+            const m = memory[v.wordFr.toLowerCase()];
+            return m && this.isDue(m);
+        }).sort((a, b) => {
+            const ma = memory[a.wordFr.toLowerCase()];
+            const mb = memory[b.wordFr.toLowerCase()];
+            return (ma.nextReview || 0) - (mb.nextReview || 0);
+        });
+        const unseen = shuffle(allVocab.filter(v => !memory[v.wordFr.toLowerCase()]));
+        const notDue = allVocab.filter(v => {
+            const m = memory[v.wordFr.toLowerCase()];
+            return m && !this.isDue(m);
+        });
 
-        // Shuffle each group
-        this.deck = [...shuffle(learning), ...shuffle(unseen), ...shuffle(known)];
+        this.deck = [...due, ...unseen, ...notDue];
         this.currentIndex = 0;
         this.revealed = false;
 
         container.innerHTML = `
+            ${this.renderTopicFilter()}
             <div class="vocab-stats-bar">
                 <div class="vocab-stat">
                     <span class="vocab-stat-num vocab-known">${knownCount}</span>
@@ -150,8 +225,8 @@ const Vocab = {
                     <span class="vocab-stat-label">New</span>
                 </div>
                 <div class="vocab-stat">
-                    <span class="vocab-stat-num">${totalCount}</span>
-                    <span class="vocab-stat-label">Total</span>
+                    <span class="vocab-stat-num vocab-due">${dueCount}</span>
+                    <span class="vocab-stat-label">Due</span>
                 </div>
             </div>
             <div class="vocab-progress-bar">
@@ -169,26 +244,39 @@ const Vocab = {
                 </div>
             ` : `
                 <div class="empty-state">
-                    <p>No vocabulary words found in the question bank.</p>
+                    <p>No vocabulary words found${this.activeTopic ? ' for this topic' : ''}.</p>
                 </div>
             `}
         `;
 
+        this.wireTopicFilter();
         this.wireVocabEvents();
     },
 
     renderFlashcard(word) {
         if (!word) return '<div class="empty-state">All done!</div>';
         const memory = this.getMemory();
-        const status = memory[word.wordFr.toLowerCase()]?.status;
+        const memEntry = memory[word.wordFr.toLowerCase()];
+        const status = memEntry?.status;
         const statusBadge = status === 'known' ? '<span class="vocab-badge known">Known</span>' :
                            status === 'learning' ? '<span class="vocab-badge learning">Learning</span>' : '';
         const topic = ETG_TOPICS.find(t => t.id === word.topic);
 
+        // SRS review badge
+        let reviewBadge = '';
+        if (memEntry) {
+            const label = this.getReviewLabel(memEntry);
+            if (label === 'Due') {
+                reviewBadge = '<span class="vocab-badge due">Due</span>';
+            } else if (label) {
+                reviewBadge = `<span class="vocab-badge review">Review in ${label}</span>`;
+            }
+        }
+
         return `
             <div class="vocab-front ${this.revealed ? 'flipped' : ''}">
                 <div class="vocab-topic-tag">${topic?.icon || ''} ${topic?.nameFr || ''}</div>
-                ${statusBadge}
+                <div class="vocab-badges-row">${statusBadge}${reviewBadge}</div>
                 <div class="vocab-word-fr">${word.wordFr}</div>
                 <div class="vocab-hint">Tap to see translation</div>
             </div>
