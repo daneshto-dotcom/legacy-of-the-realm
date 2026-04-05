@@ -2,6 +2,31 @@
    Question Bank — 540 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
+   ============================================
+
+   QUESTION SCHEMA:
+   {
+     id: string,                    // unique ID e.g. 'circ-001'
+     topic: string,                 // ETG topic ID
+     difficulty: 1|2|3,             // 1=easy, 2=medium, 3=hard
+     signs?: string[],              // road sign IDs to display
+     scenario?: string,             // intersection scenario ID
+     media?: {                      // (OPTIONAL) photo/image for exam-style questions
+       type: 'image',               //   media type
+       url: string,                 //   path or URL to image (SW-cached)
+       alt: string                  //   accessibility description
+     },
+     questionFr: string,            // question text in French
+     questionEn: string,            // question text in English
+     options: { A: {fr,en}, ... },  // 2-4 answer options
+     correctAnswers: string[],      // e.g. ["A","C"]
+     answerCount: number,           // number of correct answers
+     explanationFr: string,         // explanation in French
+     explanationEn: string,         // explanation in English
+     trapNote?: string,             // common mistake warning
+     distractorNotes?: {A?:..},     // per-wrong-answer explanations
+     vocabulary?: [{wordFr,wordEn,definition?}]
+   }
    ============================================ */
 
 const QUESTION_BANK = [

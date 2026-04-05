@@ -178,32 +178,57 @@ const App = {
     },
 
     setupCustomPractice() {
-        // Timer chips
+        const saved = Storage.getCustomPracticePrefs();
+
+        const savePrefs = () => {
+            const timerSecs = parseInt(document.querySelector('.timer-chip.active')?.dataset.timer || '0');
+            const count = parseInt(document.querySelector('.count-chip.active')?.dataset.count || '10');
+            const selectedTopics = Array.from(document.querySelectorAll('.topic-filter-chip.selected'))
+                .map(c => c.dataset.topic);
+            Storage.saveCustomPracticePrefs({ timer: timerSecs, count, topics: selectedTopics });
+        };
+
+        // Timer chips — restore saved timer
         document.querySelectorAll('.timer-chip').forEach(chip => {
+            if (saved && parseInt(chip.dataset.timer) === saved.timer) {
+                document.querySelectorAll('.timer-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+            }
             chip.addEventListener('click', () => {
                 document.querySelectorAll('.timer-chip').forEach(c => c.classList.remove('active'));
                 chip.classList.add('active');
+                savePrefs();
             });
         });
 
-        // Count chips
+        // Count chips — restore saved count
         document.querySelectorAll('.count-chip').forEach(chip => {
+            if (saved && parseInt(chip.dataset.count) === saved.count) {
+                document.querySelectorAll('.count-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+            }
             chip.addEventListener('click', () => {
                 document.querySelectorAll('.count-chip').forEach(c => c.classList.remove('active'));
                 chip.classList.add('active');
+                savePrefs();
             });
         });
 
-        // Render topic filter grid
+        // Render topic filter grid — restore saved topic selections
         const grid = document.getElementById('topic-filter-grid');
         if (grid) {
             grid.innerHTML = '';
+            const savedTopics = saved?.topics;
             for (const topic of ETG_TOPICS) {
                 const chip = document.createElement('button');
-                chip.className = 'topic-filter-chip selected';
+                const isSelected = savedTopics ? savedTopics.includes(topic.id) : true;
+                chip.className = `topic-filter-chip${isSelected ? ' selected' : ''}`;
                 chip.dataset.topic = topic.id;
                 chip.innerHTML = `<span class="topic-filter-icon">${topic.icon}</span>${topic.nameEn}`;
-                chip.addEventListener('click', () => chip.classList.toggle('selected'));
+                chip.addEventListener('click', () => {
+                    chip.classList.toggle('selected');
+                    savePrefs();
+                });
                 grid.appendChild(chip);
             }
         }
@@ -217,6 +242,7 @@ const App = {
                 else c.classList.add('selected');
             });
             document.getElementById('toggle-all-topics').textContent = allSelected ? 'Select All' : 'Deselect All';
+            savePrefs();
         });
 
         // Start custom practice
@@ -231,6 +257,7 @@ const App = {
                 return;
             }
 
+            savePrefs();
             Practice.startSession('custom', {
                 count: count,
                 topicFilters: selectedTopics,

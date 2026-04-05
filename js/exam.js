@@ -60,6 +60,7 @@ const Exam = {
                     <span class="multi-badge hidden" id="exam-multi-badge">Plusieurs réponses possibles</span>
                 </div>
                 <div class="sign-container hidden" id="exam-signs"></div>
+                <div class="media-container hidden" id="exam-media"></div>
                 <div class="question-text-fr" id="exam-question-fr"></div>
                 <div class="question-text-en" id="exam-question-en"></div>
             </div>
@@ -110,6 +111,18 @@ const Exam = {
         } else {
             signContainer.classList.add('hidden');
             signContainer.innerHTML = '';
+        }
+
+        // Media (photo-based questions)
+        const examMedia = document.getElementById('exam-media');
+        if (examMedia) {
+            if (q.media && q.media.type === 'image' && q.media.url) {
+                examMedia.innerHTML = `<img src="${q.media.url}" alt="${q.media.alt || ''}" class="question-media-img" loading="lazy">`;
+                examMedia.classList.remove('hidden');
+            } else {
+                examMedia.classList.add('hidden');
+                examMedia.innerHTML = '';
+            }
         }
 
         // Question text

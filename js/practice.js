@@ -160,6 +160,22 @@ const Practice = {
             }
         }
 
+        // Media (photo-based questions)
+        let mediaContainer = document.getElementById('question-media');
+        if (!mediaContainer) {
+            mediaContainer = document.createElement('div');
+            mediaContainer.id = 'question-media';
+            mediaContainer.className = 'media-container hidden';
+            document.getElementById('question-card').insertBefore(mediaContainer, document.getElementById('question-fr'));
+        }
+        if (q.media && q.media.type === 'image' && q.media.url) {
+            mediaContainer.innerHTML = `<img src="${q.media.url}" alt="${q.media.alt || ''}" class="question-media-img" loading="lazy">`;
+            mediaContainer.classList.remove('hidden');
+        } else {
+            mediaContainer.classList.add('hidden');
+            mediaContainer.innerHTML = '';
+        }
+
         // Question text — show English on retry, French-only on first attempt
         document.getElementById('question-fr').textContent = q.questionFr;
         const enEl = document.getElementById('question-en');

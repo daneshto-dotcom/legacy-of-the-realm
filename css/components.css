@@ -392,6 +392,18 @@
     border: 1px dashed var(--border);
 }
 
+.media-container {
+    margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+.question-media-img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: var(--radius-md);
+    object-fit: contain;
+}
+
 .sign-image {
     display: flex;
     align-items: center;

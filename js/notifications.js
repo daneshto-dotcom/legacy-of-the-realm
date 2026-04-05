@@ -5,10 +5,12 @@
 
 const Notifications = {
     _timerId: null,
+    _smartTimers: [], // streak-at-risk, SRS batch, challenge expiry
 
     init() {
         this.updateUI();
         this._scheduleNext();
+        this.scheduleSmartReminders();
     },
 
     get supported() {
@@ -123,7 +125,6 @@ const Notifications = {
     _sendReminder() {
         if (!this.enabled) return;
 
-        const stats = Storage.getOverallStats();
         const streak = Storage.getStreak();
         const dueReviews = Storage.getDueReviews().length;
 
@@ -147,6 +148,10 @@ const Notifications = {
             tag = 'daily-reminder';
         }
 
+        this._notify(body, tag);
+    },
+
+    _notify(body, tag) {
         const notification = new Notification('Code de la Route', {
             body,
             icon: 'assets/icons/icon-192.png',
@@ -160,5 +165,107 @@ const Notifications = {
             window.focus();
             notification.close();
         };
+    },
+
+    // === SMART REMINDERS ===
+
+    scheduleSmartReminders() {
+        // Clear previous smart timers
+        this._smartTimers.forEach(id => clearTimeout(id));
+        this._smartTimers = [];
+
+        if (!this.enabled) return;
+
+        this._scheduleStreakAtRisk();
+        this._scheduleSRSBatch();
+        this._scheduleChallengeExpiry();
+    },
+
+    _scheduleStreakAtRisk() {
+        // If Sara studied yesterday but not today, remind her before streak breaks
+        const lastDate = localStorage.getItem(Storage.KEYS.LAST_STUDY_DATE);
+        if (!lastDate) return;
+
+        const today = new Date().toDateString();
+        if (lastDate === today) return; // Already studied today
+
+        const yesterday = new Date(Date.now() - 86400000).toDateString();
+        if (lastDate !== yesterday) return; // Streak already broken
+
+        // Schedule for 2 hours before configured reminder, or 18:00, whichever is earlier
+        const settings = Storage.getSettings();
+        const reminderParts = (settings.reminderTime || '19:00').split(':').map(Number);
+        const earlyHour = Math.min(18, reminderParts[0] - 2);
+
+        const now = new Date();
+        const target = new Date();
+        target.setHours(Math.max(earlyHour, now.getHours()), 0, 0, 0);
+
+        // If target already passed, fire in 5 minutes (catch-up)
+        const delay = target > now ? target - now : 5 * 60 * 1000;
+
+        const id = setTimeout(() => {
+            // Re-check: maybe Sara studied since we scheduled this
+            if (localStorage.getItem(Storage.KEYS.LAST_STUDY_DATE) === new Date().toDateString()) return;
+
+            const streak = Storage.getStreak();
+            if (streak > 0) {
+                this._notify(
+                    `Your ${streak}-day streak is at risk! Just 5 questions to keep it alive.`,
+                    'streak-at-risk'
+                );
+            }
+        }, delay);
+
+        this._smartTimers.push(id);
+    },
+
+    _scheduleSRSBatch() {
+        // If 10+ reviews are due, nudge after a short delay
+        const dueCount = Storage.getDueReviews().length;
+        if (dueCount < 10) return;
+
+        // Fire in 30 minutes (don't spam on app open)
+        const id = setTimeout(() => {
+            if (!this.enabled) return;
+            const currentDue = Storage.getDueReviews().length;
+            if (currentDue >= 10) {
+                this._notify(
+                    `${currentDue} review questions are waiting! Clear your queue to lock in knowledge.`,
+                    'srs-batch'
+                );
+            }
+        }, 30 * 60 * 1000);
+
+        this._smartTimers.push(id);
+    },
+
+    _scheduleChallengeExpiry() {
+        // If daily challenge is incomplete, remind at 20:00
+        if (typeof Challenges === 'undefined') return;
+
+        const challenge = Challenges.getToday();
+        if (!challenge || challenge.completed) return;
+
+        const now = new Date();
+        const target = new Date();
+        target.setHours(20, 0, 0, 0);
+
+        if (target <= now) return; // Past 20:00 already
+
+        const delay = target - now;
+
+        const id = setTimeout(() => {
+            if (!this.enabled) return;
+            const current = Challenges.getToday();
+            if (current && !current.completed) {
+                this._notify(
+                    `Daily challenge incomplete: "${current.desc}" — ${current.progress}/${current.target}. Still time!`,
+                    'challenge-expiry'
+                );
+            }
+        }, delay);
+
+        this._smartTimers.push(id);
     }
 };

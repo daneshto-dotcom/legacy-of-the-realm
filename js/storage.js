@@ -20,7 +20,8 @@ const Storage = {
         BEST_STREAK: 'fdtta_best_streak',
         ACHIEVEMENTS: 'fdtta_achievements',
         DAILY_CHALLENGE: 'fdtta_daily_challenge',
-        STREAK_FREEZES: 'fdtta_streak_freezes'
+        STREAK_FREEZES: 'fdtta_streak_freezes',
+        CUSTOM_PRACTICE: 'fdtta_custom_practice'
     },
 
     MAX_ATTEMPTS: 5000, // prune beyond this to prevent quota exhaustion
@@ -82,6 +83,8 @@ const Storage = {
         // Trigger gamification checks (if modules loaded)
         if (typeof Achievements !== 'undefined') Achievements.checkAll();
         if (typeof Challenges !== 'undefined') Challenges.updateProgress();
+        // Recalculate smart notification timers (streak status may have changed)
+        if (typeof Notifications !== 'undefined') Notifications.scheduleSmartReminders();
         return attempts;
     },
 
@@ -478,6 +481,15 @@ const Storage = {
             return true;
         }
         return false;
+    },
+
+    // === CUSTOM PRACTICE PREFERENCES ===
+    getCustomPracticePrefs() {
+        return JSON.parse(localStorage.getItem(this.KEYS.CUSTOM_PRACTICE) || 'null');
+    },
+
+    saveCustomPracticePrefs(prefs) {
+        this._safeSet(this.KEYS.CUSTOM_PRACTICE, JSON.stringify(prefs));
     },
 
     // === DATA EXPORT / IMPORT ===
