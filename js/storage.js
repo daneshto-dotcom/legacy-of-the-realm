@@ -16,7 +16,8 @@ const Storage = {
         LAST_STUDY_DATE: 'fdtta_last_study_date',
         VOCAB_MEMORY: 'fdtta_vocab_memory',
         DIAGNOSTIC_RESULT: 'fdtta_diagnostic_result',
-        SIGN_PROGRESS: 'fdtta_sign_progress'
+        SIGN_PROGRESS: 'fdtta_sign_progress',
+        BEST_STREAK: 'fdtta_best_streak'
     },
 
     MAX_ATTEMPTS: 5000, // prune beyond this to prevent quota exhaustion
@@ -255,6 +256,11 @@ const Storage = {
 
         this._safeSet(this.KEYS.STUDY_STREAK, streak.toString());
         this._safeSet(this.KEYS.LAST_STUDY_DATE, today);
+        // Update best streak if current exceeds it
+        const best = parseInt(localStorage.getItem(this.KEYS.BEST_STREAK) || '0');
+        if (streak > best) {
+            this._safeSet(this.KEYS.BEST_STREAK, streak.toString());
+        }
         return streak;
     },
 
@@ -267,6 +273,40 @@ const Storage = {
             return 0;
         }
         return parseInt(localStorage.getItem(this.KEYS.STUDY_STREAK) || '0');
+    },
+
+    getBestStreak() {
+        return parseInt(localStorage.getItem(this.KEYS.BEST_STREAK) || '0');
+    },
+
+    // Build a map of date -> attempt count for the last N days
+    getDailyActivityMap(days = 30) {
+        const attempts = this.getAttempts();
+        const map = {};
+        const now = new Date();
+        for (let i = days - 1; i >= 0; i--) {
+            const d = new Date(now);
+            d.setDate(d.getDate() - i);
+            map[d.toDateString()] = { total: 0, correct: 0 };
+        }
+        for (const a of attempts) {
+            if (!a.timestamp) continue;
+            const key = new Date(a.timestamp).toDateString();
+            if (map[key]) {
+                map[key].total++;
+                if (a.isCorrect) map[key].correct++;
+            }
+        }
+        return map;
+    },
+
+    getTotalPracticeDays() {
+        const attempts = this.getAttempts();
+        const days = new Set();
+        for (const a of attempts) {
+            if (a.timestamp) days.add(new Date(a.timestamp).toDateString());
+        }
+        return days.size;
     },
 
     // === SETTINGS ===
@@ -379,6 +419,7 @@ const Storage = {
             bookmarks: this.getBookmarks(),
             settings: this.getSettings(),
             streak: this.getStreak(),
+            bestStreak: this.getBestStreak(),
             lastStudyDate: localStorage.getItem(this.KEYS.LAST_STUDY_DATE),
             diagnosticResult: this.getDiagnosticResult(),
             signProgress: JSON.parse(localStorage.getItem(this.KEYS.SIGN_PROGRESS) || '{}'),
@@ -404,6 +445,7 @@ const Storage = {
             if (data.bookmarks) this._safeSet(this.KEYS.BOOKMARKS, JSON.stringify(data.bookmarks));
             if (data.settings) this._safeSet(this.KEYS.SETTINGS, JSON.stringify(data.settings));
             if (data.streak) this._safeSet(this.KEYS.STUDY_STREAK, data.streak.toString());
+            if (data.bestStreak) this._safeSet(this.KEYS.BEST_STREAK, data.bestStreak.toString());
             if (data.lastStudyDate) this._safeSet(this.KEYS.LAST_STUDY_DATE, data.lastStudyDate);
             if (data.diagnosticResult) this._safeSet(this.KEYS.DIAGNOSTIC_RESULT, JSON.stringify(data.diagnosticResult));
             if (data.signProgress) this._safeSet(this.KEYS.SIGN_PROGRESS, JSON.stringify(data.signProgress));

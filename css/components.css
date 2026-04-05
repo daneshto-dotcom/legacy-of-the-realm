@@ -1552,65 +1552,94 @@
 
 /* === Study Activity Chart === */
 .study-activity-chart {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 6px;
     padding: var(--space-md);
     background: var(--surface);
     border-radius: var(--radius-md);
     border: 1px solid var(--border);
-    height: 140px;
     margin-bottom: var(--space-md);
 }
 
-.activity-day {
-    flex: 1;
+/* Streak stats row */
+.streak-stats {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-    height: 100%;
+    justify-content: space-around;
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--border);
 }
-
-.activity-day.today .activity-label {
-    color: var(--primary);
+.streak-stat {
+    text-align: center;
+}
+.streak-stat-value {
+    font-size: 1.5rem;
     font-weight: 700;
+    color: var(--primary);
 }
-
-.activity-bar-wrapper {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.activity-bar {
-    width: 20px;
-    min-height: 4px;
-    background: var(--primary-50);
-    border-radius: 4px 4px 0 0;
-    position: relative;
-    overflow: hidden;
-    transition: height 0.3s ease;
-}
-
-.activity-bar-correct {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--primary);
-    border-radius: 4px 4px 0 0;
-    transition: height 0.3s ease;
-}
-
-.activity-label {
-    font-size: 10px;
+.streak-stat-label {
+    font-size: 0.7rem;
     color: var(--text-secondary);
-    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
+
+/* 30-day calendar grid */
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+}
+.cal-cell {
+    aspect-ratio: 1;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.cal-day {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+.cal-level-0 {
+    background: var(--surface-alt, rgba(128, 128, 128, 0.08));
+}
+.cal-level-1 {
+    background: rgba(34, 139, 34, 0.2);
+}
+.cal-level-1 .cal-day { color: rgba(34, 139, 34, 0.8); }
+.cal-level-2 {
+    background: rgba(34, 139, 34, 0.45);
+}
+.cal-level-2 .cal-day { color: #fff; }
+.cal-level-3 {
+    background: rgba(34, 139, 34, 0.75);
+}
+.cal-level-3 .cal-day { color: #fff; }
+.cal-today {
+    outline: 2px solid var(--accent);
+    outline-offset: -1px;
+}
+
+/* Calendar legend */
+.cal-legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3px;
+}
+.cal-legend-label {
+    font-size: 0.6rem;
+    color: var(--text-secondary);
+    margin: 0 2px;
+}
+.cal-legend-cell {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+}
+.cal-legend-cell .cal-day { display: none; }
 
 .activity-count {
     font-size: 10px;

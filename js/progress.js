@@ -188,37 +188,54 @@ const Progress = {
         const container = document.getElementById('study-activity');
         if (!container) return;
 
-        const attempts = Storage.getAttempts();
-        const now = new Date();
-        const days = [];
+        const activityMap = Storage.getDailyActivityMap(30);
+        const streak = Storage.getStreak();
+        const bestStreak = Storage.getBestStreak();
+        const totalDays = Storage.getTotalPracticeDays();
 
-        // Build last 7 days
-        for (let i = 6; i >= 0; i--) {
-            const d = new Date(now);
-            d.setDate(d.getDate() - i);
-            const dateStr = d.toDateString();
-            const dayAttempts = attempts.filter(a => a.timestamp && new Date(a.timestamp).toDateString() === dateStr);
-            const correct = dayAttempts.filter(a => a.isCorrect).length;
-            days.push({
-                label: d.toLocaleDateString('en-US', { weekday: 'short' }),
-                total: dayAttempts.length,
-                correct,
-                isToday: i === 0
-            });
-        }
-
-        const maxCount = Math.max(...days.map(d => d.total), 1);
-
-        container.innerHTML = days.map(d => `
-            <div class="activity-day ${d.isToday ? 'today' : ''}">
-                <div class="activity-bar-wrapper">
-                    <div class="activity-bar" style="height: ${(d.total / maxCount) * 100}%;">
-                        <div class="activity-bar-correct" style="height: ${d.total > 0 ? (d.correct / d.total) * 100 : 0}%;"></div>
-                    </div>
+        // Streak stats row
+        const statsHtml = `
+            <div class="streak-stats">
+                <div class="streak-stat">
+                    <div class="streak-stat-value">${streak}</div>
+                    <div class="streak-stat-label">Current Streak</div>
                 </div>
-                <div class="activity-label">${d.label}</div>
-                <div class="activity-count">${d.total}</div>
-            </div>
-        `).join('');
+                <div class="streak-stat">
+                    <div class="streak-stat-value">${bestStreak}</div>
+                    <div class="streak-stat-label">Best Streak</div>
+                </div>
+                <div class="streak-stat">
+                    <div class="streak-stat-value">${totalDays}</div>
+                    <div class="streak-stat-label">Total Days</div>
+                </div>
+            </div>`;
+
+        // 30-day calendar grid
+        const dates = Object.keys(activityMap);
+        const cellsHtml = dates.map(dateStr => {
+            const d = activityMap[dateStr];
+            const date = new Date(dateStr);
+            const dayNum = date.getDate();
+            const isToday = dateStr === new Date().toDateString();
+            let level = 0;
+            if (d.total >= 16) level = 3;
+            else if (d.total >= 6) level = 2;
+            else if (d.total >= 1) level = 1;
+            return `<div class="cal-cell cal-level-${level}${isToday ? ' cal-today' : ''}" title="${date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}: ${d.total} questions (${d.correct} correct)"><span class="cal-day">${dayNum}</span></div>`;
+        }).join('');
+
+        const legendHtml = `
+            <div class="cal-legend">
+                <span class="cal-legend-label">Less</span>
+                <div class="cal-cell cal-level-0 cal-legend-cell"></div>
+                <div class="cal-cell cal-level-1 cal-legend-cell"></div>
+                <div class="cal-cell cal-level-2 cal-legend-cell"></div>
+                <div class="cal-cell cal-level-3 cal-legend-cell"></div>
+                <span class="cal-legend-label">More</span>
+            </div>`;
+
+        container.innerHTML = statsHtml +
+            `<div class="cal-grid">${cellsHtml}</div>` +
+            legendHtml;
     }
 };
