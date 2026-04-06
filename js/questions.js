@@ -1,5 +1,5 @@
 /* ============================================
-   Question Bank — 540 Bilingual Questions
+   Question Bank — 550 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
    ============================================
@@ -1275,6 +1275,29 @@ const QUESTION_BANK = [
             { wordFr: "ligne continue", wordEn: "continuous / solid line", definition: "A road marking that prohibits crossing or overtaking" }
         ]
     },
+    {
+        id: "media-006",
+        topic: "circulation",
+        difficulty: 2,
+        media: { type: "image", url: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22400%22%20height%3D%22300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%2387CEEB%22%2F%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%23333%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22150%22%20width%3D%22400%22%20height%3D%2280%22%20fill%3D%22%23555%22%2F%3E%3Cline%20x1%3D%220%22%20y1%3D%22190%22%20x2%3D%22400%22%20y2%3D%22190%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Cpolygon%20points%3D%22320%2C180%20400%2C160%20400%2C200%22%20fill%3D%22rgba(255%2C255%2C200%2C0.3)%22%2F%3E%3Cpolygon%20points%3D%2280%2C175%200%2C155%200%2C195%22%20fill%3D%22rgba(255%2C255%2C200%2C0.3)%22%2F%3E%3Cg%20transform%3D%22translate(310%2C180)%20rotate(90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%233498db%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(90%2C175)%20rotate(-90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%23e74c3c%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%22330%22%20cy%3D%22175%22%20r%3D%223%22%20fill%3D%22%2300bfff%22%2F%3E%3Ctext%20x%3D%22200%22%20y%3D%22290%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20fill%3D%22%23333%22%3ENight%20driving%20%E2%80%94%20oncoming%20traffic%3C%2Ftext%3E%3C%2Fsvg%3E", alt: "Night scene. Two cars approaching each other. Blue car has high beams on." },
+        questionFr: "Que doit faire le conducteur de la voiture bleue en voyant la voiture rouge arriver en face ?",
+        questionEn: "What should the blue car driver do when seeing the red car approaching?",
+        options: {
+            A: { fr: "Garder les feux de route (pleins phares)", en: "Keep high beams on" },
+            B: { fr: "Passer en feux de croisement", en: "Switch to low beams" },
+            C: { fr: "Éteindre tous les feux", en: "Turn off all lights" },
+            D: { fr: "Faire des appels de phares", en: "Flash the headlights" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "En croisant un autre véhicule la nuit, vous devez basculer sur les feux de croisement pour ne pas éblouir le conducteur en face.",
+        explanationEn: "When meeting another vehicle at night, you must switch to low beams to avoid dazzling the oncoming driver.",
+        vocabulary: [
+            { wordFr: "feux de route", wordEn: "high beams / full beams" },
+            { wordFr: "feux de croisement", wordEn: "low beams / dipped headlights" },
+            { wordFr: "éblouir", wordEn: "to dazzle / blind" }
+        ]
+    },
     // === CONDUCTEUR ===,
     {
         id: "cond-001",
@@ -2433,6 +2456,28 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "ceinture de sécurité", wordEn: "seatbelt", definition: "Safety restraint required for all vehicle occupants in France" },
             { wordFr: "passager mineur", wordEn: "minor passenger", definition: "A vehicle occupant under 18 years of age, for whom the driver bears legal responsibility" }
+        ]
+    },
+    {
+        id: "media-010",
+        topic: "conducteur",
+        difficulty: 1,
+        media: { type: "image", url: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22400%22%20height%3D%22300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%2387CEEB%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%234a8c3f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22150%22%20width%3D%22400%22%20height%3D%22100%22%20fill%3D%22%23555%22%2F%3E%3Cline%20x1%3D%220%22%20y1%3D%22200%22%20x2%3D%22400%22%20y2%3D%22200%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2250%22%20height%3D%2250%22%20fill%3D%22%23FFD700%22%20stroke%3D%22%23333%22%20stroke-width%3D%222%22%20rx%3D%223%22%2F%3E%3Ctext%20x%3D%2255%22%20y%3D%2250%22%20text-anchor%3D%22middle%22%20font-size%3D%2210%22%20fill%3D%22%23333%22%3EZONE%3C%2Ftext%3E%3Ctext%20x%3D%2255%22%20y%3D%2265%22%20text-anchor%3D%22middle%22%20font-size%3D%2210%22%20fill%3D%22%23333%22%3E30%3C%2Ftext%3E%3Ccircle%20cx%3D%22200%22%20cy%3D%22140%22%20r%3D%226%22%20fill%3D%22%23333%22%2F%3E%3Cline%20x1%3D%22200%22%20y1%3D%22146%22%20x2%3D%22200%22%20y2%3D%22160%22%20stroke%3D%22%23333%22%20stroke-width%3D%222%22%2F%3E%3Ccircle%20cx%3D%22215%22%20cy%3D%22138%22%20r%3D%226%22%20fill%3D%22%23333%22%2F%3E%3Cline%20x1%3D%22215%22%20y1%3D%22144%22%20x2%3D%22215%22%20y2%3D%22158%22%20stroke%3D%22%23333%22%20stroke-width%3D%222%22%2F%3E%3Cg%20transform%3D%22translate(300%2C210)%20rotate(90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%233498db%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Ctext%20x%3D%22200%22%20y%3D%22290%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20fill%3D%22%23333%22%3ESchool%20zone%20with%20children%3C%2Ftext%3E%3C%2Fsvg%3E", alt: "Road near school with Zone 30 sign. Two children near road. Blue car approaches." },
+        questionFr: "Vous approchez d'une zone scolaire avec des enfants visibles. Que devez-vous faire ?",
+        questionEn: "You approach a school zone with children visible. What should you do?",
+        options: {
+            A: { fr: "Maintenir la vitesse si elle est inférieure à 50 km/h", en: "Maintain speed if under 50 km/h" },
+            B: { fr: "Ralentir à 30 km/h et être prêt à s'arrêter", en: "Slow to 30 km/h and be ready to stop" },
+            C: { fr: "Klaxonner pour avertir les enfants", en: "Honk to warn the children" },
+            D: { fr: "Accélérer pour passer rapidement", en: "Speed up to pass quickly" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "En zone 30 (zone scolaire), la vitesse est limitée à 30 km/h. Avec des enfants visibles, soyez particulièrement vigilant.",
+        explanationEn: "In a Zone 30 (school zone), speed is limited to 30 km/h. With children visible, be especially vigilant and ready to brake.",
+        vocabulary: [
+            { wordFr: "zone scolaire", wordEn: "school zone" },
+            { wordFr: "vigilant", wordEn: "alert / vigilant" }
         ]
     },
     // === ROUTE ===,
@@ -3717,6 +3762,29 @@ const QUESTION_BANK = [
             { wordFr: "fading", wordEn: "brake fade", definition: "Loss of braking power due to overheating of brake components" }
         ]
     },
+    {
+        id: "media-009",
+        topic: "route",
+        difficulty: 2,
+        media: { type: "image", url: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22400%22%20height%3D%22300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%2387CEEB%22%2F%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%239bb%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22180%22%20width%3D%22400%22%20height%3D%2280%22%20fill%3D%22%23555%22%2F%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22rgba(200%2C200%2C200%2C0.5)%22%2F%3E%3Cg%20transform%3D%22translate(200%2C210)%20rotate(90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%23e74c3c%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%22220%22%20cy%3D%22205%22%20r%3D%223%22%20fill%3D%22%23ffd700%22%2F%3E%3Ctext%20x%3D%22200%22%20y%3D%22290%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20fill%3D%22%23333%22%3EDriving%20in%20heavy%20fog%3C%2Ftext%3E%3C%2Fsvg%3E", alt: "Road in heavy fog with limited visibility. Red car drives with fog lights on." },
+        questionFr: "Par temps de brouillard épais (visibilité < 50m), quels feux devez-vous utiliser ?",
+        questionEn: "In thick fog (visibility < 50m), which lights should you use?",
+        options: {
+            A: { fr: "Feux de route (pleins phares)", en: "High beams" },
+            B: { fr: "Feux de croisement + feux de brouillard", en: "Low beams + fog lights" },
+            C: { fr: "Feux de position uniquement", en: "Parking lights only" },
+            D: { fr: "Warnings (feux de détresse)", en: "Hazard lights" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Par brouillard épais, utilisez les feux de croisement et les feux de brouillard avant. Les feux de route sont INTERDITS car ils se réfléchissent dans le brouillard.",
+        explanationEn: "In thick fog, use low beams and front fog lights. High beams are PROHIBITED as they reflect off the fog and worsen glare.",
+        trapNote: "High beams in fog make visibility WORSE, not better.",
+        vocabulary: [
+            { wordFr: "brouillard", wordEn: "fog" },
+            { wordFr: "feux de brouillard", wordEn: "fog lights" }
+        ]
+    },
     // === AUTRES_USAGERS ===,
     {
         id: "autr-001",
@@ -4998,6 +5066,27 @@ const QUESTION_BANK = [
             { wordFr: "circulation interfiles", wordEn: "lane filtering / lane splitting", definition: "Riding between two lanes of slow or stopped traffic" },
             { wordFr: "deux-roues motorisé", wordEn: "powered two-wheeler", definition: "Motorcycles, scooters, and mopeds" },
             { wordFr: "vent latéral", wordEn: "crosswind", definition: "Wind blowing from the side, which can push a two-wheeler off course" }
+        ]
+    },
+    {
+        id: "media-008",
+        topic: "autres_usagers",
+        difficulty: 2,
+        media: { type: "image", url: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22400%22%20height%3D%22300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%2387CEEB%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%234a8c3f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22150%22%20width%3D%22400%22%20height%3D%22100%22%20fill%3D%22%23555%22%2F%3E%3Cline%20x1%3D%220%22%20y1%3D%22200%22%20x2%3D%22400%22%20y2%3D%22200%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22235%22%20width%3D%22400%22%20height%3D%2225%22%20fill%3D%22%235ba85b%22%2F%3E%3Ctext%20x%3D%22200%22%20y%3D%22252%22%20text-anchor%3D%22middle%22%20font-size%3D%2214%22%20fill%3D%22white%22%3E%F0%9F%9A%B2%3C%2Ftext%3E%3Ccircle%20cx%3D%22250%22%20cy%3D%22245%22%20r%3D%228%22%20fill%3D%22%23f39c12%22%2F%3E%3Cline%20x1%3D%22250%22%20y1%3D%22253%22%20x2%3D%22250%22%20y2%3D%22268%22%20stroke%3D%22%23f39c12%22%20stroke-width%3D%222%22%2F%3E%3Cg%20transform%3D%22translate(150%2C215)%20rotate(90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%233498db%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M170%2C215%20C190%2C215%20200%2C230%20200%2C245%22%20stroke%3D%22%233498db%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-dasharray%3D%224%2C4%22%2F%3E%3Ctext%20x%3D%22200%22%20y%3D%22290%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20fill%3D%22%23333%22%3ETurning%20right%20with%20bike%20lane%3C%2Ftext%3E%3C%2Fsvg%3E", alt: "Road with green bike lane on right. Blue car wants to turn right. Cyclist in bike lane." },
+        questionFr: "Vous voulez tourner à droite. Un cycliste se trouve dans la bande cyclable. Que faites-vous ?",
+        questionEn: "You want to turn right. A cyclist is in the bike lane. What do you do?",
+        options: {
+            A: { fr: "Tourner en passant devant le cycliste", en: "Turn in front of the cyclist" },
+            B: { fr: "Céder le passage au cycliste puis tourner", en: "Yield to the cyclist then turn" },
+            C: { fr: "Klaxonner pour que le cycliste s'arrête", en: "Honk so the cyclist stops" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Les cyclistes dans une bande cyclable ont la priorité. En tournant à droite, vous devez leur céder le passage.",
+        explanationEn: "Cyclists in a bike lane have priority. When turning right, you must yield to them.",
+        vocabulary: [
+            { wordFr: "bande cyclable", wordEn: "bike lane" },
+            { wordFr: "céder le passage", wordEn: "yield / give way" }
         ]
     },
     // === PRIORITE (Right of Way) ===,
@@ -6343,6 +6432,52 @@ const QUESTION_BANK = [
             { wordFr: "s'insérer", wordEn: "to merge / to join", definition: "To enter a flow of traffic from a secondary road" }
         ]
     },
+    {
+        id: "media-001",
+        topic: "priorite",
+        difficulty: 2,
+        media: { type: "image", url: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22400%22%20height%3D%22300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%2387CEEB%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%234a8c3f%22%2F%3E%3Crect%20x%3D%22170%22%20y%3D%220%22%20width%3D%2260%22%20height%3D%22300%22%20fill%3D%22%23555%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22120%22%20width%3D%22400%22%20height%3D%2260%22%20fill%3D%22%23555%22%2F%3E%3Cline%20x1%3D%22200%22%20y1%3D%220%22%20x2%3D%22200%22%20y2%3D%22120%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Cline%20x1%3D%22200%22%20y1%3D%22180%22%20x2%3D%22200%22%20y2%3D%22300%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Cline%20x1%3D%220%22%20y1%3D%22150%22%20x2%3D%22170%22%20y2%3D%22150%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Cline%20x1%3D%22230%22%20y1%3D%22150%22%20x2%3D%22400%22%20y2%3D%22150%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Cpolygon%20points%3D%22195%2C75%20177%2C109%20213%2C109%22%20fill%3D%22white%22%20stroke%3D%22red%22%20stroke-width%3D%223%22%2F%3E%3Cg%20transform%3D%22translate(185%2C70)%20rotate(180)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%23e74c3c%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(120%2C145)%20rotate(90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%233498db%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Ctext%20x%3D%22200%22%20y%3D%22290%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20fill%3D%22%23333%22%3EIntersection%20with%20yield%20sign%3C%2Ftext%3E%3C%2Fsvg%3E", alt: "Intersection: red car from north with yield sign, blue car from west." },
+        questionFr: "En observant cette intersection, qui doit céder le passage ?",
+        questionEn: "Looking at this intersection, who must yield?",
+        options: {
+            A: { fr: "La voiture bleue", en: "The blue car" },
+            B: { fr: "La voiture rouge", en: "The red car" },
+            C: { fr: "Les deux doivent s'arrêter", en: "Both must stop" },
+            D: { fr: "Celui qui arrive le premier passe", en: "First to arrive goes first" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le panneau cédez-le-passage (triangle inversé) oblige la voiture rouge à laisser passer la voiture bleue.",
+        explanationEn: "The yield sign (inverted triangle) requires the red car to give way to the blue car.",
+        trapNote: "The yield sign overrides the default priority-to-the-right rule.",
+        vocabulary: [
+            { wordFr: "cédez le passage", wordEn: "yield / give way" },
+            { wordFr: "panneau", wordEn: "sign" }
+        ]
+    },
+    {
+        id: "media-003",
+        topic: "priorite",
+        difficulty: 3,
+        media: { type: "image", url: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22400%22%20height%3D%22300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%2387CEEB%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%234a8c3f%22%2F%3E%3Crect%20x%3D%22170%22%20y%3D%220%22%20width%3D%2260%22%20height%3D%22300%22%20fill%3D%22%23555%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22120%22%20width%3D%22400%22%20height%3D%2260%22%20fill%3D%22%23555%22%2F%3E%3Cline%20x1%3D%22200%22%20y1%3D%220%22%20x2%3D%22200%22%20y2%3D%22120%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Cline%20x1%3D%22200%22%20y1%3D%22180%22%20x2%3D%22200%22%20y2%3D%22300%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Cline%20x1%3D%220%22%20y1%3D%22150%22%20x2%3D%22170%22%20y2%3D%22150%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Cline%20x1%3D%22230%22%20y1%3D%22150%22%20x2%3D%22400%22%20y2%3D%22150%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Cpolygon%20points%3D%22195%2C75%20209%2C81%20209%2C101%20195%2C107%20181%2C101%20181%2C81%22%20fill%3D%22red%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22195%22%20y%3D%2296%22%20text-anchor%3D%22middle%22%20font-size%3D%2210%22%20fill%3D%22white%22%20font-weight%3D%22bold%22%3ESTOP%3C%2Ftext%3E%3Cg%20transform%3D%22translate(185%2C55)%20rotate(180)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%23e74c3c%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(100%2C145)%20rotate(90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%233498db%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(215%2C250)%20rotate(0)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%23f39c12%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Ctext%20x%3D%22200%22%20y%3D%22290%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20fill%3D%22%23333%22%3E3-way%20intersection%20with%20STOP%3C%2Ftext%3E%3C%2Fsvg%3E", alt: "T-intersection. Red car from north with STOP sign. Blue car from west. Yellow car from south." },
+        questionFr: "La voiture rouge arrive à un STOP. Dans quel ordre les véhicules passent-ils ?",
+        questionEn: "The red car reaches a STOP sign. In what order do vehicles pass?",
+        options: {
+            A: { fr: "Rouge, Bleu, Jaune", en: "Red, Blue, Yellow" },
+            B: { fr: "Bleu, Jaune, Rouge", en: "Blue, Yellow, Red" },
+            C: { fr: "Jaune, Bleu, Rouge", en: "Yellow, Blue, Red" },
+            D: { fr: "Bleu, Rouge, Jaune", en: "Blue, Red, Yellow" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "La voiture rouge a un STOP et doit laisser passer tous les autres. Entre bleu et jaune, la priorité à droite s'applique : bleu passe avant jaune.",
+        explanationEn: "Red has a STOP and must wait for all others. Between blue and yellow, priority to the right applies: blue goes before yellow.",
+        trapNote: "STOP means yield to ALL traffic. Among the non-STOP cars, normal priority rules apply.",
+        vocabulary: [
+            { wordFr: "marquer l'arrêt", wordEn: "come to a complete stop" },
+            { wordFr: "priorité à droite", wordEn: "priority to the right" }
+        ]
+    },
     // === CROISEMENT_DEPASSEMENT ===,
     {
         id: "croi-001",
@@ -7606,6 +7741,28 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "croisement en montagne", wordEn: "passing on a mountain road", definition: "When two vehicles meet on a road too narrow for both to pass simultaneously" },
             { wordFr: "emplacement de croisement", wordEn: "passing place", definition: "A widened section of road allowing vehicles to pass each other" }
+        ]
+    },
+    {
+        id: "media-005",
+        topic: "croisement_depassement",
+        difficulty: 2,
+        media: { type: "image", url: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22400%22%20height%3D%22300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%2387CEEB%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%234a8c3f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22120%22%20width%3D%22400%22%20height%3D%22100%22%20fill%3D%22%23555%22%2F%3E%3Cline%20x1%3D%220%22%20y1%3D%22170%22%20x2%3D%22400%22%20y2%3D%22170%22%20stroke%3D%22yellow%22%20stroke-width%3D%223%22%2F%3E%3Cg%20transform%3D%22translate(100%2C195)%20rotate(90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%233498db%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Cg%20transform%3D%22translate(250%2C145)%20rotate(-90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%23e74c3c%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M130%2C195%20C140%2C160%20180%2C155%20200%2C155%22%20stroke%3D%22%233498db%22%20stroke-width%3D%222%22%20fill%3D%22none%22%20stroke-dasharray%3D%225%2C5%22%2F%3E%3Ctext%20x%3D%22200%22%20y%3D%22290%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20fill%3D%22%23333%22%3ESolid%20center%20line%3C%2Ftext%3E%3C%2Fsvg%3E", alt: "Two-lane road with solid yellow center line. Blue car wants to overtake. Red car approaching from opposite direction." },
+        questionFr: "Le conducteur de la voiture bleue peut-il dépasser dans cette situation ?",
+        questionEn: "Can the blue car overtake in this situation?",
+        options: {
+            A: { fr: "Oui, s'il a une bonne visibilité", en: "Yes, if visibility is good" },
+            B: { fr: "Non, la ligne continue interdit le dépassement", en: "No, the solid line prohibits overtaking" },
+            C: { fr: "Oui, s'il klaxonne avant", en: "Yes, if they honk first" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Une ligne continue interdit le franchissement et donc le dépassement. Il faut attendre une zone de dépassement autorisée.",
+        explanationEn: "A solid center line prohibits crossing and therefore overtaking. Wait for an authorized overtaking zone.",
+        trapNote: "Even with good visibility, a solid line means NO overtaking. Period.",
+        vocabulary: [
+            { wordFr: "ligne continue", wordEn: "solid line" },
+            { wordFr: "dépassement", wordEn: "overtaking / passing" }
         ]
     },
     // === ARRET & STATIONNEMENT (Stopping & Parking) ===,
@@ -8880,6 +9037,27 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "stationnement alterné semi-mensuel", wordEn: "semi-monthly alternating parking", definition: "A system where the permitted parking side of the street changes twice per month" },
             { wordFr: "numéros pairs/impairs", wordEn: "even/odd numbers", definition: "The house numbers on each side of the street, used to determine parking sides" }
+        ]
+    },
+    {
+        id: "media-004",
+        topic: "arret_stationnement",
+        difficulty: 2,
+        media: { type: "image", url: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22400%22%20height%3D%22300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%2387CEEB%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%234a8c3f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22150%22%20width%3D%22400%22%20height%3D%2280%22%20fill%3D%22%23555%22%2F%3E%3Cline%20x1%3D%220%22%20y1%3D%22190%22%20x2%3D%22400%22%20y2%3D%22190%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Crect%20x%3D%22180%22%20y%3D%22150%22%20width%3D%228%22%20height%3D%2280%22%20fill%3D%22white%22%2F%3E%3Crect%20x%3D%22195%22%20y%3D%22150%22%20width%3D%228%22%20height%3D%2280%22%20fill%3D%22white%22%2F%3E%3Crect%20x%3D%22210%22%20y%3D%22150%22%20width%3D%228%22%20height%3D%2280%22%20fill%3D%22white%22%2F%3E%3Crect%20x%3D%22225%22%20y%3D%22150%22%20width%3D%228%22%20height%3D%2280%22%20fill%3D%22white%22%2F%3E%3Cg%20transform%3D%22translate(155%2C175)%20rotate(90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%23e74c3c%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Ctext%20x%3D%22200%22%20y%3D%22290%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20fill%3D%22%23333%22%3EParking%20near%20a%20crosswalk%3C%2Ftext%3E%3C%2Fsvg%3E", alt: "Road with zebra crossing. Red car parked very close to the crosswalk." },
+        questionFr: "Le stationnement de cette voiture est-il autorisé ?",
+        questionEn: "Is this car legally parked?",
+        options: {
+            A: { fr: "Oui, c'est autorisé", en: "Yes, it is allowed" },
+            B: { fr: "Non, il faut être à 5 m minimum du passage piéton", en: "No, must be at least 5m from the crosswalk" },
+            C: { fr: "Oui, si le conducteur reste dans la voiture", en: "Yes, if the driver stays in the car" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Il est interdit de stationner à moins de 5 mètres en amont d'un passage piéton. Cela gêne la visibilité des piétons.",
+        explanationEn: "Parking within 5 meters before a pedestrian crossing is prohibited. It blocks visibility for pedestrians.",
+        vocabulary: [
+            { wordFr: "passage piéton", wordEn: "pedestrian crossing / crosswalk" },
+            { wordFr: "en amont", wordEn: "before / upstream" }
         ]
     },
     // === TUNNELS & PASSAGES A NIVEAU (Tunnels & Level Crossings) ===,
@@ -10180,6 +10358,28 @@ const QUESTION_BANK = [
             { wordFr: "marche arrière", wordEn: "reversing", definition: "Driving backwards" }
         ]
     },
+    {
+        id: "media-007",
+        topic: "tunnels_passages_niveau",
+        difficulty: 2,
+        media: { type: "image", url: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22400%22%20height%3D%22300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%2387CEEB%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%234a8c3f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22180%22%20width%3D%22400%22%20height%3D%2280%22%20fill%3D%22%23555%22%2F%3E%3Cline%20x1%3D%220%22%20y1%3D%22220%22%20x2%3D%22400%22%20y2%3D%22220%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Crect%20x%3D%22145%22%20y%3D%22100%22%20width%3D%226%22%20height%3D%2280%22%20fill%3D%22%23333%22%2F%3E%3Crect%20x%3D%22250%22%20y%3D%22100%22%20width%3D%226%22%20height%3D%2280%22%20fill%3D%22%23333%22%2F%3E%3Crect%20x%3D%22148%22%20y%3D%22160%22%20width%3D%22100%22%20height%3D%225%22%20fill%3D%22red%22%20rx%3D%222%22%2F%3E%3Crect%20x%3D%22152%22%20y%3D%22160%22%20width%3D%22100%22%20height%3D%225%22%20fill%3D%22red%22%20rx%3D%222%22%20transform%3D%22rotate(180%2C202%2C162)%22%2F%3E%3Cline%20x1%3D%22185%22%20y1%3D%22105%22%20x2%3D%22215%22%20y2%3D%22135%22%20stroke%3D%22red%22%20stroke-width%3D%224%22%2F%3E%3Cline%20x1%3D%22215%22%20y1%3D%22105%22%20x2%3D%22185%22%20y2%3D%22135%22%20stroke%3D%22red%22%20stroke-width%3D%224%22%2F%3E%3Ccircle%20cx%3D%22185%22%20cy%3D%2298%22%20r%3D%228%22%20fill%3D%22red%22%2F%3E%3Ccircle%20cx%3D%22215%22%20cy%3D%2298%22%20r%3D%228%22%20fill%3D%22red%22%2F%3E%3Cg%20transform%3D%22translate(100%2C210)%20rotate(90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%233498db%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Ctext%20x%3D%22200%22%20y%3D%22290%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20fill%3D%22%23333%22%3ELevel%20crossing%20with%20barriers%20down%3C%2Ftext%3E%3C%2Fsvg%3E", alt: "Railway level crossing. Barriers down, red lights. Blue car stopped before crossing." },
+        questionFr: "Les barrières du passage à niveau sont baissées et les feux clignotent. Que devez-vous faire ?",
+        questionEn: "The level crossing barriers are down and lights are flashing. What must you do?",
+        options: {
+            A: { fr: "S'arrêter et attendre la levée des barrières", en: "Stop and wait for barriers to raise" },
+            B: { fr: "Contourner les barrières s'il n'y a pas de train visible", en: "Go around barriers if no train is visible" },
+            C: { fr: "Klaxonner pour signaler sa présence", en: "Honk to signal your presence" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Quand les barrières sont baissées, l'arrêt est OBLIGATOIRE. Il est strictement interdit de contourner ou franchir des barrières fermées.",
+        explanationEn: "When barriers are down, stopping is MANDATORY. It is strictly forbidden to go around or cross closed barriers.",
+        trapNote: "Never try to beat the barriers, even if you cannot see a train.",
+        vocabulary: [
+            { wordFr: "passage à niveau", wordEn: "level crossing / railroad crossing" },
+            { wordFr: "barrière", wordEn: "barrier / gate" }
+        ]
+    },
     // === SIGNALISATION (Signs & Signals) ===,
     {
         id: "sign-001",
@@ -11469,6 +11669,28 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "signalisation temporaire", wordEn: "temporary signage", definition: "Yellow-background signs used to indicate temporary road conditions, usually works" },
             { wordFr: "déviation", wordEn: "diversion / detour", definition: "An alternative route around an obstacle or road closure" }
+        ]
+    },
+    {
+        id: "media-002",
+        topic: "signalisation",
+        difficulty: 1,
+        media: { type: "image", url: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22400%22%20height%3D%22300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%2387CEEB%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%234a8c3f%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22150%22%20width%3D%22400%22%20height%3D%2280%22%20fill%3D%22%23555%22%2F%3E%3Cline%20x1%3D%220%22%20y1%3D%22190%22%20x2%3D%22400%22%20y2%3D%22190%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-dasharray%3D%228%2C8%22%2F%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2218%22%20fill%3D%22white%22%20stroke%3D%22red%22%20stroke-width%3D%223%22%2F%3E%3Ctext%20x%3D%2250%22%20y%3D%2256%22%20text-anchor%3D%22middle%22%20font-size%3D%2214%22%20font-weight%3D%22bold%22%3E50%3C%2Ftext%3E%3Cg%20transform%3D%22translate(300%2C180)%20rotate(90)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%232ecc71%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Ctext%20x%3D%22200%22%20y%3D%22290%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20fill%3D%22%23333%22%3ESpeed%20limit%20zone%3C%2Ftext%3E%3C%2Fsvg%3E", alt: "Straight road with 50 km/h speed limit sign. Green car on road." },
+        questionFr: "Quelle est la vitesse maximale autorisée sur cette route ?",
+        questionEn: "What is the maximum speed allowed on this road?",
+        options: {
+            A: { fr: "30 km/h", en: "30 km/h" },
+            B: { fr: "50 km/h", en: "50 km/h" },
+            C: { fr: "70 km/h", en: "70 km/h" },
+            D: { fr: "90 km/h", en: "90 km/h" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le panneau rond à bord rouge avec le chiffre 50 indique une limitation de vitesse à 50 km/h.",
+        explanationEn: "The round sign with a red border showing 50 indicates a speed limit of 50 km/h.",
+        vocabulary: [
+            { wordFr: "limitation de vitesse", wordEn: "speed limit" },
+            { wordFr: "panneau rond", wordEn: "round sign" }
         ]
     },
     // === NOTIONS DIVERSES (General Knowledge) ===,
