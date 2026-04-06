@@ -154,6 +154,25 @@ const Achievements = {
         });
     },
 
+    // Share an unlocked achievement via Web Share API or clipboard fallback
+    async share(achievementId) {
+        const achievement = ACHIEVEMENTS.find(a => a.id === achievementId);
+        if (!achievement) return;
+        const text = `${achievement.icon} ${achievement.title} — ${achievement.desc}\nCode de la Route study app`;
+        if (navigator.share) {
+            try {
+                await navigator.share({ title: achievement.title, text });
+            } catch (e) {
+                // User cancelled or share failed — ignore
+            }
+        } else if (navigator.clipboard) {
+            await navigator.clipboard.writeText(text);
+            showToast('Copied to clipboard!', 'success');
+        } else {
+            showToast('Sharing not supported on this device', 'info');
+        }
+    },
+
     // Render achievements grid for progress view
     renderSection() {
         const unlocked = Storage.getAchievements();
@@ -183,7 +202,8 @@ const Achievements = {
                         <div class="achievement-icon">${isUnlocked ? a.icon : '🔒'}</div>
                         <div class="achievement-title">${a.title}</div>
                         <div class="achievement-desc">${a.desc}</div>
-                        ${isUnlocked ? `<div class="achievement-date">${date}</div>` : ''}
+                        ${isUnlocked ? `<div class="achievement-date">${date}</div>
+                        <button class="achievement-share-btn" onclick="Achievements.share('${a.id}')" aria-label="Share achievement">🔗</button>` : ''}
                     </div>`;
             }
             html += '</div>';

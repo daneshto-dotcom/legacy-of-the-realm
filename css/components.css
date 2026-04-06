@@ -2528,6 +2528,26 @@
     font-weight: 600;
 }
 
+.achievement-share-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+.achievement-share-btn:hover,
+.achievement-share-btn:active {
+    opacity: 1;
+    background: rgba(0,0,0,0.05);
+}
+.achievement-card { position: relative; }
+
 /* Achievement Toast */
 .achievement-toast {
     display: flex;
