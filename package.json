@@ -4,6 +4,8 @@
   "private": true,
   "description": "French driving theory tutor PWA for Sara",
   "scripts": {
-    "build:questions": "node scripts/build-questions.js"
+    "build:questions": "node scripts/build-questions.js",
+    "build:vocab": "node scripts/build-vocab.js",
+    "build": "npm run build:questions && npm run build:vocab"
   }
 }

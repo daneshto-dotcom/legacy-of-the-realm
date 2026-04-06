@@ -29,6 +29,11 @@ const Vocab = {
 
     // === VOCABULARY EXTRACTION ===
     getAllVocab() {
+        // Use pre-built VOCAB_DATA if available (from js/vocab-data.js)
+        if (typeof VOCAB_DATA !== 'undefined' && VOCAB_DATA.length > 0) {
+            return VOCAB_DATA.slice();
+        }
+        // Fallback: extract from QUESTION_BANK at runtime
         const vocabMap = new Map();
         for (const q of QUESTION_BANK) {
             if (!q.vocabulary) continue;
