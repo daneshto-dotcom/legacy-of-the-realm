@@ -61,14 +61,23 @@ const App = {
         Achievements.checkAll();
         Challenges.updateProgress();
 
-        // Listen for service worker update notifications
+        // Auto-reload on service worker update (seamless updates for TWA/mobile)
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.addEventListener('message', (event) => {
                 if (event.data?.type === 'SW_UPDATED') {
-                    showToast('App updated! Refresh for latest version.', 'success');
+                    this._pendingUpdate = true;
+                    // Fallback: if no navigation within 60s, reload anyway
+                    this._updateTimer = setTimeout(() => {
+                        if (this._pendingUpdate && !sessionStorage.getItem('sw_reloading')) {
+                            sessionStorage.setItem('sw_reloading', '1');
+                            window.location.reload();
+                        }
+                    }, 60000);
                 }
             });
         }
+        // Clear reload guard from previous reload
+        sessionStorage.removeItem('sw_reloading');
     },
 
     // === THEME MANAGEMENT ===
@@ -275,6 +284,14 @@ const App = {
     },
 
     navigate(viewName) {
+        // Auto-reload if SW update is pending (seamless update on tab switch)
+        if (this._pendingUpdate && !sessionStorage.getItem('sw_reloading')) {
+            clearTimeout(this._updateTimer);
+            sessionStorage.setItem('sw_reloading', '1');
+            window.location.reload();
+            return;
+        }
+
         // Don't navigate away from exam while active
         if (Exam.active && viewName !== 'exam') {
             if (!confirm('Leave the exam? Your progress will be lost.')) return;
@@ -767,15 +784,8 @@ if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js')
             .then(reg => {
-                // Check for updates
-                reg.addEventListener('updatefound', () => {
-                    const newWorker = reg.installing;
-                    newWorker.addEventListener('statechange', () => {
-                        if (newWorker.state === 'activated') {
-                            showToast('App updated! Refresh for latest version.', 'success');
-                        }
-                    });
-                });
+                // Check for updates periodically (every 30 min)
+                setInterval(() => reg.update(), 30 * 60 * 1000);
             })
             .catch(() => {});
     });
