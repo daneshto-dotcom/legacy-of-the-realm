@@ -2310,6 +2310,13 @@
     "questionId": "media-087"
   },
   {
+    "wordFr": "interdiction de dépasser",
+    "wordEn": "no overtaking",
+    "definition": "Passing the vehicle ahead is forbidden in this zone",
+    "topic": "croisement_depassement",
+    "questionId": "media-105"
+  },
+  {
     "wordFr": "ligne mixte",
     "wordEn": "mixed line marking",
     "definition": "A road marking with one continuous and one dashed line side by side",

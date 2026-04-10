@@ -2,7 +2,7 @@
    Service Worker — Offline Support
    ============================================ */
 
-const CACHE_NAME = 'code-de-la-route-v39';
+const CACHE_NAME = 'code-de-la-route-v40';
 
 // Use relative paths so caching works on GitHub Pages subdirectory (/code-de-la-route/)
 const URLS_TO_CACHE = [
@@ -190,7 +190,15 @@ const URLS_TO_CACHE = [
     './assets/audio/vocab/exces-de-vitesse.mp3',
     './assets/audio/vocab/chevron.mp3',
     './assets/audio/vocab/disque-a.mp3',
-    './assets/audio/vocab/fond-bleu.mp3'
+    './assets/audio/vocab/fond-bleu.mp3',
+    // Sign images (Imagen 4 compressed WebP)
+    './assets/images/signs/stop-sign.webp',
+    './assets/images/signs/yield-sign.webp',
+    './assets/images/signs/no-entry-sign.webp',
+    './assets/images/signs/speed-limit-50.webp',
+    './assets/images/signs/no-overtaking-sign.webp',
+    './assets/images/signs/pedestrian-crossing-sign.webp',
+    './assets/images/signs/priority-road-sign.webp'
 ];
 
 // Install — cache core assets

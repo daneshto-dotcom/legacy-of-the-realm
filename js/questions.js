@@ -1,5 +1,5 @@
 /* ============================================
-   Question Bank — 670 Bilingual Questions
+   Question Bank — 677 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
    ============================================
@@ -1572,6 +1572,29 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "rond-point", wordEn: "roundabout", definition: "Circular intersection" },
             { wordFr: "sens de circulation", wordEn: "traffic direction", definition: "The way vehicles must travel" }
+        ]
+    },
+    {
+        id: "media-104",
+        topic: "circulation",
+        difficulty: 1,
+        media: { type: "image", url: "assets/images/signs/speed-limit-50.webp", alt: "French 50 km/h speed limit sign" },
+        questionFr: "Quelle est la vitesse maximale indiquée par ce panneau ?",
+        questionEn: "What maximum speed does this sign indicate?",
+        options: {
+            A: { fr: "30 km/h", en: "30 km/h" },
+            B: { fr: "50 km/h", en: "50 km/h" },
+            C: { fr: "70 km/h", en: "70 km/h" },
+            D: { fr: "90 km/h", en: "90 km/h" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le panneau rond à bord rouge avec le chiffre 50 indique une vitesse maximale de 50 km/h.",
+        explanationEn: "The round sign with red border showing 50 means a maximum speed of 50 km/h.",
+        trapNote: "Red border circle + number = speed LIMIT (maximum). Blue circle + number = minimum speed. Know the difference.",
+        distractorNotes: { A: "30 km/h would show the number 30.", C: "70 km/h would show the number 70.", D: "90 km/h would show the number 90." },
+        vocabulary: [
+            { wordFr: "limitation de vitesse", wordEn: "speed limit", definition: "The maximum speed allowed on this road section" }
         ]
     },
     // === CONDUCTEUR ===,
@@ -6193,6 +6216,29 @@ const QUESTION_BANK = [
             { wordFr: "ralentir", wordEn: "to slow down", definition: "Reduce speed" }
         ]
     },
+    {
+        id: "media-106",
+        topic: "autres_usagers",
+        difficulty: 1,
+        media: { type: "image", url: "assets/images/signs/pedestrian-crossing-sign.webp", alt: "French pedestrian crossing sign" },
+        questionFr: "Que signifie ce panneau bleu ?",
+        questionEn: "What does this blue sign mean?",
+        options: {
+            A: { fr: "Passage piéton", en: "Pedestrian crossing" },
+            B: { fr: "Zone piétonne interdite", en: "Pedestrian zone forbidden" },
+            C: { fr: "Passage souterrain", en: "Underground passage" },
+            D: { fr: "Arrêt de bus", en: "Bus stop" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Le panneau bleu carré avec un piéton sur des bandes indique un passage piéton — les piétons ont la priorité.",
+        explanationEn: "The blue square sign with a pedestrian on stripes indicates a pedestrian crossing — pedestrians have priority.",
+        trapNote: "Blue square + pedestrian = crossing point. Pedestrians showing intent to cross ALWAYS have priority here. Penalty: 6 points + 135 euro fine.",
+        distractorNotes: { B: "This sign indicates a crossing, not a prohibition.", C: "Underground passages use different signage.", D: "Bus stops have their own specific sign." },
+        vocabulary: [
+            { wordFr: "passage piéton", wordEn: "pedestrian crossing", definition: "A marked area where pedestrians have priority to cross the road" }
+        ]
+    },
     // === PRIORITE (Right of Way) ===,
     {
         id: "prio-001",
@@ -7835,6 +7881,52 @@ const QUESTION_BANK = [
             { wordFr: "losange", wordEn: "diamond shape", definition: "The shape of the priority road sign" }
         ]
     },
+    {
+        id: "media-102",
+        topic: "priorite",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/yield-sign.webp", alt: "French yield sign (cédez le passage)" },
+        questionFr: "Que signifie ce panneau ?",
+        questionEn: "What does this sign mean?",
+        options: {
+            A: { fr: "Arrêt obligatoire", en: "Mandatory stop" },
+            B: { fr: "Cédez le passage", en: "Yield / give way" },
+            C: { fr: "Route prioritaire", en: "Priority road" },
+            D: { fr: "Fin de priorité", en: "End of priority" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le triangle inversé (pointe en bas) signifie « cédez le passage » — ralentissez et laissez passer les autres.",
+        explanationEn: "The inverted triangle (point down) means yield — slow down and let others pass.",
+        trapNote: "Inverted triangle = yield. Regular triangle (point up) = danger warning. They look similar but mean very different things.",
+        distractorNotes: { A: "Mandatory stop is an octagonal STOP sign.", C: "Priority road is a yellow diamond.", D: "End of priority has diagonal black lines." },
+        vocabulary: [
+            { wordFr: "cédez le passage", wordEn: "yield", definition: "Slow down and give way to other traffic" }
+        ]
+    },
+    {
+        id: "media-107",
+        topic: "priorite",
+        difficulty: 1,
+        media: { type: "image", url: "assets/images/signs/priority-road-sign.webp", alt: "French priority road sign (yellow diamond)" },
+        questionFr: "Que signifie ce panneau en losange jaune ?",
+        questionEn: "What does this yellow diamond sign mean?",
+        options: {
+            A: { fr: "Danger", en: "Danger" },
+            B: { fr: "Zone 30", en: "Zone 30" },
+            C: { fr: "Route prioritaire", en: "Priority road" },
+            D: { fr: "Fin de toutes les interdictions", en: "End of all restrictions" }
+        },
+        correctAnswers: ["C"],
+        answerCount: 1,
+        explanationFr: "Le losange jaune indique que vous êtes sur une route prioritaire — les véhicules des voies secondaires doivent vous céder le passage.",
+        explanationEn: "The yellow diamond means you are on a priority road — vehicles from side roads must yield to you.",
+        trapNote: "Yellow diamond = YOU have priority. Don't confuse with danger signs (triangles) or Zone 30 signs (red circle with 30).",
+        distractorNotes: { A: "Danger signs are triangular with red borders.", B: "Zone 30 is a round red sign with '30' inside.", D: "End of restrictions is a round white sign with diagonal lines." },
+        vocabulary: [
+            { wordFr: "route prioritaire", wordEn: "priority road", definition: "A road where you have right of way over joining traffic" }
+        ]
+    },
     // === CROISEMENT_DEPASSEMENT ===,
     {
         id: "croi-001",
@@ -9396,6 +9488,29 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "croisement", wordEn: "crossing", definition: "When two vehicles meet head-on" },
             { wordFr: "route étroite", wordEn: "narrow road", definition: "A road too narrow for two vehicles" }
+        ]
+    },
+    {
+        id: "media-105",
+        topic: "croisement_depassement",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/no-overtaking-sign.webp", alt: "French no overtaking sign" },
+        questionFr: "Que signifie ce panneau avec deux véhicules ?",
+        questionEn: "What does this sign with two vehicles mean?",
+        options: {
+            A: { fr: "Dépassement autorisé", en: "Overtaking allowed" },
+            B: { fr: "Interdiction de dépasser", en: "No overtaking" },
+            C: { fr: "Voie réservée aux bus", en: "Bus-only lane" },
+            D: { fr: "Croisement dangereux", en: "Dangerous crossing" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le panneau rond à bord rouge avec deux véhicules (un rouge et un noir) signifie interdiction de dépasser.",
+        explanationEn: "The round sign with red border showing two cars (one red, one black) means no overtaking.",
+        trapNote: "Red car + black car in red circle = no overtaking. The red car represents YOU trying to pass — forbidden.",
+        distractorNotes: { A: "Overtaking allowed has no sign — it's the default when no restriction applies.", C: "Bus lanes have different markings.", D: "Dangerous crossings use triangle warning signs." },
+        vocabulary: [
+            { wordFr: "interdiction de dépasser", wordEn: "no overtaking", definition: "Passing the vehicle ahead is forbidden in this zone" }
         ]
     },
     // === ARRET & STATIONNEMENT (Stopping & Parking) ===,
@@ -14152,6 +14267,52 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "interdiction", wordEn: "prohibition", definition: "Something forbidden" },
             { wordFr: "bord rouge", wordEn: "red border", definition: "Red edge indicating prohibition" }
+        ]
+    },
+    {
+        id: "media-101",
+        topic: "signalisation",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/stop-sign.webp", alt: "French STOP sign" },
+        questionFr: "Que devez-vous faire face à ce panneau ?",
+        questionEn: "What must you do when facing this sign?",
+        options: {
+            A: { fr: "Ralentir et céder le passage", en: "Slow down and yield" },
+            B: { fr: "Faire un arrêt complet", en: "Make a complete stop" },
+            C: { fr: "Accélérer pour dégager l'intersection", en: "Speed up to clear the intersection" },
+            D: { fr: "Continuer si aucun véhicule n'est visible", en: "Continue if no vehicle is visible" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le panneau STOP impose un arrêt complet, même si aucun véhicule n'est en vue.",
+        explanationEn: "A STOP sign requires a complete stop, even if no vehicle is in sight.",
+        trapNote: "STOP = always full stop. Unlike yield, you cannot just slow down — you must come to a complete halt before the line.",
+        distractorNotes: { A: "That's a yield sign behavior, not STOP.", C: "Dangerous and illegal.", D: "You must ALWAYS stop, regardless of visible traffic." },
+        vocabulary: [
+            { wordFr: "arrêt complet", wordEn: "complete stop", definition: "Coming to a full halt with zero movement" }
+        ]
+    },
+    {
+        id: "media-103",
+        topic: "signalisation",
+        difficulty: 1,
+        media: { type: "image", url: "assets/images/signs/no-entry-sign.webp", alt: "French no entry sign (sens interdit)" },
+        questionFr: "Que signifie ce panneau rond rouge ?",
+        questionEn: "What does this round red sign mean?",
+        options: {
+            A: { fr: "Sens interdit", en: "No entry" },
+            B: { fr: "Arrêt obligatoire", en: "Mandatory stop" },
+            C: { fr: "Limitation de vitesse", en: "Speed limit" },
+            D: { fr: "Interdiction de stationner", en: "No parking" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Le panneau rouge avec une barre blanche horizontale signifie « sens interdit » — vous ne pouvez pas entrer.",
+        explanationEn: "The red sign with a white horizontal bar means no entry — you cannot enter.",
+        trapNote: "Red circle + white bar = no entry. Don't confuse with the STOP sign (octagonal) or no parking (round blue with red diagonal).",
+        distractorNotes: { B: "STOP is octagonal, not round.", C: "Speed limits show a number inside.", D: "No parking has different colors (blue with red)." },
+        vocabulary: [
+            { wordFr: "sens interdit", wordEn: "no entry", definition: "A road or lane that traffic cannot enter from this direction" }
         ]
     },
     // === NOTIONS DIVERSES (General Knowledge) ===,
