@@ -1,5 +1,5 @@
 /* ============================================
-   Question Bank — 677 Bilingual Questions
+   Question Bank — 697 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
    ============================================
@@ -7927,6 +7927,119 @@ const QUESTION_BANK = [
             { wordFr: "route prioritaire", wordEn: "priority road", definition: "A road where you have right of way over joining traffic" }
         ]
     },
+    {
+        id: "prio-108",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Que signifie 'priorité à droite' ?",
+        questionEn: "What does 'priority to the right' mean?",
+        options: {
+            A: { fr: "Vous devez céder le passage aux véhicules venant de votre droite", en: "You must give way to vehicles coming from your right" },
+            B: { fr: "Vous devez toujours tourner à droite", en: "You must always turn right" },
+            C: { fr: "Les piétons passent à droite", en: "Pedestrians walk on the right" },
+            D: { fr: "Vous roulez sur la voie de droite", en: "You drive in the right lane" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "La priorité à droite est la règle par défaut en France : à une intersection sans signalisation, vous devez céder le passage à tout véhicule venant de votre droite.",
+        explanationEn: "Priority to the right is the default rule in France: at an intersection without signs, you must give way to any vehicle coming from your right.",
+        trapNote: "Default rule at unmarked intersections. If no sign says otherwise, yield to the right.",
+        distractorNotes: { B: "Priority to the right is about yielding, not turning direction.", C: "This rule concerns vehicles, not pedestrians.", D: "This is about intersection priority, not lane position." },
+        vocabulary: [
+            { wordFr: "priorité à droite", wordEn: "priority to the right", definition: "The default rule requiring drivers to yield to vehicles from the right at intersections" },
+            { wordFr: "céder le passage", wordEn: "to give way/yield", definition: "To let another road user go first" }
+        ]
+    },
+    {
+        id: "prio-109",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Que devez-vous faire quand un feu tricolore est au vert ?",
+        questionEn: "What must you do when a traffic light is green?",
+        options: {
+            A: { fr: "Vous pouvez passer si l'intersection est dégagée", en: "You may proceed if the intersection is clear" },
+            B: { fr: "Vous devez vous arrêter", en: "You must stop" },
+            C: { fr: "Vous devez klaxonner", en: "You must honk" },
+            D: { fr: "Vous devez accélérer au maximum", en: "You must accelerate as much as possible" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Le feu vert autorise le passage, mais vous devez quand même vérifier que l'intersection est dégagée. Ne vous engagez pas si des véhicules ou piétons bloquent encore le passage.",
+        explanationEn: "A green light authorises you to proceed, but you must still check that the intersection is clear. Do not enter if vehicles or pedestrians are still blocking the way.",
+        trapNote: "Green = go IF clear. You can still be at fault for entering a blocked intersection on green.",
+        distractorNotes: { B: "Stopping on green would obstruct traffic behind you.", C: "Honking is not required at a green light.", D: "Maximum acceleration is never required — proceed at a safe speed." },
+        vocabulary: [
+            { wordFr: "feu tricolore", wordEn: "traffic light", definition: "A signal with red, amber, and green lights controlling intersection traffic" },
+            { wordFr: "intersection dégagée", wordEn: "clear intersection", definition: "An intersection free of vehicles and pedestrians blocking the way" }
+        ]
+    },
+    {
+        id: "prio-110",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Que signifie un feu orange (jaune) fixe ?",
+        questionEn: "What does a steady amber (yellow) light mean?",
+        options: {
+            A: { fr: "Accélérez pour passer avant le rouge", en: "Speed up to get through before it turns red" },
+            B: { fr: "Arrêtez-vous, sauf si vous ne pouvez plus le faire en sécurité", en: "Stop, unless you can no longer do so safely" },
+            C: { fr: "Cédez le passage à droite", en: "Give way to the right" },
+            D: { fr: "Le feu est en panne", en: "The light is broken" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le feu orange fixe signifie que vous devez vous arrêter. La seule exception : si vous êtes trop proche pour vous arrêter en sécurité. Griller un feu orange est une infraction (perte de 4 points, 135 €).",
+        explanationEn: "A steady amber light means you must stop. The only exception: if you are too close to stop safely. Running an amber light is an offence (4 points lost, 135 euro fine).",
+        trapNote: "Amber = stop. NOT 'speed up'. Only pass if stopping would be dangerous.",
+        distractorNotes: { A: "Accelerating through amber is illegal and dangerous.", C: "Amber light is about stopping, not yielding to the right.", D: "A steady amber is a normal signal phase, not a malfunction." },
+        vocabulary: [
+            { wordFr: "feu orange", wordEn: "amber light", definition: "The yellow phase of a traffic light, signalling the upcoming red" }
+        ]
+    },
+    {
+        id: "prio-111",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "À qui devez-vous TOUJOURS céder le passage, quel que soit le feu ou le panneau ?",
+        questionEn: "To whom must you ALWAYS give way, regardless of lights or signs?",
+        options: {
+            A: { fr: "Aux véhicules d'urgence (sirène et gyrophare)", en: "Emergency vehicles (siren and flashing light)" },
+            B: { fr: "Aux taxis", en: "Taxis" },
+            C: { fr: "Aux camions", en: "Trucks" },
+            D: { fr: "Aux véhicules électriques", en: "Electric vehicles" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Les véhicules prioritaires (pompiers, SAMU, police) avec sirène et gyrophare en action ont toujours la priorité. Vous devez leur faciliter le passage en vous rangeant sur le côté.",
+        explanationEn: "Priority vehicles (fire brigade, ambulance, police) with active siren and flashing lights always have priority. You must make way for them by pulling to the side.",
+        trapNote: "Siren + flashing light = absolute priority. Pull over and let them pass.",
+        distractorNotes: { B: "Taxis have no special priority rights.", C: "Trucks follow the same priority rules as other vehicles.", D: "Electric vehicles have no special priority status." },
+        vocabulary: [
+            { wordFr: "véhicule prioritaire", wordEn: "priority/emergency vehicle", definition: "A vehicle with legal authority to override traffic rules when using siren and lights" },
+            { wordFr: "gyrophare", wordEn: "flashing light/beacon", definition: "The rotating or flashing light on top of emergency vehicles" }
+        ]
+    },
+    {
+        id: "prio-112",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Que signifie un panneau triangulaire avec un sommet vers le bas (pointe en bas) ?",
+        questionEn: "What does a triangular sign pointing downward (inverted triangle) mean?",
+        options: {
+            A: { fr: "Sens interdit", en: "No entry" },
+            B: { fr: "Cédez le passage", en: "Give way/Yield" },
+            C: { fr: "Route prioritaire", en: "Priority road" },
+            D: { fr: "Danger", en: "Danger" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le triangle inversé (pointe vers le bas) est le panneau 'Cédez le passage'. Vous devez ralentir et laisser passer les véhicules sur la route prioritaire, en vous arrêtant si nécessaire.",
+        explanationEn: "The inverted triangle (pointing down) is the 'Give Way' sign. You must slow down and let vehicles on the priority road pass, stopping if necessary.",
+        trapNote: "Inverted triangle = yield. Regular triangle (point up) = danger/warning. Shape matters.",
+        distractorNotes: { A: "No entry is a round red sign with a white bar.", C: "Priority road is a yellow diamond sign.", D: "Danger signs are triangles pointing UP, not down." },
+        vocabulary: [
+            { wordFr: "panneau de cédez le passage", wordEn: "give way sign", definition: "An inverted triangle sign requiring you to yield to priority traffic" }
+        ]
+    },
     // === CROISEMENT_DEPASSEMENT ===,
     {
         id: "croi-001",
@@ -9511,6 +9624,119 @@ const QUESTION_BANK = [
         distractorNotes: { A: "Overtaking allowed has no sign — it's the default when no restriction applies.", C: "Bus lanes have different markings.", D: "Dangerous crossings use triangle warning signs." },
         vocabulary: [
             { wordFr: "interdiction de dépasser", wordEn: "no overtaking", definition: "Passing the vehicle ahead is forbidden in this zone" }
+        ]
+    },
+    {
+        id: "croi-106",
+        topic: "croisement_depassement",
+        difficulty: 1,
+        questionFr: "Que signifie le terme 'dépasser' en conduite ?",
+        questionEn: "What does the term 'overtake' mean in driving?",
+        options: {
+            A: { fr: "Devancer un véhicule qui roule dans le même sens", en: "Pass a vehicle travelling in the same direction" },
+            B: { fr: "Croiser un véhicule venant en face", en: "Meet a vehicle coming from the opposite direction" },
+            C: { fr: "Suivre un véhicule de près", en: "Follow a vehicle closely" },
+            D: { fr: "Reculer devant un véhicule", en: "Reverse in front of a vehicle" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Dépasser, c'est devancer un véhicule qui circule dans le même sens que vous. Ne pas confondre avec croiser, qui signifie rencontrer un véhicule venant en sens inverse.",
+        explanationEn: "Overtaking means passing a vehicle travelling in the same direction as you. Do not confuse with 'croiser' (meeting), which means encountering a vehicle from the opposite direction.",
+        trapNote: "Dépasser = same direction. Croiser = opposite direction. Common vocab trap.",
+        distractorNotes: { B: "That is 'croiser' (meeting/crossing), not overtaking.", C: "Following closely is 'coller' or tailgating, not overtaking.", D: "Reversing has nothing to do with overtaking." },
+        vocabulary: [
+            { wordFr: "dépasser", wordEn: "to overtake", definition: "Passing a vehicle going in the same direction" },
+            { wordFr: "croiser", wordEn: "to meet/cross", definition: "Encountering a vehicle coming from the opposite direction" }
+        ]
+    },
+    {
+        id: "croi-107",
+        topic: "croisement_depassement",
+        difficulty: 1,
+        questionFr: "Par quel côté devez-vous normalement dépasser un autre véhicule ?",
+        questionEn: "On which side must you normally overtake another vehicle?",
+        options: {
+            A: { fr: "Par la droite", en: "On the right" },
+            B: { fr: "Par la gauche", en: "On the left" },
+            C: { fr: "N'importe quel côté", en: "Either side" },
+            D: { fr: "Uniquement en ligne droite", en: "Only on a straight road" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "En France, le dépassement se fait par la gauche (art. R414-4). Le dépassement par la droite est interdit sauf exceptions (véhicule tournant à gauche, tramway).",
+        explanationEn: "In France, overtaking is done on the left (Article R414-4). Overtaking on the right is prohibited except in certain exceptions (vehicle turning left, tram).",
+        trapNote: "Left = normal side for overtaking. Right = only when vehicle ahead signals left turn.",
+        distractorNotes: { A: "Right-side overtaking is the exception, not the rule.", C: "You cannot choose freely — left is the default.", D: "The rule is about the side, not the road shape." },
+        vocabulary: [
+            { wordFr: "par la gauche", wordEn: "on the left", definition: "The normal side for overtaking in France" }
+        ]
+    },
+    {
+        id: "croi-108",
+        topic: "croisement_depassement",
+        difficulty: 1,
+        questionFr: "Lors d'un croisement sur une route étroite en montagne, qui doit reculer ?",
+        questionEn: "When meeting on a narrow mountain road, who must reverse?",
+        options: {
+            A: { fr: "Le véhicule qui monte", en: "The vehicle going uphill" },
+            B: { fr: "Le véhicule qui descend", en: "The vehicle going downhill" },
+            C: { fr: "Le plus petit véhicule", en: "The smaller vehicle" },
+            D: { fr: "Le premier arrivé", en: "The first to arrive" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Sur une route de montagne étroite, c'est le véhicule qui descend qui doit reculer pour laisser passer celui qui monte, car reculer en montée est plus difficile et dangereux.",
+        explanationEn: "On a narrow mountain road, the vehicle going downhill must reverse to let the uphill vehicle pass, because reversing uphill is harder and more dangerous.",
+        trapNote: "Downhill reverses. Think: it's easier and safer to reverse downhill than uphill.",
+        distractorNotes: { A: "The uphill vehicle has priority — it keeps going.", C: "Vehicle size is not the deciding factor on mountain roads.", D: "Arrival order does not determine priority here." },
+        vocabulary: [
+            { wordFr: "croisement", wordEn: "meeting/crossing", definition: "Two vehicles passing each other from opposite directions" },
+            { wordFr: "route de montagne", wordEn: "mountain road", definition: "A road in a mountainous area, often narrow with steep gradients" }
+        ]
+    },
+    {
+        id: "croi-109",
+        topic: "croisement_depassement",
+        difficulty: 1,
+        questionFr: "Que signifie une ligne continue au centre de la chaussée ?",
+        questionEn: "What does a solid centre line on the road mean?",
+        options: {
+            A: { fr: "Interdiction de dépasser en la franchissant", en: "No overtaking by crossing it" },
+            B: { fr: "Voie réservée aux bus", en: "Bus lane" },
+            C: { fr: "Vous pouvez dépasser si la voie est libre", en: "You can overtake if the road is clear" },
+            D: { fr: "Limitation de vitesse", en: "Speed limit" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Une ligne continue (blanche) interdit le franchissement. Vous ne pouvez pas la chevaucher ni la franchir pour dépasser. C'est un marquage fondamental du Code de la route.",
+        explanationEn: "A solid (white) line prohibits crossing. You cannot straddle or cross it to overtake. This is a fundamental road marking in the French highway code.",
+        trapNote: "Solid = no crossing. Dashed = overtaking allowed if safe. Basic but essential.",
+        distractorNotes: { B: "Bus lanes are marked differently, with specific signage.", C: "A solid line means no crossing regardless of traffic conditions.", D: "Speed limits are shown on signs, not by centre line markings." },
+        vocabulary: [
+            { wordFr: "ligne continue", wordEn: "solid line", definition: "An unbroken centre line that must not be crossed" },
+            { wordFr: "franchir", wordEn: "to cross (a line)", definition: "To drive over a road marking" }
+        ]
+    },
+    {
+        id: "croi-110",
+        topic: "croisement_depassement",
+        difficulty: 1,
+        questionFr: "Que devez-vous vérifier avant de commencer un dépassement ?",
+        questionEn: "What must you check before starting to overtake?",
+        options: {
+            A: { fr: "Que personne ne vous dépasse et que la voie en face est libre", en: "That nobody is overtaking you and the oncoming lane is clear" },
+            B: { fr: "Que votre réservoir est plein", en: "That your fuel tank is full" },
+            C: { fr: "Que vos passagers sont d'accord", en: "That your passengers agree" },
+            D: { fr: "Que la radio est éteinte", en: "That the radio is off" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Avant de dépasser : 1) vérifiez les rétroviseurs (personne ne vous dépasse), 2) vérifiez la voie en face (libre et suffisamment longue), 3) signalez votre intention (clignotant gauche).",
+        explanationEn: "Before overtaking: 1) check mirrors (nobody is overtaking you), 2) check oncoming lane (clear and long enough), 3) signal your intention (left indicator).",
+        trapNote: "Mirror — Signal — Manoeuvre. Always in that order.",
+        distractorNotes: { B: "Fuel level is irrelevant to overtaking safety.", C: "Passengers have no say in driving decisions like overtaking.", D: "The radio has nothing to do with overtaking checks." },
+        vocabulary: [
+            { wordFr: "clignotant", wordEn: "indicator/turn signal", definition: "The flashing light used to signal a change of direction" }
         ]
     },
     // === ARRET & STATIONNEMENT (Stopping & Parking) ===,
@@ -12680,6 +12906,119 @@ const QUESTION_BANK = [
             { wordFr: "panne", wordEn: "breakdown", definition: "Vehicle stops working" }
         ]
     },
+    {
+        id: "tunn-093",
+        topic: "tunnels_passages_niveau",
+        difficulty: 1,
+        questionFr: "Que signifie le terme 'passage à niveau' ?",
+        questionEn: "What does 'passage à niveau' (level crossing) mean?",
+        options: {
+            A: { fr: "Un croisement entre une route et une voie ferrée", en: "A crossing between a road and a railway line" },
+            B: { fr: "Un passage souterrain", en: "An underground passage" },
+            C: { fr: "Un pont au-dessus de la route", en: "A bridge above the road" },
+            D: { fr: "Un passage piéton", en: "A pedestrian crossing" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Un passage à niveau est l'endroit où une route croise une voie ferrée au même niveau. C'est un point dangereux qui nécessite une vigilance particulière.",
+        explanationEn: "A level crossing is where a road crosses a railway line at the same level. It is a dangerous point requiring special vigilance.",
+        trapNote: "Passage à niveau = road meets train tracks. 'Niveau' means 'level' — same height, no bridge.",
+        distractorNotes: { B: "An underground passage is a 'passage souterrain'.", C: "A bridge is a 'pont' or 'viaduc'.", D: "A pedestrian crossing is a 'passage piéton'." },
+        vocabulary: [
+            { wordFr: "passage à niveau", wordEn: "level crossing", definition: "Where a road crosses a railway track at the same level" },
+            { wordFr: "voie ferrée", wordEn: "railway line/track", definition: "The rails on which trains travel" }
+        ]
+    },
+    {
+        id: "tunn-094",
+        topic: "tunnels_passages_niveau",
+        difficulty: 1,
+        questionFr: "Que devez-vous faire quand les barrières d'un passage à niveau commencent à se fermer ?",
+        questionEn: "What must you do when the barriers at a level crossing begin to close?",
+        options: {
+            A: { fr: "Accélérer pour passer avant la fermeture", en: "Speed up to get through before they close" },
+            B: { fr: "Vous arrêter avant les barrières et attendre", en: "Stop before the barriers and wait" },
+            C: { fr: "Contourner les barrières", en: "Go around the barriers" },
+            D: { fr: "Reculer rapidement", en: "Reverse quickly" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Quand les barrières descendent, vous devez impérativement vous arrêter. Ne tentez jamais de passer — un train ne peut pas s'arrêter rapidement et un accident est toujours fatal.",
+        explanationEn: "When the barriers are coming down, you must stop immediately. Never try to get through — a train cannot stop quickly and collisions are always fatal.",
+        trapNote: "Barriers closing = STOP. No exceptions. Trains cannot brake like cars.",
+        distractorNotes: { A: "Speeding through closing barriers is extremely dangerous and illegal.", C: "Going around barriers is a criminal offence.", D: "Reversing may be dangerous with vehicles behind you." },
+        vocabulary: [
+            { wordFr: "barrière", wordEn: "barrier/gate", definition: "The arm that lowers across the road at a level crossing" }
+        ]
+    },
+    {
+        id: "tunn-095",
+        topic: "tunnels_passages_niveau",
+        difficulty: 1,
+        questionFr: "Que devez-vous faire en entrant dans un tunnel, même en plein jour ?",
+        questionEn: "What must you do when entering a tunnel, even in broad daylight?",
+        options: {
+            A: { fr: "Allumer vos feux de croisement", en: "Turn on your dipped headlights" },
+            B: { fr: "Klaxonner pour signaler votre présence", en: "Honk to signal your presence" },
+            C: { fr: "Rouler le plus vite possible", en: "Drive as fast as possible" },
+            D: { fr: "Rien de spécial", en: "Nothing special" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "En entrant dans un tunnel, allumez toujours vos feux de croisement, même si le tunnel est éclairé. Cela vous rend visible aux autres usagers et vous aide à voir la route.",
+        explanationEn: "When entering a tunnel, always turn on your dipped headlights, even if the tunnel is lit. This makes you visible to other road users and helps you see the road.",
+        trapNote: "Feux de croisement = dipped/low beam. Always on in tunnels. Not full beam (too much glare).",
+        distractorNotes: { B: "Honking in a tunnel is not required and creates excessive noise.", C: "You should adapt your speed, not increase it.", D: "Headlights are always required — there is something special to do." },
+        vocabulary: [
+            { wordFr: "feux de croisement", wordEn: "dipped headlights/low beam", definition: "The standard headlights used for normal night driving and in tunnels" }
+        ]
+    },
+    {
+        id: "tunn-096",
+        topic: "tunnels_passages_niveau",
+        difficulty: 1,
+        questionFr: "En cas d'incendie dans un tunnel, que devez-vous faire ?",
+        questionEn: "In case of fire in a tunnel, what must you do?",
+        options: {
+            A: { fr: "Rester dans votre véhicule vitres fermées", en: "Stay in your vehicle with windows closed" },
+            B: { fr: "Quitter votre véhicule et rejoindre les issues de secours à pied", en: "Leave your vehicle and walk to the emergency exits" },
+            C: { fr: "Faire demi-tour", en: "Make a U-turn" },
+            D: { fr: "Accélérer pour sortir du tunnel", en: "Speed up to exit the tunnel" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "En cas d'incendie dans un tunnel : arrêtez-vous, coupez le moteur, laissez les clés sur le contact, quittez le véhicule et rejoignez les issues de secours à pied. Ne faites JAMAIS demi-tour.",
+        explanationEn: "In case of fire in a tunnel: stop, turn off the engine, leave the keys in the ignition, exit the vehicle, and walk to the emergency exits. NEVER make a U-turn.",
+        trapNote: "Leave keys IN the ignition so rescue services can move your car. Walk to emergency exits.",
+        distractorNotes: { A: "Staying in the car risks smoke inhalation — evacuate on foot.", C: "U-turns are strictly forbidden in tunnels, especially during emergencies.", D: "Speeding through smoke is extremely dangerous — you may crash." },
+        vocabulary: [
+            { wordFr: "issue de secours", wordEn: "emergency exit", definition: "A specially marked escape route in tunnels and buildings" },
+            { wordFr: "couper le moteur", wordEn: "to turn off the engine", definition: "To switch off the vehicle's engine" }
+        ]
+    },
+    {
+        id: "tunn-097",
+        topic: "tunnels_passages_niveau",
+        difficulty: 1,
+        questionFr: "Combien de panneaux en forme de croix de Saint-André avertissent d'un passage à niveau sans barrière ?",
+        questionEn: "How many St. Andrew's cross signs warn of a level crossing without barriers?",
+        options: {
+            A: { fr: "Un seul panneau au bord de la route", en: "One sign at the roadside" },
+            B: { fr: "Trois panneaux à 150 m, 100 m et 50 m", en: "Three signs at 150 m, 100 m and 50 m" },
+            C: { fr: "Aucun panneau", en: "No signs" },
+            D: { fr: "Cinq panneaux", en: "Five signs" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Un passage à niveau est signalé par des balises à 150 m (3 barres rouges), 100 m (2 barres) et 50 m (1 barre). La croix de Saint-André est placée au passage même.",
+        explanationEn: "A level crossing is signalled by countdown markers at 150 m (3 red bars), 100 m (2 bars), and 50 m (1 bar). The St. Andrew's cross is placed at the crossing itself.",
+        trapNote: "3 bars = 150m, 2 bars = 100m, 1 bar = 50m. Count the bars to know the distance.",
+        distractorNotes: { A: "There is a series of warning markers, not just one.", C: "Level crossings are always signposted.", D: "Five panels would be excessive — the standard is three countdown markers." },
+        vocabulary: [
+            { wordFr: "croix de Saint-André", wordEn: "St. Andrew's cross", definition: "The X-shaped sign placed at a level crossing without barriers" },
+            { wordFr: "balise", wordEn: "countdown marker", definition: "A sign with red bars indicating distance to a level crossing" }
+        ]
+    },
     // === SIGNALISATION (Signs & Signals) ===,
     {
         id: "sign-001",
@@ -15844,6 +16183,120 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "permis de conduire", wordEn: "driving license", definition: "Official authorization to drive" },
             { wordFr: "retrait de points", wordEn: "point deduction", definition: "Losing points for violations" }
+        ]
+    },
+    {
+        id: "div-101",
+        topic: "notions_diverses",
+        difficulty: 1,
+        questionFr: "Que signifie le sigle 'PV' en matière de circulation ?",
+        questionEn: "What does the abbreviation 'PV' mean in traffic matters?",
+        options: {
+            A: { fr: "Procès-verbal (une amende)", en: "Official report (a fine)" },
+            B: { fr: "Point de vérification", en: "Checkpoint" },
+            C: { fr: "Priorité au véhicule", en: "Vehicle priority" },
+            D: { fr: "Passage de véhicule", en: "Vehicle passage" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "PV signifie procès-verbal. C'est le document officiel constatant une infraction au Code de la route, accompagné d'une amende (contravention).",
+        explanationEn: "PV stands for procès-verbal (official report). It is the official document recording a traffic offence, accompanied by a fine (contravention).",
+        trapNote: "PV = fine/ticket in everyday French. Know the term — it appears often in the exam.",
+        distractorNotes: { B: "PV does not stand for checkpoint.", C: "There is no concept of 'vehicle priority' abbreviated as PV.", D: "PV is not related to vehicle passage." },
+        vocabulary: [
+            { wordFr: "procès-verbal", wordEn: "official report/fine", definition: "The formal document recording a traffic offence" },
+            { wordFr: "contravention", wordEn: "fine/penalty", definition: "A monetary penalty for a traffic violation" }
+        ]
+    },
+    {
+        id: "div-102",
+        topic: "notions_diverses",
+        difficulty: 1,
+        questionFr: "Combien de points comporte le permis de conduire français (titulaire confirmé) ?",
+        questionEn: "How many points does a full French driving licence have?",
+        options: {
+            A: { fr: "6 points", en: "6 points" },
+            B: { fr: "10 points", en: "10 points" },
+            C: { fr: "12 points", en: "12 points" },
+            D: { fr: "20 points", en: "20 points" }
+        },
+        correctAnswers: ["C"],
+        answerCount: 1,
+        explanationFr: "Le permis de conduire français comporte 12 points pour un titulaire confirmé. Un jeune conducteur commence avec 6 points (période probatoire de 2 à 3 ans).",
+        explanationEn: "A full French driving licence has 12 points. A new driver starts with 6 points (probationary period of 2-3 years).",
+        trapNote: "12 for full licence, 6 for new drivers. Points are LOST for offences, not gained.",
+        distractorNotes: { A: "6 points is for new drivers during the probationary period.", B: "10 points is not a valid total for any French licence category.", D: "20 points is too many — France uses a 12-point system." },
+        vocabulary: [
+            { wordFr: "permis de conduire", wordEn: "driving licence", definition: "The official document authorising a person to drive" },
+            { wordFr: "période probatoire", wordEn: "probationary period", definition: "The 2-3 year period after obtaining a licence with reduced points" }
+        ]
+    },
+    {
+        id: "div-103",
+        topic: "notions_diverses",
+        difficulty: 1,
+        questionFr: "Que signifie le terme 'infraction' dans le Code de la route ?",
+        questionEn: "What does the term 'infraction' mean in the highway code?",
+        options: {
+            A: { fr: "Un type de véhicule", en: "A type of vehicle" },
+            B: { fr: "Une violation des règles de circulation", en: "A violation of traffic rules" },
+            C: { fr: "Un équipement obligatoire", en: "Mandatory equipment" },
+            D: { fr: "Un panneau de signalisation", en: "A road sign" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Une infraction est une violation des règles du Code de la route. Les infractions sont classées en contraventions (1re à 5e classe) et délits (les plus graves).",
+        explanationEn: "An infraction is a violation of highway code rules. Infractions are classified into contraventions (1st to 5th class) and offences (the most serious).",
+        trapNote: "Infraction = breaking a rule. Classes 1-5 for minor to moderate. Délits for serious ones.",
+        distractorNotes: { A: "An infraction is not a vehicle type.", C: "An infraction is about rule-breaking, not equipment.", D: "Road signs are 'panneaux de signalisation', not infractions." },
+        vocabulary: [
+            { wordFr: "infraction", wordEn: "infraction/offence", definition: "A violation of the rules of the highway code" }
+        ]
+    },
+    {
+        id: "div-104",
+        topic: "notions_diverses",
+        difficulty: 1,
+        questionFr: "Que devez-vous toujours avoir sur vous en conduisant ?",
+        questionEn: "What must you always carry when driving?",
+        options: {
+            A: { fr: "Votre permis de conduire et la carte grise du véhicule", en: "Your driving licence and the vehicle registration document" },
+            B: { fr: "Votre passeport", en: "Your passport" },
+            C: { fr: "Un plan de la ville", en: "A city map" },
+            D: { fr: "Votre carnet de santé", en: "Your health booklet" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "En conduisant, vous devez toujours avoir votre permis de conduire, la carte grise (certificat d'immatriculation) et l'attestation d'assurance. Sans ces documents, vous risquez une amende.",
+        explanationEn: "When driving, you must always have your driving licence, the registration document (carte grise), and the insurance certificate. Without these documents, you risk a fine.",
+        trapNote: "Three mandatory documents: licence + carte grise + insurance certificate.",
+        distractorNotes: { B: "A passport is not required for driving within France.", C: "A city map is not a legal requirement.", D: "A health booklet is not required for driving." },
+        vocabulary: [
+            { wordFr: "carte grise", wordEn: "vehicle registration document", definition: "The official document proving ownership and registration of a vehicle" },
+            { wordFr: "attestation d'assurance", wordEn: "insurance certificate", definition: "Proof that the vehicle is insured" }
+        ]
+    },
+    {
+        id: "div-105",
+        topic: "notions_diverses",
+        difficulty: 1,
+        questionFr: "Quel est le taux maximum d'alcoolémie autorisé pour un conducteur confirmé en France ?",
+        questionEn: "What is the maximum permitted blood alcohol level for an experienced driver in France?",
+        options: {
+            A: { fr: "0,2 g/l de sang", en: "0.2 g/l of blood" },
+            B: { fr: "0,5 g/l de sang", en: "0.5 g/l of blood" },
+            C: { fr: "0,8 g/l de sang", en: "0.8 g/l of blood" },
+            D: { fr: "Zéro alcool", en: "Zero alcohol" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le taux maximum d'alcoolémie est de 0,5 g/l de sang (ou 0,25 mg/l d'air expiré) pour un conducteur confirmé. Pour un jeune conducteur (permis probatoire), c'est 0,2 g/l.",
+        explanationEn: "The maximum blood alcohol level is 0.5 g/l of blood (or 0.25 mg/l of exhaled air) for an experienced driver. For a new driver (probationary licence), it is 0.2 g/l.",
+        trapNote: "0.5 for experienced, 0.2 for new drivers. These numbers come up constantly on the exam.",
+        distractorNotes: { A: "0.2 g/l is the limit for new/probationary drivers, not experienced ones.", C: "0.8 g/l is the threshold for a criminal offence (délit), not the legal limit.", D: "Zero alcohol is not required in France (unlike some countries)." },
+        vocabulary: [
+            { wordFr: "alcoolémie", wordEn: "blood alcohol level", definition: "The concentration of alcohol in the blood" },
+            { wordFr: "air expiré", wordEn: "exhaled air", definition: "Breath used in breathalyser tests to measure alcohol" }
         ]
     }
 ];

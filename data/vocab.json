@@ -2170,6 +2170,13 @@
     "questionId": "croi-054"
   },
   {
+    "wordFr": "croiser",
+    "wordEn": "to meet/cross",
+    "definition": "Encountering a vehicle coming from the opposite direction",
+    "topic": "croisement_depassement",
+    "questionId": "croi-106"
+  },
+  {
     "wordFr": "déboîter",
     "wordEn": "to pull out (for overtaking)",
     "definition": "To move out of your lane to begin an overtaking manoeuvre",
@@ -2520,6 +2527,13 @@
     "questionId": "div-051"
   },
   {
+    "wordFr": "air expiré",
+    "wordEn": "exhaled air",
+    "definition": "Breath used in breathalyser tests to measure alcohol",
+    "topic": "notions_diverses",
+    "questionId": "div-105"
+  },
+  {
     "wordFr": "alerter",
     "wordEn": "to alert",
     "definition": "To call emergency services (112, 15, or 18)",
@@ -2807,6 +2821,13 @@
     "questionId": "div-045"
   },
   {
+    "wordFr": "infraction",
+    "wordEn": "infraction/offence",
+    "definition": "A violation of the rules of the highway code",
+    "topic": "notions_diverses",
+    "questionId": "div-103"
+  },
+  {
     "wordFr": "invalidation du permis",
     "wordEn": "licence invalidation",
     "definition": "Automatic cancellation of the driving licence when all points are lost",
@@ -2882,6 +2903,13 @@
     "definition": "The air pressure inside the tyres",
     "topic": "notions_diverses",
     "questionId": "div-011"
+  },
+  {
+    "wordFr": "procès-verbal",
+    "wordEn": "official report/fine",
+    "definition": "The formal document recording a traffic offence",
+    "topic": "notions_diverses",
+    "questionId": "div-101"
   },
   {
     "wordFr": "protéger",
@@ -3332,6 +3360,13 @@
     "questionId": "prio-001"
   },
   {
+    "wordFr": "intersection dégagée",
+    "wordEn": "clear intersection",
+    "definition": "An intersection free of vehicles and pedestrians blocking the way",
+    "topic": "priorite",
+    "questionId": "prio-109"
+  },
+  {
     "wordFr": "intersection sans signalisation",
     "wordEn": "unmarked intersection",
     "definition": "A crossroads with no signs, lights, or road markings indicating priority",
@@ -3393,6 +3428,13 @@
     "definition": "",
     "topic": "priorite",
     "questionId": "media-001"
+  },
+  {
+    "wordFr": "panneau de cédez le passage",
+    "wordEn": "give way sign",
+    "definition": "An inverted triangle sign requiring you to yield to priority traffic",
+    "topic": "priorite",
+    "questionId": "prio-112"
   },
   {
     "wordFr": "panneau de priorité de passage",
@@ -4697,6 +4739,13 @@
     "questionId": "tunn-034"
   },
   {
+    "wordFr": "balise",
+    "wordEn": "countdown marker",
+    "definition": "A sign with red bars indicating distance to a level crossing",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-097"
+  },
+  {
     "wordFr": "balise de passage a niveau",
     "wordEn": "level crossing marker",
     "definition": "",
@@ -4772,6 +4821,13 @@
     "definition": "The ignition switch where the key is inserted to start the vehicle",
     "topic": "tunnels_passages_niveau",
     "questionId": "tunn-021"
+  },
+  {
+    "wordFr": "couper le moteur",
+    "wordEn": "to turn off the engine",
+    "definition": "To switch off the vehicle's engine",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-096"
   },
   {
     "wordFr": "croix de Saint-Andre",
