@@ -136,6 +136,29 @@ const Tutor = {
                 streak: stats.streak
             };
 
+            // Add last exam result
+            const exams = Storage.getExamResults();
+            if (exams.length > 0) {
+                const last = exams[exams.length - 1];
+                const weakTopics = [];
+                if (last.results) {
+                    const topicScores = {};
+                    last.results.forEach(r => {
+                        if (!topicScores[r.topic]) topicScores[r.topic] = { correct: 0, total: 0 };
+                        topicScores[r.topic].total++;
+                        if (r.correct) topicScores[r.topic].correct++;
+                    });
+                    Object.entries(topicScores).forEach(([t, s]) => {
+                        if (s.total > 0 && (s.correct / s.total) < 0.5) weakTopics.push(t);
+                    });
+                }
+                context.lastExam = {
+                    score: `${last.correctCount}/${last.totalQuestions}`,
+                    passed: last.passed,
+                    weakTopics: weakTopics.join(', ') || 'none'
+                };
+            }
+
             // Add weak topics
             const mastery = Storage.getTopicMasteryArray();
             const weak = mastery.filter(t => t.accuracy < 60 && t.totalAttempts > 0).map(t => t.nameEn);
