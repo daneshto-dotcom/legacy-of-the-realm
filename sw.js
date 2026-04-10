@@ -2,7 +2,7 @@
    Service Worker — Offline Support
    ============================================ */
 
-const CACHE_NAME = 'code-de-la-route-v34';
+const CACHE_NAME = 'code-de-la-route-v35';
 
 // Use relative paths so caching works on GitHub Pages subdirectory (/code-de-la-route/)
 const URLS_TO_CACHE = [
@@ -83,7 +83,63 @@ const URLS_TO_CACHE = [
     './assets/audio/vocab/angle-mort.mp3',
     './assets/audio/vocab/champ-de-vision.mp3',
     './assets/audio/vocab/klaxon.mp3',
-    './assets/audio/vocab/retroviseur.mp3'
+    './assets/audio/vocab/retroviseur.mp3',
+    // Batch 2: 55 new words (Session 21)
+    './assets/audio/vocab/arret.mp3',
+    './assets/audio/vocab/voie.mp3',
+    './assets/audio/vocab/panne.mp3',
+    './assets/audio/vocab/stationnement.mp3',
+    './assets/audio/vocab/panneau.mp3',
+    './assets/audio/vocab/pieton.mp3',
+    './assets/audio/vocab/obligation.mp3',
+    './assets/audio/vocab/depasser.mp3',
+    './assets/audio/vocab/intersection.mp3',
+    './assets/audio/vocab/signalisation.mp3',
+    './assets/audio/vocab/klaxonner.mp3',
+    './assets/audio/vocab/ralentir.mp3',
+    './assets/audio/vocab/interdiction.mp3',
+    './assets/audio/vocab/secours.mp3',
+    './assets/audio/vocab/visibilite.mp3',
+    './assets/audio/vocab/croisement.mp3',
+    './assets/audio/vocab/barriere.mp3',
+    './assets/audio/vocab/stationner.mp3',
+    './assets/audio/vocab/cycliste.mp3',
+    './assets/audio/vocab/assurance.mp3',
+    './assets/audio/vocab/clignotant.mp3',
+    './assets/audio/vocab/zone-30.mp3',
+    './assets/audio/vocab/permis-de-conduire.mp3',
+    './assets/audio/vocab/en-agglomeration.mp3',
+    './assets/audio/vocab/ceder-le-passage.mp3',
+    './assets/audio/vocab/franchir.mp3',
+    './assets/audio/vocab/tramway.mp3',
+    './assets/audio/vocab/poids-lourd.mp3',
+    './assets/audio/vocab/feu-rouge.mp3',
+    './assets/audio/vocab/convoi.mp3',
+    './assets/audio/vocab/reculer.mp3',
+    './assets/audio/vocab/feux-de-brouillard.mp3',
+    './assets/audio/vocab/carte-grise.mp3',
+    './assets/audio/vocab/proteger.mp3',
+    './assets/audio/vocab/route-prioritaire.mp3',
+    './assets/audio/vocab/hors-agglomeration.mp3',
+    './assets/audio/vocab/secourir.mp3',
+    './assets/audio/vocab/peage.mp3',
+    './assets/audio/vocab/fatigue.mp3',
+    './assets/audio/vocab/sens-unique.mp3',
+    './assets/audio/vocab/demi-tour.mp3',
+    './assets/audio/vocab/distance-laterale.mp3',
+    './assets/audio/vocab/manoeuvre.mp3',
+    './assets/audio/vocab/remorque.mp3',
+    './assets/audio/vocab/zone-de-rencontre.mp3',
+    './assets/audio/vocab/incendie.mp3',
+    './assets/audio/vocab/accotement.mp3',
+    './assets/audio/vocab/giratoire.mp3',
+    './assets/audio/vocab/contravention.mp3',
+    './assets/audio/vocab/immatriculation.mp3',
+    './assets/audio/vocab/priorite-absolue.mp3',
+    './assets/audio/vocab/limitation-de-vitesse.mp3',
+    './assets/audio/vocab/zigzag.mp3',
+    './assets/audio/vocab/vehicule-prioritaire.mp3',
+    './assets/audio/vocab/bande-d-arret-d-urgence.mp3'
 ];
 
 // Install — cache core assets
