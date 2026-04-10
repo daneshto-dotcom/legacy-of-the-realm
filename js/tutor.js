@@ -128,6 +128,14 @@ const Tutor = {
                     Practice.selectedAnswers.sort().join(',') === [...Practice.currentQuestion.correctAnswers].sort().join(',') : null;
             }
 
+            // Add session stats (streak, accuracy, total)
+            const stats = Storage.getOverallStats();
+            context.sessionStats = {
+                total: stats.total,
+                accuracy: stats.accuracy,
+                streak: stats.streak
+            };
+
             // Add weak topics
             const mastery = Storage.getTopicMasteryArray();
             const weak = mastery.filter(t => t.accuracy < 60 && t.totalAttempts > 0).map(t => t.nameEn);
