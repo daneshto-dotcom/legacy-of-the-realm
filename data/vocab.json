@@ -1330,6 +1330,13 @@
     "questionId": "circ-001"
   },
   {
+    "wordFr": "sens de circulation",
+    "wordEn": "traffic direction",
+    "definition": "The way vehicles must travel",
+    "topic": "circulation",
+    "questionId": "circ-056"
+  },
+  {
     "wordFr": "séparateur central",
     "wordEn": "central divider",
     "definition": "A physical barrier between opposite traffic lanes",
@@ -1405,6 +1412,13 @@
     "definition": "Conditions where seeing distance is significantly decreased",
     "topic": "circulation",
     "questionId": "circ-044"
+  },
+  {
+    "wordFr": "vitesse maximale",
+    "wordEn": "maximum speed",
+    "definition": "Highest legal speed",
+    "topic": "circulation",
+    "questionId": "circ-054"
   },
   {
     "wordFr": "voie",
@@ -1531,6 +1545,13 @@
     "definition": "The concentration of alcohol in the blood",
     "topic": "conducteur",
     "questionId": "cond-001"
+  },
+  {
+    "wordFr": "amende",
+    "wordEn": "fine",
+    "definition": "Monetary penalty",
+    "topic": "conducteur",
+    "questionId": "cond-052"
   },
   {
     "wordFr": "amende forfaitaire",
@@ -1685,6 +1706,13 @@
     "definition": "A serious infraction tried in criminal court, not just a traffic fine",
     "topic": "conducteur",
     "questionId": "cond-023"
+  },
+  {
+    "wordFr": "démarrer",
+    "wordEn": "to start",
+    "definition": "Turn on engine",
+    "topic": "conducteur",
+    "questionId": "cond-051"
   },
   {
     "wordFr": "dépistage de stupéfiants",
@@ -1995,6 +2023,13 @@
     "questionId": "cond-042"
   },
   {
+    "wordFr": "téléphone au volant",
+    "wordEn": "phone while driving",
+    "definition": "Forbidden if handheld",
+    "topic": "conducteur",
+    "questionId": "cond-052"
+  },
+  {
     "wordFr": "téléphone tenu en main",
     "wordEn": "handheld phone",
     "definition": "A phone held in your hand, not on a mount or hands-free",
@@ -2007,6 +2042,13 @@
     "definition": "The continuous period spent actively driving a vehicle",
     "topic": "conducteur",
     "questionId": "cond-038"
+  },
+  {
+    "wordFr": "temps de réaction",
+    "wordEn": "reaction time",
+    "definition": "Time to perceive and act",
+    "topic": "conducteur",
+    "questionId": "cond-053"
   },
   {
     "wordFr": "test salivaire",
@@ -2371,6 +2413,13 @@
     "definition": "The rear-view mirror inside the car",
     "topic": "croisement_depassement",
     "questionId": "croi-009"
+  },
+  {
+    "wordFr": "route étroite",
+    "wordEn": "narrow road",
+    "definition": "A road too narrow for two vehicles",
+    "topic": "croisement_depassement",
+    "questionId": "croi-057"
   },
   {
     "wordFr": "se déporter",
@@ -3724,6 +3773,13 @@
     "questionId": "rout-043"
   },
   {
+    "wordFr": "dépassement autorisé",
+    "wordEn": "overtaking allowed",
+    "definition": "OK to pass if safe",
+    "topic": "route",
+    "questionId": "route-056"
+  },
+  {
     "wordFr": "dépassement de chargement",
     "wordEn": "load overhang",
     "definition": "The portion of a load extending beyond the vehicle's bodywork",
@@ -4135,6 +4191,13 @@
     "definition": "",
     "topic": "signalisation",
     "questionId": "media-063"
+  },
+  {
+    "wordFr": "bord rouge",
+    "wordEn": "red border",
+    "definition": "Red edge indicating prohibition",
+    "topic": "signalisation",
+    "questionId": "sign-058"
   },
   {
     "wordFr": "bordure rouge",
@@ -4576,6 +4639,13 @@
     "definition": "Réseau de transport collectif (bus, métro, tramway, train)",
     "topic": "signalisation",
     "questionId": "sign-050"
+  },
+  {
+    "wordFr": "triangulaire",
+    "wordEn": "triangular",
+    "definition": "Having three sides",
+    "topic": "signalisation",
+    "questionId": "sign-056"
   },
   {
     "wordFr": "valeur réglementaire",

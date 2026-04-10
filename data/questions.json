@@ -31631,5 +31631,1475 @@
         "wordEn": "point deduction"
       }
     ]
+  },
+  {
+    "id": "sign-056",
+    "topic": "signalisation",
+    "difficulty": 1,
+    "questionFr": "Quelle est la forme d'un panneau de danger ?",
+    "questionEn": "What is the shape of a danger sign?",
+    "options": {
+      "A": {
+        "fr": "Rond",
+        "en": "Round"
+      },
+      "B": {
+        "fr": "Triangulaire",
+        "en": "Triangular"
+      },
+      "C": {
+        "fr": "Carré",
+        "en": "Square"
+      },
+      "D": {
+        "fr": "Rectangulaire",
+        "en": "Rectangular"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Les panneaux de danger sont triangulaires avec un bord rouge.",
+    "explanationEn": "Danger signs are triangular with a red border.",
+    "trapNote": "Triangle = danger. Round = obligation or prohibition. Rectangle = information.",
+    "distractorNotes": {
+      "A": "Round = obligation (blue) or prohibition (red border).",
+      "C": "Not standard for danger.",
+      "D": "Information signs are rectangular."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "panneau de danger",
+        "wordEn": "danger sign",
+        "definition": "A sign warning of a hazard ahead"
+      },
+      {
+        "wordFr": "triangulaire",
+        "wordEn": "triangular",
+        "definition": "Having three sides"
+      }
+    ]
+  },
+  {
+    "id": "sign-057",
+    "topic": "signalisation",
+    "difficulty": 1,
+    "questionFr": "Un feu rouge signifie :",
+    "questionEn": "A red traffic light means:",
+    "options": {
+      "A": {
+        "fr": "Ralentir",
+        "en": "Slow down"
+      },
+      "B": {
+        "fr": "S'arrêter",
+        "en": "Stop"
+      },
+      "C": {
+        "fr": "Accélérer",
+        "en": "Speed up"
+      },
+      "D": {
+        "fr": "Faire demi-tour",
+        "en": "Make a U-turn"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Un feu rouge impose l'arrêt absolu.",
+    "explanationEn": "A red light requires a complete stop.",
+    "trapNote": "Red = stop. Orange = stop if safe. Green = go.",
+    "distractorNotes": {
+      "A": "Amber, not red.",
+      "C": "Dangerous and illegal.",
+      "D": "Never means U-turn."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "feu rouge",
+        "wordEn": "red light",
+        "definition": "A red traffic signal requiring a complete stop"
+      },
+      {
+        "wordFr": "arrêt absolu",
+        "wordEn": "complete stop",
+        "definition": "Stopping fully with zero movement"
+      }
+    ]
+  },
+  {
+    "id": "sign-058",
+    "topic": "signalisation",
+    "difficulty": 1,
+    "questionFr": "Que signifie un panneau rond à bord rouge sur fond blanc ?",
+    "questionEn": "What does a round sign with a red border on white mean?",
+    "options": {
+      "A": {
+        "fr": "Obligation",
+        "en": "Obligation"
+      },
+      "B": {
+        "fr": "Indication",
+        "en": "Information"
+      },
+      "C": {
+        "fr": "Interdiction",
+        "en": "Prohibition"
+      },
+      "D": {
+        "fr": "Danger",
+        "en": "Danger"
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Un panneau rond à bord rouge sur fond blanc est un panneau d'interdiction.",
+    "explanationEn": "A round sign with red border on white is a prohibition sign.",
+    "trapNote": "Round + red border + white = prohibition. Round + blue = obligation.",
+    "distractorNotes": {
+      "A": "Obligation = round with BLUE background.",
+      "B": "Information = rectangular.",
+      "D": "Danger = triangular."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "interdiction",
+        "wordEn": "prohibition",
+        "definition": "Something forbidden"
+      },
+      {
+        "wordFr": "bord rouge",
+        "wordEn": "red border",
+        "definition": "Red edge indicating prohibition"
+      }
+    ]
+  },
+  {
+    "id": "prio-058",
+    "topic": "priorite",
+    "difficulty": 1,
+    "questionFr": "En l'absence de signalisation, qui a la priorité à une intersection ?",
+    "questionEn": "Without signs, who has priority at an intersection?",
+    "options": {
+      "A": {
+        "fr": "Le véhicule venant de gauche",
+        "en": "Vehicle from the left"
+      },
+      "B": {
+        "fr": "Le véhicule venant de droite",
+        "en": "Vehicle from the right"
+      },
+      "C": {
+        "fr": "Le véhicule le plus rapide",
+        "en": "The fastest vehicle"
+      },
+      "D": {
+        "fr": "Le véhicule le plus gros",
+        "en": "The largest vehicle"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "La règle par défaut est la priorité à droite.",
+    "explanationEn": "The default rule is priority to the right.",
+    "trapNote": "Priority to the RIGHT is the default at unmarked intersections.",
+    "distractorNotes": {
+      "A": "Left has NO priority.",
+      "C": "Speed never determines priority.",
+      "D": "Size never determines priority."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "priorité à droite",
+        "wordEn": "priority to the right",
+        "definition": "Default rule: vehicles from the right go first"
+      },
+      {
+        "wordFr": "intersection",
+        "wordEn": "intersection",
+        "definition": "Where two or more roads meet"
+      }
+    ]
+  },
+  {
+    "id": "prio-059",
+    "topic": "priorite",
+    "difficulty": 1,
+    "questionFr": "Que signifie un panneau triangulaire inversé (pointe en bas) ?",
+    "questionEn": "What does an inverted triangle sign mean?",
+    "options": {
+      "A": {
+        "fr": "Route prioritaire",
+        "en": "Priority road"
+      },
+      "B": {
+        "fr": "Cédez le passage",
+        "en": "Yield"
+      },
+      "C": {
+        "fr": "Sens interdit",
+        "en": "No entry"
+      },
+      "D": {
+        "fr": "Arrêt obligatoire",
+        "en": "Mandatory stop"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Le triangle inversé est le panneau « cédez le passage ».",
+    "explanationEn": "The inverted triangle is the yield sign.",
+    "trapNote": "Inverted triangle = yield. Octagonal = stop. Yellow diamond = priority.",
+    "distractorNotes": {
+      "A": "Priority road is a yellow diamond.",
+      "C": "No entry is round red.",
+      "D": "Mandatory stop is octagonal."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "cédez le passage",
+        "wordEn": "yield",
+        "definition": "Slow down and let others pass first"
+      },
+      {
+        "wordFr": "triangle inversé",
+        "wordEn": "inverted triangle",
+        "definition": "The yield sign shape"
+      }
+    ]
+  },
+  {
+    "id": "prio-060",
+    "topic": "priorite",
+    "difficulty": 1,
+    "questionFr": "Quel panneau indique une route prioritaire ?",
+    "questionEn": "Which sign indicates a priority road?",
+    "options": {
+      "A": {
+        "fr": "Un losange jaune",
+        "en": "A yellow diamond"
+      },
+      "B": {
+        "fr": "Un cercle bleu",
+        "en": "A blue circle"
+      },
+      "C": {
+        "fr": "Un triangle rouge",
+        "en": "A red triangle"
+      },
+      "D": {
+        "fr": "Un rectangle vert",
+        "en": "A green rectangle"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Le losange jaune indique une route prioritaire.",
+    "explanationEn": "The yellow diamond indicates a priority road.",
+    "trapNote": "Yellow diamond = priority road.",
+    "distractorNotes": {
+      "B": "Blue circles = obligation.",
+      "C": "Red triangles = danger.",
+      "D": "Green rectangles = motorway direction."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "route prioritaire",
+        "wordEn": "priority road",
+        "definition": "A road where you have priority over joining traffic"
+      },
+      {
+        "wordFr": "losange",
+        "wordEn": "diamond shape",
+        "definition": "The shape of the priority road sign"
+      }
+    ]
+  },
+  {
+    "id": "croi-055",
+    "topic": "croisement_depassement",
+    "difficulty": 1,
+    "questionFr": "Par quel côté doit-on dépasser en France ?",
+    "questionEn": "On which side must you overtake in France?",
+    "options": {
+      "A": {
+        "fr": "Par la droite",
+        "en": "On the right"
+      },
+      "B": {
+        "fr": "Par la gauche",
+        "en": "On the left"
+      },
+      "C": {
+        "fr": "Des deux côtés",
+        "en": "Either side"
+      },
+      "D": {
+        "fr": "Par le milieu",
+        "en": "Through the middle"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Le dépassement se fait par la gauche (sauf tramways).",
+    "explanationEn": "Overtaking is done on the left (except trams).",
+    "trapNote": "Overtake LEFT. Exception: trams on the right.",
+    "distractorNotes": {
+      "A": "Right-side overtaking forbidden except trams.",
+      "C": "Cannot choose.",
+      "D": "Not possible."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "dépasser",
+        "wordEn": "to overtake",
+        "definition": "To pass another vehicle"
+      },
+      {
+        "wordFr": "par la gauche",
+        "wordEn": "on the left",
+        "definition": "Mandatory side for overtaking"
+      }
+    ]
+  },
+  {
+    "id": "croi-056",
+    "topic": "croisement_depassement",
+    "difficulty": 1,
+    "questionFr": "Est-il interdit de dépasser sur une ligne continue ?",
+    "questionEn": "Is overtaking on a continuous line forbidden?",
+    "options": {
+      "A": {
+        "fr": "Oui, toujours",
+        "en": "Yes, always"
+      },
+      "B": {
+        "fr": "Non, jamais",
+        "en": "No, never"
+      },
+      "C": {
+        "fr": "Seulement la nuit",
+        "en": "Only at night"
+      },
+      "D": {
+        "fr": "Seulement en ville",
+        "en": "Only in town"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Il est toujours interdit de franchir une ligne continue pour dépasser.",
+    "explanationEn": "It is always forbidden to cross a continuous line to overtake.",
+    "trapNote": "Continuous = NEVER cross. Dashed = allowed if safe.",
+    "distractorNotes": {
+      "B": "Always forbidden.",
+      "C": "Time irrelevant.",
+      "D": "Location irrelevant."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "ligne continue",
+        "wordEn": "continuous line",
+        "definition": "A solid line that must not be crossed"
+      },
+      {
+        "wordFr": "franchir",
+        "wordEn": "to cross",
+        "definition": "To go across a boundary"
+      }
+    ]
+  },
+  {
+    "id": "croi-057",
+    "topic": "croisement_depassement",
+    "difficulty": 1,
+    "questionFr": "Sur une route étroite en montagne, qui doit céder ?",
+    "questionEn": "On a narrow mountain road, who must yield?",
+    "options": {
+      "A": {
+        "fr": "Celui qui monte",
+        "en": "The one going uphill"
+      },
+      "B": {
+        "fr": "Celui qui descend",
+        "en": "The one going downhill"
+      },
+      "C": {
+        "fr": "Le plus petit véhicule",
+        "en": "The smaller vehicle"
+      },
+      "D": {
+        "fr": "Le plus lent",
+        "en": "The slowest"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Le véhicule qui descend cède le passage à celui qui monte.",
+    "explanationEn": "The downhill vehicle yields to the uphill one.",
+    "trapNote": "Downhill yields to uphill — restarting uphill is harder.",
+    "distractorNotes": {
+      "A": "Uphill has priority.",
+      "C": "Size irrelevant.",
+      "D": "Speed irrelevant."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "croisement",
+        "wordEn": "crossing",
+        "definition": "When two vehicles meet head-on"
+      },
+      {
+        "wordFr": "route étroite",
+        "wordEn": "narrow road",
+        "definition": "A road too narrow for two vehicles"
+      }
+    ]
+  },
+  {
+    "id": "tunn-056",
+    "topic": "tunnels_passages_niveau",
+    "difficulty": 1,
+    "questionFr": "Que faire quand les barrières d'un passage à niveau se ferment ?",
+    "questionEn": "What to do when level crossing barriers close?",
+    "options": {
+      "A": {
+        "fr": "Accélérer pour passer",
+        "en": "Speed up to cross"
+      },
+      "B": {
+        "fr": "S'arrêter avant les barrières",
+        "en": "Stop before the barriers"
+      },
+      "C": {
+        "fr": "Contourner les barrières",
+        "en": "Go around barriers"
+      },
+      "D": {
+        "fr": "Klaxonner",
+        "en": "Honk"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Arrêtez-vous et attendez que les barrières se relèvent.",
+    "explanationEn": "Stop and wait for barriers to fully raise.",
+    "trapNote": "ALWAYS stop when barriers close. Never try to cross.",
+    "distractorNotes": {
+      "A": "Extremely dangerous.",
+      "C": "Illegal and deadly.",
+      "D": "Serves no purpose."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "passage à niveau",
+        "wordEn": "level crossing",
+        "definition": "Where a road crosses a railway"
+      },
+      {
+        "wordFr": "barrière",
+        "wordEn": "barrier",
+        "definition": "Gate that blocks traffic for trains"
+      }
+    ]
+  },
+  {
+    "id": "tunn-057",
+    "topic": "tunnels_passages_niveau",
+    "difficulty": 1,
+    "questionFr": "Dans un tunnel, devez-vous allumer vos feux ?",
+    "questionEn": "In a tunnel, must you turn on lights?",
+    "options": {
+      "A": {
+        "fr": "Oui, les feux de croisement",
+        "en": "Yes, dipped headlights"
+      },
+      "B": {
+        "fr": "Non, le tunnel est éclairé",
+        "en": "No, it's lit"
+      },
+      "C": {
+        "fr": "Seulement les feux de position",
+        "en": "Only parking lights"
+      },
+      "D": {
+        "fr": "Seulement les feux de route",
+        "en": "Only full beam"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Les feux de croisement sont obligatoires dans un tunnel.",
+    "explanationEn": "Dipped headlights are mandatory in tunnels.",
+    "trapNote": "Tunnel = dipped headlights always. Not full beam. Not parking lights.",
+    "distractorNotes": {
+      "B": "Even lit tunnels require lights.",
+      "C": "Insufficient.",
+      "D": "Full beam dazzles others."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "tunnel",
+        "wordEn": "tunnel",
+        "definition": "An enclosed passage for traffic"
+      },
+      {
+        "wordFr": "feux de croisement",
+        "wordEn": "dipped headlights",
+        "definition": "Low-beam headlights"
+      }
+    ]
+  },
+  {
+    "id": "tunn-058",
+    "topic": "tunnels_passages_niveau",
+    "difficulty": 1,
+    "questionFr": "En panne dans un tunnel, où s'arrêter si possible ?",
+    "questionEn": "Broken down in a tunnel, where to stop?",
+    "options": {
+      "A": {
+        "fr": "Au milieu de la voie",
+        "en": "Middle of the lane"
+      },
+      "B": {
+        "fr": "Dans une niche de sécurité",
+        "en": "In a safety recess"
+      },
+      "C": {
+        "fr": "À l'entrée du tunnel",
+        "en": "At the entrance"
+      },
+      "D": {
+        "fr": "Sur la voie de gauche",
+        "en": "In the left lane"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Les niches de sécurité sont prévues pour les arrêts d'urgence.",
+    "explanationEn": "Safety recesses are for emergency stops.",
+    "trapNote": "Safety recess = emergency stop area in tunnels.",
+    "distractorNotes": {
+      "A": "Blocks traffic.",
+      "C": "Not always reachable.",
+      "D": "Left lane is for traffic."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "niche de sécurité",
+        "wordEn": "safety recess",
+        "definition": "A bay in a tunnel for emergency stops"
+      },
+      {
+        "wordFr": "panne",
+        "wordEn": "breakdown",
+        "definition": "Vehicle stops working"
+      }
+    ]
+  },
+  {
+    "id": "div-053",
+    "topic": "notions_diverses",
+    "difficulty": 1,
+    "questionFr": "Quel document devez-vous toujours avoir dans votre véhicule ?",
+    "questionEn": "What document must you always have in your vehicle?",
+    "options": {
+      "A": {
+        "fr": "L'attestation d'assurance",
+        "en": "Insurance certificate"
+      },
+      "B": {
+        "fr": "Le carnet d'entretien",
+        "en": "Maintenance logbook"
+      },
+      "C": {
+        "fr": "Le contrat d'achat",
+        "en": "Purchase contract"
+      },
+      "D": {
+        "fr": "La facture du carburant",
+        "en": "Fuel receipt"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "L'attestation d'assurance doit toujours être à bord.",
+    "explanationEn": "The insurance certificate must always be in the vehicle.",
+    "trapNote": "Mandatory: insurance, registration (carte grise), license.",
+    "distractorNotes": {
+      "B": "Useful but not required.",
+      "C": "Not a driving document.",
+      "D": "Not required."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "attestation d'assurance",
+        "wordEn": "insurance certificate",
+        "definition": "Proof the vehicle is insured"
+      },
+      {
+        "wordFr": "carte grise",
+        "wordEn": "registration",
+        "definition": "Official registration document"
+      }
+    ]
+  },
+  {
+    "id": "div-054",
+    "topic": "notions_diverses",
+    "difficulty": 1,
+    "questionFr": "Taux d'alcoolémie maximum pour un conducteur novice ?",
+    "questionEn": "Maximum blood alcohol for a novice driver?",
+    "options": {
+      "A": {
+        "fr": "0,5 g/L",
+        "en": "0.5 g/L"
+      },
+      "B": {
+        "fr": "0,2 g/L",
+        "en": "0.2 g/L"
+      },
+      "C": {
+        "fr": "0,8 g/L",
+        "en": "0.8 g/L"
+      },
+      "D": {
+        "fr": "0 g/L",
+        "en": "0 g/L"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Le maximum pour un novice est de 0,2 g/L.",
+    "explanationEn": "The maximum for a novice is 0.2 g/L.",
+    "trapNote": "Novice = 0.2. Experienced = 0.5.",
+    "distractorNotes": {
+      "A": "0.5 is for experienced.",
+      "C": "Criminal offense level.",
+      "D": "Not absolute zero."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "taux d'alcoolémie",
+        "wordEn": "blood alcohol level",
+        "definition": "Alcohol concentration in blood"
+      },
+      {
+        "wordFr": "permis probatoire",
+        "wordEn": "probationary license",
+        "definition": "License for new drivers"
+      }
+    ]
+  },
+  {
+    "id": "div-055",
+    "topic": "notions_diverses",
+    "difficulty": 1,
+    "questionFr": "Combien de points comporte le permis français ?",
+    "questionEn": "How many points on a French license?",
+    "options": {
+      "A": {
+        "fr": "6 points",
+        "en": "6 points"
+      },
+      "B": {
+        "fr": "10 points",
+        "en": "10 points"
+      },
+      "C": {
+        "fr": "12 points",
+        "en": "12 points"
+      },
+      "D": {
+        "fr": "20 points",
+        "en": "20 points"
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Le permis comporte 12 points (6 pour les novices).",
+    "explanationEn": "The license has 12 points (6 for novices).",
+    "trapNote": "Full = 12. Novice = 6.",
+    "distractorNotes": {
+      "A": "6 is for novices.",
+      "B": "Not used.",
+      "D": "Exceeds maximum."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "permis de conduire",
+        "wordEn": "driving license",
+        "definition": "Official authorization to drive"
+      },
+      {
+        "wordFr": "retrait de points",
+        "wordEn": "point deduction",
+        "definition": "Losing points for violations"
+      }
+    ]
+  },
+  {
+    "id": "arret-055",
+    "topic": "arret_stationnement",
+    "difficulty": 1,
+    "questionFr": "Quelle différence entre l'arrêt et le stationnement ?",
+    "questionEn": "What's the difference between stopping and parking?",
+    "options": {
+      "A": {
+        "fr": "L'arrêt est court, le stationnement est long",
+        "en": "Stopping is brief, parking is long"
+      },
+      "B": {
+        "fr": "Pas de différence",
+        "en": "No difference"
+      },
+      "C": {
+        "fr": "L'arrêt est interdit, le stationnement autorisé",
+        "en": "Stopping forbidden, parking allowed"
+      },
+      "D": {
+        "fr": "L'arrêt est la nuit, le stationnement le jour",
+        "en": "Stopping at night, parking daytime"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "L'arrêt est bref, le stationnement est prolongé.",
+    "explanationEn": "Stopping is brief, parking is prolonged.",
+    "trapNote": "Arrêt = brief, driver nearby. Stationnement = prolonged.",
+    "distractorNotes": {
+      "B": "Legal distinction exists.",
+      "C": "Both can be allowed or forbidden.",
+      "D": "Time irrelevant."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "arrêt",
+        "wordEn": "stopping",
+        "definition": "Brief halt, driver stays near"
+      },
+      {
+        "wordFr": "stationnement",
+        "wordEn": "parking",
+        "definition": "Prolonged halt, driver may leave"
+      }
+    ]
+  },
+  {
+    "id": "arret-056",
+    "topic": "arret_stationnement",
+    "difficulty": 1,
+    "questionFr": "Peut-on stationner sur un passage piéton ?",
+    "questionEn": "Can you park on a pedestrian crossing?",
+    "options": {
+      "A": {
+        "fr": "Oui, si c'est bref",
+        "en": "Yes, if brief"
+      },
+      "B": {
+        "fr": "Non, jamais",
+        "en": "No, never"
+      },
+      "C": {
+        "fr": "Oui, la nuit",
+        "en": "Yes, at night"
+      },
+      "D": {
+        "fr": "Oui, avec les feux de détresse",
+        "en": "Yes, with hazard lights"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Interdit de stationner sur un passage piéton.",
+    "explanationEn": "Parking on a pedestrian crossing is always forbidden.",
+    "trapNote": "Pedestrian crossing = NEVER park. No exceptions.",
+    "distractorNotes": {
+      "A": "Even briefly forbidden.",
+      "C": "Time irrelevant.",
+      "D": "Hazard lights don't help."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "passage piéton",
+        "wordEn": "pedestrian crossing",
+        "definition": "Marked area for pedestrians"
+      },
+      {
+        "wordFr": "stationner",
+        "wordEn": "to park",
+        "definition": "To leave a vehicle in a place"
+      }
+    ]
+  },
+  {
+    "id": "arret-057",
+    "topic": "arret_stationnement",
+    "difficulty": 1,
+    "questionFr": "Distance minimale de stationnement d'une intersection ?",
+    "questionEn": "Minimum parking distance from an intersection?",
+    "options": {
+      "A": {
+        "fr": "1 mètre",
+        "en": "1 meter"
+      },
+      "B": {
+        "fr": "5 mètres",
+        "en": "5 meters"
+      },
+      "C": {
+        "fr": "10 mètres",
+        "en": "10 meters"
+      },
+      "D": {
+        "fr": "20 mètres",
+        "en": "20 meters"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Au moins 5 mètres d'une intersection.",
+    "explanationEn": "At least 5 meters from an intersection.",
+    "trapNote": "5 meters for visibility.",
+    "distractorNotes": {
+      "A": "Too close.",
+      "C": "10m is for fire hydrants.",
+      "D": "Not standard."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "intersection",
+        "wordEn": "intersection",
+        "definition": "Where roads meet"
+      },
+      {
+        "wordFr": "visibilité",
+        "wordEn": "visibility",
+        "definition": "Ability to see and be seen"
+      }
+    ]
+  },
+  {
+    "id": "autr-056",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "questionFr": "Distance latérale minimale pour dépasser un cycliste en ville ?",
+    "questionEn": "Minimum lateral distance passing a cyclist in town?",
+    "options": {
+      "A": {
+        "fr": "0,5 mètre",
+        "en": "0.5 m"
+      },
+      "B": {
+        "fr": "1 mètre",
+        "en": "1 m"
+      },
+      "C": {
+        "fr": "1,5 mètre",
+        "en": "1.5 m"
+      },
+      "D": {
+        "fr": "2 mètres",
+        "en": "2 m"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "En agglomération, 1 mètre minimum.",
+    "explanationEn": "In built-up areas, 1 meter minimum.",
+    "trapNote": "Town = 1m. Outside town = 1.5m.",
+    "distractorNotes": {
+      "A": "Too close.",
+      "C": "1.5m is outside town.",
+      "D": "Not standard minimum."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "cycliste",
+        "wordEn": "cyclist",
+        "definition": "Person on a bicycle"
+      },
+      {
+        "wordFr": "distance latérale",
+        "wordEn": "lateral distance",
+        "definition": "Sideways gap between vehicles"
+      }
+    ]
+  },
+  {
+    "id": "autr-057",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "questionFr": "Les piétons ont-ils la priorité sur un passage piéton ?",
+    "questionEn": "Do pedestrians have priority at a crossing?",
+    "options": {
+      "A": {
+        "fr": "Oui, toujours",
+        "en": "Yes, always"
+      },
+      "B": {
+        "fr": "Non, jamais",
+        "en": "No, never"
+      },
+      "C": {
+        "fr": "Seulement aux feux",
+        "en": "Only at lights"
+      },
+      "D": {
+        "fr": "Seulement le jour",
+        "en": "Only daytime"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Les piétons ont toujours la priorité sur un passage piéton.",
+    "explanationEn": "Pedestrians always have priority at crossings.",
+    "trapNote": "ALWAYS priority. 6 points + fine if not respected.",
+    "distractorNotes": {
+      "B": "Always priority.",
+      "C": "All crossings, not just signalized.",
+      "D": "Time irrelevant."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "piéton",
+        "wordEn": "pedestrian",
+        "definition": "A person walking"
+      },
+      {
+        "wordFr": "passage piéton",
+        "wordEn": "pedestrian crossing",
+        "definition": "Marked crossing area"
+      }
+    ]
+  },
+  {
+    "id": "autr-058",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "questionFr": "Comment réagir face à un bus scolaire à l'arrêt ?",
+    "questionEn": "How to react to a stopped school bus?",
+    "options": {
+      "A": {
+        "fr": "Accélérer pour le doubler",
+        "en": "Speed up to pass"
+      },
+      "B": {
+        "fr": "Ralentir et être prêt à s'arrêter",
+        "en": "Slow down, ready to stop"
+      },
+      "C": {
+        "fr": "Klaxonner",
+        "en": "Honk"
+      },
+      "D": {
+        "fr": "Faire demi-tour",
+        "en": "U-turn"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Des enfants peuvent traverser. Ralentissez.",
+    "explanationEn": "Children may cross. Slow down.",
+    "trapNote": "School bus = children may cross. Always slow down.",
+    "distractorNotes": {
+      "A": "Dangerous.",
+      "C": "Could startle children.",
+      "D": "Not required."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "autobus scolaire",
+        "wordEn": "school bus",
+        "definition": "Bus for children"
+      },
+      {
+        "wordFr": "ralentir",
+        "wordEn": "to slow down",
+        "definition": "Reduce speed"
+      }
+    ]
+  },
+  {
+    "id": "circ-054",
+    "topic": "circulation",
+    "difficulty": 1,
+    "questionFr": "Vitesse maximale en agglomération ?",
+    "questionEn": "Maximum speed in a built-up area?",
+    "options": {
+      "A": {
+        "fr": "30 km/h",
+        "en": "30 km/h"
+      },
+      "B": {
+        "fr": "50 km/h",
+        "en": "50 km/h"
+      },
+      "C": {
+        "fr": "70 km/h",
+        "en": "70 km/h"
+      },
+      "D": {
+        "fr": "90 km/h",
+        "en": "90 km/h"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "50 km/h en agglomération.",
+    "explanationEn": "50 km/h in built-up areas.",
+    "trapNote": "Town = 50. Zone 30 = 30. Outside = 80. Motorway = 130.",
+    "distractorNotes": {
+      "A": "30 is Zone 30.",
+      "C": "Exceeds limit.",
+      "D": "Dual carriageways outside town."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "agglomération",
+        "wordEn": "built-up area",
+        "definition": "Town or city area"
+      },
+      {
+        "wordFr": "vitesse maximale",
+        "wordEn": "maximum speed",
+        "definition": "Highest legal speed"
+      }
+    ]
+  },
+  {
+    "id": "circ-055",
+    "topic": "circulation",
+    "difficulty": 1,
+    "questionFr": "Sur quelle voie rouler normalement sur une route à deux voies ?",
+    "questionEn": "Which lane for normal driving on a two-lane road?",
+    "options": {
+      "A": {
+        "fr": "La voie de gauche",
+        "en": "Left lane"
+      },
+      "B": {
+        "fr": "La voie de droite",
+        "en": "Right lane"
+      },
+      "C": {
+        "fr": "Au milieu",
+        "en": "Middle"
+      },
+      "D": {
+        "fr": "N'importe laquelle",
+        "en": "Any lane"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "En France, on roule à droite.",
+    "explanationEn": "In France, drive on the right.",
+    "trapNote": "Always RIGHT lane. Left for overtaking only.",
+    "distractorNotes": {
+      "A": "Left is for overtaking.",
+      "C": "Dangerous.",
+      "D": "Right is default."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "voie de droite",
+        "wordEn": "right lane",
+        "definition": "Normal driving lane"
+      },
+      {
+        "wordFr": "voie de circulation",
+        "wordEn": "traffic lane",
+        "definition": "A lane for vehicles"
+      }
+    ]
+  },
+  {
+    "id": "circ-056",
+    "topic": "circulation",
+    "difficulty": 1,
+    "questionFr": "Sens de circulation dans un rond-point en France ?",
+    "questionEn": "Traffic direction in a French roundabout?",
+    "options": {
+      "A": {
+        "fr": "Sens des aiguilles d'une montre",
+        "en": "Clockwise"
+      },
+      "B": {
+        "fr": "Sens inverse des aiguilles d'une montre",
+        "en": "Counterclockwise"
+      },
+      "C": {
+        "fr": "Les deux sens",
+        "en": "Both"
+      },
+      "D": {
+        "fr": "Tout droit",
+        "en": "Straight only"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Sens inverse des aiguilles d'une montre (par la droite).",
+    "explanationEn": "Counterclockwise (entering from the right).",
+    "trapNote": "Right-hand driving = counterclockwise roundabouts.",
+    "distractorNotes": {
+      "A": "Clockwise = left-hand countries.",
+      "C": "One-way only.",
+      "D": "Circular."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "rond-point",
+        "wordEn": "roundabout",
+        "definition": "Circular intersection"
+      },
+      {
+        "wordFr": "sens de circulation",
+        "wordEn": "traffic direction",
+        "definition": "The way vehicles must travel"
+      }
+    ]
+  },
+  {
+    "id": "cond-051",
+    "topic": "conducteur",
+    "difficulty": 1,
+    "questionFr": "Que faire avant de démarrer ?",
+    "questionEn": "What to do before starting?",
+    "options": {
+      "A": {
+        "fr": "Attacher sa ceinture",
+        "en": "Fasten seatbelt"
+      },
+      "B": {
+        "fr": "Allumer la radio",
+        "en": "Turn on radio"
+      },
+      "C": {
+        "fr": "Ouvrir les fenêtres",
+        "en": "Open windows"
+      },
+      "D": {
+        "fr": "Régler le siège après",
+        "en": "Adjust seat after"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Ceinture obligatoire avant de démarrer.",
+    "explanationEn": "Seatbelt mandatory before starting.",
+    "trapNote": "Seatbelt BEFORE starting. 135€ + 3 points.",
+    "distractorNotes": {
+      "B": "Optional.",
+      "C": "Not mandatory.",
+      "D": "Adjust BEFORE starting."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "ceinture de sécurité",
+        "wordEn": "seatbelt",
+        "definition": "Safety belt for all occupants"
+      },
+      {
+        "wordFr": "démarrer",
+        "wordEn": "to start",
+        "definition": "Turn on engine"
+      }
+    ]
+  },
+  {
+    "id": "cond-052",
+    "topic": "conducteur",
+    "difficulty": 1,
+    "questionFr": "Peut-on téléphoner au volant en tenant le téléphone ?",
+    "questionEn": "Can you use a handheld phone while driving?",
+    "options": {
+      "A": {
+        "fr": "Oui, si bref",
+        "en": "Yes, if brief"
+      },
+      "B": {
+        "fr": "Oui, en ville",
+        "en": "Yes, in town"
+      },
+      "C": {
+        "fr": "Non, c'est interdit",
+        "en": "No, forbidden"
+      },
+      "D": {
+        "fr": "Oui, au feu rouge",
+        "en": "Yes, at red lights"
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Téléphone en main interdit. 135€ et 3 points.",
+    "explanationEn": "Handheld phone forbidden. €135 and 3 points.",
+    "trapNote": "Phone in hand = ALWAYS forbidden, even at red lights.",
+    "distractorNotes": {
+      "A": "Duration irrelevant.",
+      "B": "Location irrelevant.",
+      "D": "Even at red lights, forbidden."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "téléphone au volant",
+        "wordEn": "phone while driving",
+        "definition": "Forbidden if handheld"
+      },
+      {
+        "wordFr": "amende",
+        "wordEn": "fine",
+        "definition": "Monetary penalty"
+      }
+    ]
+  },
+  {
+    "id": "cond-053",
+    "topic": "conducteur",
+    "difficulty": 1,
+    "questionFr": "Effet principal de la fatigue sur la conduite ?",
+    "questionEn": "Main effect of fatigue on driving?",
+    "options": {
+      "A": {
+        "fr": "Meilleurs réflexes",
+        "en": "Better reflexes"
+      },
+      "B": {
+        "fr": "Temps de réaction augmenté",
+        "en": "Increased reaction time"
+      },
+      "C": {
+        "fr": "Meilleure concentration",
+        "en": "Better focus"
+      },
+      "D": {
+        "fr": "Vision plus nette",
+        "en": "Sharper vision"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "La fatigue augmente le temps de réaction.",
+    "explanationEn": "Fatigue increases reaction time.",
+    "trapNote": "Fatigue = slower reactions. Break every 2 hours.",
+    "distractorNotes": {
+      "A": "Worsens reflexes.",
+      "C": "Reduces concentration.",
+      "D": "Blurs vision."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "fatigue",
+        "wordEn": "fatigue",
+        "definition": "Exhaustion impairing driving"
+      },
+      {
+        "wordFr": "temps de réaction",
+        "wordEn": "reaction time",
+        "definition": "Time to perceive and act"
+      }
+    ]
+  },
+  {
+    "id": "route-056",
+    "topic": "route",
+    "difficulty": 1,
+    "questionFr": "Que signifie une ligne blanche discontinue au centre ?",
+    "questionEn": "What does a center dashed white line mean?",
+    "options": {
+      "A": {
+        "fr": "Interdiction de dépasser",
+        "en": "No overtaking"
+      },
+      "B": {
+        "fr": "Dépassement autorisé",
+        "en": "Overtaking allowed"
+      },
+      "C": {
+        "fr": "Voie de bus",
+        "en": "Bus lane"
+      },
+      "D": {
+        "fr": "Zone de stationnement",
+        "en": "Parking zone"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Ligne discontinue = dépassement autorisé si visibilité suffisante.",
+    "explanationEn": "Dashed line = overtaking allowed if safe.",
+    "trapNote": "Dashed = OK. Continuous = NEVER.",
+    "distractorNotes": {
+      "A": "Continuous line, not dashed.",
+      "C": "Bus lanes marked differently.",
+      "D": "Not parking."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "ligne discontinue",
+        "wordEn": "dashed line",
+        "definition": "Broken line, may be crossed"
+      },
+      {
+        "wordFr": "dépassement autorisé",
+        "wordEn": "overtaking allowed",
+        "definition": "OK to pass if safe"
+      }
+    ]
+  },
+  {
+    "id": "route-057",
+    "topic": "route",
+    "difficulty": 1,
+    "questionFr": "Vitesse maximale sur autoroute par temps sec ?",
+    "questionEn": "Max motorway speed in dry weather?",
+    "options": {
+      "A": {
+        "fr": "110 km/h",
+        "en": "110 km/h"
+      },
+      "B": {
+        "fr": "120 km/h",
+        "en": "120 km/h"
+      },
+      "C": {
+        "fr": "130 km/h",
+        "en": "130 km/h"
+      },
+      "D": {
+        "fr": "150 km/h",
+        "en": "150 km/h"
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ],
+    "answerCount": 1,
+    "explanationFr": "130 km/h par temps sec sur autoroute.",
+    "explanationEn": "130 km/h in dry weather on motorways.",
+    "trapNote": "Motorway: 130 dry, 110 rain.",
+    "distractorNotes": {
+      "A": "110 is rain limit.",
+      "B": "Not standard.",
+      "D": "Exceeds maximum."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "autoroute",
+        "wordEn": "motorway",
+        "definition": "High-speed controlled-access road"
+      },
+      {
+        "wordFr": "temps sec",
+        "wordEn": "dry weather",
+        "definition": "No rain — higher limits"
+      }
+    ]
+  },
+  {
+    "id": "route-058",
+    "topic": "route",
+    "difficulty": 1,
+    "questionFr": "Sur une route à 3 voies, la voie du milieu sert à :",
+    "questionEn": "On a 3-lane road, the middle lane is for:",
+    "options": {
+      "A": {
+        "fr": "Circulation normale",
+        "en": "Normal driving"
+      },
+      "B": {
+        "fr": "Dépassement dans les deux sens",
+        "en": "Overtaking both directions"
+      },
+      "C": {
+        "fr": "Stationnement",
+        "en": "Parking"
+      },
+      "D": {
+        "fr": "Véhicules lents",
+        "en": "Slow vehicles"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Voie centrale = dépassement dans les deux sens.",
+    "explanationEn": "Center lane = overtaking in both directions.",
+    "trapNote": "Middle = overtaking ONLY, shared. Never drive in it.",
+    "distractorNotes": {
+      "A": "Normal driving in right lane.",
+      "C": "Cannot park on traffic lanes.",
+      "D": "Slow vehicles stay right."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "voie du milieu",
+        "wordEn": "middle lane",
+        "definition": "Center lane for overtaking only"
+      },
+      {
+        "wordFr": "dépassement",
+        "wordEn": "overtaking",
+        "definition": "Passing another vehicle"
+      }
+    ]
   }
 ]
