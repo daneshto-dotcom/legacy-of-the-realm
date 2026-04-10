@@ -1,5 +1,5 @@
 /* ============================================
-   Question Bank — 697 Bilingual Questions
+   Question Bank — 705 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
    ============================================
@@ -1595,6 +1595,52 @@ const QUESTION_BANK = [
         distractorNotes: { A: "30 km/h would show the number 30.", C: "70 km/h would show the number 70.", D: "90 km/h would show the number 90." },
         vocabulary: [
             { wordFr: "limitation de vitesse", wordEn: "speed limit", definition: "The maximum speed allowed on this road section" }
+        ]
+    },
+    {
+        id: "media-111",
+        topic: "circulation",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/roundabout-sign.webp", alt: "French roundabout sign" },
+        questionFr: "Que signifie ce panneau et dans quel sens devez-vous circuler ?",
+        questionEn: "What does this sign mean and in which direction must you drive?",
+        options: {
+            A: { fr: "Rond-point — circuler dans le sens inverse des aiguilles d'une montre", en: "Roundabout — drive counterclockwise" },
+            B: { fr: "Rond-point — circuler dans le sens des aiguilles d'une montre", en: "Roundabout — drive clockwise" },
+            C: { fr: "Zone de stationnement circulaire", en: "Circular parking zone" },
+            D: { fr: "Demi-tour autorisé", en: "U-turn allowed" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Ce panneau indique un rond-point. En France, on circule dans le sens inverse des aiguilles d'une montre (sens anti-horaire). Les véhicules déjà sur le rond-point ont la priorité.",
+        explanationEn: "This sign indicates a roundabout. In France, you drive counterclockwise (anti-clockwise). Vehicles already on the roundabout have priority.",
+        trapNote: "France = counterclockwise on roundabouts (driving on the right). UK = clockwise (driving on the left).",
+        distractorNotes: { B: "Clockwise is for left-hand traffic countries like the UK.", C: "This is a traffic flow sign, not a parking sign.", D: "U-turns and roundabouts are different concepts." },
+        vocabulary: [
+            { wordFr: "rond-point", wordEn: "roundabout", definition: "A circular intersection where traffic flows in one direction around a central island" }
+        ]
+    },
+    {
+        id: "media-112",
+        topic: "circulation",
+        difficulty: 1,
+        media: { type: "image", url: "assets/images/signs/no-u-turn-sign.webp", alt: "French no U-turn sign" },
+        questionFr: "Que vous interdit ce panneau ?",
+        questionEn: "What does this sign prohibit?",
+        options: {
+            A: { fr: "Le demi-tour", en: "Making a U-turn" },
+            B: { fr: "Le virage à gauche", en: "Turning left" },
+            C: { fr: "Le dépassement", en: "Overtaking" },
+            D: { fr: "La marche arrière", en: "Reversing" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Ce panneau rond blanc avec un bord rouge et une flèche en U barrée interdit le demi-tour. Vous ne pouvez pas faire demi-tour à cet endroit.",
+        explanationEn: "This round white sign with a red border and a crossed-out U-turn arrow prohibits U-turns. You cannot make a U-turn at this location.",
+        trapNote: "U-turn arrow with red slash = no U-turn. Simple recognition — the arrow shape tells the story.",
+        distractorNotes: { B: "No left turn uses a different arrow symbol.", C: "No overtaking shows two vehicles side by side.", D: "Reversing is not indicated by this type of sign." },
+        vocabulary: [
+            { wordFr: "demi-tour interdit", wordEn: "no U-turn", definition: "Turning your vehicle around to go in the opposite direction is prohibited here" }
         ]
     },
     // === CONDUCTEUR ===,
@@ -8040,6 +8086,29 @@ const QUESTION_BANK = [
             { wordFr: "panneau de cédez le passage", wordEn: "give way sign", definition: "An inverted triangle sign requiring you to yield to priority traffic" }
         ]
     },
+    {
+        id: "media-115",
+        topic: "priorite",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/end-priority-road-sign.webp", alt: "French end of priority road sign" },
+        questionFr: "Que change ce panneau pour votre conduite ?",
+        questionEn: "How does this sign change your driving?",
+        options: {
+            A: { fr: "Vous n'êtes plus sur une route prioritaire — la priorité à droite s'applique de nouveau", en: "You are no longer on a priority road — priority to the right applies again" },
+            B: { fr: "Début d'une zone prioritaire", en: "Start of a priority zone" },
+            C: { fr: "Fin de limitation de vitesse", en: "End of speed limit" },
+            D: { fr: "Route en travaux", en: "Road under construction" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Le losange jaune barré indique la fin de la route prioritaire. Après ce panneau, la règle de priorité à droite s'applique à nouveau aux intersections sans signalisation.",
+        explanationEn: "The yellow diamond with stripes indicates the end of the priority road. After this sign, the priority-to-the-right rule applies again at unsigned intersections.",
+        trapNote: "Yellow diamond = priority road. Yellow diamond with stripes = END of priority. After this, yield to the right at every unmarked intersection.",
+        distractorNotes: { B: "The start of a priority road is the same diamond without stripes.", C: "End of speed limit uses a round white sign with grey stripes.", D: "Construction zones use different triangular warning signs." },
+        vocabulary: [
+            { wordFr: "fin de route prioritaire", wordEn: "end of priority road", definition: "The road you are on is no longer a priority road" }
+        ]
+    },
     // === CROISEMENT_DEPASSEMENT ===,
     {
         id: "croi-001",
@@ -11308,6 +11377,52 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "intersection", wordEn: "intersection", definition: "Where roads meet" },
             { wordFr: "visibilité", wordEn: "visibility", definition: "Ability to see and be seen" }
+        ]
+    },
+    {
+        id: "media-109",
+        topic: "arret_stationnement",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/no-parking-sign.webp", alt: "French no parking sign" },
+        questionFr: "Ce panneau interdit :",
+        questionEn: "This sign prohibits:",
+        options: {
+            A: { fr: "L'arrêt et le stationnement", en: "Both stopping and parking" },
+            B: { fr: "Le stationnement, mais l'arrêt reste autorisé", en: "Parking, but stopping is still allowed" },
+            C: { fr: "Le dépassement", en: "Overtaking" },
+            D: { fr: "L'accès aux véhicules légers", en: "Access for light vehicles" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le panneau rond bleu avec une barre rouge diagonale interdit le stationnement (se garer), mais vous pouvez vous arrêter brièvement (pour déposer quelqu'un, par exemple). Le panneau avec un X rouge interdit l'arrêt ET le stationnement.",
+        explanationEn: "The round blue sign with a single red diagonal stripe prohibits parking (leaving your vehicle), but you may stop briefly (to drop someone off, for example). The sign with a red X prohibits BOTH stopping AND parking.",
+        trapNote: "One stripe = no parking. X = no stopping AND no parking. Key distinction!",
+        distractorNotes: { A: "That would be the sign with a red X (two stripes), not one.", C: "No overtaking uses a different sign (two vehicles in a circle).", D: "Access restrictions use different signage entirely." },
+        vocabulary: [
+            { wordFr: "stationnement interdit", wordEn: "no parking", definition: "Parking (leaving the vehicle) is not allowed in this area" }
+        ]
+    },
+    {
+        id: "media-114",
+        topic: "arret_stationnement",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/no-stopping-sign.webp", alt: "French no stopping sign" },
+        questionFr: "Quelle est la différence entre ce panneau et le panneau de stationnement interdit ?",
+        questionEn: "What is the difference between this sign and the no-parking sign?",
+        options: {
+            A: { fr: "Ce panneau interdit aussi l'arrêt — vous ne pouvez même pas vous arrêter brièvement", en: "This sign also prohibits stopping — you cannot even stop briefly" },
+            B: { fr: "Ils signifient exactement la même chose", en: "They mean exactly the same thing" },
+            C: { fr: "Ce panneau est pour les poids lourds uniquement", en: "This sign is for trucks only" },
+            D: { fr: "Ce panneau est valable uniquement la nuit", en: "This sign applies only at night" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Le X rouge sur fond bleu interdit l'arrêt ET le stationnement. La barre diagonale simple (stationnement interdit) permet un arrêt bref. Le X = interdiction totale de s'arrêter, même pour déposer quelqu'un.",
+        explanationEn: "The red X on blue background prohibits BOTH stopping AND parking. The single diagonal stripe (no parking) allows a brief stop. The X = total prohibition on stopping, even to drop someone off.",
+        trapNote: "X (two stripes) = no stopping at all. One stripe = no parking but brief stops OK. This distinction is exam-critical.",
+        distractorNotes: { B: "They are different — one stripe vs X makes a big difference in what's allowed.", C: "The sign applies to all vehicles, not just trucks.", D: "The sign applies at all times unless a time panel is attached below it." },
+        vocabulary: [
+            { wordFr: "arrêt et stationnement interdits", wordEn: "no stopping and no parking", definition: "You cannot stop or park your vehicle at all in this zone" }
         ]
     },
     // === TUNNELS & PASSAGES A NIVEAU (Tunnels & Level Crossings) ===,
@@ -14652,6 +14767,75 @@ const QUESTION_BANK = [
         distractorNotes: { B: "STOP is octagonal, not round.", C: "Speed limits show a number inside.", D: "No parking has different colors (blue with red)." },
         vocabulary: [
             { wordFr: "sens interdit", wordEn: "no entry", definition: "A road or lane that traffic cannot enter from this direction" }
+        ]
+    },
+    {
+        id: "media-108",
+        topic: "signalisation",
+        difficulty: 1,
+        media: { type: "image", url: "assets/images/signs/one-way-sign.webp", alt: "French one-way street sign" },
+        questionFr: "Que vous indique ce panneau bleu rectangulaire ?",
+        questionEn: "What does this blue rectangular sign indicate?",
+        options: {
+            A: { fr: "Sens unique — vous ne pouvez circuler que dans cette direction", en: "One-way — you can only travel in this direction" },
+            B: { fr: "Virage obligatoire à droite", en: "Mandatory right turn" },
+            C: { fr: "Voie réservée aux bus", en: "Bus lane" },
+            D: { fr: "Sortie d'autoroute", en: "Motorway exit" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Ce panneau rectangulaire bleu avec une flèche blanche indique un sens unique. La circulation ne se fait que dans le sens indiqué par la flèche.",
+        explanationEn: "This blue rectangular sign with a white arrow indicates a one-way street. Traffic flows only in the direction shown by the arrow.",
+        trapNote: "Rectangle = information/direction. Don't confuse with the round mandatory direction sign.",
+        distractorNotes: { B: "Mandatory turn is a round blue sign, not rectangular.", C: "Bus lanes have specific 'BUS' markings.", D: "Motorway exits have different signage with green backgrounds." },
+        vocabulary: [
+            { wordFr: "sens unique", wordEn: "one-way", definition: "A street where traffic is allowed in one direction only" }
+        ]
+    },
+    {
+        id: "media-110",
+        topic: "signalisation",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/mandatory-direction-sign.webp", alt: "French mandatory direction sign - turn right" },
+        questionFr: "Quelle action ce panneau rond bleu vous impose-t-il ?",
+        questionEn: "What action does this round blue sign require you to take?",
+        options: {
+            A: { fr: "Tourner à droite obligatoirement", en: "You must turn right" },
+            B: { fr: "Sens unique à droite", en: "One-way to the right" },
+            C: { fr: "Virage dangereux à droite", en: "Dangerous right curve" },
+            D: { fr: "Voie réservée à droite", en: "Reserved lane on the right" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Un panneau rond bleu avec une flèche blanche est un panneau d'obligation. Il impose de tourner dans la direction indiquée. Rond bleu = obligation. Ne pas confondre avec le rectangle bleu (information).",
+        explanationEn: "A round blue sign with a white arrow is a mandatory sign. You must turn in the indicated direction. Round blue = obligation. Do not confuse with a blue rectangle (information).",
+        trapNote: "Round blue = must do. Rectangle blue = information. Shape determines meaning.",
+        distractorNotes: { B: "One-way is a rectangular sign, not round.", C: "Dangerous curves use triangular warning signs with red borders.", D: "Reserved lanes have different markings." },
+        vocabulary: [
+            { wordFr: "direction obligatoire", wordEn: "mandatory direction", definition: "A sign requiring you to go in the indicated direction" }
+        ]
+    },
+    {
+        id: "media-113",
+        topic: "signalisation",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/road-narrows-sign.webp", alt: "French road narrows warning sign" },
+        questionFr: "Ce panneau triangulaire vous avertit que :",
+        questionEn: "This triangular sign warns you that:",
+        options: {
+            A: { fr: "La chaussée se rétrécit — adaptez votre vitesse", en: "The road narrows — adjust your speed" },
+            B: { fr: "Deux voies se rejoignent", en: "Two lanes merge" },
+            C: { fr: "Passage souterrain à venir", en: "Underground passage ahead" },
+            D: { fr: "Pont étroit en avant", en: "Narrow bridge ahead" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Ce panneau triangulaire à bord rouge est un panneau de danger. Il signale un rétrécissement de la chaussée. Ralentissez et préparez-vous à croiser des véhicules sur une voie plus étroite.",
+        explanationEn: "This triangular sign with a red border is a danger warning sign. It signals the road ahead narrows. Slow down and prepare to meet vehicles on a narrower road.",
+        trapNote: "Triangle with red border = danger/warning. The icon shows the road getting narrower.",
+        distractorNotes: { B: "Lane merge has a different graphic showing lanes converging.", C: "Underground passages have different dedicated signage.", D: "While a narrow bridge could trigger this sign, the sign specifically indicates the road narrows." },
+        vocabulary: [
+            { wordFr: "rétrécissement de chaussée", wordEn: "road narrows", definition: "The road becomes narrower ahead" }
         ]
     },
     // === NOTIONS DIVERSES (General Knowledge) ===,
