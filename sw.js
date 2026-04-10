@@ -2,7 +2,7 @@
    Service Worker — Offline Support
    ============================================ */
 
-const CACHE_NAME = 'code-de-la-route-v38';
+const CACHE_NAME = 'code-de-la-route-v39';
 
 // Use relative paths so caching works on GitHub Pages subdirectory (/code-de-la-route/)
 const URLS_TO_CACHE = [
@@ -139,7 +139,58 @@ const URLS_TO_CACHE = [
     './assets/audio/vocab/limitation-de-vitesse.mp3',
     './assets/audio/vocab/zigzag.mp3',
     './assets/audio/vocab/vehicule-prioritaire.mp3',
-    './assets/audio/vocab/bande-d-arret-d-urgence.mp3'
+    './assets/audio/vocab/bande-d-arret-d-urgence.mp3',
+    // Batch 3: 50 new words (Session 21b)
+    './assets/audio/vocab/par-la-droite.mp3',
+    './assets/audio/vocab/par-la-gauche.mp3',
+    './assets/audio/vocab/alerter.mp3',
+    './assets/audio/vocab/panneau-rond.mp3',
+    './assets/audio/vocab/voie-de-gauche.mp3',
+    './assets/audio/vocab/faire-demi-tour.mp3',
+    './assets/audio/vocab/stationnement-payant.mp3',
+    './assets/audio/vocab/triangulaire.mp3',
+    './assets/audio/vocab/cote-droit.mp3',
+    './assets/audio/vocab/eclaire.mp3',
+    './assets/audio/vocab/cote.mp3',
+    './assets/audio/vocab/bord-rouge.mp3',
+    './assets/audio/vocab/ligne-jaune.mp3',
+    './assets/audio/vocab/bus-scolaire.mp3',
+    './assets/audio/vocab/zone-de-travaux.mp3',
+    './assets/audio/vocab/voie-de-droite.mp3',
+    './assets/audio/vocab/taux-d-alcool.mp3',
+    './assets/audio/vocab/alternat.mp3',
+    './assets/audio/vocab/gyrophare.mp3',
+    './assets/audio/vocab/impasse.mp3',
+    './assets/audio/vocab/voie-publique.mp3',
+    './assets/audio/vocab/signalisation-temporaire.mp3',
+    './assets/audio/vocab/route-nationale.mp3',
+    './assets/audio/vocab/double-file.mp3',
+    './assets/audio/vocab/frein-a-main.mp3',
+    './assets/audio/vocab/sirene.mp3',
+    './assets/audio/vocab/sens-de-circulation.mp3',
+    './assets/audio/vocab/voie-reservee.mp3',
+    './assets/audio/vocab/delit.mp3',
+    './assets/audio/vocab/periode-probatoire.mp3',
+    './assets/audio/vocab/voie-du-milieu.mp3',
+    './assets/audio/vocab/attestation-d-assurance.mp3',
+    './assets/audio/vocab/numero-d-urgence.mp3',
+    './assets/audio/vocab/losange.mp3',
+    './assets/audio/vocab/feu-orange.mp3',
+    './assets/audio/vocab/signalisation-permanente.mp3',
+    './assets/audio/vocab/horodateur.mp3',
+    './assets/audio/vocab/zone-bleue.mp3',
+    './assets/audio/vocab/temps-de-pluie.mp3',
+    './assets/audio/vocab/alcoolemie.mp3',
+    './assets/audio/vocab/descendant.mp3',
+    './assets/audio/vocab/passage-etroit.mp3',
+    './assets/audio/vocab/route-etroite.mp3',
+    './assets/audio/vocab/pression-des-pneus.mp3',
+    './assets/audio/vocab/disque-de-stationnement.mp3',
+    './assets/audio/vocab/suspension-du-permis.mp3',
+    './assets/audio/vocab/exces-de-vitesse.mp3',
+    './assets/audio/vocab/chevron.mp3',
+    './assets/audio/vocab/disque-a.mp3',
+    './assets/audio/vocab/fond-bleu.mp3'
 ];
 
 // Install — cache core assets
