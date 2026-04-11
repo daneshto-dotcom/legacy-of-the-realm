@@ -1,5 +1,5 @@
 /* ============================================
-   Question Bank — 755 Bilingual Questions
+   Question Bank — 770 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
    ============================================
@@ -1757,6 +1757,117 @@ const QUESTION_BANK = [
         distractorNotes: { A: "130 km/h is only for motorways.", C: "90 km/h is for dual carriageways with central reservation, not two-way roads.", D: "The 70 limit was cancelled by the end-of-restriction sign." },
         vocabulary: [
             { wordFr: "vitesse par défaut", wordEn: "default speed", definition: "The standard speed limit that applies when no specific sign is posted" }
+        ]
+    },
+    {
+        id: "circ-057",
+        topic: "circulation",
+        difficulty: 1,
+        questionFr: "Quelle est la vitesse maximale sur autoroute par temps sec ?",
+        questionEn: "What is the maximum speed on a motorway in dry weather?",
+        options: {
+            A: { fr: "110 km/h", en: "110 km/h" },
+            B: { fr: "120 km/h", en: "120 km/h" },
+            C: { fr: "130 km/h", en: "130 km/h" },
+            D: { fr: "150 km/h", en: "150 km/h" }
+        },
+        correctAnswers: ["C"],
+        answerCount: 1,
+        explanationFr: "La vitesse maximale sur autoroute en France est de 130 km/h par temps sec. Par temps de pluie, elle est réduite à 110 km/h.",
+        explanationEn: "The maximum speed on a French motorway is 130 km/h in dry weather. In rain, it is reduced to 110 km/h.",
+        trapNote: "Dry: 130. Rain: 110. Fog (<50m): 50. Novice drivers: 110 max always.",
+        distractorNotes: { A: "110 km/h is the rain speed on autoroute, or the dry speed on voie express.", B: "120 km/h is not a standard French speed limit.", D: "150 km/h does not exist in French speed limits." },
+        vocabulary: [
+            { wordFr: "autoroute", wordEn: "motorway/highway", definition: "A high-speed divided road with limited access points" }
+        ]
+    },
+    {
+        id: "circ-058",
+        topic: "circulation",
+        difficulty: 1,
+        questionFr: "Quelle est la vitesse maximale hors agglomération sur une route à double sens ?",
+        questionEn: "What is the maximum speed outside built-up areas on a two-way road?",
+        options: {
+            A: { fr: "50 km/h", en: "50 km/h" },
+            B: { fr: "80 km/h", en: "80 km/h" },
+            C: { fr: "90 km/h", en: "90 km/h" },
+            D: { fr: "110 km/h", en: "110 km/h" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Depuis juillet 2018, la vitesse maximale hors agglomération sur une route à double sens sans séparateur central est de 80 km/h.",
+        explanationEn: "Since July 2018, the maximum speed outside built-up areas on a two-way road without a central divider is 80 km/h.",
+        trapNote: "Changed from 90 to 80 in 2018. Common trap question — many people still think it is 90.",
+        distractorNotes: { A: "50 km/h is the urban (agglomération) limit.", C: "90 km/h was the old limit before July 2018.", D: "110 km/h is for expressways (voies express) or divided roads." },
+        vocabulary: [
+            { wordFr: "hors agglomération", wordEn: "outside built-up areas", definition: "Areas outside cities and towns, typically marked by end-of-town signs" }
+        ]
+    },
+    {
+        id: "circ-059",
+        topic: "circulation",
+        difficulty: 1,
+        questionFr: "À quoi sert la ceinture de sécurité ?",
+        questionEn: "What is the purpose of a seatbelt?",
+        options: {
+            A: { fr: "Empêcher le conducteur de bouger dans son siège", en: "Prevent the driver from moving in the seat" },
+            B: { fr: "Retenir les occupants en cas de choc et réduire les blessures", en: "Restrain occupants in a crash and reduce injuries" },
+            C: { fr: "Éviter les amendes uniquement", en: "Only to avoid fines" },
+            D: { fr: "Elle n'est utile qu'à haute vitesse", en: "It is only useful at high speed" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "La ceinture de sécurité retient les occupants en cas de choc et réduit considérablement le risque de blessures graves ou mortelles, quelle que soit la vitesse.",
+        explanationEn: "The seatbelt restrains occupants in a crash and significantly reduces the risk of serious or fatal injuries at any speed.",
+        trapNote: "Seatbelt is effective at ALL speeds, even 20 km/h. Non-port = 3 points + 135€.",
+        distractorNotes: { A: "The seatbelt allows normal movement but restrains in a crash.", C: "The seatbelt saves lives — avoiding fines is a side benefit.", D: "Even at low speeds (30 km/h), a crash without seatbelt can be fatal." },
+        vocabulary: [
+            { wordFr: "ceinture de sécurité", wordEn: "seatbelt", definition: "A strap that holds a vehicle occupant in place during a collision" }
+        ]
+    },
+    {
+        id: "circ-060",
+        topic: "circulation",
+        difficulty: 1,
+        questionFr: "Quels feux devez-vous utiliser la nuit en agglomération éclairée ?",
+        questionEn: "Which lights must you use at night in a well-lit built-up area?",
+        options: {
+            A: { fr: "Les feux de route (pleins phares)", en: "High beams (full headlights)" },
+            B: { fr: "Les feux de croisement (codes)", en: "Low beams (dipped headlights)" },
+            C: { fr: "Les feux de position uniquement", en: "Parking lights only" },
+            D: { fr: "Aucun feu, la rue est éclairée", en: "No lights, the street is lit" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "En agglomération éclairée la nuit, vous devez utiliser les feux de croisement (codes). Les feux de route sont interdits car ils éblouissent les autres usagers.",
+        explanationEn: "In a well-lit built-up area at night, you must use dipped headlights (low beams). High beams are forbidden as they blind other road users.",
+        trapNote: "Town at night = low beams (croisement). High beams = only on unlit roads with no oncoming traffic.",
+        distractorNotes: { A: "High beams (feux de route) are forbidden in built-up areas — they blind others.", C: "Parking lights (feux de position) alone are insufficient for driving at night.", D: "You must always use headlights at night, even on lit streets." },
+        vocabulary: [
+            { wordFr: "feux de croisement", wordEn: "dipped headlights/low beams", definition: "Headlights that illuminate the road ahead without blinding oncoming drivers" },
+            { wordFr: "feux de route", wordEn: "high beams/full headlights", definition: "Powerful headlights for unlit roads, must be switched off when facing other vehicles" }
+        ]
+    },
+    {
+        id: "circ-061",
+        topic: "circulation",
+        difficulty: 1,
+        questionFr: "Quelle est la distance de sécurité minimale recommandée sur autoroute ?",
+        questionEn: "What is the minimum recommended safe following distance on a motorway?",
+        options: {
+            A: { fr: "1 seconde", en: "1 second" },
+            B: { fr: "2 secondes (ou 2 bandes blanches)", en: "2 seconds (or 2 white lane markings)" },
+            C: { fr: "5 secondes", en: "5 seconds" },
+            D: { fr: "10 mètres", en: "10 metres" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Sur autoroute, la distance de sécurité minimale est de 2 secondes, ce qui correspond à environ 2 bandes de la bande d'arrêt d'urgence (environ 73 mètres à 130 km/h).",
+        explanationEn: "On a motorway, the minimum safe following distance is 2 seconds, which corresponds to about 2 emergency lane markings (about 73 metres at 130 km/h).",
+        trapNote: "2-second rule = universal. At 130 km/h this equals ~73m. The white dashes on the emergency lane help you count.",
+        distractorNotes: { A: "1 second is far too close, especially at motorway speeds.", C: "5 seconds is overly cautious for normal conditions.", D: "10 metres at 130 km/h would mean less than 0.3 seconds — extremely dangerous." },
+        vocabulary: [
+            { wordFr: "distance de sécurité", wordEn: "safe following distance", definition: "The minimum gap you must maintain behind the vehicle in front" }
         ]
     },
     // === CONDUCTEUR ===,
@@ -8693,6 +8804,118 @@ const QUESTION_BANK = [
             { wordFr: "cédez le passage", wordEn: "give way / yield", definition: "Slow down and let other vehicles pass before proceeding" }
         ]
     },
+    {
+        id: "prio-113",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Qui a la priorité dans un rond-point en France ?",
+        questionEn: "Who has priority in a roundabout in France?",
+        options: {
+            A: { fr: "Les véhicules déjà dans le rond-point", en: "Vehicles already in the roundabout" },
+            B: { fr: "Les véhicules qui entrent dans le rond-point", en: "Vehicles entering the roundabout" },
+            C: { fr: "Les véhicules les plus rapides", en: "The fastest vehicles" },
+            D: { fr: "Les véhicules venant de la gauche", en: "Vehicles coming from the left" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Dans un rond-point (carrefour giratoire) en France, les véhicules déjà engagés dans le rond-point ont la priorité sur ceux qui veulent y entrer.",
+        explanationEn: "In a roundabout in France, vehicles already in the roundabout have priority over those entering.",
+        trapNote: "Roundabout = vehicles inside have priority. Do NOT confuse with priorité à droite — roundabouts override that rule.",
+        distractorNotes: { B: "Entering vehicles must yield, not the other way around.", C: "Speed is never a factor in priority rules.", D: "Priority to the left does not exist in French traffic law." },
+        vocabulary: [
+            { wordFr: "rond-point", wordEn: "roundabout", definition: "A circular intersection where traffic flows in one direction" },
+            { wordFr: "carrefour giratoire", wordEn: "roundabout (formal)", definition: "Official term for a roundabout with specific priority rules" }
+        ]
+    },
+    {
+        id: "prio-114",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Que devez-vous faire à un panneau STOP ?",
+        questionEn: "What must you do at a STOP sign?",
+        options: {
+            A: { fr: "Ralentir et passer si la voie est libre", en: "Slow down and go if the way is clear" },
+            B: { fr: "Vous arrêter complètement, puis repartir quand la voie est libre", en: "Come to a complete stop, then go when the way is clear" },
+            C: { fr: "Klaxonner pour prévenir les autres", en: "Honk to warn others" },
+            D: { fr: "Accélérer pour passer rapidement", en: "Accelerate to pass quickly" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Au panneau STOP, vous devez obligatoirement marquer un arrêt complet (roues immobilisées), puis céder le passage avant de repartir.",
+        explanationEn: "At a STOP sign, you must come to a complete stop (wheels stationary), then yield before continuing.",
+        trapNote: "STOP = mandatory complete stop even if no one is coming. Rolling stop = infraction.",
+        distractorNotes: { A: "That describes cédez le passage (yield), not STOP.", C: "Honking is not required at a STOP sign.", D: "Accelerating at a STOP sign is dangerous and illegal." },
+        vocabulary: [
+            { wordFr: "arrêt complet", wordEn: "complete stop", definition: "Stopping with wheels fully stationary" }
+        ]
+    },
+    {
+        id: "prio-115",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Un feu clignotant orange signifie :",
+        questionEn: "A flashing orange light means:",
+        options: {
+            A: { fr: "Vous devez vous arrêter", en: "You must stop" },
+            B: { fr: "Le feu est en panne, passez sans précaution", en: "The light is broken, pass without caution" },
+            C: { fr: "Ralentissez et appliquez la priorité à droite", en: "Slow down and apply priority to the right" },
+            D: { fr: "Seuls les piétons peuvent passer", en: "Only pedestrians may pass" }
+        },
+        correctAnswers: ["C"],
+        answerCount: 1,
+        explanationFr: "Un feu orange clignotant signifie que le feu ne fonctionne pas normalement. Vous devez ralentir et appliquer les règles de priorité habituelles (priorité à droite sauf signalisation contraire).",
+        explanationEn: "A flashing orange light means the traffic light is not operating normally. You must slow down and apply normal priority rules (priority to the right unless otherwise signed).",
+        trapNote: "Flashing orange = caution + priority to the right. NOT the same as steady orange (which means stop if safe).",
+        distractorNotes: { A: "A complete stop is not mandatory, but you must slow down.", B: "You must always exercise caution, even when the light is flashing.", D: "All road users are affected, not just pedestrians." },
+        vocabulary: [
+            { wordFr: "feu clignotant", wordEn: "flashing light", definition: "A traffic light that blinks on and off repeatedly" }
+        ]
+    },
+    {
+        id: "prio-116",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Que devez-vous faire quand un feu tricolore passe au rouge ?",
+        questionEn: "What must you do when a traffic light turns red?",
+        options: {
+            A: { fr: "Vous arrêter avant la ligne d'arrêt", en: "Stop before the stop line" },
+            B: { fr: "Ralentir et passer prudemment", en: "Slow down and pass carefully" },
+            C: { fr: "Accélérer pour passer avant le rouge", en: "Accelerate to pass before it turns red" },
+            D: { fr: "Allumer vos feux de détresse", en: "Turn on your hazard lights" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Quand le feu passe au rouge, vous devez vous arrêter avant la ligne d'arrêt. Griller un feu rouge est une infraction grave pouvant entraîner un retrait de 4 points.",
+        explanationEn: "When the light turns red, you must stop before the stop line. Running a red light is a serious offense that can result in a 4-point deduction.",
+        trapNote: "Red = stop. 4-point penalty + 135€ fine. No exceptions except emergency vehicles.",
+        distractorNotes: { B: "You cannot pass a red light under any circumstances (unless directed by police).", C: "Accelerating to beat a red light is a common cause of accidents.", D: "Hazard lights are not relevant to traffic light signals." },
+        vocabulary: [
+            { wordFr: "ligne d'arrêt", wordEn: "stop line", definition: "The white line painted on the road where you must stop at a red light" },
+            { wordFr: "griller un feu rouge", wordEn: "to run a red light", definition: "To pass through a red traffic light illegally" }
+        ]
+    },
+    {
+        id: "prio-117",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Un piéton s'engage sur un passage piéton. Que devez-vous faire ?",
+        questionEn: "A pedestrian steps onto a crosswalk. What must you do?",
+        options: {
+            A: { fr: "Klaxonner pour qu'il se dépêche", en: "Honk so they hurry up" },
+            B: { fr: "Vous arrêter pour le laisser traverser", en: "Stop to let them cross" },
+            C: { fr: "Le contourner par la gauche", en: "Go around them on the left" },
+            D: { fr: "Accélérer si vous êtes déjà proche", en: "Accelerate if you are already close" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Les piétons engagés sur un passage piéton ont TOUJOURS la priorité. Vous devez vous arrêter et les laisser traverser complètement. Ne pas céder le passage : retrait de 6 points.",
+        explanationEn: "Pedestrians on a crosswalk ALWAYS have priority. You must stop and let them cross completely. Failure to yield: 6-point deduction.",
+        trapNote: "6 points for not yielding to a pedestrian on a crosswalk — one of the heaviest penalties. Pedestrians = sacred.",
+        distractorNotes: { A: "Honking at pedestrians on a crosswalk is aggressive and inappropriate.", C: "Going around a pedestrian on a crosswalk is extremely dangerous.", D: "Accelerating near a pedestrian is illegal and dangerous." },
+        vocabulary: [
+            { wordFr: "passage piéton", wordEn: "crosswalk/pedestrian crossing", definition: "A marked area on the road where pedestrians have priority to cross" }
+        ]
+    },
     // === CROISEMENT_DEPASSEMENT ===,
     {
         id: "croi-001",
@@ -12286,6 +12509,118 @@ const QUESTION_BANK = [
         distractorNotes: { B: "Toll booths have specific signs with money symbols.", C: "Bus stops use a bus icon, not a P.", D: "Meeting points use different symbols." },
         vocabulary: [
             { wordFr: "stationnement autorisé", wordEn: "authorized parking", definition: "A zone where parking is permitted" }
+        ]
+    },
+    {
+        id: "arret-063",
+        topic: "arret_stationnement",
+        difficulty: 1,
+        questionFr: "Peut-on s'arrêter en double file ?",
+        questionEn: "Can you stop in double file (double parking)?",
+        options: {
+            A: { fr: "Oui, si c'est pour moins de 5 minutes", en: "Yes, if it is for less than 5 minutes" },
+            B: { fr: "Oui, à condition de mettre les feux de détresse", en: "Yes, as long as you turn on hazard lights" },
+            C: { fr: "Non, c'est toujours interdit", en: "No, it is always forbidden" },
+            D: { fr: "Oui, si le conducteur reste dans le véhicule", en: "Yes, if the driver stays in the vehicle" }
+        },
+        correctAnswers: ["C"],
+        answerCount: 1,
+        explanationFr: "L'arrêt et le stationnement en double file sont toujours interdits. C'est un stationnement gênant passible d'une amende de 35 €.",
+        explanationEn: "Stopping and parking in double file is always forbidden. It is classified as obstructive parking and carries a 35€ fine.",
+        trapNote: "Double file = ALWAYS forbidden. No exception for just a minute or hazard lights.",
+        distractorNotes: { A: "Duration does not matter — double file is always forbidden.", B: "Hazard lights do not legalize double parking.", D: "Whether the driver stays or leaves, double file is still illegal." },
+        vocabulary: [
+            { wordFr: "double file", wordEn: "double parking", definition: "Parking alongside a vehicle already parked at the kerb, blocking traffic" },
+            { wordFr: "stationnement gênant", wordEn: "obstructive parking", definition: "Parking that obstructs traffic flow, pedestrians, or other vehicles" }
+        ]
+    },
+    {
+        id: "arret-064",
+        topic: "arret_stationnement",
+        difficulty: 1,
+        questionFr: "Après avoir stationné en descente, comment positionner vos roues avant ?",
+        questionEn: "After parking on a downhill slope, how should you position your front wheels?",
+        options: {
+            A: { fr: "Tournées vers le trottoir", en: "Turned towards the kerb" },
+            B: { fr: "Tournées vers la route", en: "Turned towards the road" },
+            C: { fr: "Droites (position normale)", en: "Straight (normal position)" },
+            D: { fr: "Cela n'a pas d'importance", en: "It does not matter" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "En descente, vous devez tourner vos roues vers le trottoir pour que le véhicule vienne buter contre le trottoir en cas de défaillance du frein à main.",
+        explanationEn: "On a downhill slope, turn your wheels towards the kerb so the car rolls into the kerb if the handbrake fails.",
+        trapNote: "Downhill = wheels toward kerb. Uphill = wheels away from kerb. Both prevent runaway.",
+        distractorNotes: { B: "Towards the road would make the car roll into traffic if the brake failed.", C: "Straight wheels offer no protection against rolling.", D: "Wheel position is very important on slopes for safety." },
+        vocabulary: [
+            { wordFr: "frein à main", wordEn: "handbrake/parking brake", definition: "A brake used to keep the vehicle stationary when parked" }
+        ]
+    },
+    {
+        id: "arret-065",
+        topic: "arret_stationnement",
+        difficulty: 1,
+        questionFr: "Que signifie un marquage jaune en zigzag au bord de la route ?",
+        questionEn: "What does a yellow zigzag marking at the side of the road mean?",
+        options: {
+            A: { fr: "Zone de stationnement réservée aux taxis", en: "Parking zone reserved for taxis" },
+            B: { fr: "Interdiction de s'arrêter et de stationner (arrêt de bus)", en: "No stopping or parking (bus stop)" },
+            C: { fr: "Zone de chargement pour camions", en: "Loading zone for trucks" },
+            D: { fr: "Place réservée aux personnes handicapées", en: "Space reserved for disabled persons" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le marquage jaune en zigzag indique un arrêt de bus. Il est interdit de s'arrêter et de stationner sur cette zone.",
+        explanationEn: "A yellow zigzag marking indicates a bus stop. Stopping and parking are forbidden in this zone.",
+        trapNote: "Yellow zigzag = bus stop = no stopping at all (not even briefly).",
+        distractorNotes: { A: "Taxi zones have different markings (usually a sign, not zigzag).", C: "Loading zones are marked differently (usually with specific signs).", D: "Disabled spaces are marked with the wheelchair symbol." },
+        vocabulary: [
+            { wordFr: "marquage en zigzag", wordEn: "zigzag marking", definition: "Yellow zigzag lines painted at bus stops indicating no stopping" }
+        ]
+    },
+    {
+        id: "arret-066",
+        topic: "arret_stationnement",
+        difficulty: 1,
+        questionFr: "Qu'est-ce qu'un disque de stationnement (zone bleue) ?",
+        questionEn: "What is a parking disc (blue zone)?",
+        options: {
+            A: { fr: "Un disque indiquant votre heure d'arrivée, requis en zone bleue", en: "A disc showing your arrival time, required in blue zones" },
+            B: { fr: "Un autocollant pour les résidents uniquement", en: "A sticker for residents only" },
+            C: { fr: "Un ticket de parking payant", en: "A paid parking ticket" },
+            D: { fr: "Un permis spécial de stationnement longue durée", en: "A special long-term parking permit" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "En zone bleue, vous devez afficher un disque de stationnement avec votre heure d'arrivée sur le pare-brise. La durée maximale est généralement de 1h30.",
+        explanationEn: "In a blue zone, you must display a parking disc with your arrival time on the windshield. The maximum duration is usually 1h30.",
+        trapNote: "Blue zone = free but time-limited. Disc required on windshield. Usually 1h30 max.",
+        distractorNotes: { B: "The disc is for all drivers, not just residents.", C: "Blue zones are free — the disc is not a payment ticket.", D: "Blue zones are for short-term parking, not long-term." },
+        vocabulary: [
+            { wordFr: "disque de stationnement", wordEn: "parking disc", definition: "A cardboard disc placed on the dashboard to show arrival time in blue parking zones" },
+            { wordFr: "zone bleue", wordEn: "blue zone", definition: "A free time-limited parking area requiring a parking disc" }
+        ]
+    },
+    {
+        id: "arret-067",
+        topic: "arret_stationnement",
+        difficulty: 1,
+        questionFr: "À quelle distance minimale d'un passage piéton est-il interdit de stationner ?",
+        questionEn: "What is the minimum distance from a crosswalk where parking is forbidden?",
+        options: {
+            A: { fr: "3 mètres", en: "3 metres" },
+            B: { fr: "5 mètres", en: "5 metres" },
+            C: { fr: "10 mètres", en: "10 metres" },
+            D: { fr: "15 mètres", en: "15 metres" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Il est interdit de stationner à moins de 5 mètres en amont d'un passage piéton (dans le sens de circulation) pour garantir la visibilité des piétons.",
+        explanationEn: "Parking is forbidden within 5 metres upstream of a crosswalk (in the direction of traffic) to ensure pedestrian visibility.",
+        trapNote: "5m from crosswalk (upstream). Different from intersection distance (also 5m). The rule protects pedestrian visibility.",
+        distractorNotes: { A: "3 metres is too close — visibility would be insufficient.", C: "10 metres is the distance for some other countries, not France.", D: "15 metres is excessive for this rule." },
+        vocabulary: [
+            { wordFr: "en amont", wordEn: "upstream (before)", definition: "Before a point in the direction of traffic flow" }
         ]
     },
     // === TUNNELS & PASSAGES A NIVEAU (Tunnels & Level Crossings) ===,
