@@ -34781,5 +34781,717 @@
         "definition": "The road you are on is no longer a priority road"
       }
     ]
+  },
+  {
+    "id": "route-059",
+    "topic": "route",
+    "difficulty": 1,
+    "signs": [
+      "speed_130"
+    ],
+    "questionFr": "Quelle est la vitesse maximale autorisée sur autoroute par temps sec ?",
+    "questionEn": "What is the maximum speed allowed on a motorway in dry conditions?",
+    "options": {
+      "A": {
+        "fr": "110 km/h",
+        "en": "110 km/h"
+      },
+      "B": {
+        "fr": "120 km/h",
+        "en": "120 km/h"
+      },
+      "C": {
+        "fr": "130 km/h",
+        "en": "130 km/h"
+      },
+      "D": {
+        "fr": "150 km/h",
+        "en": "150 km/h"
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Sur autoroute, la vitesse maximale est de 130 km/h par temps sec. Elle est réduite à 110 km/h par temps de pluie.",
+    "explanationEn": "On motorways, the maximum speed is 130 km/h in dry conditions. It is reduced to 110 km/h in rain.",
+    "trapNote": "130 dry, 110 rain. Don't confuse with dual carriageways (110/100).",
+    "distractorNotes": {
+      "A": "110 km/h is the rain limit on motorways, or the dry limit on dual carriageways.",
+      "B": "120 km/h is not a standard French speed limit.",
+      "D": "150 km/h is not permitted anywhere in France."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "autoroute",
+        "wordEn": "motorway",
+        "definition": "A high-speed road with at least two lanes in each direction, separated by a central barrier"
+      },
+      {
+        "wordFr": "temps sec",
+        "wordEn": "dry conditions",
+        "definition": "When there is no rain, snow, or ice on the road"
+      }
+    ]
+  },
+  {
+    "id": "route-060",
+    "topic": "route",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Quelle est la vitesse maximale sur autoroute par temps de pluie ?",
+    "questionEn": "What is the maximum speed on a motorway in rain?",
+    "options": {
+      "A": {
+        "fr": "90 km/h",
+        "en": "90 km/h"
+      },
+      "B": {
+        "fr": "100 km/h",
+        "en": "100 km/h"
+      },
+      "C": {
+        "fr": "110 km/h",
+        "en": "110 km/h"
+      },
+      "D": {
+        "fr": "130 km/h",
+        "en": "130 km/h"
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Par temps de pluie, la vitesse sur autoroute est limitée à 110 km/h au lieu de 130 km/h.",
+    "explanationEn": "In rain, the motorway speed limit is reduced to 110 km/h instead of 130 km/h.",
+    "trapNote": "Rain = minus 20 km/h on motorways (130->110).",
+    "distractorNotes": {
+      "A": "90 km/h is for single carriageways in rain.",
+      "B": "100 km/h is for dual carriageways in rain.",
+      "D": "130 km/h is the dry weather limit."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "temps de pluie",
+        "wordEn": "rainy conditions",
+        "definition": "When it is raining and the road surface is wet"
+      }
+    ]
+  },
+  {
+    "id": "route-061",
+    "topic": "route",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Comment appelle-t-on la voie la plus à droite sur une autoroute à trois voies ?",
+    "questionEn": "What is the rightmost lane called on a three-lane motorway?",
+    "options": {
+      "A": {
+        "fr": "La voie de dépassement",
+        "en": "The overtaking lane"
+      },
+      "B": {
+        "fr": "La voie du milieu",
+        "en": "The middle lane"
+      },
+      "C": {
+        "fr": "La voie de droite ou voie normale de circulation",
+        "en": "The right lane or normal driving lane"
+      },
+      "D": {
+        "fr": "La bande d'arrêt d'urgence",
+        "en": "The emergency stopping lane"
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ],
+    "answerCount": 1,
+    "explanationFr": "La voie de droite est la voie normale de circulation. On doit y rouler sauf pour dépasser.",
+    "explanationEn": "The right lane is the normal driving lane. You must drive in it except when overtaking.",
+    "trapNote": "In France, you MUST drive in the rightmost lane when it is free.",
+    "distractorNotes": {
+      "A": "The overtaking lane is the leftmost lane.",
+      "B": "The middle lane is for overtaking slower vehicles.",
+      "D": "The emergency stopping lane is on the far right shoulder."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "voie normale de circulation",
+        "wordEn": "normal driving lane",
+        "definition": "The right lane where you should drive by default"
+      }
+    ]
+  },
+  {
+    "id": "route-062",
+    "topic": "route",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Quelle est la distance minimale de sécurité à respecter sur autoroute ?",
+    "questionEn": "What is the minimum safe following distance on a motorway?",
+    "options": {
+      "A": {
+        "fr": "Un trait de marquage au sol",
+        "en": "One road marking line"
+      },
+      "B": {
+        "fr": "Deux traits de marquage au sol (environ 2 secondes)",
+        "en": "Two road marking lines (about 2 seconds)"
+      },
+      "C": {
+        "fr": "Trois traits de marquage au sol",
+        "en": "Three road marking lines"
+      },
+      "D": {
+        "fr": "Cinq traits de marquage au sol",
+        "en": "Five road marking lines"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "La distance de sécurité sur autoroute correspond à 2 secondes, soit au moins 2 traits de marquage au sol.",
+    "explanationEn": "The safe following distance on a motorway is 2 seconds, or at least 2 road marking lines.",
+    "trapNote": "2-second rule = 2 road markings at motorway speed.",
+    "distractorNotes": {
+      "A": "One marking is too close.",
+      "C": "Three markings is more than required.",
+      "D": "Five markings is excessive."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "distance de sécurité",
+        "wordEn": "safe following distance",
+        "definition": "The minimum gap between your vehicle and the one ahead"
+      }
+    ]
+  },
+  {
+    "id": "route-063",
+    "topic": "route",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Que signifie une ligne blanche continue au milieu de la route ?",
+    "questionEn": "What does a solid white line in the middle of the road mean?",
+    "options": {
+      "A": {
+        "fr": "Dépassement autorisé",
+        "en": "Overtaking is allowed"
+      },
+      "B": {
+        "fr": "Interdiction de franchir ou de chevaucher la ligne",
+        "en": "You must not cross or straddle the line"
+      },
+      "C": {
+        "fr": "Voie réservée aux bus",
+        "en": "Bus-only lane"
+      },
+      "D": {
+        "fr": "Zone de stationnement",
+        "en": "Parking zone"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Une ligne blanche continue interdit le dépassement. Il est interdit de la franchir ou de la chevaucher.",
+    "explanationEn": "A solid white line prohibits overtaking. You must not cross or straddle it.",
+    "trapNote": "Continuous = no crossing. Dashed = overtaking permitted.",
+    "distractorNotes": {
+      "A": "Overtaking is only allowed with a dashed line on your side.",
+      "C": "Bus lanes are marked differently.",
+      "D": "Parking zones use different markings."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "ligne continue",
+        "wordEn": "solid line",
+        "definition": "An unbroken white line that must not be crossed"
+      },
+      {
+        "wordFr": "chevaucher",
+        "wordEn": "to straddle",
+        "definition": "To drive with one wheel on each side of a line"
+      }
+    ]
+  },
+  {
+    "id": "arret-058",
+    "topic": "arret_stationnement",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Quelle est la différence principale entre l'arrêt et le stationnement ?",
+    "questionEn": "What is the key difference between stopping and parking?",
+    "options": {
+      "A": {
+        "fr": "L'arrêt dure moins de 5 minutes",
+        "en": "Stopping lasts less than 5 minutes"
+      },
+      "B": {
+        "fr": "L'arrêt = conducteur reste ; stationnement = conducteur quitte le véhicule",
+        "en": "Stopping = driver stays; parking = driver leaves the vehicle"
+      },
+      "C": {
+        "fr": "Aucune différence légale",
+        "en": "No legal difference"
+      },
+      "D": {
+        "fr": "L'arrêt est gratuit, le stationnement est payant",
+        "en": "Stopping is free, parking costs money"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "L'arrêt signifie que le conducteur reste au volant ou à proximité immédiate. Le stationnement, c'est quand le conducteur quitte le véhicule.",
+    "explanationEn": "Stopping means the driver stays at the wheel or nearby. Parking is when the driver leaves the vehicle.",
+    "trapNote": "It's NOT about duration — it's about whether the driver stays or leaves.",
+    "distractorNotes": {
+      "A": "The 5-minute rule is not the legal definition.",
+      "C": "There is a clear legal distinction.",
+      "D": "Cost is not what differentiates them legally."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "arrêt",
+        "wordEn": "stopping",
+        "definition": "Briefly halting while the driver remains at the wheel or nearby"
+      },
+      {
+        "wordFr": "stationnement",
+        "wordEn": "parking",
+        "definition": "Leaving your vehicle while the driver is absent"
+      }
+    ]
+  },
+  {
+    "id": "arret-059",
+    "topic": "arret_stationnement",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "À quelle distance minimale d'une intersection devez-vous vous garer ?",
+    "questionEn": "What is the minimum distance from an intersection where you may park?",
+    "options": {
+      "A": {
+        "fr": "3 mètres",
+        "en": "3 metres"
+      },
+      "B": {
+        "fr": "5 mètres",
+        "en": "5 metres"
+      },
+      "C": {
+        "fr": "10 mètres",
+        "en": "10 metres"
+      },
+      "D": {
+        "fr": "15 mètres",
+        "en": "15 metres"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Il est interdit de stationner à moins de 5 mètres d'une intersection pour ne pas gêner la visibilité.",
+    "explanationEn": "Parking within 5 metres of an intersection is prohibited to avoid blocking visibility.",
+    "trapNote": "5 metres from intersections. Also 5 metres from pedestrian crossings.",
+    "distractorNotes": {
+      "A": "3 metres is too close.",
+      "C": "10 metres is not the legal minimum.",
+      "D": "15 metres is for fire hydrants."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "intersection",
+        "wordEn": "intersection",
+        "definition": "Where two or more roads meet"
+      }
+    ]
+  },
+  {
+    "id": "arret-060",
+    "topic": "arret_stationnement",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Que signifie une ligne jaune continue peinte sur le bord du trottoir ?",
+    "questionEn": "What does a solid yellow line painted on the kerb mean?",
+    "options": {
+      "A": {
+        "fr": "Stationnement payant",
+        "en": "Paid parking"
+      },
+      "B": {
+        "fr": "Arrêt et stationnement interdits",
+        "en": "No stopping and no parking"
+      },
+      "C": {
+        "fr": "Stationnement limité à 30 minutes",
+        "en": "Parking limited to 30 minutes"
+      },
+      "D": {
+        "fr": "Réservé aux livraisons",
+        "en": "Reserved for deliveries"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Une ligne jaune continue sur le trottoir signifie que l'arrêt et le stationnement sont tous les deux interdits.",
+    "explanationEn": "A solid yellow line on the kerb means both stopping and parking are prohibited.",
+    "trapNote": "Solid yellow = no stopping AND no parking. Dashed yellow = no parking but stopping OK.",
+    "distractorNotes": {
+      "A": "Paid parking uses specific signs or meters.",
+      "C": "Time-limited parking uses blue zone signs.",
+      "D": "Delivery zones have specific signs."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "ligne jaune continue",
+        "wordEn": "solid yellow line",
+        "definition": "A road marking on the kerb prohibiting stopping and parking"
+      }
+    ]
+  },
+  {
+    "id": "arret-061",
+    "topic": "arret_stationnement",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Où est-il interdit de stationner ?",
+    "questionEn": "Where is parking prohibited?",
+    "options": {
+      "A": {
+        "fr": "Sur un passage piéton ou à moins de 5 mètres",
+        "en": "On a pedestrian crossing or within 5 metres"
+      },
+      "B": {
+        "fr": "Dans une rue large à sens unique",
+        "en": "On a wide one-way street"
+      },
+      "C": {
+        "fr": "Devant un garage privé quand le propriétaire est absent",
+        "en": "In front of a private garage when the owner is away"
+      },
+      "D": {
+        "fr": "Sur un parking public",
+        "en": "In a public car park"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Il est interdit de stationner sur un passage piéton ou à moins de 5 mètres avant celui-ci.",
+    "explanationEn": "Parking on a pedestrian crossing or within 5 metres before it is prohibited.",
+    "trapNote": "Pedestrian crossings, intersections, bus stops, fire hydrants all have distance rules.",
+    "distractorNotes": {
+      "B": "Wide one-way streets generally allow parking.",
+      "C": "Parking in front of a garage is prohibited at all times, but A is more fundamental.",
+      "D": "Public car parks are designed for parking."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "passage piéton",
+        "wordEn": "pedestrian crossing",
+        "definition": "A marked area where pedestrians have right of way to cross"
+      }
+    ]
+  },
+  {
+    "id": "arret-062",
+    "topic": "arret_stationnement",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Qu'est-ce que le stationnement gênant ?",
+    "questionEn": "What is obstructive parking?",
+    "options": {
+      "A": {
+        "fr": "Se garer sur un trottoir, un passage piéton ou en double file",
+        "en": "Parking on a pavement, pedestrian crossing, or double-parking"
+      },
+      "B": {
+        "fr": "Se garer plus de 24 heures au même endroit",
+        "en": "Parking in the same spot for more than 24 hours"
+      },
+      "C": {
+        "fr": "Se garer sans payer le parcmètre",
+        "en": "Parking without paying the meter"
+      },
+      "D": {
+        "fr": "Se garer dans une zone bleue sans disque",
+        "en": "Parking in a blue zone without a disc"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Le stationnement gênant comprend le stationnement sur les trottoirs, passages piétons, pistes cyclables, en double file.",
+    "explanationEn": "Obstructive parking includes parking on pavements, pedestrian crossings, cycle paths, double-parking.",
+    "trapNote": "Gênant = obstructive (blocks others). Abusif = abusive (7+ days). Different offences.",
+    "distractorNotes": {
+      "B": "Parking 7+ days is stationnement abusif, a different offence.",
+      "C": "Not paying is a fine issue, not classified as gênant.",
+      "D": "Missing blue disc is a specific zone offence."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "stationnement gênant",
+        "wordEn": "obstructive parking",
+        "definition": "Parking that blocks or inconveniences other road users"
+      },
+      {
+        "wordFr": "double file",
+        "wordEn": "double-parking",
+        "definition": "Parking alongside a car already parked at the kerb"
+      }
+    ]
+  },
+  {
+    "id": "autr-059",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Quelle distance minimale devez-vous laisser en dépassant un cycliste en agglomération ?",
+    "questionEn": "What is the minimum distance when overtaking a cyclist in a built-up area?",
+    "options": {
+      "A": {
+        "fr": "0,5 mètre",
+        "en": "0.5 metres"
+      },
+      "B": {
+        "fr": "1 mètre",
+        "en": "1 metre"
+      },
+      "C": {
+        "fr": "1,5 mètre",
+        "en": "1.5 metres"
+      },
+      "D": {
+        "fr": "2 mètres",
+        "en": "2 metres"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "En agglomération, vous devez laisser au moins 1 mètre. Hors agglomération, c'est 1,5 mètre.",
+    "explanationEn": "In built-up areas, you must leave at least 1 metre. Outside, it is 1.5 metres.",
+    "trapNote": "1 metre in town, 1.5 metres outside town. Common exam question.",
+    "distractorNotes": {
+      "A": "0.5 metres is dangerously close and illegal.",
+      "C": "1.5 metres is the rule outside built-up areas.",
+      "D": "2 metres is not required by law."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "cycliste",
+        "wordEn": "cyclist",
+        "definition": "A person riding a bicycle on the road"
+      }
+    ]
+  },
+  {
+    "id": "autr-060",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Quel usager est le plus vulnérable sur la route ?",
+    "questionEn": "Which road user is the most vulnerable?",
+    "options": {
+      "A": {
+        "fr": "Un conducteur de camion",
+        "en": "A truck driver"
+      },
+      "B": {
+        "fr": "Un piéton ou un cycliste",
+        "en": "A pedestrian or cyclist"
+      },
+      "C": {
+        "fr": "Un conducteur de voiture",
+        "en": "A car driver"
+      },
+      "D": {
+        "fr": "Un conducteur de bus",
+        "en": "A bus driver"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Les piétons et les cyclistes sont les plus vulnérables car ils n'ont pas de carrosserie.",
+    "explanationEn": "Pedestrians and cyclists are the most vulnerable because they have no bodywork protection.",
+    "trapNote": "Vulnerable = pedestrians, cyclists, motorcyclists, children, elderly.",
+    "distractorNotes": {
+      "A": "Truck drivers are well protected by vehicle size.",
+      "C": "Car drivers have safety features.",
+      "D": "Bus drivers are inside large vehicles."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "usager vulnérable",
+        "wordEn": "vulnerable road user",
+        "definition": "A road user with little or no physical protection"
+      }
+    ]
+  },
+  {
+    "id": "autr-061",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Que devez-vous faire lorsqu'un bus scolaire est arrêté avec ses feux de détresse ?",
+    "questionEn": "What must you do when a school bus is stopped with its hazard lights on?",
+    "options": {
+      "A": {
+        "fr": "Accélérer pour passer rapidement",
+        "en": "Speed up to pass quickly"
+      },
+      "B": {
+        "fr": "Klaxonner pour avertir les enfants",
+        "en": "Honk to warn the children"
+      },
+      "C": {
+        "fr": "Ralentir et être prêt à s'arrêter",
+        "en": "Slow down and be ready to stop"
+      },
+      "D": {
+        "fr": "Faire demi-tour",
+        "en": "Make a U-turn"
+      }
+    },
+    "correctAnswers": [
+      "C"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Lorsqu'un bus scolaire est arrêté, vous devez ralentir car des enfants peuvent traverser.",
+    "explanationEn": "When a school bus is stopped, slow down because children may cross unpredictably.",
+    "trapNote": "Children are unpredictable. Always reduce speed near school buses.",
+    "distractorNotes": {
+      "A": "Speeding past is extremely dangerous.",
+      "B": "Honking could startle children.",
+      "D": "A U-turn is unnecessary."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "bus scolaire",
+        "wordEn": "school bus",
+        "definition": "A bus used to transport children to and from school"
+      },
+      {
+        "wordFr": "feux de détresse",
+        "wordEn": "hazard lights",
+        "definition": "Flashing lights on all four corners signaling danger"
+      }
+    ]
+  },
+  {
+    "id": "autr-062",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Que signifie une canne blanche portée par un piéton ?",
+    "questionEn": "What does a white cane carried by a pedestrian indicate?",
+    "options": {
+      "A": {
+        "fr": "La personne est âgée",
+        "en": "The person is elderly"
+      },
+      "B": {
+        "fr": "La personne est aveugle ou malvoyante",
+        "en": "The person is blind or visually impaired"
+      },
+      "C": {
+        "fr": "La personne a un handicap moteur",
+        "en": "The person has a motor disability"
+      },
+      "D": {
+        "fr": "La personne est un agent de sécurité",
+        "en": "The person is a security agent"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Une canne blanche indique que le piéton est aveugle ou malvoyant.",
+    "explanationEn": "A white cane indicates the pedestrian is blind or visually impaired.",
+    "trapNote": "White cane = blind. Yellow cane = partially sighted.",
+    "distractorNotes": {
+      "A": "Being elderly doesn't require a white cane.",
+      "C": "Motor disabilities use wheelchairs or crutches.",
+      "D": "Security agents don't use white canes."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "canne blanche",
+        "wordEn": "white cane",
+        "definition": "A stick used by blind or visually impaired people"
+      },
+      {
+        "wordFr": "malvoyant",
+        "wordEn": "visually impaired",
+        "definition": "A person with significantly reduced vision"
+      }
+    ]
+  },
+  {
+    "id": "autr-063",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "signs": [],
+    "questionFr": "Quel véhicule prioritaire devez-vous toujours laisser passer ?",
+    "questionEn": "Which priority vehicle must you always give way to?",
+    "options": {
+      "A": {
+        "fr": "Un taxi avec un client",
+        "en": "A taxi with a passenger"
+      },
+      "B": {
+        "fr": "Une ambulance avec sirène et gyrophare allumés",
+        "en": "An ambulance with siren and flashing light on"
+      },
+      "C": {
+        "fr": "Un camion de déménagement",
+        "en": "A moving truck"
+      },
+      "D": {
+        "fr": "Un véhicule de location",
+        "en": "A rental vehicle"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Les véhicules prioritaires avec sirène et gyrophare allumés ont la priorité absolue.",
+    "explanationEn": "Priority vehicles with active sirens and lights have absolute priority.",
+    "trapNote": "Only when siren AND lights are active. A parked police car has no special priority.",
+    "distractorNotes": {
+      "A": "Taxis follow normal traffic rules.",
+      "C": "Moving trucks have no special priority.",
+      "D": "Rental vehicles have no special status."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "véhicule prioritaire",
+        "wordEn": "priority vehicle",
+        "definition": "Emergency vehicles that have right of way when using sirens and lights"
+      },
+      {
+        "wordFr": "gyrophare",
+        "wordEn": "flashing light",
+        "definition": "A rotating or flashing light on top of emergency vehicles"
+      }
+    ]
   }
 ]

@@ -805,6 +805,13 @@
     "questionId": "autr-044"
   },
   {
+    "wordFr": "malvoyant",
+    "wordEn": "visually impaired",
+    "definition": "A person with significantly reduced vision",
+    "topic": "autres_usagers",
+    "questionId": "autr-062"
+  },
+  {
     "wordFr": "manifester l'intention de traverser",
     "wordEn": "show intention to cross",
     "definition": "",
@@ -4212,6 +4219,13 @@
     "definition": "A high-speed road limited to 110 km/h, with some at-grade junctions possible",
     "topic": "route",
     "questionId": "route-029"
+  },
+  {
+    "wordFr": "voie normale de circulation",
+    "wordEn": "normal driving lane",
+    "definition": "The right lane where you should drive by default",
+    "topic": "route",
+    "questionId": "route-061"
   },
   {
     "wordFr": "voyant",
