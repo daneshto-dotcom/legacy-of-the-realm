@@ -2268,6 +2268,13 @@
     "questionId": "croi-029"
   },
   {
+    "wordFr": "chaussée étroite",
+    "wordEn": "narrow road",
+    "definition": "A road too narrow for two vehicles to pass comfortably side by side",
+    "topic": "croisement_depassement",
+    "questionId": "croi-120"
+  },
+  {
     "wordFr": "circulation dense",
     "wordEn": "heavy traffic",
     "definition": "Situation où le volume de véhicules réduit significativement la vitesse d'écoulement",
@@ -2597,6 +2604,13 @@
     "questionId": "croi-009"
   },
   {
+    "wordFr": "serrer à droite",
+    "wordEn": "move to the right",
+    "definition": "To position your vehicle as far right as possible on the road",
+    "topic": "croisement_depassement",
+    "questionId": "croi-120"
+  },
+  {
     "wordFr": "sommet d'une côte",
     "wordEn": "hill crest",
     "definition": "The top of a hill where the road goes over",
@@ -2898,6 +2912,13 @@
     "questionId": "div-045"
   },
   {
+    "wordFr": "durée de validité",
+    "wordEn": "validity period",
+    "definition": "How long a document remains legally valid before needing renewal",
+    "topic": "notions_diverses",
+    "questionId": "div-115"
+  },
+  {
     "wordFr": "eCall",
     "wordEn": "eCall (emergency Call)",
     "definition": "An automatic emergency call system that contacts 112 after a serious accident",
@@ -3003,6 +3024,13 @@
     "questionId": "div-031"
   },
   {
+    "wordFr": "jours ouvrés",
+    "wordEn": "working days",
+    "definition": "Business days, excluding weekends and public holidays",
+    "topic": "notions_diverses",
+    "questionId": "div-112"
+  },
+  {
     "wordFr": "mise en circulation",
     "wordEn": "first registration",
     "definition": "The date a vehicle was first officially registered for road use",
@@ -3050,6 +3078,13 @@
     "definition": "",
     "topic": "notions_diverses",
     "questionId": "media-029"
+  },
+  {
+    "wordFr": "permis B",
+    "wordEn": "B licence",
+    "definition": "The standard car driving licence in France",
+    "topic": "notions_diverses",
+    "questionId": "div-114"
   },
   {
     "wordFr": "permis de conduire",
@@ -3211,6 +3246,13 @@
     "definition": "A coloured sticker classifying a vehicle by its emissions",
     "topic": "notions_diverses",
     "questionId": "div-017"
+  },
+  {
+    "wordFr": "visite médicale",
+    "wordEn": "medical check",
+    "definition": "A health examination required for certain driving licence categories",
+    "topic": "notions_diverses",
+    "questionId": "div-114"
   },
   {
     "wordFr": "voie de covoiturage",

@@ -1,5 +1,5 @@
 /* ============================================
-   Question Bank — 812 Bilingual Questions
+   Question Bank — 827 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
    ============================================
@@ -9687,6 +9687,123 @@ const QUESTION_BANK = [
             { wordFr: "passage piéton", wordEn: "crosswalk/pedestrian crossing", definition: "A marked area on the road where pedestrians have priority to cross" }
         ]
     },
+    {
+        id: "prio-118",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "À une intersection sans signalisation, qui a la priorité ?",
+        questionEn: "At an intersection with no signs, who has priority?",
+        options: {
+            A: { fr: "Le véhicule venant de gauche", en: "The vehicle coming from the left" },
+            B: { fr: "Le véhicule venant de droite", en: "The vehicle coming from the right" },
+            C: { fr: "Le véhicule le plus rapide", en: "The fastest vehicle" },
+            D: { fr: "Le véhicule le plus gros", en: "The largest vehicle" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "En l'absence de signalisation, c'est la règle de la priorité à droite qui s'applique : le véhicule venant de votre droite a la priorité.",
+        explanationEn: "Without any signs, the priority-to-the-right rule applies: the vehicle coming from your right has priority.",
+        trapNote: "Priorité à droite is THE fundamental rule of French driving. It applies at ALL unsigned intersections. Never assume you have priority.",
+        distractorNotes: { A: "Left does not have priority — it is always right in France.", C: "Speed is never a factor in determining priority.", D: "Vehicle size does not determine priority." },
+        vocabulary: [
+            { wordFr: "intersection", wordEn: "intersection", definition: "A point where two or more roads meet" }
+        ]
+    },
+    {
+        id: "prio-119",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Que devez-vous faire face à un feu rouge clignotant ?",
+        questionEn: "What must you do when facing a flashing red light?",
+        options: {
+            A: { fr: "Vous arrêter, puis repartir prudemment", en: "Stop, then proceed carefully" },
+            B: { fr: "Ralentir et passer", en: "Slow down and pass" },
+            C: { fr: "Continuer normalement", en: "Continue normally" },
+            D: { fr: "Faire demi-tour", en: "Make a U-turn" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Un feu rouge clignotant impose un arrêt absolu. Vous devez vous arrêter, vérifier que la voie est libre, puis repartir prudemment.",
+        explanationEn: "A flashing red light requires a complete stop. You must stop, check the way is clear, then proceed carefully.",
+        trapNote: "Flashing red = stop absolutely (like at level crossings). Flashing orange = proceed with caution. Don't confuse the two.",
+        distractorNotes: {
+            A: "Correct — a flashing red requires a complete stop first.",
+            B: "Slowing down is not enough — a full stop is required.",
+            C: "Continuing without stopping is a serious offence at a flashing red.",
+            D: "A U-turn is not required — just stop, then proceed if clear."
+        },
+        vocabulary: [
+            { wordFr: "feu rouge clignotant", wordEn: "flashing red light", definition: "A red traffic light that flashes, requiring a mandatory stop before proceeding" }
+        ]
+    },
+    {
+        id: "prio-120",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Un agent de police fait signe de vous arrêter. Les feux sont verts. Que faites-vous ?",
+        questionEn: "A police officer signals you to stop. The lights are green. What do you do?",
+        options: {
+            A: { fr: "Passer au vert", en: "Go on green" },
+            B: { fr: "Obéir à l'agent et vous arrêter", en: "Obey the officer and stop" },
+            C: { fr: "Klaxonner pour prévenir l'agent", en: "Honk to alert the officer" },
+            D: { fr: "Ralentir mais continuer", en: "Slow down but continue" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Les indications d'un agent de police prévalent TOUJOURS sur les feux, les panneaux et les marquages au sol.",
+        explanationEn: "A police officer's instructions ALWAYS override traffic lights, signs, and road markings.",
+        trapNote: "Priority hierarchy: 1) Police officer, 2) Traffic lights, 3) Signs, 4) Road markings, 5) Priority to the right. Agent > everything.",
+        distractorNotes: { A: "A green light does not override a police officer's instructions.", C: "Honking at a police officer is inappropriate and could be an offence.", D: "You must stop completely, not just slow down." },
+        vocabulary: [
+            { wordFr: "agent de police", wordEn: "police officer", definition: "A law enforcement officer who can direct traffic and override signals" }
+        ]
+    },
+    {
+        id: "prio-121",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Vous arrivez à un rond-point. Qui a la priorité ?",
+        questionEn: "You arrive at a roundabout. Who has priority?",
+        options: {
+            A: { fr: "Vous, car vous êtes sur la route principale", en: "You, because you are on the main road" },
+            B: { fr: "Les véhicules déjà engagés dans le rond-point", en: "Vehicles already in the roundabout" },
+            C: { fr: "Le véhicule le plus rapide", en: "The fastest vehicle" },
+            D: { fr: "Les véhicules venant de droite (priorité à droite)", en: "Vehicles from the right (priority to the right)" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Dans un rond-point (signalé par un panneau cédez-le-passage), les véhicules déjà engagés ont la priorité. Vous devez leur céder le passage avant d'entrer.",
+        explanationEn: "At a roundabout (marked with a yield sign), vehicles already inside have priority. You must yield before entering.",
+        trapNote: "Roundabout (with yield sign) ≠ carrefour giratoire. At a rond-point, yield to vehicles inside. At some old-style giratoires, priority to the right may still apply — but this is rare.",
+        distractorNotes: { A: "Being on a main road does not give you priority entering a roundabout.", C: "Speed is never a factor in determining priority.", D: "Priority to the right does not apply at roundabouts with yield signs." },
+        vocabulary: [
+            { wordFr: "rond-point", wordEn: "roundabout", definition: "A circular junction where traffic flows in one direction around a central island" },
+            { wordFr: "céder le passage", wordEn: "yield/give way", definition: "To let other vehicles go first before you proceed" }
+        ]
+    },
+    {
+        id: "prio-122",
+        topic: "priorite",
+        difficulty: 1,
+        questionFr: "Quel véhicule a TOUJOURS la priorité, même au feu rouge ?",
+        questionEn: "Which vehicle ALWAYS has priority, even at a red light?",
+        options: {
+            A: { fr: "Les bus", en: "Buses" },
+            B: { fr: "Les taxis", en: "Taxis" },
+            C: { fr: "Les véhicules prioritaires (pompiers, SAMU) en intervention", en: "Emergency vehicles (fire, ambulance) on a call" },
+            D: { fr: "Les camions de livraison", en: "Delivery trucks" }
+        },
+        correctAnswers: ["C"],
+        answerCount: 1,
+        explanationFr: "Les véhicules prioritaires en intervention (gyrophare + sirène) ont la priorité absolue. Vous devez leur céder le passage, même si votre feu est vert.",
+        explanationEn: "Emergency vehicles on a call (lights + siren) have absolute priority. You must yield to them even if your light is green.",
+        trapNote: "Priority vehicles must have BOTH flashing lights AND siren activated to claim priority. Lights alone = facilitated passage, not absolute priority.",
+        distractorNotes: { A: "Buses have facilitated re-entry into traffic but not absolute priority.", B: "Taxis have no special priority rights.", D: "Delivery trucks have no priority rights whatsoever." },
+        vocabulary: [
+            { wordFr: "véhicule prioritaire", wordEn: "emergency/priority vehicle", definition: "A vehicle (fire, ambulance, police) with legal authority to override traffic rules when on a call" },
+            { wordFr: "gyrophare", wordEn: "flashing light/beacon", definition: "The rotating or flashing light on top of emergency vehicles" }
+        ]
+    },
     // === CROISEMENT_DEPASSEMENT ===,
     {
         id: "croi-001",
@@ -11522,6 +11639,119 @@ const QUESTION_BANK = [
         distractorNotes: { B: "This is the opposite — the sign gives YOU priority. The yield-to-oncoming sign is circular with a red border.", C: "Two-way road signs use vertical red and white arrows in a triangle.", D: "No entry is a red circle with a white horizontal bar." },
         vocabulary: [
             { wordFr: "priorité sur la circulation inverse", wordEn: "priority over oncoming traffic", definition: "A sign giving you right of way in a narrow passage where only one direction can pass at a time" }
+        ]
+    },
+    {
+        id: "croi-116",
+        topic: "croisement_depassement",
+        difficulty: 1,
+        questionFr: "Quelle est la distance latérale minimale pour dépasser un cycliste hors agglomération ?",
+        questionEn: "What is the minimum lateral distance for overtaking a cyclist outside built-up areas?",
+        options: {
+            A: { fr: "50 cm", en: "50 cm" },
+            B: { fr: "1 mètre", en: "1 metre" },
+            C: { fr: "1,50 mètre", en: "1.5 metres" },
+            D: { fr: "2 mètres", en: "2 metres" }
+        },
+        correctAnswers: ["C"],
+        answerCount: 1,
+        explanationFr: "Hors agglomération, la distance latérale minimale pour dépasser un cycliste est de 1,50 m. En agglomération, elle est de 1 m.",
+        explanationEn: "Outside built-up areas, the minimum lateral distance for overtaking a cyclist is 1.5 m. In built-up areas, it is 1 m.",
+        trapNote: "1 m in town, 1.5 m outside. Many candidates confuse the two. The bigger distance applies on faster roads.",
+        distractorNotes: { A: "50 cm is far too close and dangerous for a cyclist.", B: "1 metre is the rule in built-up areas, not outside.", D: "2 metres is more than required, though always recommended." },
+        vocabulary: [
+            { wordFr: "distance latérale", wordEn: "lateral distance", definition: "The side gap between your vehicle and what you are overtaking" },
+            { wordFr: "hors agglomération", wordEn: "outside built-up areas", definition: "On roads outside towns and cities, where speed limits are higher" }
+        ]
+    },
+    {
+        id: "croi-117",
+        topic: "croisement_depassement",
+        difficulty: 1,
+        questionFr: "Est-il autorisé de dépasser par la droite sur une autoroute ?",
+        questionEn: "Is it allowed to overtake on the right on a motorway?",
+        options: {
+            A: { fr: "Oui, à tout moment", en: "Yes, at any time" },
+            B: { fr: "Non, c'est interdit", en: "No, it is prohibited" },
+            C: { fr: "Oui, si le véhicule devant roule lentement", en: "Yes, if the vehicle ahead is going slowly" },
+            D: { fr: "Oui, si vous utilisez le clignotant", en: "Yes, if you use the indicator" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le dépassement par la droite est interdit en France, y compris sur autoroute. Vous devez toujours dépasser par la gauche.",
+        explanationEn: "Overtaking on the right is prohibited in France, including on motorways. You must always overtake on the left.",
+        trapNote: "Even if the left lane is occupied, you must wait. Undertaking is a serious offence in France.",
+        distractorNotes: { A: "Overtaking on the right is never allowed on motorways.", C: "A slow vehicle ahead does not authorise right-side overtaking.", D: "Using an indicator does not make illegal overtaking legal." },
+        vocabulary: [
+            { wordFr: "dépasser par la droite", wordEn: "overtake on the right", definition: "Passing another vehicle on the right side — prohibited in France" }
+        ]
+    },
+    {
+        id: "croi-118",
+        topic: "croisement_depassement",
+        difficulty: 1,
+        questionFr: "À l'approche d'un virage sans visibilité, le dépassement est :",
+        questionEn: "When approaching a blind bend, overtaking is:",
+        options: {
+            A: { fr: "Autorisé si vous roulez vite", en: "Allowed if you drive fast" },
+            B: { fr: "Interdit", en: "Prohibited" },
+            C: { fr: "Autorisé si la route est large", en: "Allowed if the road is wide" },
+            D: { fr: "Autorisé avec les feux de route", en: "Allowed with full beam" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le dépassement est interdit dans un virage sans visibilité car vous ne pouvez pas voir les véhicules venant en sens inverse.",
+        explanationEn: "Overtaking is prohibited at a blind bend because you cannot see oncoming vehicles.",
+        trapNote: "Blind bends, hilltops, and intersections are all overtaking-prohibited zones.",
+        distractorNotes: { A: "Speed makes overtaking at a blind bend even more dangerous.", C: "Road width does not remove the danger of invisible oncoming traffic.", D: "Full beam cannot reveal vehicles around a bend." },
+        vocabulary: [
+            { wordFr: "virage sans visibilité", wordEn: "blind bend", definition: "A curve in the road where you cannot see what is ahead" }
+        ]
+    },
+    {
+        id: "croi-119",
+        topic: "croisement_depassement",
+        difficulty: 1,
+        questionFr: "Que devez-vous faire avant de commencer un dépassement ?",
+        questionEn: "What must you do before starting to overtake?",
+        options: {
+            A: { fr: "Vérifier les rétroviseurs et mettre le clignotant", en: "Check mirrors and indicate" },
+            B: { fr: "Klaxonner", en: "Sound the horn" },
+            C: { fr: "Accélérer d'abord, puis vérifier", en: "Accelerate first, then check" },
+            D: { fr: "Allumer les feux de détresse", en: "Turn on hazard lights" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Avant de dépasser : vérifiez le rétroviseur intérieur, le rétroviseur extérieur gauche, contrôlez l'angle mort, puis mettez le clignotant gauche.",
+        explanationEn: "Before overtaking: check the interior mirror, left exterior mirror, check the blind spot, then indicate left.",
+        trapNote: "The sequence matters: mirror → blind spot → indicator → manoeuvre. Many exam questions test this order.",
+        distractorNotes: { B: "Honking is not part of the standard overtaking procedure.", C: "You must check before accelerating, not after.", D: "Hazard lights are not used for overtaking — they signal danger or a stopped vehicle." },
+        vocabulary: [
+            { wordFr: "rétroviseur", wordEn: "rearview mirror", definition: "A mirror inside or outside the car used to see behind" },
+            { wordFr: "clignotant", wordEn: "indicator/turn signal", definition: "A flashing light used to signal a change in direction" }
+        ]
+    },
+    {
+        id: "croi-120",
+        topic: "croisement_depassement",
+        difficulty: 1,
+        questionFr: "Lors d'un croisement avec un véhicule, que devez-vous faire si la chaussée est étroite ?",
+        questionEn: "When meeting an oncoming vehicle on a narrow road, what must you do?",
+        options: {
+            A: { fr: "Accélérer pour passer en premier", en: "Accelerate to pass first" },
+            B: { fr: "Serrer à droite et ralentir", en: "Move to the right and slow down" },
+            C: { fr: "Vous arrêter au milieu de la route", en: "Stop in the middle of the road" },
+            D: { fr: "Klaxonner pour que l'autre recule", en: "Honk so the other reverses" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Lors d'un croisement sur une chaussée étroite, serrez à droite et ralentissez pour faciliter le passage.",
+        explanationEn: "When meeting oncoming traffic on a narrow road, move to the right and slow down to allow safe passing.",
+        trapNote: "In mountains, the vehicle going downhill must yield. On flat narrow roads, both drivers should cooperate by moving right.",
+        distractorNotes: { A: "Accelerating creates danger in a narrow crossing situation.", C: "Stopping in the middle blocks both directions.", D: "Honking is not a solution — both drivers should cooperate." },
+        vocabulary: [
+            { wordFr: "serrer à droite", wordEn: "move to the right", definition: "To position your vehicle as far right as possible on the road" },
+            { wordFr: "chaussée étroite", wordEn: "narrow road", definition: "A road too narrow for two vehicles to pass comfortably side by side" }
         ]
     },
     // === ARRET & STATIONNEMENT (Stopping & Parking) ===,
@@ -18934,6 +19164,120 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "numéro d'urgence européen", wordEn: "European emergency number", definition: "112 — the universal emergency number across all EU countries" },
             { wordFr: "SAMU", wordEn: "emergency medical service", definition: "Service d'Aide Médicale Urgente — reached at 15 in France" }
+        ]
+    },
+    {
+        id: "div-111",
+        topic: "notions_diverses",
+        difficulty: 1,
+        questionFr: "Combien de points perdez-vous pour un excès de vitesse inférieur à 20 km/h hors agglomération ?",
+        questionEn: "How many points do you lose for speeding less than 20 km/h over the limit outside built-up areas?",
+        options: {
+            A: { fr: "0 point", en: "0 points" },
+            B: { fr: "1 point", en: "1 point" },
+            C: { fr: "2 points", en: "2 points" },
+            D: { fr: "3 points", en: "3 points" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Un excès de vitesse inférieur à 20 km/h hors agglomération entraîne la perte d'1 point et une amende de 68 €.",
+        explanationEn: "Speeding less than 20 km/h over the limit outside built-up areas results in a 1-point deduction and a €68 fine.",
+        trapNote: "In town (<20 km/h over) it's also 1 point but €135. Outside town it's only €68. The point loss is the same.",
+        distractorNotes: { A: "All speed offences result in at least 1 point lost.", C: "2 points is for 20-29 km/h over the limit.", D: "3 points is for 30-39 km/h over the limit." },
+        vocabulary: [
+            { wordFr: "excès de vitesse", wordEn: "speeding", definition: "Driving faster than the speed limit" },
+            { wordFr: "retrait de points", wordEn: "point deduction", definition: "Points removed from your driving licence for offences" }
+        ]
+    },
+    {
+        id: "div-112",
+        topic: "notions_diverses",
+        difficulty: 1,
+        questionFr: "Quel est le délai pour envoyer un constat amiable à votre assurance après un accident ?",
+        questionEn: "What is the deadline to send an accident report to your insurer after an accident?",
+        options: {
+            A: { fr: "24 heures", en: "24 hours" },
+            B: { fr: "5 jours ouvrés", en: "5 working days" },
+            C: { fr: "10 jours", en: "10 days" },
+            D: { fr: "1 mois", en: "1 month" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Vous disposez de 5 jours ouvrés pour envoyer le constat amiable à votre compagnie d'assurance.",
+        explanationEn: "You have 5 working days to send the accident report form to your insurance company.",
+        trapNote: "5 working days, not calendar days. Count from the date of the accident.",
+        distractorNotes: { A: "24 hours is too short — you have 5 working days.", C: "10 days is incorrect — the legal deadline is 5 working days.", D: "1 month is far too long — you must act within 5 working days." },
+        vocabulary: [
+            { wordFr: "constat amiable", wordEn: "accident report form", definition: "A standardised form filled out by both parties after a traffic accident" },
+            { wordFr: "jours ouvrés", wordEn: "working days", definition: "Business days, excluding weekends and public holidays" }
+        ]
+    },
+    {
+        id: "div-113",
+        topic: "notions_diverses",
+        difficulty: 1,
+        questionFr: "À partir de quel âge peut-on commencer la conduite accompagnée (AAC) ?",
+        questionEn: "At what age can you start accompanied driving (AAC)?",
+        options: {
+            A: { fr: "14 ans", en: "14 years" },
+            B: { fr: "15 ans", en: "15 years" },
+            C: { fr: "16 ans", en: "16 years" },
+            D: { fr: "17 ans", en: "17 years" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "La conduite accompagnée (AAC) est accessible dès 15 ans après avoir réussi le code et effectué 20 heures de conduite en auto-école.",
+        explanationEn: "Accompanied driving (AAC) is available from age 15 after passing the theory test and completing 20 hours of driving school.",
+        trapNote: "15 for AAC, 17 for supervised driving, 18 for a full licence. These age thresholds are frequently tested.",
+        distractorNotes: { A: "14 is too young — the minimum age for AAC is 15.", C: "16 is incorrect — AAC starts at 15, not 16.", D: "17 is when you can apply for the practical exam, not start AAC." },
+        vocabulary: [
+            { wordFr: "conduite accompagnée", wordEn: "accompanied driving", definition: "A system allowing learners from 15 to drive with an approved adult companion" },
+            { wordFr: "auto-école", wordEn: "driving school", definition: "A school where you learn to drive and prepare for the driving test" }
+        ]
+    },
+    {
+        id: "div-114",
+        topic: "notions_diverses",
+        difficulty: 1,
+        questionFr: "Quand devez-vous passer la première visite médicale obligatoire pour le permis de conduire ?",
+        questionEn: "When must you take the first mandatory medical check for a driving licence?",
+        options: {
+            A: { fr: "Tous les 5 ans dès l'obtention", en: "Every 5 years from the start" },
+            B: { fr: "Jamais pour le permis B standard", en: "Never for a standard B licence" },
+            C: { fr: "À 70 ans", en: "At 70 years old" },
+            D: { fr: "Tous les 2 ans", en: "Every 2 years" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "En France, il n'y a pas de visite médicale obligatoire pour le permis B standard. Une visite est requise uniquement pour certaines catégories (poids lourds, transport de personnes) ou après une suspension.",
+        explanationEn: "In France, there is no mandatory medical check for a standard B licence. A medical is only required for certain categories (heavy vehicles, passenger transport) or after a suspension.",
+        trapNote: "Unlike many countries, France does not require periodic medical exams for regular car drivers. This often surprises candidates.",
+        distractorNotes: { A: "No periodic medical check is required for a standard car licence.", C: "There is no age-triggered medical requirement for the B licence.", D: "2-year checks apply to professional categories, not standard B." },
+        vocabulary: [
+            { wordFr: "visite médicale", wordEn: "medical check", definition: "A health examination required for certain driving licence categories" },
+            { wordFr: "permis B", wordEn: "B licence", definition: "The standard car driving licence in France" }
+        ]
+    },
+    {
+        id: "div-115",
+        topic: "notions_diverses",
+        difficulty: 1,
+        questionFr: "Quelle est la durée de validité du permis de conduire français (format carte) ?",
+        questionEn: "What is the validity period of the French driving licence (card format)?",
+        options: {
+            A: { fr: "10 ans", en: "10 years" },
+            B: { fr: "15 ans", en: "15 years" },
+            C: { fr: "20 ans", en: "20 years" },
+            D: { fr: "À vie", en: "For life" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le permis de conduire français au format carte est valable 15 ans. Le renouvellement est administratif (pas de nouvel examen).",
+        explanationEn: "The French driving licence in card format is valid for 15 years. Renewal is administrative (no new exam required).",
+        trapNote: "15 years for category B. The old pink paper licence had no expiry. Renewal is just an administrative process — no re-examination.",
+        distractorNotes: { A: "10 years is the validity for some EU countries but not France.", C: "20 years is too long — the card expires after 15 years.", D: "The card format is not valid for life — the old pink paper was." },
+        vocabulary: [
+            { wordFr: "durée de validité", wordEn: "validity period", definition: "How long a document remains legally valid before needing renewal" }
         ]
     }
 ];
