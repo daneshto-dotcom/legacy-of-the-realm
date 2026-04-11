@@ -1,5 +1,5 @@
 /* ============================================
-   Question Bank — 842 Bilingual Questions
+   Question Bank — 848 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
    ============================================
@@ -5759,6 +5759,52 @@ const QUESTION_BANK = [
         trapNote: "Unlike a STOP sign, you don't have to stop completely at an unguarded crossing — but you MUST check both ways.",
         distractorNotes: { B: "Stopping is mandatory only at crossings with a STOP sign, not all unguarded crossings.", D: "Honking serves no purpose and could startle other road users." },
         vocabulary: []
+    },
+    {
+        id: "media-145",
+        topic: "route",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/slippery-road.webp" },
+        questionFr: "Vous voyez ce panneau. Que devez-vous faire ?",
+        questionEn: "You see this sign. What should you do?",
+        options: {
+            A: { fr: "Accélérer pour passer rapidement la zone", en: "Accelerate to pass the zone quickly" },
+            B: { fr: "Ralentir et éviter les freinages brusques", en: "Slow down and avoid sudden braking" },
+            C: { fr: "Allumer les feux de brouillard", en: "Turn on fog lights" },
+            D: { fr: "Changer de voie immédiatement", en: "Change lanes immediately" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Ce panneau signale une chaussée glissante. Ralentissez progressivement, évitez les freinages brusques, les accélérations vives et les changements de direction soudains.",
+        explanationEn: "This sign warns of a slippery road. Slow down gradually, avoid sudden braking, sharp acceleration, and sudden direction changes.",
+        trapNote: "On a slippery road: gentle steering, gentle braking, gentle acceleration. Any sudden movement can cause loss of control.",
+        distractorNotes: { A: "Accelerating on a slippery road is extremely dangerous.", C: "Fog lights are for fog, not for slippery conditions.", D: "Sudden lane changes are dangerous on slippery surfaces." },
+        vocabulary: [
+            { wordFr: "chaussée glissante", wordEn: "slippery road", definition: "A road surface with reduced grip due to rain, ice, oil, or other conditions" }
+        ]
+    },
+    {
+        id: "media-146",
+        topic: "route",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/falling-rocks.webp" },
+        questionFr: "Que signifie ce panneau et comment réagir ?",
+        questionEn: "What does this sign mean and how should you react?",
+        options: {
+            A: { fr: "Danger de chute de pierres — ne pas s'arrêter dans cette zone", en: "Falling rocks danger — do not stop in this zone" },
+            B: { fr: "Route en construction", en: "Road under construction" },
+            C: { fr: "Terrain de randonnée", en: "Hiking area" },
+            D: { fr: "Carrière à proximité", en: "Quarry nearby" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Ce panneau signale un risque de chute de pierres. Ne vous arrêtez pas dans cette zone, restez vigilant et passez sans traîner. Des pierres peuvent tomber sur la chaussée à tout moment.",
+        explanationEn: "This sign warns of falling rocks risk. Do not stop in this zone, stay alert, and pass through without lingering. Rocks may fall onto the road at any time.",
+        trapNote: "In mountain areas, this sign is common. Drive through quickly but safely. Watch for debris already on the road.",
+        distractorNotes: { B: "Construction zones have their own yellow background signs.", C: "Hiking areas are indicated by tourism signs, not danger warnings.", D: "A quarry would not be signalled by a danger sign to motorists." },
+        vocabulary: [
+            { wordFr: "chute de pierres", wordEn: "falling rocks", definition: "A danger zone where rocks may fall from a cliff or hillside onto the road" }
+        ]
     },
     // === AUTRES_USAGERS ===,
     {
@@ -17627,6 +17673,98 @@ const QUESTION_BANK = [
         distractorNotes: { C: "It discourages but does not formally prohibit — only the continuous line prohibits.", D: "It is different from a continuous line — it is still dashed, just with shorter gaps." },
         vocabulary: [
             { wordFr: "ligne de dissuasion", wordEn: "dissuasion line", definition: "A dashed line with closely spaced dashes warning of an approaching continuous line" }
+        ]
+    },
+    {
+        id: "media-143",
+        topic: "signalisation",
+        difficulty: 1,
+        media: { type: "image", url: "assets/images/signs/school-zone-sign.webp" },
+        questionFr: "Que signifie ce panneau de danger ?",
+        questionEn: "What does this danger sign mean?",
+        options: {
+            A: { fr: "Passage piéton", en: "Pedestrian crossing" },
+            B: { fr: "Zone scolaire — attention aux enfants", en: "School zone — watch for children" },
+            C: { fr: "Aire de jeux", en: "Playground" },
+            D: { fr: "Zone piétonne", en: "Pedestrian zone" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Ce panneau triangulaire avec deux silhouettes d'enfants signale la proximité d'une école ou d'un endroit fréquenté par des enfants. Réduisez votre vitesse et soyez très vigilant.",
+        explanationEn: "This triangular sign with two child silhouettes warns of a nearby school or area frequented by children. Reduce your speed and be very alert.",
+        trapNote: "Different from pedestrian crossing — this warns of children who may be unpredictable. Speed is often reduced to 30 km/h near schools.",
+        distractorNotes: { A: "Pedestrian crossing has a different sign showing an adult on stripes.", C: "No specific sign exists for playgrounds — this is a school zone warning.", D: "Pedestrian zone is a round blue sign, not a triangular danger sign." },
+        vocabulary: [
+            { wordFr: "zone scolaire", wordEn: "school zone", definition: "An area near a school where extra caution and reduced speed are required" }
+        ]
+    },
+    {
+        id: "media-144",
+        topic: "signalisation",
+        difficulty: 1,
+        media: { type: "image", url: "assets/images/signs/animal-crossing.webp" },
+        questionFr: "Que signifie ce panneau de danger ?",
+        questionEn: "What does this danger sign mean?",
+        options: {
+            A: { fr: "Réserve naturelle", en: "Nature reserve" },
+            B: { fr: "Chasse autorisée", en: "Hunting permitted" },
+            C: { fr: "Passage d'animaux sauvages", en: "Wild animal crossing" },
+            D: { fr: "Zoo à proximité", en: "Zoo nearby" }
+        },
+        correctAnswers: ["C"],
+        answerCount: 1,
+        explanationFr: "Ce panneau triangulaire avec un cerf signale un passage fréquent d'animaux sauvages. Ralentissez, surtout à l'aube et au crépuscule quand les animaux sont les plus actifs.",
+        explanationEn: "This triangular sign with a deer warns of frequent wild animal crossings. Slow down, especially at dawn and dusk when animals are most active.",
+        trapNote: "Deer are most active at dawn and dusk. A collision with a large animal at speed is extremely dangerous. Reduce speed and watch the roadside.",
+        distractorNotes: { A: "Nature reserves have their own informational signage, not danger triangles.", B: "Hunting areas are not signalled by road danger signs.", D: "Zoos are indicated by tourism signs, not danger warnings." },
+        vocabulary: [
+            { wordFr: "passage d'animaux sauvages", wordEn: "wild animal crossing", definition: "An area where wild animals frequently cross the road" }
+        ]
+    },
+    {
+        id: "media-147",
+        topic: "signalisation",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/no-horn-sign.webp" },
+        questionFr: "Ce panneau interdit l'utilisation de l'avertisseur sonore. Dans quelle situation pouvez-vous quand même klaxonner ?",
+        questionEn: "This sign prohibits using the horn. In what situation can you still honk?",
+        options: {
+            A: { fr: "Pour saluer un ami", en: "To greet a friend" },
+            B: { fr: "En cas de danger immédiat", en: "In case of immediate danger" },
+            C: { fr: "Pour dépasser un véhicule", en: "To overtake a vehicle" },
+            D: { fr: "Jamais, l'interdiction est absolue", en: "Never, the prohibition is absolute" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Même dans une zone d'interdiction de klaxonner, l'avertisseur sonore reste autorisé en cas de danger immédiat. C'est la seule exception.",
+        explanationEn: "Even in a no-horn zone, using the horn is still allowed in case of immediate danger. This is the only exception.",
+        trapNote: "Danger immédiat = the only exception to a no-horn sign. Greeting, overtaking, or impatience are never valid reasons.",
+        distractorNotes: { A: "Greeting is never a valid reason to honk, especially in a no-horn zone.", C: "Overtaking does not justify using the horn in a no-horn zone.", D: "The prohibition is NOT absolute — immediate danger overrides it." },
+        vocabulary: [
+            { wordFr: "avertisseur sonore", wordEn: "horn", definition: "The sound-emitting device on a vehicle used to alert others" }
+        ]
+    },
+    {
+        id: "media-148",
+        topic: "signalisation",
+        difficulty: 2,
+        media: { type: "image", url: "assets/images/signs/dead-end-sign.webp" },
+        questionFr: "Que signifie ce panneau et quelles conséquences a-t-il sur votre priorité ?",
+        questionEn: "What does this sign mean and what effect does it have on your priority?",
+        options: {
+            A: { fr: "Voie sans issue — vous n'avez PAS la priorité en sortant", en: "Dead end — you do NOT have priority when exiting" },
+            B: { fr: "Route barrée — faire demi-tour", en: "Road closed — turn around" },
+            C: { fr: "Sens interdit", en: "No entry" },
+            D: { fr: "Voie réservée aux riverains", en: "Road reserved for residents" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Ce panneau indique une voie sans issue (impasse). Le véhicule qui sort d'une voie sans issue n'a JAMAIS la priorité, même en l'absence de signalisation. Vous devez céder le passage à tous les usagers de la route principale.",
+        explanationEn: "This sign indicates a dead end (cul-de-sac). A vehicle exiting a dead-end street NEVER has priority, even without signage. You must yield to all users on the main road.",
+        trapNote: "Exiting a dead-end = exiting private property in terms of priority. You yield to EVERYONE, regardless of right-of-way rules.",
+        distractorNotes: { B: "A dead end is not the same as a road closure — you can enter and exit.", C: "No entry is a round red sign with a white bar, completely different.", D: "Resident-only roads have different regulatory signage." },
+        vocabulary: [
+            { wordFr: "voie sans issue", wordEn: "dead end/cul-de-sac", definition: "A road that has no exit — you must return the way you came" }
         ]
     },
     // === NOTIONS DIVERSES (General Knowledge) ===,
