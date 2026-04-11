@@ -2,7 +2,7 @@
    Service Worker — Offline Support
    ============================================ */
 
-const CACHE_NAME = 'code-de-la-route-v46';
+const CACHE_NAME = 'code-de-la-route-v47';
 
 // Use relative paths so caching works on GitHub Pages subdirectory (/code-de-la-route/)
 const URLS_TO_CACHE = [
@@ -242,6 +242,34 @@ const URLS_TO_CACHE = [
     './assets/audio/vocab/mise-en-fourriere.mp3',
     './assets/audio/vocab/contre-visite.mp3',
     './assets/audio/vocab/deviation.mp3',
+    // Batch 5: 30 new words (Session 23)
+    './assets/audio/vocab/arret-de-bus.mp3',
+    './assets/audio/vocab/adherence.mp3',
+    './assets/audio/vocab/croix-de-saint-andre.mp3',
+    './assets/audio/vocab/temps-sec.mp3',
+    './assets/audio/vocab/direction-obligatoire.mp3',
+    './assets/audio/vocab/feu-rouge-clignotant.mp3',
+    './assets/audio/vocab/ligne-jaune-continue.mp3',
+    './assets/audio/vocab/stationnement-genant.mp3',
+    './assets/audio/vocab/chien-guide-d-aveugle.mp3',
+    './assets/audio/vocab/circulation-inter-files.mp3',
+    './assets/audio/vocab/convoi-funeraire.mp3',
+    './assets/audio/vocab/deux-roues-motorise.mp3',
+    './assets/audio/vocab/effet-de-souffle.mp3',
+    './assets/audio/vocab/patineur-en-ligne.mp3',
+    './assets/audio/vocab/siege-auto.mp3',
+    './assets/audio/vocab/trottinette-electrique.mp3',
+    './assets/audio/vocab/vehicule-agricole.mp3',
+    './assets/audio/vocab/aire-pietonne.mp3',
+    './assets/audio/vocab/danger-immediat.mp3',
+    './assets/audio/vocab/feux-diurnes.mp3',
+    './assets/audio/vocab/vehicule-d-urgence.mp3',
+    './assets/audio/vocab/visibilite-insuffisante.mp3',
+    './assets/audio/vocab/amende-forfaitaire.mp3',
+    './assets/audio/vocab/capital-de-points.mp3',
+    './assets/audio/vocab/ethylotest-anti-demarrage.mp3',
+    './assets/audio/vocab/monoxyde-de-carbone.mp3',
+    './assets/audio/vocab/engin-agricole.mp3',
     // Sign images (Imagen 4 compressed WebP)
     './assets/images/signs/stop-sign.webp',
     './assets/images/signs/yield-sign.webp',

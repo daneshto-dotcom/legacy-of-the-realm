@@ -1,6 +1,6 @@
 /* ============================================
    Vocabulary Audio — Pronunciation Manifest
-   205 key driving terms with TTS audio
+   235 key driving terms with TTS audio
    Generated via GCP Chirp 3 HD (fr-FR)
    ============================================ */
 
@@ -278,7 +278,49 @@ const VOCAB_AUDIO = {
   "champ de vision": "assets/audio/vocab/champ-de-vision.mp3",
   "klaxon": "assets/audio/vocab/klaxon.mp3",
   "rétroviseur": "assets/audio/vocab/retroviseur.mp3",
-  "retroviseur": "assets/audio/vocab/retroviseur.mp3"
+  "retroviseur": "assets/audio/vocab/retroviseur.mp3",
+  // --- Batch 5: 27 new words (Session 23) ---
+  "arrêt de bus": "assets/audio/vocab/arret-de-bus.mp3",
+  "arret de bus": "assets/audio/vocab/arret-de-bus.mp3",
+  "adhérence": "assets/audio/vocab/adherence.mp3",
+  "adherence": "assets/audio/vocab/adherence.mp3",
+  "croix de Saint-André": "assets/audio/vocab/croix-de-saint-andre.mp3",
+  "croix de saint-andre": "assets/audio/vocab/croix-de-saint-andre.mp3",
+  "temps sec": "assets/audio/vocab/temps-sec.mp3",
+  "direction obligatoire": "assets/audio/vocab/direction-obligatoire.mp3",
+  "feu rouge clignotant": "assets/audio/vocab/feu-rouge-clignotant.mp3",
+  "ligne jaune continue": "assets/audio/vocab/ligne-jaune-continue.mp3",
+  "stationnement gênant": "assets/audio/vocab/stationnement-genant.mp3",
+  "stationnement genant": "assets/audio/vocab/stationnement-genant.mp3",
+  "chien guide d'aveugle": "assets/audio/vocab/chien-guide-d-aveugle.mp3",
+  "circulation inter-files": "assets/audio/vocab/circulation-inter-files.mp3",
+  "convoi funéraire": "assets/audio/vocab/convoi-funeraire.mp3",
+  "convoi funeraire": "assets/audio/vocab/convoi-funeraire.mp3",
+  "deux-roues motorisé": "assets/audio/vocab/deux-roues-motorise.mp3",
+  "deux-roues motorise": "assets/audio/vocab/deux-roues-motorise.mp3",
+  "effet de souffle": "assets/audio/vocab/effet-de-souffle.mp3",
+  "patineur en ligne": "assets/audio/vocab/patineur-en-ligne.mp3",
+  "siège auto": "assets/audio/vocab/siege-auto.mp3",
+  "siege auto": "assets/audio/vocab/siege-auto.mp3",
+  "trottinette électrique": "assets/audio/vocab/trottinette-electrique.mp3",
+  "trottinette electrique": "assets/audio/vocab/trottinette-electrique.mp3",
+  "véhicule agricole": "assets/audio/vocab/vehicule-agricole.mp3",
+  "vehicule agricole": "assets/audio/vocab/vehicule-agricole.mp3",
+  "aire piétonne": "assets/audio/vocab/aire-pietonne.mp3",
+  "aire pietonne": "assets/audio/vocab/aire-pietonne.mp3",
+  "danger immédiat": "assets/audio/vocab/danger-immediat.mp3",
+  "danger immediat": "assets/audio/vocab/danger-immediat.mp3",
+  "feux diurnes": "assets/audio/vocab/feux-diurnes.mp3",
+  "véhicule d'urgence": "assets/audio/vocab/vehicule-d-urgence.mp3",
+  "vehicule d'urgence": "assets/audio/vocab/vehicule-d-urgence.mp3",
+  "visibilité insuffisante": "assets/audio/vocab/visibilite-insuffisante.mp3",
+  "visibilite insuffisante": "assets/audio/vocab/visibilite-insuffisante.mp3",
+  "amende forfaitaire": "assets/audio/vocab/amende-forfaitaire.mp3",
+  "capital de points": "assets/audio/vocab/capital-de-points.mp3",
+  "éthylotest anti-démarrage": "assets/audio/vocab/ethylotest-anti-demarrage.mp3",
+  "ethylotest anti-demarrage": "assets/audio/vocab/ethylotest-anti-demarrage.mp3",
+  "monoxyde de carbone": "assets/audio/vocab/monoxyde-de-carbone.mp3",
+  "engin agricole": "assets/audio/vocab/engin-agricole.mp3"
 };
 
 // Audio player singleton
