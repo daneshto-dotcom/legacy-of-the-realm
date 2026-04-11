@@ -1204,6 +1204,13 @@
     "questionId": "circ-005"
   },
   {
+    "wordFr": "chargement",
+    "wordEn": "load / cargo",
+    "definition": "Items carried in or on a vehicle",
+    "topic": "circulation",
+    "questionId": "circ-069"
+  },
+  {
     "wordFr": "chaussées séparées",
     "wordEn": "dual carriageway",
     "definition": "A road where opposing traffic lanes are physically separated",
@@ -1302,6 +1309,13 @@
     "questionId": "circ-009"
   },
   {
+    "wordFr": "feu de brouillard arrière",
+    "wordEn": "rear fog light",
+    "definition": "Very bright red light only for heavy fog",
+    "topic": "circulation",
+    "questionId": "circ-066"
+  },
+  {
     "wordFr": "feux d'affectation de voie",
     "wordEn": "lane control signals",
     "definition": "Overhead signals (green arrow, red X, yellow flash) indicating whether a lane is open, closed, or transitioning",
@@ -1335,6 +1349,13 @@
     "definition": "Something that is not allowed",
     "topic": "circulation",
     "questionId": "circ-006"
+  },
+  {
+    "wordFr": "kit mains libres",
+    "wordEn": "hands-free kit",
+    "definition": "Phone device now banned while driving",
+    "topic": "circulation",
+    "questionId": "circ-062"
   },
   {
     "wordFr": "klaxon",
@@ -2303,6 +2324,13 @@
     "questionId": "croi-023"
   },
   {
+    "wordFr": "aspiration",
+    "wordEn": "slipstream / draft effect",
+    "definition": "Air turbulence from a large vehicle",
+    "topic": "croisement_depassement",
+    "questionId": "croi-131"
+  },
+  {
     "wordFr": "aux abords de",
     "wordEn": "near/in the vicinity of",
     "definition": "Close to, in the area around",
@@ -2646,6 +2674,13 @@
     "questionId": "croi-031"
   },
   {
+    "wordFr": "se faire dépasser",
+    "wordEn": "to be overtaken",
+    "definition": "When another vehicle passes you",
+    "topic": "croisement_depassement",
+    "questionId": "croi-128"
+  },
+  {
     "wordFr": "se rabattre",
     "wordEn": "to pull back in",
     "definition": "Returning to your original lane after overtaking",
@@ -2679,6 +2714,13 @@
     "definition": "Véhicule agricole à moteur circulant à faible vitesse",
     "topic": "croisement_depassement",
     "questionId": "croi-046"
+  },
+  {
+    "wordFr": "tunnel bidirectionnel",
+    "wordEn": "two-way tunnel",
+    "definition": "A tunnel with traffic in both directions",
+    "topic": "croisement_depassement",
+    "questionId": "croi-133"
   },
   {
     "wordFr": "vehicule a moteur",
@@ -3836,6 +3878,13 @@
     "questionId": "prio-057"
   },
   {
+    "wordFr": "sas vélo",
+    "wordEn": "bike box / advanced stop line",
+    "definition": "A marked area at traffic lights where cyclists wait ahead of cars",
+    "topic": "priorite",
+    "questionId": "prio-127"
+  },
+  {
     "wordFr": "se ranger",
     "wordEn": "to pull over",
     "definition": "To move your vehicle to the side of the road",
@@ -3918,6 +3967,13 @@
     "definition": "The lane where you increase speed before merging onto the motorway",
     "topic": "priorite",
     "questionId": "prio-027"
+  },
+  {
+    "wordFr": "voie d'insertion",
+    "wordEn": "slip road / merge lane",
+    "definition": "The lane used to enter a motorway",
+    "topic": "priorite",
+    "questionId": "prio-124"
   },
   {
     "wordFr": "voie principale",
