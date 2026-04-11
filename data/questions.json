@@ -38181,5 +38181,402 @@
         "definition": "A restriction on the maximum height of vehicles, often at tunnels and underpasses"
       }
     ]
+  },
+  {
+    "id": "cond-104",
+    "topic": "conducteur",
+    "difficulty": 1,
+    "questionFr": "Quelle est la durée minimale de repos recommandée après deux heures de conduite ?",
+    "questionEn": "What is the minimum recommended rest duration after two hours of driving?",
+    "options": {
+      "A": { "fr": "10 minutes", "en": "10 minutes" },
+      "B": { "fr": "15 minutes", "en": "15 minutes" },
+      "C": { "fr": "20 minutes", "en": "20 minutes" },
+      "D": { "fr": "30 minutes", "en": "30 minutes" }
+    },
+    "correctAnswers": ["C"],
+    "answerCount": 1,
+    "explanationFr": "La Sécurité routière recommande une pause d'au moins 20 minutes toutes les deux heures pour lutter contre la somnolence au volant.",
+    "explanationEn": "Road safety authorities recommend a break of at least 20 minutes every two hours to fight drowsiness at the wheel.",
+    "trapNote": "15 minutes is often guessed but the official recommendation is 20 minutes minimum.",
+    "distractorNotes": {
+      "A": "10 minutes is too short to effectively combat fatigue.",
+      "B": "15 minutes is close but below the official recommendation.",
+      "D": "30 minutes is fine but not the minimum — 20 is sufficient."
+    },
+    "vocabulary": [
+      { "wordFr": "somnolence", "wordEn": "drowsiness", "definition": "A state of sleepiness that impairs driving ability" },
+      { "wordFr": "pause", "wordEn": "break/rest", "definition": "A stop during a journey to rest" }
+    ]
+  },
+  {
+    "id": "cond-105",
+    "topic": "conducteur",
+    "difficulty": 1,
+    "questionFr": "Quel est le taux d'alcoolémie maximal autorisé pour un conducteur expérimenté ?",
+    "questionEn": "What is the maximum permitted blood alcohol level for an experienced driver?",
+    "options": {
+      "A": { "fr": "0,2 g/l de sang", "en": "0.2 g/l of blood" },
+      "B": { "fr": "0,5 g/l de sang", "en": "0.5 g/l of blood" },
+      "C": { "fr": "0,8 g/l de sang", "en": "0.8 g/l of blood" },
+      "D": { "fr": "0 g/l de sang", "en": "0 g/l of blood" }
+    },
+    "correctAnswers": ["B"],
+    "answerCount": 1,
+    "explanationFr": "Le taux d'alcoolémie maximal autorisé est de 0,5 g/l de sang (ou 0,25 mg/l d'air expiré) pour un conducteur expérimenté. Au-delà, c'est une infraction.",
+    "explanationEn": "The maximum permitted blood alcohol level is 0.5 g/l of blood (or 0.25 mg/l of exhaled air) for an experienced driver. Above this is an offence.",
+    "trapNote": "0.2 g/l is the limit for novice drivers (permis probatoire), not experienced drivers.",
+    "distractorNotes": {
+      "A": "0.2 g/l applies to novice drivers only, not experienced ones.",
+      "C": "0.8 g/l was the old limit and is now a criminal offence threshold.",
+      "D": "0 g/l is not required for experienced drivers in France."
+    },
+    "vocabulary": [
+      { "wordFr": "alcoolémie", "wordEn": "blood alcohol level", "definition": "The concentration of alcohol in the blood, measured in g/l" }
+    ]
+  },
+  {
+    "id": "cond-106",
+    "topic": "conducteur",
+    "difficulty": 1,
+    "questionFr": "Combien de points perd-on pour un excès de vitesse inférieur à 20 km/h hors agglomération ?",
+    "questionEn": "How many points do you lose for speeding less than 20 km/h over the limit outside built-up areas?",
+    "options": {
+      "A": { "fr": "1 point", "en": "1 point" },
+      "B": { "fr": "2 points", "en": "2 points" },
+      "C": { "fr": "3 points", "en": "3 points" },
+      "D": { "fr": "0 point (amende seulement)", "en": "0 points (fine only)" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "Un excès de vitesse inférieur à 20 km/h hors agglomération entraîne la perte d'un point et une amende forfaitaire de 68 €.",
+    "explanationEn": "Speeding less than 20 km/h over the limit outside built-up areas results in the loss of 1 point and a fixed fine of €68.",
+    "trapNote": "Inside built-up areas, the same <20 km/h excess costs 1 point too but with a higher fine (€135).",
+    "distractorNotes": {
+      "B": "2 points is for speeding 20-30 km/h over the limit.",
+      "C": "3 points is for speeding 30-40 km/h over the limit.",
+      "D": "You always lose at least 1 point for any speeding offence."
+    },
+    "vocabulary": [
+      { "wordFr": "excès de vitesse", "wordEn": "speeding", "definition": "Driving above the posted speed limit" },
+      { "wordFr": "amende forfaitaire", "wordEn": "fixed fine", "definition": "A set monetary penalty for a traffic offence" }
+    ]
+  },
+  {
+    "id": "cond-107",
+    "topic": "conducteur",
+    "difficulty": 1,
+    "questionFr": "Que devez-vous faire si vous êtes ébloui par les phares d'un véhicule venant en face ?",
+    "questionEn": "What should you do if you are dazzled by the headlights of an oncoming vehicle?",
+    "options": {
+      "A": { "fr": "Regarder le bord droit de la route", "en": "Look at the right edge of the road" },
+      "B": { "fr": "Allumer vos feux de route", "en": "Turn on your high beams" },
+      "C": { "fr": "Fermer les yeux brièvement", "en": "Close your eyes briefly" },
+      "D": { "fr": "Freiner brusquement", "en": "Brake suddenly" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "Lorsque vous êtes ébloui, regardez le bord droit de la route pour maintenir votre trajectoire sans être gêné par les phares en face.",
+    "explanationEn": "When dazzled, look at the right edge of the road to maintain your trajectory without being disturbed by oncoming headlights.",
+    "trapNote": "Never respond to high beams with your own high beams — this creates danger for both drivers.",
+    "distractorNotes": {
+      "B": "Turning on high beams creates a double dazzle — extremely dangerous.",
+      "C": "Closing your eyes while driving is never safe.",
+      "D": "Sudden braking could cause a rear-end collision."
+    },
+    "vocabulary": [
+      { "wordFr": "ébloui", "wordEn": "dazzled/blinded", "definition": "Temporarily unable to see clearly due to bright light" },
+      { "wordFr": "phares", "wordEn": "headlights", "definition": "The main forward-facing lights of a vehicle" }
+    ]
+  },
+  {
+    "id": "cond-108",
+    "topic": "conducteur",
+    "difficulty": 1,
+    "questionFr": "Pendant combien de temps un conducteur novice est-il en période probatoire ?",
+    "questionEn": "For how long is a novice driver on a probationary period?",
+    "options": {
+      "A": { "fr": "2 ans", "en": "2 years" },
+      "B": { "fr": "3 ans", "en": "3 years" },
+      "C": { "fr": "1 an", "en": "1 year" },
+      "D": { "fr": "5 ans", "en": "5 years" }
+    },
+    "correctAnswers": ["B"],
+    "answerCount": 1,
+    "explanationFr": "La période probatoire dure 3 ans (ou 2 ans pour ceux ayant suivi la conduite accompagnée). Pendant cette période, le permis ne comporte que 6 points.",
+    "explanationEn": "The probationary period lasts 3 years (or 2 years for those who completed accompanied driving). During this period, the licence has only 6 points.",
+    "trapNote": "2 years is the reduced period for accompanied driving graduates, not the standard.",
+    "distractorNotes": {
+      "A": "2 years is only for drivers who completed conduite accompagnée.",
+      "C": "1 year is too short — no such option exists in France.",
+      "D": "5 years is too long — the standard is 3 years."
+    },
+    "vocabulary": [
+      { "wordFr": "période probatoire", "wordEn": "probationary period", "definition": "The initial period after obtaining a licence with restricted points" },
+      { "wordFr": "permis probatoire", "wordEn": "probationary licence", "definition": "A new driver's licence starting with 6 points instead of 12" }
+    ]
+  },
+  {
+    "id": "route-064",
+    "topic": "route",
+    "difficulty": 1,
+    "questionFr": "Que signifie un panneau carré bleu avec une flèche blanche vers le haut ?",
+    "questionEn": "What does a blue square sign with a white upward arrow mean?",
+    "options": {
+      "A": { "fr": "Sens unique", "en": "One-way street" },
+      "B": { "fr": "Voie sans issue", "en": "Dead end" },
+      "C": { "fr": "Direction obligatoire tout droit", "en": "Mandatory straight ahead" },
+      "D": { "fr": "Autoroute", "en": "Motorway" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "Un panneau carré bleu avec une flèche blanche vers le haut indique un sens unique. Tous les véhicules circulent dans la même direction.",
+    "explanationEn": "A blue square sign with a white upward arrow indicates a one-way street. All vehicles travel in the same direction.",
+    "trapNote": "Don't confuse with the round blue mandatory direction sign — the square shape means one-way.",
+    "distractorNotes": {
+      "B": "Dead-end signs have a horizontal bar at the top of the arrow.",
+      "C": "Mandatory direction is a round sign, not square.",
+      "D": "Motorway signs are blue but have a different pictogram."
+    },
+    "vocabulary": [
+      { "wordFr": "sens unique", "wordEn": "one-way", "definition": "A road where traffic flows in only one direction" }
+    ]
+  },
+  {
+    "id": "route-065",
+    "topic": "route",
+    "difficulty": 1,
+    "questionFr": "Sur une route à double sens, où devez-vous circuler ?",
+    "questionEn": "On a two-way road, where should you drive?",
+    "options": {
+      "A": { "fr": "Le plus à droite possible", "en": "As far right as possible" },
+      "B": { "fr": "Au milieu de la chaussée", "en": "In the middle of the road" },
+      "C": { "fr": "Sur la voie de gauche", "en": "In the left lane" },
+      "D": { "fr": "N'importe où si la route est vide", "en": "Anywhere if the road is empty" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "Sur une route à double sens, vous devez circuler le plus à droite possible, sauf pour dépasser ou tourner à gauche.",
+    "explanationEn": "On a two-way road, you must drive as far right as possible, except when overtaking or turning left.",
+    "trapNote": "Even on an empty road, you must stay right — driving in the middle is an offence.",
+    "distractorNotes": {
+      "B": "Driving in the middle blocks oncoming traffic and is dangerous.",
+      "C": "The left lane is for oncoming traffic on a two-way road.",
+      "D": "You must always stay right regardless of traffic."
+    },
+    "vocabulary": [
+      { "wordFr": "double sens", "wordEn": "two-way", "definition": "A road where traffic flows in both directions" },
+      { "wordFr": "chaussée", "wordEn": "roadway", "definition": "The part of the road intended for vehicle traffic" }
+    ]
+  },
+  {
+    "id": "route-066",
+    "topic": "route",
+    "difficulty": 1,
+    "questionFr": "Quelle est la vitesse maximale autorisée en agglomération ?",
+    "questionEn": "What is the maximum speed limit in built-up areas?",
+    "options": {
+      "A": { "fr": "50 km/h", "en": "50 km/h" },
+      "B": { "fr": "70 km/h", "en": "70 km/h" },
+      "C": { "fr": "30 km/h", "en": "30 km/h" },
+      "D": { "fr": "80 km/h", "en": "80 km/h" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "La vitesse maximale en agglomération est de 50 km/h, sauf indication contraire. Certaines zones sont limitées à 30 km/h.",
+    "explanationEn": "The maximum speed in built-up areas is 50 km/h, unless otherwise indicated. Some zones are limited to 30 km/h.",
+    "trapNote": "30 km/h exists in some zones but is not the general rule — 50 km/h is the default.",
+    "distractorNotes": {
+      "B": "70 km/h can apply on certain urban expressways but is not the default.",
+      "C": "30 km/h applies in specific zones de rencontre or near schools.",
+      "D": "80 km/h is for roads outside built-up areas."
+    },
+    "vocabulary": [
+      { "wordFr": "agglomération", "wordEn": "built-up area", "definition": "An area with buildings on both sides, marked by specific entry/exit signs" }
+    ]
+  },
+  {
+    "id": "route-067",
+    "topic": "route",
+    "difficulty": 1,
+    "questionFr": "Que devez-vous faire à l'approche d'un passage à niveau sans barrière ?",
+    "questionEn": "What must you do when approaching a level crossing without barriers?",
+    "options": {
+      "A": { "fr": "Ralentir, regarder des deux côtés et traverser si la voie est libre", "en": "Slow down, look both ways and cross if clear" },
+      "B": { "fr": "Accélérer pour traverser rapidement", "en": "Accelerate to cross quickly" },
+      "C": { "fr": "S'arrêter uniquement si un train est visible", "en": "Stop only if a train is visible" },
+      "D": { "fr": "Klaxonner avant de traverser", "en": "Honk before crossing" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "À un passage à niveau sans barrière, vous devez ralentir, vérifier qu'aucun train n'arrive des deux côtés, puis traverser prudemment.",
+    "explanationEn": "At a level crossing without barriers, you must slow down, check no train is coming from either direction, then cross carefully.",
+    "trapNote": "You must always check both directions — trains can come from either side.",
+    "distractorNotes": {
+      "B": "Accelerating is extremely dangerous at a level crossing.",
+      "C": "Trains can be silent and fast — you must always slow down and check.",
+      "D": "Honking serves no purpose at a railway crossing."
+    },
+    "vocabulary": [
+      { "wordFr": "passage à niveau", "wordEn": "level crossing", "definition": "A place where a road crosses a railway track at the same level" }
+    ]
+  },
+  {
+    "id": "route-068",
+    "topic": "route",
+    "difficulty": 1,
+    "questionFr": "Quelle est la vitesse maximale autorisée sur une route nationale à deux voies hors agglomération ?",
+    "questionEn": "What is the maximum speed on a two-lane national road outside built-up areas?",
+    "options": {
+      "A": { "fr": "80 km/h", "en": "80 km/h" },
+      "B": { "fr": "90 km/h", "en": "90 km/h" },
+      "C": { "fr": "110 km/h", "en": "110 km/h" },
+      "D": { "fr": "70 km/h", "en": "70 km/h" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "Depuis le 1er juillet 2018, la vitesse maximale sur les routes à double sens sans séparateur central est de 80 km/h (abaissée de 90 km/h).",
+    "explanationEn": "Since 1 July 2018, the maximum speed on two-way roads without a central separator has been 80 km/h (lowered from 90 km/h).",
+    "trapNote": "90 km/h was the old limit — the 2018 change to 80 km/h is a frequent exam trap.",
+    "distractorNotes": {
+      "B": "90 km/h was the limit before July 2018 — no longer applies.",
+      "C": "110 km/h is for dual carriageways with central separation.",
+      "D": "70 km/h is not a standard speed limit for national roads."
+    },
+    "vocabulary": [
+      { "wordFr": "route nationale", "wordEn": "national road", "definition": "A major road maintained by the state, connecting cities" }
+    ]
+  },
+  {
+    "id": "autr-064",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "questionFr": "Quelle distance latérale minimale devez-vous respecter en dépassant un cycliste hors agglomération ?",
+    "questionEn": "What minimum lateral distance must you keep when overtaking a cyclist outside built-up areas?",
+    "options": {
+      "A": { "fr": "1,5 mètre", "en": "1.5 metres" },
+      "B": { "fr": "1 mètre", "en": "1 metre" },
+      "C": { "fr": "50 centimètres", "en": "50 centimetres" },
+      "D": { "fr": "2 mètres", "en": "2 metres" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "Hors agglomération, la distance latérale minimale pour dépasser un cycliste est de 1,5 mètre. En agglomération, c'est 1 mètre.",
+    "explanationEn": "Outside built-up areas, the minimum lateral distance for overtaking a cyclist is 1.5 metres. In built-up areas, it is 1 metre.",
+    "trapNote": "1 metre is the rule inside built-up areas — outside it's 1.5 metres. A classic exam question.",
+    "distractorNotes": {
+      "B": "1 metre is the minimum in built-up areas, not outside.",
+      "C": "50 cm is far too close and dangerous.",
+      "D": "2 metres is ideal but not the legal minimum."
+    },
+    "vocabulary": [
+      { "wordFr": "distance latérale", "wordEn": "lateral distance", "definition": "The side clearance between your vehicle and another road user when overtaking" }
+    ]
+  },
+  {
+    "id": "autr-065",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "questionFr": "Que devez-vous faire lorsqu'un tramway s'arrête à une station sans refuge pour les passagers ?",
+    "questionEn": "What must you do when a tram stops at a station without a passenger refuge?",
+    "options": {
+      "A": { "fr": "S'arrêter et attendre que les passagers aient fini de monter et descendre", "en": "Stop and wait until passengers have finished boarding and alighting" },
+      "B": { "fr": "Ralentir et contourner le tramway", "en": "Slow down and go around the tram" },
+      "C": { "fr": "Klaxonner pour prévenir les passagers", "en": "Honk to warn passengers" },
+      "D": { "fr": "Continuer à vitesse réduite", "en": "Continue at reduced speed" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "Lorsqu'un tramway s'arrête sans refuge piéton, vous devez vous arrêter pour laisser les passagers monter et descendre en sécurité.",
+    "explanationEn": "When a tram stops without a pedestrian refuge, you must stop to let passengers board and alight safely.",
+    "trapNote": "Unlike buses, trams always have right of way — and passengers step directly onto the road.",
+    "distractorNotes": {
+      "B": "Going around the tram puts passengers at risk.",
+      "C": "Honking could startle passengers and cause an accident.",
+      "D": "Even at reduced speed, passing is not allowed while passengers are present."
+    },
+    "vocabulary": [
+      { "wordFr": "tramway", "wordEn": "tram/streetcar", "definition": "A rail vehicle that runs on tracks in city streets" },
+      { "wordFr": "refuge", "wordEn": "passenger refuge/island", "definition": "A raised platform between the road and tram tracks for passenger safety" }
+    ]
+  },
+  {
+    "id": "autr-066",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "questionFr": "Que signifie un feu jaune clignotant au-dessus d'un passage piéton ?",
+    "questionEn": "What does a flashing yellow light above a pedestrian crossing mean?",
+    "options": {
+      "A": { "fr": "Ralentir et céder le passage aux piétons", "en": "Slow down and give way to pedestrians" },
+      "B": { "fr": "Interdiction de passer", "en": "No entry" },
+      "C": { "fr": "Accélérer pour libérer le passage", "en": "Accelerate to clear the crossing" },
+      "D": { "fr": "Le feu est en panne, ignorer", "en": "The light is broken, ignore it" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "Un feu jaune clignotant signifie que vous devez ralentir et céder le passage aux piétons qui traversent ou s'apprêtent à traverser.",
+    "explanationEn": "A flashing yellow light means you must slow down and give way to pedestrians who are crossing or about to cross.",
+    "trapNote": "A flashing yellow is not a broken light — it has a specific legal meaning.",
+    "distractorNotes": {
+      "B": "A flashing yellow does not prohibit passage — it requires caution.",
+      "C": "Accelerating near a pedestrian crossing is dangerous.",
+      "D": "The flashing yellow is intentional, not a malfunction."
+    },
+    "vocabulary": [
+      { "wordFr": "feu jaune clignotant", "wordEn": "flashing yellow light", "definition": "A traffic signal meaning caution — proceed with care and yield to pedestrians" }
+    ]
+  },
+  {
+    "id": "autr-067",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "questionFr": "Les trottinettes électriques ont-elles le droit de circuler sur le trottoir ?",
+    "questionEn": "Are electric scooters allowed to ride on the pavement?",
+    "options": {
+      "A": { "fr": "Non, sauf si le maire l'autorise", "en": "No, unless the mayor authorises it" },
+      "B": { "fr": "Oui, à vitesse réduite", "en": "Yes, at reduced speed" },
+      "C": { "fr": "Oui, si elles roulent à moins de 6 km/h", "en": "Yes, if they travel under 6 km/h" },
+      "D": { "fr": "Oui, toujours", "en": "Yes, always" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "Depuis 2019, les trottinettes électriques sont interdites sur les trottoirs sauf autorisation du maire. Elles doivent circuler sur les pistes cyclables ou la chaussée.",
+    "explanationEn": "Since 2019, electric scooters are banned from pavements unless the mayor authorises it. They must use cycle lanes or the road.",
+    "trapNote": "The 6 km/h rule applies to motorised wheelchairs, not scooters.",
+    "distractorNotes": {
+      "B": "Speed does not matter — pavements are banned by default for e-scooters.",
+      "C": "The 6 km/h exception applies to other mobility devices, not scooters.",
+      "D": "Riding on the pavement risks a €135 fine."
+    },
+    "vocabulary": [
+      { "wordFr": "trottinette électrique", "wordEn": "electric scooter", "definition": "A small electric-powered personal mobility device" },
+      { "wordFr": "trottoir", "wordEn": "pavement/sidewalk", "definition": "The raised path alongside a road for pedestrians" }
+    ]
+  },
+  {
+    "id": "autr-068",
+    "topic": "autres_usagers",
+    "difficulty": 1,
+    "questionFr": "Quelle est la vitesse maximale autorisée pour une trottinette électrique ?",
+    "questionEn": "What is the maximum speed allowed for an electric scooter?",
+    "options": {
+      "A": { "fr": "25 km/h", "en": "25 km/h" },
+      "B": { "fr": "20 km/h", "en": "20 km/h" },
+      "C": { "fr": "30 km/h", "en": "30 km/h" },
+      "D": { "fr": "35 km/h", "en": "35 km/h" }
+    },
+    "correctAnswers": ["A"],
+    "answerCount": 1,
+    "explanationFr": "Les trottinettes électriques sont limitées à 25 km/h. Au-delà, elles sont considérées comme des cyclomoteurs et nécessitent immatriculation et assurance spécifique.",
+    "explanationEn": "Electric scooters are limited to 25 km/h. Above this, they are classified as mopeds and require registration and specific insurance.",
+    "trapNote": "25 km/h is the legal cap — scooters sold above this speed are illegal on public roads without registration.",
+    "distractorNotes": {
+      "B": "20 km/h was proposed but never adopted as the limit.",
+      "C": "30 km/h exceeds the legal limit for e-scooters.",
+      "D": "35 km/h would classify the scooter as a moped."
+    },
+    "vocabulary": [
+      { "wordFr": "cyclomoteur", "wordEn": "moped", "definition": "A small motorised two-wheeler with limited speed, requiring registration" }
+    ]
   }
 ]
