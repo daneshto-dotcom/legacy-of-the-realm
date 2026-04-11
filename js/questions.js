@@ -1,5 +1,5 @@
 /* ============================================
-   Question Bank — 848 Bilingual Questions
+   Question Bank — 863 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
    ============================================
@@ -3857,6 +3857,116 @@ const QUESTION_BANK = [
             { wordFr: "feux de brouillard", wordEn: "fog lights", definition: "Low-mounted lights designed to illuminate the road surface in fog without reflection" },
             { wordFr: "feux de croisement", wordEn: "dipped headlights", definition: "The standard forward lights angled downward to avoid dazzling oncoming drivers" }
         ]
+    },
+    {
+        id: "cond-109",
+        topic: "conducteur",
+        difficulty: 1,
+        questionFr: "Quel est le nombre de points sur le permis de conduire d'un conducteur novice ?",
+        questionEn: "How many points does a novice driver's licence have?",
+        options: {
+            A: { fr: "6 points", en: "6 points" },
+            B: { fr: "12 points", en: "12 points" },
+            C: { fr: "8 points", en: "8 points" },
+            D: { fr: "3 points", en: "3 points" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Un conducteur novice commence avec 6 points. Il gagne 2 points par an sans infraction (3 avec conduite accompagnée) jusqu'à atteindre 12 points.",
+        explanationEn: "A novice driver starts with 6 points. They gain 2 points per year without offences (3 with accompanied driving) up to 12 points.",
+        trapNote: "6 points for novice, NOT 12. 12 is the full licence total.",
+        distractorNotes: { B: "12 points is the maximum for an experienced driver.", C: "8 points does not exist in the French system.", D: "3 points is too few — even novices get 6." },
+        vocabulary: [
+            { wordFr: "conducteur novice", wordEn: "novice driver", definition: "A driver in their probationary period after first obtaining a licence" }
+        ]
+    },
+    {
+        id: "cond-110",
+        topic: "conducteur",
+        difficulty: 1,
+        questionFr: "Un passager de moins de 10 ans doit-il voyager à l'arrière du véhicule ?",
+        questionEn: "Must a passenger under 10 years old travel in the back of the vehicle?",
+        options: {
+            A: { fr: "Oui, sauf exceptions (pas de place arrière, siège dos à la route avec airbag désactivé)", en: "Yes, except in specific cases (no rear seat, rear-facing seat with airbag deactivated)" },
+            B: { fr: "Non, il peut s'asseoir devant librement", en: "No, they can sit in front freely" },
+            C: { fr: "Oui, sans aucune exception", en: "Yes, with no exceptions" },
+            D: { fr: "Seulement sur autoroute", en: "Only on motorways" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Les enfants de moins de 10 ans doivent voyager à l'arrière, sauf s'il n'y a pas de banquette arrière ou si l'enfant est dans un siège dos à la route avec l'airbag passager désactivé.",
+        explanationEn: "Children under 10 must travel in the rear, unless there is no back seat or the child is in a rear-facing seat with the passenger airbag deactivated.",
+        trapNote: "There ARE exceptions — the absolute rule (C) is wrong. Know the two exceptions.",
+        distractorNotes: { B: "Children under 10 cannot sit in front without specific conditions.", C: "There are legitimate exceptions to the rule.", D: "The rule applies on all roads, not just motorways." },
+        vocabulary: [
+            { wordFr: "banquette arrière", wordEn: "rear seat/back seat", definition: "The rear seating area of a vehicle" }
+        ]
+    },
+    {
+        id: "cond-111",
+        topic: "conducteur",
+        difficulty: 1,
+        questionFr: "Quelle sanction risquez-vous pour conduite sous l'emprise de stupéfiants ?",
+        questionEn: "What penalty do you face for driving under the influence of drugs?",
+        options: {
+            A: { fr: "Retrait de 6 points et jusqu'à 2 ans de prison", en: "Loss of 6 points and up to 2 years in prison" },
+            B: { fr: "Retrait de 3 points et une amende", en: "Loss of 3 points and a fine" },
+            C: { fr: "Simple avertissement", en: "A simple warning" },
+            D: { fr: "Retrait de 1 point", en: "Loss of 1 point" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "La conduite sous stupéfiants est un délit grave : retrait de 6 points, jusqu'à 4 500 € d'amende, 2 ans de prison, et suspension ou annulation du permis.",
+        explanationEn: "Driving under the influence of drugs is a serious offence: 6-point loss, up to €4,500 fine, 2 years imprisonment, and licence suspension or cancellation.",
+        trapNote: "6 points — the maximum single-offence loss. Combined with alcohol = even harsher penalties.",
+        distractorNotes: { B: "3 points is far too lenient for a drug-driving offence.", C: "Drug driving is a criminal offence, never just a warning.", D: "1 point is for minor offences only." },
+        vocabulary: [
+            { wordFr: "stupéfiants", wordEn: "drugs/narcotics", definition: "Illegal substances that impair driving ability" },
+            { wordFr: "emprise", wordEn: "influence/effect", definition: "Being under the effect of a substance that alters behaviour" }
+        ]
+    },
+    {
+        id: "cond-112",
+        topic: "conducteur",
+        difficulty: 1,
+        questionFr: "Quel équipement est obligatoire dans un véhicule en France ?",
+        questionEn: "What equipment is mandatory in a vehicle in France?",
+        options: {
+            A: { fr: "Un gilet de haute visibilité et un triangle de présignalisation", en: "A high-visibility vest and a warning triangle" },
+            B: { fr: "Un extincteur et une trousse de secours", en: "A fire extinguisher and a first aid kit" },
+            C: { fr: "Un gilet de haute visibilité uniquement", en: "A high-visibility vest only" },
+            D: { fr: "Aucun équipement particulier", en: "No particular equipment" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Tout véhicule doit obligatoirement contenir un gilet de haute visibilité (accessible depuis l'habitacle) et un triangle de présignalisation.",
+        explanationEn: "Every vehicle must carry a high-visibility vest (accessible from the cabin) and a warning triangle.",
+        trapNote: "Both vest AND triangle are mandatory. The vest must be reachable from inside the car (not in the boot).",
+        distractorNotes: { B: "Fire extinguisher and first aid kit are recommended but not mandatory for cars.", C: "The triangle is also mandatory, not just the vest.", D: "Equipment IS required by law." },
+        vocabulary: [
+            { wordFr: "gilet de haute visibilité", wordEn: "high-visibility vest", definition: "A fluorescent yellow or orange vest worn to be seen by other road users" },
+            { wordFr: "triangle de présignalisation", wordEn: "warning triangle", definition: "A reflective triangle placed on the road to warn of a stopped vehicle" }
+        ]
+    },
+    {
+        id: "cond-113",
+        topic: "conducteur",
+        difficulty: 1,
+        questionFr: "Quelle est la vitesse maximale autorisée pour un conducteur novice sur autoroute ?",
+        questionEn: "What is the maximum speed allowed for a novice driver on a motorway?",
+        options: {
+            A: { fr: "110 km/h", en: "110 km/h" },
+            B: { fr: "130 km/h", en: "130 km/h" },
+            C: { fr: "90 km/h", en: "90 km/h" },
+            D: { fr: "120 km/h", en: "120 km/h" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Un conducteur novice (en période probatoire) est limité à 110 km/h sur autoroute (au lieu de 130 km/h), 100 km/h sur route à chaussées séparées (au lieu de 110 km/h) et 80 km/h sur route.",
+        explanationEn: "A novice driver (probationary period) is limited to 110 km/h on motorways (instead of 130 km/h), 100 km/h on dual carriageways (instead of 110 km/h) and 80 km/h on other roads.",
+        trapNote: "110 not 130 — novice limits are 20 km/h lower on fast roads.",
+        distractorNotes: { B: "130 km/h is for experienced drivers only.", C: "90 km/h was the old rural road limit, not for motorways.", D: "120 km/h is not a standard limit in France." },
+        vocabulary: []
     },
     // === ROUTE ===,
     {
@@ -15789,6 +15899,114 @@ const QUESTION_BANK = [
             { wordFr: "lunettes de soleil", wordEn: "sunglasses", definition: "Tinted glasses that must be removed when entering a tunnel" }
         ]
     },
+    {
+        id: "tunn-103",
+        topic: "tunnels_passages_niveau",
+        difficulty: 1,
+        questionFr: "Quelle distance minimale devez-vous maintenir entre votre véhicule et celui qui vous précède dans un tunnel ?",
+        questionEn: "What minimum distance must you keep between your vehicle and the one ahead in a tunnel?",
+        options: {
+            A: { fr: "Au moins 50 mètres (ou deux traits de balisage)", en: "At least 50 metres (or two marker lines)" },
+            B: { fr: "Au moins 20 mètres", en: "At least 20 metres" },
+            C: { fr: "Aucune distance particulière", en: "No particular distance" },
+            D: { fr: "Au moins 100 mètres", en: "At least 100 metres" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Dans un tunnel, vous devez maintenir une distance d'au moins 50 mètres avec le véhicule qui vous précède, soit l'équivalent de deux traits de balisage au sol.",
+        explanationEn: "In a tunnel, you must maintain at least 50 metres from the vehicle ahead, equivalent to two road markings on the ground.",
+        trapNote: "50m is the minimum — two marker lines is the visual reference. Not 100m (that is for motorways in good conditions).",
+        distractorNotes: { B: "20 metres is dangerously short in a tunnel.", C: "A specific distance IS required in tunnels for safety.", D: "100 metres is for motorways, not specifically tunnels." },
+        vocabulary: [
+            { wordFr: "trait de balisage", wordEn: "road marking line", definition: "Painted lines on the road surface used as distance references in tunnels" }
+        ]
+    },
+    {
+        id: "tunn-104",
+        topic: "tunnels_passages_niveau",
+        difficulty: 1,
+        questionFr: "Devez-vous retirer vos lunettes de soleil en entrant dans un tunnel ?",
+        questionEn: "Should you remove your sunglasses when entering a tunnel?",
+        options: {
+            A: { fr: "Oui, pour adapter sa vision à l'obscurité", en: "Yes, to adapt your vision to the darkness" },
+            B: { fr: "Non, ce n'est pas nécessaire", en: "No, it is not necessary" },
+            C: { fr: "Seulement si le tunnel fait plus de 500 mètres", en: "Only if the tunnel is longer than 500 metres" },
+            D: { fr: "Seulement la nuit", en: "Only at night" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Oui, retirez vos lunettes de soleil avant d'entrer dans un tunnel. Le passage de la lumière à l'obscurité réduit temporairement la visibilité, et les lunettes aggravent ce phénomène.",
+        explanationEn: "Yes, remove your sunglasses before entering a tunnel. The transition from light to darkness temporarily reduces visibility, and sunglasses worsen this effect.",
+        trapNote: "Always remove sunglasses — tunnel length does not matter.",
+        distractorNotes: { B: "It IS necessary to avoid dangerous temporary blindness.", C: "Tunnel length is irrelevant — always remove them.", D: "You would not be wearing sunglasses at night anyway." },
+        vocabulary: []
+    },
+    {
+        id: "tunn-105",
+        topic: "tunnels_passages_niveau",
+        difficulty: 1,
+        questionFr: "Quel type de feux devez-vous utiliser obligatoirement en tunnel ?",
+        questionEn: "What type of lights must you use in a tunnel?",
+        options: {
+            A: { fr: "Les feux de croisement", en: "Dipped headlights (low beam)" },
+            B: { fr: "Les feux de route", en: "Full beam headlights" },
+            C: { fr: "Les feux de position uniquement", en: "Sidelights only" },
+            D: { fr: "Les feux de brouillard avant", en: "Front fog lights" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "En tunnel, vous devez allumer vos feux de croisement (codes). Les feux de route sont interdits car ils éblouissent les autres usagers dans un espace confiné.",
+        explanationEn: "In a tunnel, you must switch on dipped headlights. Full beam is prohibited as it dazzles other road users in a confined space.",
+        trapNote: "Dipped headlights (codes/croisement), NOT full beam. Sidelights alone are insufficient.",
+        distractorNotes: { B: "Full beam would dazzle other drivers in the tunnel.", C: "Sidelights alone do not provide enough visibility.", D: "Fog lights are for fog conditions, not standard tunnel use." },
+        vocabulary: [
+            { wordFr: "feux de croisement", wordEn: "dipped headlights", definition: "Low beam lights that illuminate the road without blinding oncoming traffic" }
+        ]
+    },
+    {
+        id: "tunn-106",
+        topic: "tunnels_passages_niveau",
+        difficulty: 1,
+        questionFr: "Que devez-vous faire si vous entendez un signal sonore d'alerte dans un tunnel ?",
+        questionEn: "What should you do if you hear an alarm signal in a tunnel?",
+        options: {
+            A: { fr: "Écouter les consignes de sécurité et suivre les indications", en: "Listen to safety instructions and follow the directions" },
+            B: { fr: "Accélérer pour sortir du tunnel au plus vite", en: "Accelerate to exit the tunnel as quickly as possible" },
+            C: { fr: "S'arrêter immédiatement sur la voie", en: "Stop immediately in the lane" },
+            D: { fr: "Faire demi-tour", en: "Make a U-turn" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "En cas d'alerte sonore dans un tunnel, écoutez les consignes diffusées par les haut-parleurs et suivez les indications (panneaux lumineux, signalisation). Ne paniquez pas et ne faites jamais demi-tour.",
+        explanationEn: "If you hear an alarm in a tunnel, listen to the instructions broadcast over speakers and follow the signs (illuminated panels, signals). Do not panic and never make a U-turn.",
+        trapNote: "Follow instructions — do NOT accelerate or U-turn. Stopping in the lane blocks emergency vehicles.",
+        distractorNotes: { B: "Speeding to exit increases danger and may cause accidents.", C: "Stopping in the lane blocks the road for emergency vehicles.", D: "U-turns are strictly prohibited in tunnels." },
+        vocabulary: [
+            { wordFr: "signal sonore d'alerte", wordEn: "alarm signal", definition: "An audible warning broadcast in a tunnel to alert drivers of an incident" }
+        ]
+    },
+    {
+        id: "tunn-107",
+        topic: "tunnels_passages_niveau",
+        difficulty: 1,
+        questionFr: "À un passage à niveau, le feu rouge clignote et les barrières sont levées. Que faites-vous ?",
+        questionEn: "At a level crossing, the red light is flashing but the barriers are raised. What do you do?",
+        options: {
+            A: { fr: "Vous vous arrêtez : le feu rouge est prioritaire", en: "You stop: the red light takes priority" },
+            B: { fr: "Vous passez car les barrières sont levées", en: "You proceed because the barriers are raised" },
+            C: { fr: "Vous ralentissez et passez prudemment", en: "You slow down and pass carefully" },
+            D: { fr: "Vous attendez que le feu passe au vert", en: "You wait for the light to turn green" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Le feu rouge clignotant impose l'arrêt absolu, même si les barrières sont encore levées. Les barrières peuvent mettre quelques secondes à descendre après le déclenchement du feu.",
+        explanationEn: "A flashing red light means you must stop completely, even if the barriers are still raised. Barriers may take a few seconds to lower after the light activates.",
+        trapNote: "Red light = absolute stop, regardless of barrier position. This is a classic trap question.",
+        distractorNotes: { B: "Barrier position does NOT override the red light signal.", C: "Slowing down is not enough — a full stop is required.", D: "There is no green light at a level crossing — only red flashing." },
+        vocabulary: [
+            { wordFr: "barrière", wordEn: "barrier/gate", definition: "The lowering arm at a level crossing that blocks the road when a train approaches" }
+        ]
+    },
     // === SIGNALISATION (Signs & Signals) ===,
     {
         id: "sign-001",
@@ -17766,6 +17984,115 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "voie sans issue", wordEn: "dead end/cul-de-sac", definition: "A road that has no exit — you must return the way you came" }
         ]
+    },
+    {
+        id: "sign-059",
+        topic: "signalisation",
+        difficulty: 1,
+        questionFr: "Quelle est la forme d'un panneau d'interdiction ?",
+        questionEn: "What is the shape of a prohibition sign?",
+        options: {
+            A: { fr: "Rond avec un bord rouge sur fond blanc", en: "Round with a red border on white background" },
+            B: { fr: "Triangulaire avec un bord rouge", en: "Triangular with a red border" },
+            C: { fr: "Carré à fond bleu", en: "Square with blue background" },
+            D: { fr: "Rond à fond bleu", en: "Round with blue background" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Les panneaux d'interdiction sont ronds avec un bord rouge sur fond blanc. Les panneaux triangulaires sont des panneaux de danger, et les ronds bleus sont des panneaux d'obligation.",
+        explanationEn: "Prohibition signs are round with a red border on a white background. Triangular signs are danger signs, and round blue signs are mandatory signs.",
+        trapNote: "Round + red border = interdiction. Round + blue = obligation. Triangle + red = danger.",
+        distractorNotes: { B: "Triangular with red border is a danger/warning sign.", C: "Square blue signs are information signs.", D: "Round blue signs are mandatory/obligation signs." },
+        vocabulary: [
+            { wordFr: "panneau d'interdiction", wordEn: "prohibition sign", definition: "A round sign with red border indicating something is forbidden" }
+        ]
+    },
+    {
+        id: "sign-060",
+        topic: "signalisation",
+        difficulty: 1,
+        questionFr: "Que signifie un feu orange clignotant ?",
+        questionEn: "What does a flashing amber light mean?",
+        options: {
+            A: { fr: "Ralentir et passer avec prudence", en: "Slow down and proceed with caution" },
+            B: { fr: "S'arrêter obligatoirement", en: "You must stop" },
+            C: { fr: "Voie libre, accélérer", en: "Road clear, accelerate" },
+            D: { fr: "Interdiction de passer", en: "No passing allowed" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Un feu orange clignotant signifie que vous devez ralentir et passer avec prudence en cédant le passage aux piétons et aux véhicules prioritaires. Il ne signifie pas l'arrêt obligatoire.",
+        explanationEn: "A flashing amber light means slow down and proceed with caution, yielding to pedestrians and priority vehicles. It does not mean you must stop.",
+        trapNote: "Flashing amber ≠ fixed amber. Flashing = caution, fixed = prepare to stop.",
+        distractorNotes: { B: "A flashing amber does not require stopping (unlike a fixed amber or red).", C: "You must slow down, not accelerate.", D: "You may pass, but with caution." },
+        vocabulary: [
+            { wordFr: "feu orange clignotant", wordEn: "flashing amber light", definition: "A traffic light flashing amber, meaning proceed with caution" }
+        ]
+    },
+    {
+        id: "sign-061",
+        topic: "signalisation",
+        difficulty: 1,
+        questionFr: "Que signifie une ligne blanche continue au sol ?",
+        questionEn: "What does a solid white line on the road mean?",
+        options: {
+            A: { fr: "Interdiction de franchir ou de chevaucher cette ligne", en: "It is forbidden to cross or straddle this line" },
+            B: { fr: "Autorisation de dépasser si la visibilité est bonne", en: "Overtaking is allowed if visibility is good" },
+            C: { fr: "Voie réservée aux bus", en: "Lane reserved for buses" },
+            D: { fr: "Zone de stationnement autorisé", en: "Permitted parking area" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Une ligne blanche continue interdit formellement le franchissement et le chevauchement. Elle sépare les sens de circulation et garantit la sécurité dans les zones à visibilité réduite.",
+        explanationEn: "A solid white line strictly prohibits crossing or straddling. It separates traffic directions and ensures safety in areas with reduced visibility.",
+        trapNote: "Continuous = NEVER cross. Dashed/broken = may cross to overtake.",
+        distractorNotes: { B: "Good visibility does NOT permit crossing a continuous line.", C: "Bus lanes have specific markings, not just a white line.", D: "Parking zones use different marking types." },
+        vocabulary: [
+            { wordFr: "ligne blanche continue", wordEn: "solid white line", definition: "An unbroken line on the road that must not be crossed" },
+            { wordFr: "chevaucher", wordEn: "to straddle", definition: "To drive with wheels on both sides of a road marking" }
+        ]
+    },
+    {
+        id: "sign-062",
+        topic: "signalisation",
+        difficulty: 1,
+        questionFr: "Quelle couleur de fond a un panneau d'indication ?",
+        questionEn: "What background colour does an information sign have?",
+        options: {
+            A: { fr: "Bleu (en agglomération) ou vert (hors agglomération)", en: "Blue (urban) or green (rural/motorway)" },
+            B: { fr: "Rouge", en: "Red" },
+            C: { fr: "Jaune", en: "Yellow" },
+            D: { fr: "Blanc", en: "White" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Les panneaux d'indication de direction ont un fond bleu en agglomération et vert sur les routes hors agglomération et autoroutes. Les panneaux marron indiquent les sites touristiques.",
+        explanationEn: "Direction information signs have a blue background in urban areas and green on rural roads and motorways. Brown signs indicate tourist sites.",
+        trapNote: "Blue = urban, green = rural/motorway. Brown = tourism. White = local/temporary.",
+        distractorNotes: { B: "Red is used for prohibition and danger signs, not information.", C: "Yellow is used for temporary/works signage.", D: "White is used for local direction signs, not the main information signs." },
+        vocabulary: [
+            { wordFr: "panneau d'indication", wordEn: "information sign", definition: "A sign providing directional or informational guidance to drivers" }
+        ]
+    },
+    {
+        id: "sign-063",
+        topic: "signalisation",
+        difficulty: 1,
+        questionFr: "Que signifie un panneau triangulaire bordé de rouge ?",
+        questionEn: "What does a triangle sign with a red border mean?",
+        options: {
+            A: { fr: "Danger : un risque est signalé plus loin", en: "Danger: a hazard is indicated ahead" },
+            B: { fr: "Interdiction : une action est interdite", en: "Prohibition: an action is forbidden" },
+            C: { fr: "Obligation : une action est obligatoire", en: "Obligation: an action is mandatory" },
+            D: { fr: "Indication : information sur la route", en: "Information: details about the road" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Un panneau triangulaire bordé de rouge est un panneau de danger. Il avertit d'un risque situé à environ 150 mètres hors agglomération ou 50 mètres en agglomération.",
+        explanationEn: "A triangle sign with a red border is a danger sign. It warns of a hazard approximately 150 metres ahead outside built-up areas or 50 metres in built-up areas.",
+        trapNote: "150m outside town, 50m inside. Triangle = warning/danger ONLY.",
+        distractorNotes: { B: "Prohibition signs are round with a red border, not triangular.", C: "Obligation signs are round with a blue background.", D: "Information signs are rectangular or square." },
+        vocabulary: []
     },
     // === NOTIONS DIVERSES (General Knowledge) ===,
     {

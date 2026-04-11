@@ -1715,6 +1715,13 @@
     "questionId": "media-098"
   },
   {
+    "wordFr": "banquette arrière",
+    "wordEn": "rear seat/back seat",
+    "definition": "The rear seating area of a vehicle",
+    "topic": "conducteur",
+    "questionId": "cond-110"
+  },
+  {
     "wordFr": "bâillement",
     "wordEn": "yawn",
     "definition": "An involuntary deep breath when tired",
@@ -1881,6 +1888,13 @@
     "definition": "Small audio devices inserted into or placed over the ears",
     "topic": "conducteur",
     "questionId": "cond-025"
+  },
+  {
+    "wordFr": "emprise",
+    "wordEn": "influence/effect",
+    "definition": "Being under the effect of a substance that alters behaviour",
+    "topic": "conducteur",
+    "questionId": "cond-111"
   },
   {
     "wordFr": "endormissement",
@@ -4718,6 +4732,13 @@
     "questionId": "sign-034"
   },
   {
+    "wordFr": "ligne blanche continue",
+    "wordEn": "solid white line",
+    "definition": "An unbroken line on the road that must not be crossed",
+    "topic": "signalisation",
+    "questionId": "sign-061"
+  },
+  {
     "wordFr": "ligne continue",
     "wordEn": "continuous/solid line",
     "definition": "An unbroken line painted on the road",
@@ -5565,6 +5586,13 @@
     "questionId": "tunn-049"
   },
   {
+    "wordFr": "signal sonore d'alerte",
+    "wordEn": "alarm signal",
+    "definition": "An audible warning broadcast in a tunnel to alert drivers of an incident",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-106"
+  },
+  {
     "wordFr": "sortie de secours",
     "wordEn": "emergency exit",
     "definition": "A marked exit route for emergencies in a tunnel",
@@ -5577,6 +5605,13 @@
     "definition": "The regulated transport of hazardous materials",
     "topic": "tunnels_passages_niveau",
     "questionId": "tunn-020"
+  },
+  {
+    "wordFr": "trait de balisage",
+    "wordEn": "road marking line",
+    "definition": "Painted lines on the road surface used as distance references in tunnels",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-103"
   },
   {
     "wordFr": "tunnel",
