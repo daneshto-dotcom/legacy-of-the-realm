@@ -36785,5 +36785,429 @@
         "definition": "Service d'Aide Médicale Urgente — reached at 15 in France"
       }
     ]
+  },
+  {
+    "id": "media-122",
+    "topic": "circulation",
+    "difficulty": 1,
+    "signs": [
+      "speed-limit-70"
+    ],
+    "questionFr": "Quelle est la vitesse maximale autorisée indiquée par ce panneau ?",
+    "questionEn": "What is the maximum permitted speed indicated by this sign?",
+    "options": {
+      "A": {
+        "fr": "70 km/h",
+        "en": "70 km/h"
+      },
+      "B": {
+        "fr": "90 km/h",
+        "en": "90 km/h"
+      },
+      "C": {
+        "fr": "50 km/h",
+        "en": "50 km/h"
+      },
+      "D": {
+        "fr": "80 km/h",
+        "en": "80 km/h"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Ce panneau rond à bordure rouge avec le nombre 70 indique une limitation de vitesse à 70 km/h.",
+    "explanationEn": "This round sign with a red border and the number 70 indicates a speed limit of 70 km/h.",
+    "trapNote": "70 km/h is sometimes used on sections where the standard 80 km/h limit is reduced due to road conditions.",
+    "distractorNotes": {
+      "B": "90 km/h was the old default for two-lane roads but is not shown here.",
+      "C": "50 km/h is the default speed in built-up areas.",
+      "D": "80 km/h is the current default for two-lane roads outside built-up areas."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "limitation de vitesse",
+        "wordEn": "speed limit",
+        "definition": "The maximum legal speed on a given road"
+      }
+    ]
+  },
+  {
+    "id": "media-123",
+    "topic": "route",
+    "difficulty": 1,
+    "signs": [
+      "speed-limit-90"
+    ],
+    "questionFr": "Ce panneau de 90 km/h s'applique sur quel type de route ?",
+    "questionEn": "This 90 km/h sign applies on which type of road?",
+    "options": {
+      "A": {
+        "fr": "Route à chaussées séparées par un terre-plein central",
+        "en": "Road with lanes separated by a central reservation"
+      },
+      "B": {
+        "fr": "En agglomération",
+        "en": "In built-up areas"
+      },
+      "C": {
+        "fr": "Sur autoroute",
+        "en": "On a motorway"
+      },
+      "D": {
+        "fr": "Dans une zone 30",
+        "en": "In a 30 zone"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "La vitesse de 90 km/h s'applique sur les routes à chaussées séparées par un terre-plein central (2x2 voies). Les routes à double sens sans séparation sont limitées à 80 km/h.",
+    "explanationEn": "The 90 km/h speed applies on roads with lanes separated by a central reservation (dual carriageways). Two-way roads without separation are limited to 80 km/h.",
+    "trapNote": "Since 2018, two-lane roads are 80 km/h (not 90). Only dual carriageways with central reservation keep 90 km/h.",
+    "distractorNotes": {
+      "B": "Built-up areas are limited to 50 km/h by default.",
+      "C": "Motorways are 130 km/h (or 110 km/h in rain).",
+      "D": "Zone 30 is 30 km/h."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "terre-plein central",
+        "wordEn": "central reservation/median",
+        "definition": "A physical barrier separating opposing traffic lanes"
+      }
+    ]
+  },
+  {
+    "id": "media-124",
+    "topic": "circulation",
+    "difficulty": 2,
+    "signs": [
+      "speed-limit-110"
+    ],
+    "questionFr": "Si ce panneau de 110 km/h est sur une autoroute, dans quelle condition s'applique cette vitesse réduite ?",
+    "questionEn": "If this 110 km/h sign is on a motorway, under what condition does this reduced speed apply?",
+    "options": {
+      "A": {
+        "fr": "Par temps de pluie",
+        "en": "In rainy weather"
+      },
+      "B": {
+        "fr": "La nuit uniquement",
+        "en": "At night only"
+      },
+      "C": {
+        "fr": "Le week-end",
+        "en": "On weekends"
+      },
+      "D": {
+        "fr": "Uniquement pour les poids lourds",
+        "en": "Only for heavy vehicles"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Sur autoroute, la vitesse maximale passe de 130 à 110 km/h par temps de pluie ou lorsque la chaussée est mouillée.",
+    "explanationEn": "On motorways, the maximum speed drops from 130 to 110 km/h in rain or when the road is wet.",
+    "trapNote": "Rain speed limits: autoroute 130→110, routes express 110→100, routes à 80→80 (unchanged). Visibility < 50m: all roads 50 km/h.",
+    "distractorNotes": {
+      "B": "There is no specific nighttime speed reduction on motorways.",
+      "C": "Speed limits do not change on weekends.",
+      "D": "110 km/h applies to all vehicles in rain, not just heavy vehicles."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "temps de pluie",
+        "wordEn": "rainy weather",
+        "definition": "When rain or wet conditions reduce grip and visibility"
+      }
+    ]
+  },
+  {
+    "id": "media-125",
+    "topic": "circulation",
+    "difficulty": 1,
+    "signs": [
+      "speed-limit-130"
+    ],
+    "questionFr": "Sur quel type de route cette vitesse de 130 km/h est-elle autorisée ?",
+    "questionEn": "On what type of road is this 130 km/h speed permitted?",
+    "options": {
+      "A": {
+        "fr": "Sur autoroute par temps sec",
+        "en": "On a motorway in dry weather"
+      },
+      "B": {
+        "fr": "Sur toutes les routes nationales",
+        "en": "On all national roads"
+      },
+      "C": {
+        "fr": "En agglomération la nuit",
+        "en": "In built-up areas at night"
+      },
+      "D": {
+        "fr": "Sur les routes départementales",
+        "en": "On departmental roads"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "130 km/h est la vitesse maximale autorisée sur autoroute par temps sec. Par temps de pluie, elle est réduite à 110 km/h.",
+    "explanationEn": "130 km/h is the maximum speed allowed on motorways in dry weather. In rain, it is reduced to 110 km/h.",
+    "trapNote": "Novice drivers (permis probatoire) are limited to 110 km/h on motorways even in dry weather.",
+    "distractorNotes": {
+      "B": "National roads are limited to 80 or 90 km/h depending on configuration.",
+      "C": "Built-up areas are always 50 km/h or less.",
+      "D": "Departmental roads are 80 km/h."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "autoroute",
+        "wordEn": "motorway",
+        "definition": "A high-speed road with controlled access, minimum 2 lanes per direction"
+      }
+    ]
+  },
+  {
+    "id": "media-126",
+    "topic": "signalisation",
+    "difficulty": 1,
+    "signs": [
+      "end-of-restriction"
+    ],
+    "questionFr": "Que signifie ce panneau avec des barres diagonales ?",
+    "questionEn": "What does this sign with diagonal bars mean?",
+    "options": {
+      "A": {
+        "fr": "Fin de toutes les interdictions précédemment signalées",
+        "en": "End of all previously signalled restrictions"
+      },
+      "B": {
+        "fr": "Zone de stationnement interdit",
+        "en": "No parking zone"
+      },
+      "C": {
+        "fr": "Route barrée",
+        "en": "Road closed"
+      },
+      "D": {
+        "fr": "Début d'une zone de danger",
+        "en": "Start of a danger zone"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Ce panneau rond blanc avec des barres diagonales grises indique la fin de toutes les interdictions locales (vitesse, dépassement, etc.).",
+    "explanationEn": "This round white sign with grey diagonal bars indicates the end of all local restrictions (speed, overtaking, etc.).",
+    "trapNote": "This ends ALL local restrictions at once. There are also specific end-of signs (e.g., end of speed limit, end of no overtaking).",
+    "distractorNotes": {
+      "B": "No parking has different markings (red circle with blue background and red X).",
+      "C": "Road closed uses a red circle with a white bar.",
+      "D": "Danger zones use triangular warning signs."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "fin d'interdiction",
+        "wordEn": "end of restriction",
+        "definition": "A sign indicating that a previously signalled prohibition no longer applies"
+      }
+    ]
+  },
+  {
+    "id": "media-127",
+    "topic": "croisement_depassement",
+    "difficulty": 2,
+    "signs": [
+      "priority-over-oncoming"
+    ],
+    "questionFr": "Que signifie ce panneau rectangulaire avec une flèche noire et une flèche rouge ?",
+    "questionEn": "What does this rectangular sign with a black arrow and a red arrow mean?",
+    "options": {
+      "A": {
+        "fr": "Vous avez la priorité sur la circulation venant en sens inverse",
+        "en": "You have priority over oncoming traffic"
+      },
+      "B": {
+        "fr": "Vous devez céder le passage à la circulation inverse",
+        "en": "You must yield to oncoming traffic"
+      },
+      "C": {
+        "fr": "Route à double sens",
+        "en": "Two-way road"
+      },
+      "D": {
+        "fr": "Sens interdit",
+        "en": "No entry"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "La grande flèche noire (vers le haut) indique votre direction et votre priorité. La petite flèche rouge (vers le bas) représente le sens inverse qui doit vous céder le passage.",
+    "explanationEn": "The large black arrow (pointing up) indicates your direction and priority. The small red arrow (pointing down) represents oncoming traffic that must yield to you.",
+    "trapNote": "Don't confuse with the circular 'yield to oncoming traffic' sign (red circle with two arrows) which means the OPPOSITE — you must yield.",
+    "distractorNotes": {
+      "B": "This is the opposite — the sign gives YOU priority. The yield-to-oncoming sign is circular with a red border.",
+      "C": "Two-way road signs use vertical red and white arrows in a triangle.",
+      "D": "No entry is a red circle with a white horizontal bar."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "priorité sur la circulation inverse",
+        "wordEn": "priority over oncoming traffic",
+        "definition": "A sign giving you right of way in a narrow passage where only one direction can pass at a time"
+      }
+    ]
+  },
+  {
+    "id": "media-128",
+    "topic": "conducteur",
+    "difficulty": 2,
+    "signs": [
+      "speed-limit-130"
+    ],
+    "questionFr": "Un conducteur novice voit ce panneau de 130 km/h sur autoroute. À quelle vitesse peut-il rouler au maximum ?",
+    "questionEn": "A novice driver sees this 130 km/h sign on a motorway. What is the maximum speed they can drive?",
+    "options": {
+      "A": {
+        "fr": "130 km/h",
+        "en": "130 km/h"
+      },
+      "B": {
+        "fr": "110 km/h",
+        "en": "110 km/h"
+      },
+      "C": {
+        "fr": "100 km/h",
+        "en": "100 km/h"
+      },
+      "D": {
+        "fr": "90 km/h",
+        "en": "90 km/h"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Un conducteur novice (permis probatoire) est limité à 110 km/h sur autoroute, même si le panneau indique 130 km/h.",
+    "explanationEn": "A novice driver (probationary licence) is limited to 110 km/h on motorways, even if the sign shows 130 km/h.",
+    "trapNote": "Novice speed limits: 110 on motorway (vs 130), 100 on dual carriageway (vs 110), 80 on other roads (same as experienced).",
+    "distractorNotes": {
+      "A": "130 km/h is for experienced drivers only.",
+      "C": "100 km/h is the novice limit on dual carriageways, not motorways.",
+      "D": "90 km/h is for dual carriageways for experienced drivers."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "permis probatoire",
+        "wordEn": "probationary licence",
+        "definition": "The licence period for new drivers with reduced speed limits and point balance"
+      }
+    ]
+  },
+  {
+    "id": "media-129",
+    "topic": "circulation",
+    "difficulty": 2,
+    "signs": [
+      "speed-limit-70",
+      "end-of-restriction"
+    ],
+    "questionFr": "Après avoir passé le panneau de 70 km/h, vous rencontrez le panneau de fin d'interdiction. À quelle vitesse pouvez-vous rouler si vous êtes sur une route à double sens hors agglomération ?",
+    "questionEn": "After passing the 70 km/h sign, you encounter the end-of-restriction sign. What speed can you drive if you are on a two-way road outside a built-up area?",
+    "options": {
+      "A": {
+        "fr": "130 km/h",
+        "en": "130 km/h"
+      },
+      "B": {
+        "fr": "80 km/h",
+        "en": "80 km/h"
+      },
+      "C": {
+        "fr": "90 km/h",
+        "en": "90 km/h"
+      },
+      "D": {
+        "fr": "70 km/h",
+        "en": "70 km/h"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Le panneau de fin d'interdiction annule la limitation locale de 70 km/h. La vitesse par défaut sur une route à double sens hors agglomération est de 80 km/h.",
+    "explanationEn": "The end-of-restriction sign cancels the local 70 km/h limit. The default speed on a two-way road outside built-up areas is 80 km/h.",
+    "trapNote": "After end-of-restriction, you revert to the DEFAULT speed for that road type, not unlimited speed.",
+    "distractorNotes": {
+      "A": "130 km/h is only for motorways.",
+      "C": "90 km/h is for dual carriageways with central reservation, not two-way roads.",
+      "D": "The 70 limit was cancelled by the end-of-restriction sign."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "vitesse par défaut",
+        "wordEn": "default speed",
+        "definition": "The standard speed limit that applies when no specific sign is posted"
+      }
+    ]
+  },
+  {
+    "id": "media-130",
+    "topic": "signalisation",
+    "difficulty": 1,
+    "signs": [
+      "speed-limit-110"
+    ],
+    "questionFr": "Sur une voie express, à quelle vitesse êtes-vous limité par temps de pluie si la limite normale est 110 km/h ?",
+    "questionEn": "On an expressway, what is your speed limit in rain if the normal limit is 110 km/h?",
+    "options": {
+      "A": {
+        "fr": "110 km/h",
+        "en": "110 km/h"
+      },
+      "B": {
+        "fr": "100 km/h",
+        "en": "100 km/h"
+      },
+      "C": {
+        "fr": "90 km/h",
+        "en": "90 km/h"
+      },
+      "D": {
+        "fr": "80 km/h",
+        "en": "80 km/h"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Sur une voie express limitée à 110 km/h, la vitesse est réduite à 100 km/h par temps de pluie.",
+    "explanationEn": "On an expressway limited to 110 km/h, the speed is reduced to 100 km/h in rain.",
+    "trapNote": "Rain reductions: 130→110 (autoroute), 110→100 (voie express), 80→80 (unchanged). If visibility < 50m: ALL roads 50 km/h.",
+    "distractorNotes": {
+      "A": "The speed is always reduced in rain, never the same.",
+      "C": "90 km/h would be too much of a reduction for this road type.",
+      "D": "80 km/h is the default for ordinary two-lane roads."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "voie express",
+        "wordEn": "expressway",
+        "definition": "A fast road with limited access, typically 110 km/h, less than a motorway"
+      }
+    ]
   }
 ]

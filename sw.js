@@ -2,7 +2,7 @@
    Service Worker — Offline Support
    ============================================ */
 
-const CACHE_NAME = 'code-de-la-route-v49';
+const CACHE_NAME = 'code-de-la-route-v50';
 
 // Use relative paths so caching works on GitHub Pages subdirectory (/code-de-la-route/)
 const URLS_TO_CACHE = [
@@ -331,7 +331,14 @@ const URLS_TO_CACHE = [
     './assets/images/signs/pedestrian-crossing-warning.webp',
     './assets/images/signs/speed-limit-30.webp',
     './assets/images/signs/sharp-curve-sign.webp',
-    './assets/images/signs/school-zone-sign.webp'
+    './assets/images/signs/school-zone-sign.webp',
+    // --- Session 24: 6 new signs ---
+    './assets/images/signs/speed-limit-70.webp',
+    './assets/images/signs/speed-limit-90.webp',
+    './assets/images/signs/speed-limit-110.webp',
+    './assets/images/signs/speed-limit-130.webp',
+    './assets/images/signs/end-of-restriction.webp',
+    './assets/images/signs/priority-over-oncoming.webp'
 ];
 
 // Install — cache core assets

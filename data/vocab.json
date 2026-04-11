@@ -1449,6 +1449,13 @@
     "questionId": "circ-054"
   },
   {
+    "wordFr": "vitesse par défaut",
+    "wordEn": "default speed",
+    "definition": "The standard speed limit that applies when no specific sign is posted",
+    "topic": "circulation",
+    "questionId": "media-129"
+  },
+  {
     "wordFr": "voie",
     "wordEn": "lane",
     "definition": "A marked section of road intended for a single line of vehicles",
@@ -2448,6 +2455,13 @@
     "definition": "The hinged panel providing entry to a vehicle",
     "topic": "croisement_depassement",
     "questionId": "croi-038"
+  },
+  {
+    "wordFr": "priorité sur la circulation inverse",
+    "wordEn": "priority over oncoming traffic",
+    "definition": "A sign giving you right of way in a narrow passage where only one direction can pass at a time",
+    "topic": "croisement_depassement",
+    "questionId": "media-127"
   },
   {
     "wordFr": "reculer",
