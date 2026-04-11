@@ -3859,7 +3859,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "cond-109",
+        id: "cond-114",
         topic: "conducteur",
         difficulty: 1,
         questionFr: "Quel est le nombre de points sur le permis de conduire d'un conducteur novice ?",
@@ -3881,7 +3881,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "cond-110",
+        id: "cond-115",
         topic: "conducteur",
         difficulty: 1,
         questionFr: "Un passager de moins de 10 ans doit-il voyager à l'arrière du véhicule ?",
@@ -3903,7 +3903,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "cond-111",
+        id: "cond-116",
         topic: "conducteur",
         difficulty: 1,
         questionFr: "Quelle sanction risquez-vous pour conduite sous l'emprise de stupéfiants ?",
@@ -3926,7 +3926,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "cond-112",
+        id: "cond-117",
         topic: "conducteur",
         difficulty: 1,
         questionFr: "Quel équipement est obligatoire dans un véhicule en France ?",
@@ -3949,7 +3949,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "cond-113",
+        id: "cond-118",
         topic: "conducteur",
         difficulty: 1,
         questionFr: "Quelle est la vitesse maximale autorisée pour un conducteur novice sur autoroute ?",
@@ -13524,7 +13524,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "arret-055",
+        id: "arret-068",
         topic: "arret_stationnement",
         difficulty: 1,
         questionFr: "Quelle différence entre l'arrêt et le stationnement ?",
@@ -13547,7 +13547,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "arret-056",
+        id: "arret-069",
         topic: "arret_stationnement",
         difficulty: 1,
         questionFr: "Peut-on stationner sur un passage piéton ?",
@@ -13570,7 +13570,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "arret-057",
+        id: "arret-070",
         topic: "arret_stationnement",
         difficulty: 1,
         questionFr: "Distance minimale de stationnement d'une intersection ?",
@@ -13639,7 +13639,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "arret-058",
+        id: "arret-071",
         topic: "arret_stationnement",
         difficulty: 1,
         signs: [],
@@ -13663,7 +13663,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "arret-059",
+        id: "arret-072",
         topic: "arret_stationnement",
         difficulty: 1,
         signs: [],
@@ -17986,7 +17986,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "sign-059",
+        id: "sign-064",
         topic: "signalisation",
         difficulty: 1,
         questionFr: "Quelle est la forme d'un panneau d'interdiction ?",
@@ -18008,7 +18008,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "sign-060",
+        id: "sign-065",
         topic: "signalisation",
         difficulty: 1,
         questionFr: "Que signifie un feu orange clignotant ?",
@@ -18030,7 +18030,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "sign-061",
+        id: "sign-066",
         topic: "signalisation",
         difficulty: 1,
         questionFr: "Que signifie une ligne blanche continue au sol ?",
@@ -18053,7 +18053,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "sign-062",
+        id: "sign-067",
         topic: "signalisation",
         difficulty: 1,
         questionFr: "Quelle couleur de fond a un panneau d'indication ?",
@@ -18075,7 +18075,7 @@ const QUESTION_BANK = [
         ]
     },
     {
-        id: "sign-063",
+        id: "sign-068",
         topic: "signalisation",
         difficulty: 1,
         questionFr: "Que signifie un panneau triangulaire bordé de rouge ?",
