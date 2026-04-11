@@ -42886,5 +42886,280 @@
         "definition": "A standardised form filled in by both drivers after an accident"
       }
     ]
+  },
+  {
+    "id": "media-149",
+    "topic": "signalisation",
+    "difficulty": 2,
+    "signs": [
+      "traffic-light-sign"
+    ],
+    "questionFr": "Ce feu tricolore affiche le rouge. Que devez-vous faire ?",
+    "questionEn": "This traffic light is showing red. What must you do?",
+    "options": {
+      "A": {
+        "fr": "Vous arrêter avant la ligne d'arrêt et attendre le feu vert",
+        "en": "Stop before the stop line and wait for the green light"
+      },
+      "B": {
+        "fr": "Ralentir et passer si la voie est dégagée",
+        "en": "Slow down and proceed if the road is clear"
+      },
+      "C": {
+        "fr": "Accélérer pour passer avant le prochain changement",
+        "en": "Accelerate to pass before the next change"
+      },
+      "D": {
+        "fr": "Tourner à droite uniquement",
+        "en": "Turn right only"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Le feu rouge impose l'arrêt absolu avant la ligne d'arrêt. Vous devez attendre le passage au vert avant de repartir, sauf indication contraire d'un agent de la circulation.",
+    "explanationEn": "A red light requires an absolute stop before the stop line. You must wait for the green light before proceeding, unless directed otherwise by a traffic officer.",
+    "trapNote": "Red = absolute stop. No right turn on red in France (unlike some countries).",
+    "distractorNotes": {
+      "B": "Slowing down is not enough — a full stop is mandatory.",
+      "C": "Accelerating through a red light is extremely dangerous and illegal.",
+      "D": "Unlike in some countries, turning right on red is NOT allowed in France."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "feu tricolore",
+        "wordEn": "traffic light",
+        "definition": "A signal with three lights (red, amber, green) controlling traffic flow"
+      },
+      {
+        "wordFr": "ligne d'arrêt",
+        "wordEn": "stop line",
+        "definition": "A white line on the road where vehicles must stop at a red light"
+      }
+    ]
+  },
+  {
+    "id": "media-150",
+    "topic": "signalisation",
+    "difficulty": 2,
+    "signs": [
+      "traffic-light-sign"
+    ],
+    "questionFr": "Le feu passe à l'orange fixe. Que devez-vous faire ?",
+    "questionEn": "The light turns solid amber. What must you do?",
+    "options": {
+      "A": {
+        "fr": "Vous arrêter, sauf si vous ne pouvez plus le faire en sécurité",
+        "en": "Stop, unless you can no longer do so safely"
+      },
+      "B": {
+        "fr": "Accélérer pour passer avant le rouge",
+        "en": "Accelerate to pass before it turns red"
+      },
+      "C": {
+        "fr": "Continuer à la même vitesse",
+        "en": "Continue at the same speed"
+      },
+      "D": {
+        "fr": "Allumer les feux de détresse",
+        "en": "Switch on hazard lights"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Le feu orange fixe signifie que vous devez vous arrêter. La seule exception est si vous êtes trop engagé pour vous arrêter en sécurité (trop près de la ligne d'arrêt).",
+    "explanationEn": "A solid amber light means you must stop. The only exception is if you are too committed to stop safely (too close to the stop line).",
+    "trapNote": "Fixed amber = stop (unlike flashing amber = caution). Only exception: already too close to stop safely.",
+    "distractorNotes": {
+      "B": "Accelerating on amber is dangerous and illegal.",
+      "C": "You must prepare to stop, not maintain speed.",
+      "D": "Hazard lights are not relevant at traffic lights."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "media-151",
+    "topic": "circulation",
+    "difficulty": 2,
+    "signs": [
+      "bicycle-lane-sign"
+    ],
+    "questionFr": "Que signifie ce panneau rond bleu avec un vélo blanc ?",
+    "questionEn": "What does this round blue sign with a white bicycle mean?",
+    "options": {
+      "A": {
+        "fr": "Piste cyclable obligatoire pour les cyclistes",
+        "en": "Mandatory cycle lane for cyclists"
+      },
+      "B": {
+        "fr": "Interdiction aux vélos",
+        "en": "No bicycles allowed"
+      },
+      "C": {
+        "fr": "Zone de stationnement pour vélos",
+        "en": "Bicycle parking area"
+      },
+      "D": {
+        "fr": "Piste cyclable recommandée mais facultative",
+        "en": "Recommended but optional cycle path"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Un panneau rond à fond bleu est un panneau d'obligation. Ce panneau impose aux cyclistes d'utiliser la piste cyclable et interdit aux véhicules motorisés d'y circuler.",
+    "explanationEn": "A round sign with a blue background is a mandatory sign. This sign requires cyclists to use the cycle lane and prohibits motorised vehicles from using it.",
+    "trapNote": "Round blue = obligation. Square blue with bicycle = recommended (not mandatory). Know the difference!",
+    "distractorNotes": {
+      "B": "Blue means obligation, not prohibition. A red border would mean prohibition.",
+      "C": "This is not a parking sign — it indicates a mandatory lane.",
+      "D": "Round blue = mandatory. A square blue sign would be a recommendation."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "piste cyclable",
+        "wordEn": "cycle lane/bike path",
+        "definition": "A lane or path reserved exclusively for bicycles"
+      }
+    ]
+  },
+  {
+    "id": "media-152",
+    "topic": "circulation",
+    "difficulty": 2,
+    "signs": [
+      "zone-30-sign"
+    ],
+    "questionFr": "Vous entrez dans une zone marquée par ce panneau. Quelle est la vitesse maximale autorisée ?",
+    "questionEn": "You enter a zone marked by this sign. What is the maximum speed allowed?",
+    "options": {
+      "A": {
+        "fr": "30 km/h",
+        "en": "30 km/h"
+      },
+      "B": {
+        "fr": "50 km/h",
+        "en": "50 km/h"
+      },
+      "C": {
+        "fr": "20 km/h",
+        "en": "20 km/h"
+      },
+      "D": {
+        "fr": "40 km/h",
+        "en": "40 km/h"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Le panneau 'Zone 30' indique une zone où la vitesse est limitée à 30 km/h. Ces zones se trouvent généralement dans les quartiers résidentiels, près des écoles et dans les centres-villes.",
+    "explanationEn": "The 'Zone 30' sign indicates an area where speed is limited to 30 km/h. These zones are typically found in residential areas, near schools, and in town centres.",
+    "trapNote": "Zone 30 means the entire area is 30 km/h — not just one road. Applies until the end-of-zone sign.",
+    "distractorNotes": {
+      "B": "50 km/h is the default urban speed limit, not for Zone 30.",
+      "C": "20 km/h is for « zone de rencontre » (shared space zones).",
+      "D": "40 km/h is not a standard speed limit in France."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "zone 30",
+        "wordEn": "30 km/h zone",
+        "definition": "A residential area where the speed limit is 30 km/h throughout"
+      }
+    ]
+  },
+  {
+    "id": "media-153",
+    "topic": "priorite",
+    "difficulty": 2,
+    "signs": [
+      "roundabout-sign"
+    ],
+    "questionFr": "Vous approchez d'un carrefour giratoire indiqué par ce panneau. Qui a la priorité ?",
+    "questionEn": "You approach a roundabout indicated by this sign. Who has priority?",
+    "options": {
+      "A": {
+        "fr": "Les véhicules déjà engagés dans le giratoire",
+        "en": "Vehicles already in the roundabout"
+      },
+      "B": {
+        "fr": "Vous, car vous venez de la droite",
+        "en": "You, because you are coming from the right"
+      },
+      "C": {
+        "fr": "Les piétons sur le trottoir",
+        "en": "Pedestrians on the pavement"
+      },
+      "D": {
+        "fr": "Le véhicule le plus rapide",
+        "en": "The fastest vehicle"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Dans un carrefour giratoire (avec panneau cédez-le-passage), les véhicules déjà engagés ont la priorité. Vous devez leur céder le passage avant de vous insérer.",
+    "explanationEn": "At a roundabout (with a yield sign), vehicles already in the roundabout have priority. You must yield to them before entering.",
+    "trapNote": "Modern roundabouts: yield to traffic already inside. Old-style « rond-point »: priority to the right (entering traffic). Know the difference!",
+    "distractorNotes": {
+      "B": "Priority to the right does not apply at modern roundabouts with yield signs.",
+      "C": "Pedestrians on the pavement do not affect roundabout priority rules.",
+      "D": "Speed does not determine priority."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "carrefour giratoire",
+        "wordEn": "roundabout",
+        "definition": "A circular junction where traffic flows in one direction around a central island"
+      }
+    ]
+  },
+  {
+    "id": "media-154",
+    "topic": "tunnels_passages_niveau",
+    "difficulty": 2,
+    "signs": [
+      "tunnel-sign"
+    ],
+    "questionFr": "Vous approchez d'un tunnel signalé par ce panneau. Quelles précautions prenez-vous ?",
+    "questionEn": "You approach a tunnel indicated by this sign. What precautions do you take?",
+    "options": {
+      "A": {
+        "fr": "Allumer les feux de croisement et retirer les lunettes de soleil",
+        "en": "Switch on dipped headlights and remove sunglasses"
+      },
+      "B": {
+        "fr": "Allumer les feux de route pour mieux voir",
+        "en": "Switch on full beam for better visibility"
+      },
+      "C": {
+        "fr": "Accélérer pour traverser le tunnel rapidement",
+        "en": "Accelerate to cross the tunnel quickly"
+      },
+      "D": {
+        "fr": "Aucune précaution particulière",
+        "en": "No particular precautions"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Avant d'entrer dans un tunnel : allumez vos feux de croisement (pas les feux de route), retirez vos lunettes de soleil, et respectez les distances de sécurité.",
+    "explanationEn": "Before entering a tunnel: switch on dipped headlights (not full beam), remove your sunglasses, and maintain safe distances.",
+    "trapNote": "Dipped headlights (croisement), NOT full beam. Sunglasses OFF. Speed maintained, not increased.",
+    "distractorNotes": {
+      "B": "Full beam dazzles other drivers in the confined space of a tunnel.",
+      "C": "Accelerating in a tunnel increases danger.",
+      "D": "Multiple precautions are required when entering a tunnel."
+    },
+    "vocabulary": []
   }
 ]
