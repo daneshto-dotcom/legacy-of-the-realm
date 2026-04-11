@@ -42217,5 +42217,674 @@
       "D": "Information signs are rectangular or square."
     },
     "vocabulary": []
+  },
+  {
+    "id": "tunn-108",
+    "topic": "tunnels_passages_niveau",
+    "difficulty": 3,
+    "questionFr": "Quelles affirmations sont correctes concernant la conduite dans un tunnel ? (2 réponses)",
+    "questionEn": "Which statements are correct about driving in a tunnel? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "La ventilation du tunnel peut être déclenchée automatiquement en cas d'incendie",
+        "en": "Tunnel ventilation can be triggered automatically in case of fire"
+      },
+      "B": {
+        "fr": "Vous pouvez dépasser un véhicule lent si la visibilité est bonne",
+        "en": "You can overtake a slow vehicle if visibility is good"
+      },
+      "C": {
+        "fr": "L'arrêt et le stationnement sont interdits sauf en cas d'urgence",
+        "en": "Stopping and parking are prohibited except in emergencies"
+      },
+      "D": {
+        "fr": "Les feux de route sont recommandés pour mieux voir",
+        "en": "Full beam is recommended for better visibility"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "answerCount": 2,
+    "explanationFr": "Dans un tunnel, la ventilation est automatique en cas d'incendie pour évacuer les fumées. L'arrêt et le stationnement sont strictement interdits sauf urgence. Le dépassement est généralement interdit, et les feux de route éblouissent dans un espace confiné.",
+    "explanationEn": "In a tunnel, ventilation activates automatically in case of fire to evacuate smoke. Stopping and parking are strictly prohibited except in emergencies. Overtaking is generally forbidden, and full beam dazzles in a confined space.",
+    "trapNote": "Overtaking in tunnels is almost always prohibited. Full beam is NEVER used in tunnels.",
+    "distractorNotes": {
+      "B": "Overtaking is generally prohibited in tunnels regardless of visibility.",
+      "D": "Full beam headlights are forbidden in tunnels — use dipped headlights only."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "désenfumage",
+        "wordEn": "smoke extraction",
+        "definition": "A system that removes smoke from an enclosed space like a tunnel during a fire"
+      }
+    ]
+  },
+  {
+    "id": "tunn-109",
+    "topic": "tunnels_passages_niveau",
+    "difficulty": 3,
+    "questionFr": "Quelles règles s'appliquent à un passage à niveau sans barrière ni signalisation lumineuse ? (2 réponses)",
+    "questionEn": "What rules apply at a level crossing with no barriers or lights? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Vous devez marquer un arrêt et vérifier dans les deux sens",
+        "en": "You must stop and check both directions"
+      },
+      "B": {
+        "fr": "Vous pouvez passer lentement sans vous arrêter",
+        "en": "You can pass slowly without stopping"
+      },
+      "C": {
+        "fr": "La priorité est au train dans tous les cas",
+        "en": "The train always has priority"
+      },
+      "D": {
+        "fr": "Un panneau de stop est toujours présent",
+        "en": "A stop sign is always present"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "answerCount": 2,
+    "explanationFr": "À un passage à niveau sans barrière ni feu, vous devez vous arrêter, regarder des deux côtés et ne passer que si la voie est libre. Le train a toujours la priorité absolue. Un panneau stop n'est pas toujours présent — une croix de Saint-André suffit.",
+    "explanationEn": "At a level crossing without barriers or lights, you must stop, look both ways, and only proceed when clear. The train always has absolute priority. A stop sign is not always present — a St Andrew's cross may be the only signal.",
+    "trapNote": "You MUST stop even without a stop sign. The St Andrew's cross alone requires a stop.",
+    "distractorNotes": {
+      "B": "You must come to a full stop, not just slow down.",
+      "D": "A stop sign is not always present — a croix de Saint-André alone may mark the crossing."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "tunn-110",
+    "topic": "tunnels_passages_niveau",
+    "difficulty": 3,
+    "questionFr": "En cas d'embouteillage dans un tunnel, quelles actions devez-vous effectuer ? (2 réponses)",
+    "questionEn": "In case of a traffic jam in a tunnel, what actions must you take? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Couper le moteur si l'arrêt se prolonge",
+        "en": "Turn off the engine if the stop is prolonged"
+      },
+      "B": {
+        "fr": "Maintenir une distance de sécurité avec le véhicule précédent",
+        "en": "Maintain a safe distance from the vehicle ahead"
+      },
+      "C": {
+        "fr": "Faire demi-tour pour quitter le tunnel",
+        "en": "Make a U-turn to exit the tunnel"
+      },
+      "D": {
+        "fr": "Utiliser les feux de route pour signaler votre présence",
+        "en": "Use full beam to signal your presence"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "En cas d'embouteillage dans un tunnel, coupez le moteur pour éviter l'accumulation de gaz toxiques et maintenez une distance de sécurité. Ne faites jamais demi-tour et n'utilisez pas les feux de route.",
+    "explanationEn": "During a traffic jam in a tunnel, turn off the engine to prevent toxic gas buildup and maintain a safe distance. Never make a U-turn and do not use full beam.",
+    "trapNote": "Engine OFF to reduce CO/CO2 buildup. U-turns are ALWAYS prohibited in tunnels.",
+    "distractorNotes": {
+      "C": "U-turns are strictly prohibited in tunnels, even in traffic jams.",
+      "D": "Full beam is never used in tunnels."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "gaz d'échappement",
+        "wordEn": "exhaust fumes",
+        "definition": "Toxic gases emitted by vehicle engines, especially dangerous in enclosed spaces"
+      }
+    ]
+  },
+  {
+    "id": "tunn-111",
+    "topic": "tunnels_passages_niveau",
+    "difficulty": 3,
+    "questionFr": "Quels équipements de sécurité trouve-t-on dans les tunnels routiers ? (2 réponses)",
+    "questionEn": "What safety equipment is found in road tunnels? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Des bornes d'appel d'urgence (SOS)",
+        "en": "Emergency call points (SOS)"
+      },
+      "B": {
+        "fr": "Des stations-service tous les 500 mètres",
+        "en": "Service stations every 500 metres"
+      },
+      "C": {
+        "fr": "Des extincteurs et des niches de sécurité",
+        "en": "Fire extinguishers and safety shelters"
+      },
+      "D": {
+        "fr": "Des feux de circulation à chaque sortie",
+        "en": "Traffic lights at each exit"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "answerCount": 2,
+    "explanationFr": "Les tunnels sont équipés de bornes d'appel d'urgence SOS et d'extincteurs dans des niches de sécurité (refuges). Il n'y a pas de stations-service dans les tunnels.",
+    "explanationEn": "Tunnels are equipped with SOS emergency call points and fire extinguishers in safety shelters (refuges). There are no service stations inside tunnels.",
+    "trapNote": "SOS call points + extinguishers + shelters are the key tunnel safety features.",
+    "distractorNotes": {
+      "B": "There are no service stations inside tunnels.",
+      "D": "Traffic lights are not a standard tunnel safety feature."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "borne d'appel d'urgence",
+        "wordEn": "emergency call point",
+        "definition": "A telephone or button in a tunnel or motorway used to call for help"
+      }
+    ]
+  },
+  {
+    "id": "tunn-112",
+    "topic": "tunnels_passages_niveau",
+    "difficulty": 3,
+    "questionFr": "Quelles affirmations sont correctes concernant les passages à niveau automatiques ? (2 réponses)",
+    "questionEn": "Which statements are correct about automatic level crossings? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Les demi-barrières ne bloquent que la voie droite pour permettre l'évacuation",
+        "en": "Half-barriers only block the right lane to allow evacuation"
+      },
+      "B": {
+        "fr": "Les barrières se ferment complètement des deux côtés",
+        "en": "The barriers close completely on both sides"
+      },
+      "C": {
+        "fr": "Le feu rouge clignotant s'allume avant la descente des barrières",
+        "en": "The flashing red light comes on before the barriers descend"
+      },
+      "D": {
+        "fr": "Vous pouvez contourner les barrières si aucun train n'est visible",
+        "en": "You can go around the barriers if no train is visible"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "answerCount": 2,
+    "explanationFr": "Les passages à niveau automatiques utilisent des demi-barrières (côté droit uniquement) pour permettre à un véhicule bloqué sur les voies de s'échapper par la gauche. Le feu rouge clignotant s'active toujours en premier, avant la descente des barrières.",
+    "explanationEn": "Automatic level crossings use half-barriers (right side only) to allow a vehicle stuck on the tracks to escape via the left. The flashing red light always activates first, before the barriers descend.",
+    "trapNote": "Half-barriers on purpose — so trapped vehicles can escape. NEVER go around barriers.",
+    "distractorNotes": {
+      "B": "Full barriers exist on some crossings, but automatic crossings use half-barriers.",
+      "D": "Going around barriers is extremely dangerous and strictly illegal."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "demi-barrière",
+        "wordEn": "half-barrier",
+        "definition": "A barrier that blocks only one side of the road at a level crossing"
+      }
+    ]
+  },
+  {
+    "id": "arret-073",
+    "topic": "arret_stationnement",
+    "difficulty": 3,
+    "questionFr": "Quelles sont les règles du stationnement alterné semi-mensuel ? (2 réponses)",
+    "questionEn": "What are the rules for semi-monthly alternate parking? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Du 1er au 15 : stationnement côté numéros impairs",
+        "en": "1st to 15th: park on the odd-numbered side"
+      },
+      "B": {
+        "fr": "Le changement s'effectue le dernier jour de chaque quinzaine entre 20h30 et 21h",
+        "en": "The changeover happens on the last day of each fortnight between 8:30pm and 9pm"
+      },
+      "C": {
+        "fr": "Le changement s'effectue chaque lundi matin",
+        "en": "The changeover happens every Monday morning"
+      },
+      "D": {
+        "fr": "Ce système ne s'applique qu'en agglomération parisienne",
+        "en": "This system only applies in the Paris metropolitan area"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "Le stationnement alterné semi-mensuel prévoit : côté impair du 1er au 15, côté pair du 16 au dernier jour du mois. Le changement se fait entre 20h30 et 21h les 15 et dernier jour du mois.",
+    "explanationEn": "Semi-monthly alternate parking means: odd side from 1st to 15th, even side from 16th to month end. Changeover occurs between 8:30pm and 9pm on the 15th and last day of the month.",
+    "trapNote": "20h30-21h window is key — not midnight, not morning. Impair=1-15, pair=16-31.",
+    "distractorNotes": {
+      "C": "The changeover is not weekly but twice monthly (15th and last day).",
+      "D": "This system applies throughout France, not just Paris."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "stationnement alterné",
+        "wordEn": "alternate parking",
+        "definition": "A system where parking alternates between sides of the road on set dates"
+      }
+    ]
+  },
+  {
+    "id": "arret-074",
+    "topic": "arret_stationnement",
+    "difficulty": 3,
+    "questionFr": "Quelles infractions constituent un stationnement très gênant ? (2 réponses)",
+    "questionEn": "Which offences constitute very obstructive parking? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Stationner sur un emplacement réservé aux personnes handicapées",
+        "en": "Parking in a space reserved for disabled persons"
+      },
+      "B": {
+        "fr": "Stationner sur un passage piéton",
+        "en": "Parking on a pedestrian crossing"
+      },
+      "C": {
+        "fr": "Dépasser le temps de stationnement autorisé en zone bleue",
+        "en": "Exceeding the allowed parking time in a blue zone"
+      },
+      "D": {
+        "fr": "Stationner à 15 mètres d'une intersection",
+        "en": "Parking 15 metres from an intersection"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "Le stationnement très gênant inclut : sur un passage piéton, sur un emplacement handicapé, sur une piste cyclable, en double file, devant une entrée de garage. L'amende est de 135 € avec mise en fourrière possible.",
+    "explanationEn": "Very obstructive parking includes: on a pedestrian crossing, in a disabled space, on a cycle lane, double parking, in front of a garage entrance. The fine is €135 with possible towing.",
+    "trapNote": "« Très gênant » is worse than « gênant ». Disabled space and pedestrian crossing are the classic examples.",
+    "distractorNotes": {
+      "C": "Exceeding time in a blue zone is a minor parking offence, not « très gênant ».",
+      "D": "Parking 15m from an intersection is not specifically « très gênant »."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "stationnement très gênant",
+        "wordEn": "very obstructive parking",
+        "definition": "A serious parking offence subject to €135 fine and possible towing"
+      },
+      {
+        "wordFr": "mise en fourrière",
+        "wordEn": "towing/impounding",
+        "definition": "The removal and impounding of an illegally parked vehicle"
+      }
+    ]
+  },
+  {
+    "id": "arret-075",
+    "topic": "arret_stationnement",
+    "difficulty": 3,
+    "questionFr": "Quelles affirmations sont correctes sur le stationnement en côte ? (2 réponses)",
+    "questionEn": "Which statements are correct about parking on a hill? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "En montée, braquez les roues vers l'extérieur (loin du trottoir)",
+        "en": "Going uphill, turn wheels outward (away from the kerb)"
+      },
+      "B": {
+        "fr": "En descente, braquez les roues vers le trottoir",
+        "en": "Going downhill, turn wheels toward the kerb"
+      },
+      "C": {
+        "fr": "Il suffit de serrer le frein à main sans toucher au volant",
+        "en": "Just engage the handbrake without turning the steering wheel"
+      },
+      "D": {
+        "fr": "La position des roues n'a pas d'importance si l'on est en première",
+        "en": "Wheel position doesn't matter if you're in first gear"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "En côte montante : roues braquées vers l'extérieur pour que la voiture roule vers le trottoir si elle recule. En descente : roues vers le trottoir pour arrêter la voiture contre le bord. Toujours engager le frein à main ET braquer les roues.",
+    "explanationEn": "Going uphill: wheels turned outward so the car rolls toward the kerb if it rolls back. Downhill: wheels toward the kerb to stop the car against the edge. Always engage the handbrake AND turn the wheels.",
+    "trapNote": "Uphill = out, downhill = in. Handbrake alone is NOT sufficient.",
+    "distractorNotes": {
+      "C": "The handbrake alone is not sufficient — you must also turn the wheels.",
+      "D": "First gear helps but wheel position is still essential as a backup."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "braquer les roues",
+        "wordEn": "to turn the wheels",
+        "definition": "Turning the steering wheel to angle the front wheels in a specific direction"
+      }
+    ]
+  },
+  {
+    "id": "arret-076",
+    "topic": "arret_stationnement",
+    "difficulty": 3,
+    "questionFr": "Quelles affirmations sont correctes concernant l'arrêt d'urgence sur autoroute ? (2 réponses)",
+    "questionEn": "Which statements are correct about an emergency stop on a motorway? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Vous devez vous arrêter sur la bande d'arrêt d'urgence le plus à droite possible",
+        "en": "You must stop on the hard shoulder as far right as possible"
+      },
+      "B": {
+        "fr": "Vous devez allumer les feux de détresse et poser le triangle à 200 m en amont",
+        "en": "You must switch on hazard lights and place the triangle 200m behind"
+      },
+      "C": {
+        "fr": "Vous pouvez réparer votre véhicule sur la bande d'arrêt d'urgence",
+        "en": "You can repair your vehicle on the hard shoulder"
+      },
+      "D": {
+        "fr": "Tous les passagers doivent rester dans le véhicule",
+        "en": "All passengers must remain in the vehicle"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "Sur autoroute, arrêtez-vous le plus à droite possible sur la BAU, allumez vos feux de détresse et placez le triangle à 200 m en amont (30 m sur route). Faites évacuer les passagers derrière la glissière de sécurité.",
+    "explanationEn": "On a motorway, stop as far right as possible on the hard shoulder, switch on hazard lights and place the triangle 200m behind (30m on regular roads). Evacuate passengers behind the safety barrier.",
+    "trapNote": "200m on motorway (not 30m — that's for regular roads). Passengers must EXIT the vehicle.",
+    "distractorNotes": {
+      "C": "Repairing on the hard shoulder is dangerous and should be left to professionals.",
+      "D": "Passengers must EXIT and stand behind the safety barrier."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "bande d'arrêt d'urgence",
+        "wordEn": "hard shoulder/emergency lane",
+        "definition": "The rightmost lane on a motorway reserved for emergency stops"
+      },
+      {
+        "wordFr": "glissière de sécurité",
+        "wordEn": "safety barrier/guardrail",
+        "definition": "A metal barrier separating the motorway from the roadside"
+      }
+    ]
+  },
+  {
+    "id": "arret-077",
+    "topic": "arret_stationnement",
+    "difficulty": 3,
+    "questionFr": "Quelles affirmations sont correctes sur la zone bleue de stationnement ? (2 réponses)",
+    "questionEn": "Which statements are correct about blue parking zones? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Le disque de stationnement est obligatoire et doit indiquer l'heure d'arrivée",
+        "en": "The parking disc is mandatory and must show the arrival time"
+      },
+      "B": {
+        "fr": "La durée maximale est généralement de 1h30",
+        "en": "The maximum duration is generally 1 hour 30 minutes"
+      },
+      "C": {
+        "fr": "Le stationnement est gratuit et illimité",
+        "en": "Parking is free and unlimited"
+      },
+      "D": {
+        "fr": "Le disque est facultatif si vous restez moins de 30 minutes",
+        "en": "The disc is optional if you stay less than 30 minutes"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "En zone bleue, le disque de stationnement (bleu) est obligatoire. Vous réglez l'heure d'arrivée arrondie à la demi-heure suivante. La durée maximale est généralement de 1h30 (varie selon les communes).",
+    "explanationEn": "In a blue zone, the parking disc (blue) is mandatory. You set it to the arrival time rounded to the next half hour. The maximum duration is generally 1h30 (varies by municipality).",
+    "trapNote": "Disc is ALWAYS mandatory in blue zones. 1h30 is standard. Round UP to next half hour.",
+    "distractorNotes": {
+      "C": "Blue zone parking is free but NOT unlimited — it has a time limit.",
+      "D": "The disc is always mandatory regardless of how long you stay."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "disque de stationnement",
+        "wordEn": "parking disc",
+        "definition": "A blue cardboard disc placed on the dashboard showing your arrival time in a blue zone"
+      }
+    ]
+  },
+  {
+    "id": "cond-119",
+    "topic": "conducteur",
+    "difficulty": 3,
+    "questionFr": "Quelles affirmations sont correctes sur le contrôle technique automobile ? (2 réponses)",
+    "questionEn": "Which statements are correct about vehicle technical inspection? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Le premier contrôle a lieu dans les 6 mois précédant le 4ème anniversaire de la mise en circulation",
+        "en": "The first inspection is within 6 months before the 4th anniversary of registration"
+      },
+      "B": {
+        "fr": "Ensuite, le contrôle est à renouveler tous les 2 ans",
+        "en": "After that, the inspection must be renewed every 2 years"
+      },
+      "C": {
+        "fr": "Le contrôle technique est facultatif pour les véhicules de moins de 5 ans",
+        "en": "Technical inspection is optional for vehicles under 5 years old"
+      },
+      "D": {
+        "fr": "Le contrôle peut être effectué dans n'importe quel garage",
+        "en": "The inspection can be done at any garage"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "Le premier contrôle technique est obligatoire dans les 6 mois avant le 4ème anniversaire de mise en circulation, puis tous les 2 ans. Il doit être effectué dans un centre agréé, pas n'importe quel garage.",
+    "explanationEn": "The first technical inspection is mandatory within 6 months before the 4th anniversary of registration, then every 2 years. It must be done at an approved centre, not any garage.",
+    "trapNote": "4 years (not 3 or 5). Every 2 years after. Must be an approved centre.",
+    "distractorNotes": {
+      "C": "It is mandatory, not optional, before the 4th anniversary.",
+      "D": "Only approved inspection centres can perform the control."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "contrôle technique",
+        "wordEn": "technical inspection/MOT",
+        "definition": "A mandatory safety inspection of vehicles at approved centres"
+      },
+      {
+        "wordFr": "centre agréé",
+        "wordEn": "approved centre",
+        "definition": "An officially authorised facility for vehicle inspections"
+      }
+    ]
+  },
+  {
+    "id": "cond-120",
+    "topic": "conducteur",
+    "difficulty": 3,
+    "questionFr": "Quelles sont les conséquences d'un refus de se soumettre à un contrôle d'alcoolémie ? (2 réponses)",
+    "questionEn": "What are the consequences of refusing a breathalyser test? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Retrait de 6 points sur le permis",
+        "en": "Loss of 6 points on the licence"
+      },
+      "B": {
+        "fr": "Jusqu'à 2 ans d'emprisonnement et 4 500 € d'amende",
+        "en": "Up to 2 years imprisonment and €4,500 fine"
+      },
+      "C": {
+        "fr": "Simple amende forfaitaire de 135 €",
+        "en": "A simple fixed fine of €135"
+      },
+      "D": {
+        "fr": "Aucune conséquence si le conducteur n'a pas bu",
+        "en": "No consequences if the driver has not been drinking"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "Le refus de se soumettre à un contrôle d'alcoolémie est un délit : 6 points retirés, jusqu'à 2 ans de prison, 4 500 € d'amende, et suspension du permis. Les peines sont les mêmes que pour une conduite en état d'ivresse.",
+    "explanationEn": "Refusing a breathalyser test is a criminal offence: 6 points lost, up to 2 years in prison, €4,500 fine, and licence suspension. The penalties are the same as for drink-driving.",
+    "trapNote": "Refusal = same penalties as being over the limit. Never refuse.",
+    "distractorNotes": {
+      "C": "€135 is for minor offences — refusal is a criminal offence with much harsher penalties.",
+      "D": "Refusal is punished regardless of whether the driver has actually been drinking."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "refus de se soumettre",
+        "wordEn": "refusal to comply",
+        "definition": "Refusing to undergo a mandatory test ordered by authorities"
+      }
+    ]
+  },
+  {
+    "id": "cond-121",
+    "topic": "conducteur",
+    "difficulty": 3,
+    "questionFr": "Quelles affirmations sont correctes sur la conduite et les médicaments ? (2 réponses)",
+    "questionEn": "Which statements are correct about driving and medication? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Le pictogramme de niveau 3 (rouge) signifie qu'il est très dangereux de conduire",
+        "en": "The level 3 pictogram (red) means driving is very dangerous"
+      },
+      "B": {
+        "fr": "Même un médicament de niveau 1 (jaune) peut affecter la conduite",
+        "en": "Even a level 1 (yellow) medication can affect driving"
+      },
+      "C": {
+        "fr": "Seuls les médicaments de niveau 3 affectent la conduite",
+        "en": "Only level 3 medications affect driving"
+      },
+      "D": {
+        "fr": "Les médicaments sans pictogramme sont toujours sans danger pour la conduite",
+        "en": "Medications without a pictogram are always safe for driving"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "Les médicaments ont 3 niveaux de risque : jaune (prudence), orange (avis médical nécessaire), rouge (très dangereux). Même le niveau 1 peut affecter la vigilance. L'absence de pictogramme ne garantit pas l'absence de tout effet.",
+    "explanationEn": "Medications have 3 risk levels: yellow (caution), orange (medical advice needed), red (very dangerous). Even level 1 can affect alertness. No pictogram does not guarantee zero effects.",
+    "trapNote": "All 3 levels can affect driving. Level 3 (red) = essentially do not drive.",
+    "distractorNotes": {
+      "C": "All three levels can impair driving ability to varying degrees.",
+      "D": "Even without a pictogram, some medications may still cause drowsiness."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "pictogramme",
+        "wordEn": "pictogram/warning symbol",
+        "definition": "A coloured triangle on medication packaging indicating driving risk level"
+      }
+    ]
+  },
+  {
+    "id": "cond-122",
+    "topic": "conducteur",
+    "difficulty": 3,
+    "questionFr": "Quelles affirmations sont correctes sur l'éco-conduite ? (2 réponses)",
+    "questionEn": "Which statements are correct about eco-driving? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Passer rapidement au rapport supérieur réduit la consommation",
+        "en": "Shifting to a higher gear early reduces fuel consumption"
+      },
+      "B": {
+        "fr": "Vérifier régulièrement la pression des pneus contribue à l'économie de carburant",
+        "en": "Regularly checking tyre pressure helps save fuel"
+      },
+      "C": {
+        "fr": "Rouler en sous-régime (très bas régime moteur) est toujours économique",
+        "en": "Driving at very low engine revs is always fuel-efficient"
+      },
+      "D": {
+        "fr": "La climatisation n'a aucun impact sur la consommation",
+        "en": "Air conditioning has no impact on fuel consumption"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "L'éco-conduite recommande de passer rapidement les vitesses (autour de 2000 tr/min diesel, 2500 essence) et de maintenir la pression correcte des pneus. Le sous-régime peut endommager le moteur. La climatisation augmente la consommation de 5 à 20%.",
+    "explanationEn": "Eco-driving recommends shifting gears early (around 2000 rpm diesel, 2500 petrol) and maintaining correct tyre pressure. Under-revving can damage the engine. AC increases consumption by 5-20%.",
+    "trapNote": "Under-revving is NOT eco — it strains the engine. AC = 5-20% more fuel.",
+    "distractorNotes": {
+      "C": "Driving at too-low revs strains the engine and can increase consumption.",
+      "D": "Air conditioning increases fuel consumption by 5-20%."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "éco-conduite",
+        "wordEn": "eco-driving",
+        "definition": "Driving techniques that reduce fuel consumption and emissions"
+      }
+    ]
+  },
+  {
+    "id": "cond-123",
+    "topic": "conducteur",
+    "difficulty": 3,
+    "questionFr": "Quelles obligations s'appliquent lors d'un accident matériel sans blessé ? (2 réponses)",
+    "questionEn": "What obligations apply in a property-damage accident with no injuries? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Remplir un constat amiable avec l'autre conducteur",
+        "en": "Fill in a joint accident report with the other driver"
+      },
+      "B": {
+        "fr": "Déclarer l'accident à son assurance dans les 5 jours ouvrables",
+        "en": "Report the accident to your insurer within 5 working days"
+      },
+      "C": {
+        "fr": "Appeler obligatoirement la police",
+        "en": "You must call the police"
+      },
+      "D": {
+        "fr": "Déplacer immédiatement les véhicules avant tout constat",
+        "en": "Immediately move vehicles before any report"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "En cas d'accident matériel : remplissez un constat amiable (même en cas de désaccord) et déclarez-le à votre assureur dans les 5 jours ouvrables. La police n'est pas obligatoire sauf blocage de la voie ou délit de fuite.",
+    "explanationEn": "In a property-damage accident: fill in a joint report (even if there is disagreement) and notify your insurer within 5 working days. Police are not mandatory unless the road is blocked or there is a hit-and-run.",
+    "trapNote": "5 jours ouvrables (working days), not calendar days. Police optional for material-only.",
+    "distractorNotes": {
+      "C": "Police are not mandatory for property-damage-only accidents.",
+      "D": "You should document the scene before moving vehicles."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "constat amiable",
+        "wordEn": "joint accident report",
+        "definition": "A standardised form filled in by both drivers after an accident"
+      }
+    ]
   }
 ]

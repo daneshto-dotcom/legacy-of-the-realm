@@ -378,6 +378,13 @@
     "questionId": "arret-001"
   },
   {
+    "wordFr": "stationnement alterné",
+    "wordEn": "alternate parking",
+    "definition": "A system where parking alternates between sides of the road on set dates",
+    "topic": "arret_stationnement",
+    "questionId": "arret-073"
+  },
+  {
     "wordFr": "stationnement alterné semi-mensuel",
     "wordEn": "semi-monthly alternating parking",
     "definition": "A system where the permitted parking side of the street changes twice per month",
@@ -1719,7 +1726,7 @@
     "wordEn": "rear seat/back seat",
     "definition": "The rear seating area of a vehicle",
     "topic": "conducteur",
-    "questionId": "cond-110"
+    "questionId": "cond-115"
   },
   {
     "wordFr": "bâillement",
@@ -1748,6 +1755,13 @@
     "definition": "Mandatory qualification card for professional goods or passenger transport drivers",
     "topic": "conducteur",
     "questionId": "cond-049"
+  },
+  {
+    "wordFr": "centre agréé",
+    "wordEn": "approved centre",
+    "definition": "An officially authorised facility for vehicle inspections",
+    "topic": "conducteur",
+    "questionId": "cond-119"
   },
   {
     "wordFr": "certificat médical",
@@ -1894,7 +1908,7 @@
     "wordEn": "influence/effect",
     "definition": "Being under the effect of a substance that alters behaviour",
     "topic": "conducteur",
-    "questionId": "cond-111"
+    "questionId": "cond-116"
   },
   {
     "wordFr": "endormissement",
@@ -2091,6 +2105,13 @@
     "definition": "The process of restoring lost points on the driving licence",
     "topic": "conducteur",
     "questionId": "cond-029"
+  },
+  {
+    "wordFr": "refus de se soumettre",
+    "wordEn": "refusal to comply",
+    "definition": "Refusing to undergo a mandatory test ordered by authorities",
+    "topic": "conducteur",
+    "questionId": "cond-120"
   },
   {
     "wordFr": "retrait de points",
@@ -4736,7 +4757,7 @@
     "wordEn": "solid white line",
     "definition": "An unbroken line on the road that must not be crossed",
     "topic": "signalisation",
-    "questionId": "sign-061"
+    "questionId": "sign-066"
   },
   {
     "wordFr": "ligne continue",
@@ -5241,6 +5262,13 @@
     "definition": "Turning your vehicle around to go in the opposite direction",
     "topic": "tunnels_passages_niveau",
     "questionId": "tunn-007"
+  },
+  {
+    "wordFr": "désenfumage",
+    "wordEn": "smoke extraction",
+    "definition": "A system that removes smoke from an enclosed space like a tunnel during a fire",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-108"
   },
   {
     "wordFr": "distance de sécurité renforcée",
