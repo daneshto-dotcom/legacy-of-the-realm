@@ -1,5 +1,5 @@
 /* ============================================
-   Question Bank — 914 Bilingual Questions
+   Question Bank — 944 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
    ============================================
@@ -6294,6 +6294,196 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "chute de pierres", wordEn: "falling rocks", definition: "A danger zone where rocks may fall from a cliff or hillside onto the road" }
         ]
+    },
+    {
+        id: "rout-147",
+        topic: "route",
+        difficulty: 2,
+        questionFr: "Quelles affirmations sont correctes concernant la conduite sur autoroute ?",
+        questionEn: "Which statements about motorway driving are correct?",
+        options: {
+            A: { fr: "La vitesse minimale sur la voie de gauche est de 80 km/h", en: "The minimum speed on the left lane is 80 km/h" },
+            B: { fr: "Il est interdit de s'arrêter sur la bande d'arrêt d'urgence sauf en cas de panne ou malaise", en: "Stopping on the hard shoulder is forbidden except for breakdown or illness" },
+            C: { fr: "On peut circuler en permanence sur la voie du milieu si elle est libre", en: "You can always drive in the middle lane if it is free" },
+            D: { fr: "Le dépassement par la droite est interdit sauf en cas de file", en: "Overtaking on the right is forbidden except in queuing traffic" }
+        },
+        correctAnswers: ["B", "D"],
+        answerCount: 2,
+        explanationFr: "La bande d'arrêt d'urgence est réservée aux arrêts d'urgence (panne, malaise). Le dépassement par la droite est interdit sauf quand les véhicules roulent en file dans chaque voie. La vitesse minimale sur autoroute est 80 km/h (pas spécifique à la voie de gauche). On doit toujours revenir sur la voie la plus à droite quand elle est libre.",
+        explanationEn: "The hard shoulder is reserved for emergencies (breakdown, illness). Overtaking on the right is forbidden except when vehicles are in queuing lanes. The minimum motorway speed is 80 km/h (not specific to the left lane). You must always return to the rightmost free lane.",
+        trapNote: "The 80 km/h minimum applies to motorway driving in general, not specifically the left lane. Middle lane hogging is an infraction.",
+        distractorNotes: { A: "80 km/h is the general minimum for motorways, not a left-lane-specific rule.", C: "You must always drive as far right as possible — middle lane hogging is penalized." }
+    },
+    {
+        id: "rout-148",
+        topic: "route",
+        difficulty: 2,
+        questionFr: "Que devez-vous faire en entrant sur une autoroute par la voie d'accélération ?",
+        questionEn: "What must you do when entering a motorway via the acceleration lane?",
+        options: {
+            A: { fr: "Accélérer pour atteindre la vitesse des véhicules sur l'autoroute", en: "Accelerate to match the speed of motorway traffic" },
+            B: { fr: "Vous avez la priorité sur les véhicules déjà sur l'autoroute", en: "You have priority over vehicles already on the motorway" },
+            C: { fr: "Utiliser le clignotant gauche pour signaler votre insertion", en: "Use the left indicator to signal your merging" },
+            D: { fr: "Vous pouvez vous arrêter au bout de la voie d'accélération si vous ne trouvez pas de créneau", en: "You can stop at the end of the acceleration lane if you can't find a gap" }
+        },
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "En entrant sur l'autoroute, vous devez accélérer dans la voie d'accélération pour atteindre la vitesse du trafic et utiliser votre clignotant gauche. Les véhicules sur l'autoroute ont la priorité — c'est à vous de vous insérer. S'arrêter en bout de voie d'accélération est très dangereux.",
+        explanationEn: "When entering the motorway, you must accelerate in the acceleration lane to match traffic speed and use your left indicator. Vehicles on the motorway have priority — you must merge safely. Stopping at the end of the acceleration lane is very dangerous.",
+        trapNote: "You do NOT have priority when merging. Stopping at the end of the acceleration lane creates a serious hazard.",
+        distractorNotes: { B: "Vehicles already on the motorway always have priority over those merging.", D: "Stopping at the end of the acceleration lane is dangerous and prohibited." }
+    },
+    {
+        id: "rout-149",
+        topic: "route",
+        difficulty: 2,
+        questionFr: "Quelles sont les règles concernant les distances de sécurité sur autoroute ?",
+        questionEn: "What are the rules about safety distances on the motorway?",
+        options: {
+            A: { fr: "La distance minimale est de 2 secondes ou environ 90 mètres à 130 km/h", en: "The minimum distance is 2 seconds or about 90 metres at 130 km/h" },
+            B: { fr: "Les lignes au sol sur autoroute permettent d'évaluer la distance de sécurité", en: "Ground markings on the motorway help evaluate the safety distance" },
+            C: { fr: "La distance de sécurité ne s'applique pas en cas de bouchon", en: "The safety distance does not apply in traffic jams" },
+            D: { fr: "Il suffit de 1 seconde d'intervalle par temps sec", en: "1 second of gap is sufficient in dry weather" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "La distance de sécurité minimale est de 2 secondes, soit environ 90 mètres à 130 km/h. Les bandes blanches au sol (espacées d'environ 38 m) aident à l'évaluer : 3 bandes = bonne distance. La distance s'applique toujours, y compris dans les bouchons (réduite mais toujours nécessaire). 1 seconde est insuffisante.",
+        explanationEn: "The minimum safety distance is 2 seconds, about 90 metres at 130 km/h. White ground markings (spaced about 38m apart) help evaluate it: 3 markings = safe distance. It always applies, including in jams (reduced but necessary). 1 second is insufficient.",
+        trapNote: "2 seconds is the MINIMUM, not 1 second. Safety distance rules always apply.",
+        distractorNotes: { C: "Safety distance rules apply at all times, even in slow traffic.", D: "2 seconds is the minimum regardless of weather — increase in bad conditions." }
+    },
+    {
+        id: "rout-150",
+        topic: "route",
+        difficulty: 3,
+        questionFr: "Quelles affirmations sur les routes à sens unique sont correctes ?",
+        questionEn: "Which statements about one-way streets are correct?",
+        options: {
+            A: { fr: "Le stationnement est autorisé des deux côtés sauf indication contraire", en: "Parking is allowed on both sides unless otherwise indicated" },
+            B: { fr: "On peut dépasser par la gauche et par la droite", en: "You can overtake on the left and on the right" },
+            C: { fr: "Les piétons n'ont pas besoin de regarder dans les deux sens", en: "Pedestrians don't need to look both ways" },
+            D: { fr: "La marche arrière est interdite", en: "Reversing is prohibited" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Sur une route à sens unique, le stationnement est permis des deux côtés (sauf interdiction) et le dépassement peut se faire des deux côtés. Les piétons doivent toujours regarder dans les deux sens (vélos à contresens, véhicules d'urgence). La marche arrière est autorisée sur une courte distance si nécessaire.",
+        explanationEn: "On a one-way street, parking is allowed on both sides (unless prohibited) and overtaking can be done on either side. Pedestrians must always look both ways (contraflow cyclists, emergency vehicles). Reversing is permitted for short distances if necessary.",
+        trapNote: "Pedestrians should ALWAYS look both ways — contraflow bike lanes exist on many one-way streets.",
+        distractorNotes: { C: "Contraflow cycling lanes mean vehicles may come from the 'wrong' direction.", D: "Short reversing maneuvers are permitted on one-way streets." }
+    },
+    {
+        id: "rout-151",
+        topic: "route",
+        difficulty: 2,
+        questionFr: "Quelles règles s'appliquent dans une zone 30 ?",
+        questionEn: "Which rules apply in a 30 km/h zone?",
+        options: {
+            A: { fr: "La vitesse est limitée à 30 km/h", en: "The speed limit is 30 km/h" },
+            B: { fr: "Les piétons peuvent traverser où ils veulent", en: "Pedestrians can cross wherever they want" },
+            C: { fr: "Le stationnement est interdit partout", en: "Parking is forbidden everywhere" },
+            D: { fr: "Tous les carrefours sont en priorité à droite sauf signalisation contraire", en: "All intersections follow priority to the right unless otherwise signposted" }
+        },
+        correctAnswers: ["A", "D"],
+        answerCount: 2,
+        explanationFr: "En zone 30, la vitesse est limitée à 30 km/h et la priorité à droite s'applique à tous les carrefours sauf indication contraire. Les piétons doivent utiliser les passages piétons quand il y en a à moins de 50 m. Le stationnement suit les règles habituelles (pas interdit par défaut).",
+        explanationEn: "In a 30 km/h zone, the speed limit is 30 km/h and priority to the right applies at all intersections unless otherwise indicated. Pedestrians must use crossings if one exists within 50m. Parking follows normal rules (not forbidden by default).",
+        trapNote: "Zone 30 does NOT mean pedestrians can cross anywhere — normal crossing rules apply.",
+        distractorNotes: { B: "Pedestrians must still use crossings within 50m. Only in 'aire piétonne' do pedestrians have full priority.", C: "Parking rules are normal in zone 30 — only restricted by specific signage." }
+    },
+    {
+        id: "rout-152",
+        topic: "route",
+        difficulty: 3,
+        questionFr: "Que devez-vous faire si vous manquez votre sortie sur autoroute ?",
+        questionEn: "What should you do if you miss your motorway exit?",
+        options: {
+            A: { fr: "Continuer jusqu'à la prochaine sortie", en: "Continue to the next exit" },
+            B: { fr: "Faire marche arrière sur la bande d'arrêt d'urgence", en: "Reverse on the hard shoulder" },
+            C: { fr: "Ne jamais s'arrêter ni reculer sur l'autoroute", en: "Never stop or reverse on the motorway" },
+            D: { fr: "Faire demi-tour si la voie est dégagée", en: "Make a U-turn if the road is clear" }
+        },
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Si vous manquez votre sortie, continuez jusqu'à la prochaine sortie. Il est strictement interdit de s'arrêter, de reculer ou de faire demi-tour sur l'autoroute, même sur la bande d'arrêt d'urgence. Ces manœuvres sont extrêmement dangereuses et lourdement sanctionnées.",
+        explanationEn: "If you miss your exit, continue to the next one. It is strictly forbidden to stop, reverse, or make a U-turn on the motorway, even on the hard shoulder. These manoeuvres are extremely dangerous and heavily penalized.",
+        trapNote: "NEVER reverse or U-turn on a motorway. The hard shoulder is for emergencies only.",
+        distractorNotes: { B: "Reversing on the hard shoulder is illegal and extremely dangerous.", D: "U-turns on the motorway are strictly prohibited regardless of traffic." }
+    },
+    {
+        id: "rout-153",
+        topic: "route",
+        difficulty: 2,
+        questionFr: "Quelles affirmations sont correctes concernant les voies réservées aux bus ?",
+        questionEn: "Which statements about bus lanes are correct?",
+        options: {
+            A: { fr: "Les taxis peuvent généralement utiliser les voies de bus", en: "Taxis can generally use bus lanes" },
+            B: { fr: "Les vélos peuvent circuler dans les voies de bus sauf interdiction", en: "Bicycles can ride in bus lanes unless prohibited" },
+            C: { fr: "Vous pouvez emprunter une voie de bus pour tourner à droite", en: "You can use a bus lane to turn right" },
+            D: { fr: "Les voies de bus ne fonctionnent que pendant les heures de pointe", en: "Bus lanes only operate during rush hours" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Les taxis et les vélos sont généralement autorisés dans les voies de bus (sauf signalisation contraire). Vous ne pouvez pas emprunter une voie de bus pour tourner, sauf si un marquage au sol l'indique spécifiquement. Les voies de bus sont actives en permanence sauf indication d'horaires.",
+        explanationEn: "Taxis and bicycles are generally allowed in bus lanes (unless signs say otherwise). You cannot use a bus lane to turn unless road markings specifically indicate it. Bus lanes are active at all times unless hours are posted.",
+        trapNote: "Bus lanes are generally 24/7 unless time-restricted signs indicate otherwise.",
+        distractorNotes: { C: "Using a bus lane to turn requires specific road markings allowing it.", D: "Bus lanes are active at all times unless posted hours say otherwise." }
+    },
+    {
+        id: "rout-154",
+        topic: "route",
+        difficulty: 2,
+        questionFr: "Quelles précautions devez-vous prendre sur une route de montagne ?",
+        questionEn: "What precautions should you take on a mountain road?",
+        options: {
+            A: { fr: "Le véhicule montant a la priorité sur le véhicule descendant", en: "The ascending vehicle has priority over the descending one" },
+            B: { fr: "Rétrograder dans les descentes pour utiliser le frein moteur", en: "Downshift on descents to use engine braking" },
+            C: { fr: "Klaxonner avant chaque virage sans visibilité", en: "Sound the horn before every blind bend" },
+            D: { fr: "Rouler au milieu de la route pour avoir plus de marge", en: "Drive in the middle of the road to have more margin" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "En montagne, le véhicule qui monte a la priorité car il est plus difficile de redémarrer en côte. Vous devez rétrograder dans les descentes pour utiliser le frein moteur et éviter la surchauffe des freins. Klaxonner est recommandé aux virages sans visibilité en montagne. Rouler au milieu est dangereux.",
+        explanationEn: "In mountains, the ascending vehicle has priority because restarting on a hill is harder. You should downshift on descents to use engine braking and avoid brake overheating. Honking at blind bends is recommended in mountains. Driving in the middle is dangerous.",
+        trapNote: "C is a trap — honking is recommended but NOT mandatory before EVERY blind bend. A and B are the firm rules.",
+        distractorNotes: { C: "Honking is recommended in mountains but the question says 'every' blind bend which overstates it.", D: "Driving in the middle of the road is dangerous due to oncoming traffic on narrow mountain roads." }
+    },
+    {
+        id: "rout-155",
+        topic: "route",
+        difficulty: 2,
+        questionFr: "Quelles sont les obligations sur une route nationale à 2 voies ?",
+        questionEn: "What are the obligations on a 2-lane national road?",
+        options: {
+            A: { fr: "La vitesse est limitée à 80 km/h sauf indication contraire", en: "The speed limit is 80 km/h unless otherwise indicated" },
+            B: { fr: "Il faut rouler le plus à droite possible", en: "You must drive as far right as possible" },
+            C: { fr: "Le dépassement est interdit dans tous les virages", en: "Overtaking is forbidden on all bends" },
+            D: { fr: "Les phares de croisement sont obligatoires de jour", en: "Dipped headlights are mandatory during the day" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Sur les routes nationales bidirectionnelles, la vitesse est de 80 km/h (depuis 2018) et vous devez rouler le plus à droite possible. Le dépassement est interdit quand la visibilité est insuffisante (souvent dans les virages, mais pas systématiquement tous les virages). Les feux de jour (DRL) sont recommandés mais pas obligatoires.",
+        explanationEn: "On two-way national roads, the limit is 80 km/h (since 2018) and you must drive as far right as possible. Overtaking is forbidden when visibility is insufficient (often on bends, but not automatically all bends). Daytime running lights are recommended but not mandatory.",
+        trapNote: "80 km/h since July 2018 reform. Overtaking on bends depends on visibility, not an automatic ban.",
+        distractorNotes: { C: "Overtaking depends on visibility and road markings, not automatically all bends.", D: "DRL are recommended but not legally mandatory for all vehicles during the day." }
+    },
+    {
+        id: "rout-156",
+        topic: "route",
+        difficulty: 3,
+        questionFr: "Quelles règles s'appliquent dans une aire piétonne ?",
+        questionEn: "Which rules apply in a pedestrian zone?",
+        options: {
+            A: { fr: "Les piétons ont la priorité absolue", en: "Pedestrians have absolute priority" },
+            B: { fr: "Les véhicules autorisés doivent rouler au pas (< 20 km/h)", en: "Authorized vehicles must drive at walking pace (< 20 km/h)" },
+            C: { fr: "Tous les véhicules motorisés sont interdits sans exception", en: "All motorized vehicles are prohibited without exception" },
+            D: { fr: "Le stationnement est autorisé pour les livraisons", en: "Parking is allowed for deliveries" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Dans une aire piétonne, les piétons ont la priorité absolue et les véhicules autorisés (riverains, livraisons aux horaires prévus) doivent rouler au pas. Ce n'est pas une interdiction totale — certains véhicules sont autorisés selon la signalisation locale. Le stationnement est interdit, même pour les livraisons (seul l'arrêt bref est toléré).",
+        explanationEn: "In a pedestrian zone, pedestrians have absolute priority and authorized vehicles (residents, deliveries at designated hours) must drive at walking pace. It's not a total ban — some vehicles are allowed per local signage. Parking is forbidden, even for deliveries (only brief stopping is tolerated).",
+        trapNote: "Pedestrian zones allow SOME vehicles (residents, deliveries) — it's not a total ban. But parking is still prohibited.",
+        distractorNotes: { C: "Residents and delivery vehicles at designated hours are usually permitted.", D: "Parking is forbidden in pedestrian zones — only brief stopping for deliveries." }
     },
     // === AUTRES_USAGERS ===,
     {
@@ -14978,6 +15168,196 @@ const QUESTION_BANK = [
             { wordFr: "disque de stationnement", wordEn: "parking disc", definition: "A blue cardboard disc placed on the dashboard showing your arrival time in a blue zone" }
         ]
     },
+    {
+        id: "arre-141",
+        topic: "arret_stationnement",
+        difficulty: 2,
+        questionFr: "Quelle est la différence entre un arrêt et un stationnement ?",
+        questionEn: "What is the difference between stopping and parking?",
+        options: {
+            A: { fr: "Un arrêt est de courte durée et le conducteur reste à proximité", en: "A stop is brief and the driver stays nearby" },
+            B: { fr: "Un stationnement est quand le véhicule est immobilisé plus longtemps et le conducteur s'éloigne", en: "Parking is when the vehicle is stationary longer and the driver leaves" },
+            C: { fr: "Un arrêt dure moins de 5 minutes dans tous les cas", en: "A stop lasts less than 5 minutes in all cases" },
+            D: { fr: "Le stationnement est interdit partout en agglomération", en: "Parking is forbidden everywhere in built-up areas" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Un arrêt est une immobilisation momentanée : le conducteur reste à proximité du véhicule ou à l'intérieur, et peut repartir immédiatement. Un stationnement est une immobilisation prolongée : le conducteur quitte le véhicule. La durée de 5 minutes n'est pas un critère fixe — c'est la présence ou l'absence du conducteur qui compte.",
+        explanationEn: "A stop is a momentary immobilization: the driver stays near or inside the vehicle and can leave immediately. Parking is prolonged immobilization: the driver leaves the vehicle. 5 minutes is not a fixed criterion — it's the presence or absence of the driver that matters.",
+        trapNote: "The distinction is about the driver's proximity, NOT a strict time limit.",
+        distractorNotes: { C: "There is no strict 5-minute rule — it depends on whether the driver stays nearby.", D: "Parking is regulated in built-up areas, not forbidden everywhere." }
+    },
+    {
+        id: "arre-142",
+        topic: "arret_stationnement",
+        difficulty: 2,
+        questionFr: "Où est-il interdit de stationner en agglomération ?",
+        questionEn: "Where is parking forbidden in built-up areas?",
+        options: {
+            A: { fr: "Sur les trottoirs, sauf autorisation locale", en: "On pavements, unless locally authorized" },
+            B: { fr: "À moins de 5 mètres d'un passage piéton en amont", en: "Within 5 metres before a pedestrian crossing" },
+            C: { fr: "Sur les emplacements réservés aux personnes handicapées sans carte", en: "In disabled parking spaces without a card" },
+            D: { fr: "Uniquement du côté gauche de la chaussée", en: "Only on the left side of the road" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Le stationnement est interdit sur les trottoirs (sauf autorisation locale spécifique) et à moins de 5 mètres en amont d'un passage piéton (pour ne pas masquer les piétons). Le stationnement sur les places handicapées sans carte est aussi interdit, mais la réponse D est fausse : on peut stationner à gauche dans les rues à sens unique.",
+        explanationEn: "Parking is forbidden on pavements (unless specifically authorized locally) and within 5m before a pedestrian crossing (to not block the view of pedestrians). Parking in disabled spots without a card is also forbidden, but answer D is wrong: you can park on the left in one-way streets.",
+        trapNote: "The 5m rule is BEFORE (upstream of) the crossing, not after it.",
+        distractorNotes: { C: "This is also forbidden but is an additional prohibition, not the core rule being tested.", D: "In one-way streets, parking on the left side is allowed." }
+    },
+    {
+        id: "arre-143",
+        topic: "arret_stationnement",
+        difficulty: 3,
+        questionFr: "Quelles règles s'appliquent au stationnement alterné semi-mensuel ?",
+        questionEn: "Which rules apply to semi-monthly alternate parking?",
+        options: {
+            A: { fr: "Du 1er au 15 : côté impair (numéros des maisons). Du 16 au dernier jour : côté pair", en: "1st-15th: odd side (house numbers). 16th-last day: even side" },
+            B: { fr: "Le changement de côté se fait la veille entre 20h30 et 21h", en: "The side change happens the evening before between 8:30pm and 9pm" },
+            C: { fr: "Le changement se fait à minuit pile", en: "The change happens at exactly midnight" },
+            D: { fr: "Ce système ne s'applique qu'à Paris", en: "This system only applies in Paris" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Le stationnement alterné semi-mensuel fonctionne ainsi : du 1er au 15 côté impair, du 16 au dernier jour côté pair. Le changement de côté se fait la veille au soir entre 20h30 et 21h (pas à minuit). Ce système existe dans de nombreuses villes françaises, pas uniquement à Paris.",
+        explanationEn: "Semi-monthly alternate parking works as follows: 1st-15th on the odd side, 16th-last day on the even side. The side change happens the evening before between 8:30pm and 9pm (not at midnight). This system exists in many French cities, not just Paris.",
+        trapNote: "Change happens between 8:30-9pm the EVENING BEFORE, not at midnight.",
+        distractorNotes: { C: "The switch is at 20h30-21h the evening before, not midnight.", D: "Many French towns use this system, not just Paris." }
+    },
+    {
+        id: "arre-144",
+        topic: "arret_stationnement",
+        difficulty: 2,
+        questionFr: "Quelles affirmations sur la zone bleue sont correctes ?",
+        questionEn: "Which statements about blue zones are correct?",
+        options: {
+            A: { fr: "Le disque de stationnement est obligatoire et visible derrière le pare-brise", en: "The parking disc is mandatory and must be visible behind the windshield" },
+            B: { fr: "La durée maximale est généralement de 1h30", en: "The maximum duration is generally 1h30" },
+            C: { fr: "Le stationnement est payant au-delà de la durée autorisée", en: "Parking is paid beyond the allowed duration" },
+            D: { fr: "Le disque n'est nécessaire que les jours de semaine", en: "The disc is only needed on weekdays" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "En zone bleue, vous devez afficher un disque de stationnement européen visible sur le tableau de bord avec l'heure d'arrivée. La durée est généralement limitée à 1h30. Au-delà, vous risquez une contravention (pas un paiement complémentaire). Les horaires de la zone bleue sont indiqués par les panneaux — pas forcément uniquement en semaine.",
+        explanationEn: "In a blue zone, you must display a European parking disc visible on the dashboard with your arrival time. Duration is generally limited to 1h30. Exceeding it risks a fine (not additional payment). Blue zone hours are indicated by signs — not necessarily weekdays only.",
+        trapNote: "Exceeding blue zone time = fine, not paid parking. Check signs for active hours.",
+        distractorNotes: { C: "Overstaying in a blue zone results in a fine, not a paid parking fee.", D: "Blue zone hours depend on local signage — some apply on weekends too." }
+    },
+    {
+        id: "arre-145",
+        topic: "arret_stationnement",
+        difficulty: 2,
+        questionFr: "Quelles sont les règles de stationnement près d'une intersection ?",
+        questionEn: "What are the parking rules near an intersection?",
+        options: {
+            A: { fr: "Le stationnement est interdit à moins de 5 m d'une intersection", en: "Parking is forbidden within 5m of an intersection" },
+            B: { fr: "L'interdiction protège la visibilité des autres usagers", en: "The prohibition protects visibility for other road users" },
+            C: { fr: "L'interdiction ne s'applique pas si vous restez dans le véhicule", en: "The prohibition doesn't apply if you stay in the vehicle" },
+            D: { fr: "Seul le côté droit est concerné par cette règle", en: "Only the right side is affected by this rule" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Le stationnement est interdit à moins de 5 m d'une intersection, quel que soit le côté. Cette règle existe pour garantir la visibilité aux carrefours. L'interdiction s'applique même si le conducteur reste dans le véhicule (c'est alors un arrêt, mais le positionnement reste gênant pour la visibilité).",
+        explanationEn: "Parking is forbidden within 5m of an intersection, on either side. This rule exists to ensure visibility at junctions. The prohibition applies even if the driver stays in the vehicle (it's technically a stop, but the position still blocks visibility).",
+        trapNote: "5m rule applies to ALL sides of the intersection, not just one.",
+        distractorNotes: { C: "Even a brief stop within 5m of an intersection blocks visibility and is prohibited.", D: "The rule applies to both sides of the road near any intersection." }
+    },
+    {
+        id: "arre-146",
+        topic: "arret_stationnement",
+        difficulty: 2,
+        questionFr: "Quelles affirmations sur le stationnement en double file sont correctes ?",
+        questionEn: "Which statements about double parking are correct?",
+        options: {
+            A: { fr: "Il est interdit car il gêne la circulation", en: "It is forbidden because it blocks traffic" },
+            B: { fr: "Il peut entraîner une mise en fourrière du véhicule", en: "It can result in the vehicle being towed" },
+            C: { fr: "Il est toléré pour les livraisons de moins de 5 minutes", en: "It is tolerated for deliveries under 5 minutes" },
+            D: { fr: "Il est autorisé si les feux de détresse sont allumés", en: "It is allowed if hazard lights are on" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Le stationnement en double file est interdit car il bloque la circulation et peut empêcher les véhicules garés de sortir. Il peut entraîner une contravention et une mise en fourrière. Les feux de détresse ne rendent pas le double stationnement légal. Les livraisons en double file sont aussi verbalisables.",
+        explanationEn: "Double parking is forbidden because it blocks traffic and can prevent parked vehicles from leaving. It can result in a fine and towing. Hazard lights don't make double parking legal. Double-parked deliveries are also subject to fines.",
+        trapNote: "Hazard lights do NOT legalize double parking. Many people do it but it's always illegal.",
+        distractorNotes: { C: "Double parking for deliveries is still technically illegal, even if briefly tolerated in practice.", D: "Turning on hazard lights has zero legal effect on parking violations." }
+    },
+    {
+        id: "arre-147",
+        topic: "arret_stationnement",
+        difficulty: 3,
+        questionFr: "Quelles règles concernent le stationnement en côte ?",
+        questionEn: "What rules concern parking on a hill?",
+        options: {
+            A: { fr: "Braquer les roues vers le trottoir en descente et vers la route en montée", en: "Turn wheels toward the kerb when facing downhill and toward the road when facing uphill" },
+            B: { fr: "Engager une vitesse (1ère en montée, marche arrière en descente) ou le frein de parking", en: "Engage a gear (1st going uphill, reverse going downhill) or the parking brake" },
+            C: { fr: "Il suffit de serrer le frein à main, les roues n'ont pas besoin d'être braquées", en: "Just engaging the handbrake is sufficient, wheels don't need turning" },
+            D: { fr: "On doit toujours braquer les roues vers la route", en: "You must always turn wheels toward the road" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "En descente, braquage vers le trottoir pour que la voiture se bloque contre celui-ci si elle roule. En montée, braquage vers la route pour le même effet. Il faut aussi laisser une vitesse engagée (1ère en montée, marche arrière en descente) et serrer le frein à main. Le frein à main seul peut ne pas suffire sur forte pente.",
+        explanationEn: "Facing downhill, turn wheels toward the kerb so the car blocks against it if it rolls. Facing uphill, turn toward the road for the same effect. Also leave a gear engaged (1st uphill, reverse downhill) and apply the handbrake. The handbrake alone may not be enough on steep slopes.",
+        trapNote: "Wheel direction changes based on uphill vs downhill. The handbrake alone is insufficient on steep hills.",
+        distractorNotes: { C: "The handbrake alone is not enough — wheels must also be turned as a safety measure.", D: "Wheel direction depends on whether you're facing uphill or downhill." }
+    },
+    {
+        id: "arre-148",
+        topic: "arret_stationnement",
+        difficulty: 2,
+        questionFr: "Que risquez-vous en cas de stationnement gênant ?",
+        questionEn: "What are the consequences of obstructive parking?",
+        options: {
+            A: { fr: "Une contravention de 35 € (ou 135 € si très gênant)", en: "A fine of €35 (or €135 if very obstructive)" },
+            B: { fr: "La mise en fourrière du véhicule est possible", en: "The vehicle can be towed" },
+            C: { fr: "Uniquement un avertissement verbal pour la première fois", en: "Only a verbal warning for the first time" },
+            D: { fr: "Un retrait de points sur le permis", en: "Points deducted from licence" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Le stationnement gênant est sanctionné par une amende de 35 € (2e classe) ou 135 € si très gênant (4e classe : trottoir, place handicapée, piste cyclable). La mise en fourrière est possible dans les deux cas. Il n'y a pas d'avertissement pour première infraction ni de retrait de points pour du stationnement.",
+        explanationEn: "Obstructive parking is penalized with a €35 fine (class 2) or €135 if very obstructive (class 4: pavement, disabled spot, cycle lane). Towing is possible in both cases. There's no first-offence warning and no points deducted for parking offences.",
+        trapNote: "Parking offences don't cost licence points — only fines and possible towing.",
+        distractorNotes: { C: "There is no verbal warning system for parking offences in France.", D: "Parking violations do not result in licence points deduction." }
+    },
+    {
+        id: "arre-149",
+        topic: "arret_stationnement",
+        difficulty: 2,
+        questionFr: "Quelles affirmations sur le stationnement payant sont correctes ?",
+        questionEn: "Which statements about paid parking are correct?",
+        options: {
+            A: { fr: "Le forfait post-stationnement (FPS) remplace l'ancienne amende depuis 2018", en: "The post-parking fee (FPS) replaced the old fine since 2018" },
+            B: { fr: "Le montant du FPS varie selon les communes", en: "The FPS amount varies by municipality" },
+            C: { fr: "L'horodateur est toujours la seule façon de payer", en: "The parking meter is always the only way to pay" },
+            D: { fr: "Le FPS ne peut pas dépasser 17 €", en: "The FPS cannot exceed €17" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Depuis 2018, le forfait post-stationnement (FPS) a remplacé les amendes de stationnement. Son montant est fixé par chaque commune et varie donc selon les villes (de 10 € à 60 € ou plus à Paris). On peut souvent payer par application mobile, pas seulement à l'horodateur. Le FPS n'a pas de plafond national fixe à 17 €.",
+        explanationEn: "Since 2018, the post-parking fee (FPS) replaced parking fines. Its amount is set by each municipality and varies by city (from €10 to €60+ in Paris). You can often pay via mobile app, not just the meter. There's no fixed national cap of €17 for FPS.",
+        trapNote: "FPS amounts vary widely — Paris can charge €50+ while small towns may charge €10.",
+        distractorNotes: { C: "Many cities now accept mobile app payments in addition to parking meters.", D: "There is no €17 national cap — municipalities set their own rates." }
+    },
+    {
+        id: "arre-150",
+        topic: "arret_stationnement",
+        difficulty: 3,
+        questionFr: "Où est-il interdit de s'arrêter (même brièvement) ?",
+        questionEn: "Where is it forbidden to stop (even briefly)?",
+        options: {
+            A: { fr: "Sur les voies de tramway et les passages à niveau", en: "On tram tracks and level crossings" },
+            B: { fr: "Dans les tunnels et sur les ponts sans bande d'arrêt d'urgence", en: "In tunnels and on bridges without hard shoulders" },
+            C: { fr: "Devant les entrées de garage uniquement pendant les heures de bureau", en: "In front of garage entrances only during office hours" },
+            D: { fr: "Sur le côté droit de la route en agglomération", en: "On the right side of the road in built-up areas" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "L'arrêt est interdit sur les voies de tramway, les passages à niveau, dans les tunnels et sur les ponts sans bande d'arrêt d'urgence — ces zones présentent des dangers immédiats. Devant les garages, l'interdiction est permanente (pas seulement aux heures de bureau). Stationner à droite en agglomération est généralement autorisé.",
+        explanationEn: "Stopping is forbidden on tram tracks, level crossings, in tunnels, and on bridges without hard shoulders — these zones pose immediate dangers. In front of garages, the prohibition is permanent (not just during office hours). Parking on the right in built-up areas is generally allowed.",
+        trapNote: "These are absolute no-stop zones — even a brief stop is illegal. Garage obstruction is 24/7.",
+        distractorNotes: { C: "The garage entrance prohibition applies 24/7, not just during office hours.", D: "Right-side parking in built-up areas is the normal rule, not forbidden." }
+    },
     // === TUNNELS & PASSAGES A NIVEAU (Tunnels & Level Crossings) ===,
     {
         id: "tunn-001",
@@ -19216,6 +19596,196 @@ const QUESTION_BANK = [
         trapNote: "Fixed amber = stop (unlike flashing amber = caution). Only exception: already too close to stop safely.",
         distractorNotes: { B: "Accelerating on amber is dangerous and illegal.", C: "You must prepare to stop, not maintain speed.", D: "Hazard lights are not relevant at traffic lights." },
         vocabulary: []
+    },
+    {
+        id: "sign-151",
+        topic: "signalisation",
+        difficulty: 2,
+        questionFr: "Que signifient les lignes blanches discontinues sur la chaussée ?",
+        questionEn: "What do broken white lines on the road mean?",
+        options: {
+            A: { fr: "Elles séparent les voies de circulation dans le même sens", en: "They separate lanes going in the same direction" },
+            B: { fr: "Elles autorisent le franchissement pour dépasser", en: "They allow crossing to overtake" },
+            C: { fr: "Elles indiquent une zone de stationnement", en: "They indicate a parking zone" },
+            D: { fr: "Elles interdisent le changement de voie", en: "They forbid lane changing" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Les lignes blanches discontinues (type T1) séparent les voies de même sens et autorisent le franchissement pour dépasser ou changer de voie. Elles n'indiquent pas de stationnement et n'interdisent pas le changement de voie — c'est le rôle des lignes continues.",
+        explanationEn: "Broken white lines (T1 type) separate same-direction lanes and allow crossing to overtake or change lanes. They do not indicate parking and do not forbid lane changes — that's what continuous lines do.",
+        trapNote: "Broken = can cross. Continuous = cannot cross. Don't confuse them.",
+        distractorNotes: { C: "Parking zones use specific blue markings, not white broken lines.", D: "Broken lines ALLOW lane changing — continuous lines forbid it." }
+    },
+    {
+        id: "sign-152",
+        topic: "signalisation",
+        difficulty: 2,
+        questionFr: "Quelles affirmations sur les panneaux triangulaires à bord rouge sont correctes ?",
+        questionEn: "Which statements about triangular signs with a red border are correct?",
+        options: {
+            A: { fr: "Ils annoncent un danger", en: "They warn of a danger" },
+            B: { fr: "Ils sont placés environ 150 m avant le danger hors agglomération", en: "They are placed about 150m before the danger outside built-up areas" },
+            C: { fr: "Ils imposent une obligation", en: "They impose an obligation" },
+            D: { fr: "Ils sont toujours accompagnés d'un panonceau", en: "They always have a supplementary plate" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Les panneaux triangulaires à bord rouge sont des panneaux de danger. Hors agglomération, ils sont placés environ 150 m avant le danger (50 m en agglomération). Ils ne sont pas des panneaux d'obligation (ronds bleus) et ne sont pas toujours accompagnés d'un panonceau.",
+        explanationEn: "Triangular signs with a red border are danger warning signs. Outside built-up areas, they are placed about 150m before the hazard (50m in built-up areas). They are not obligation signs (blue circles) and don't always have supplementary plates.",
+        trapNote: "150m outside town, 50m inside town. Don't confuse danger (triangle) with obligation (blue circle).",
+        distractorNotes: { C: "Obligation signs are round and blue — triangles are always warnings.", D: "Supplementary plates are common but not mandatory on danger signs." }
+    },
+    {
+        id: "sign-153",
+        topic: "signalisation",
+        difficulty: 3,
+        questionFr: "Que signifie un feu jaune clignotant ?",
+        questionEn: "What does a flashing yellow light mean?",
+        options: {
+            A: { fr: "Vous pouvez passer avec prudence", en: "You may proceed with caution" },
+            B: { fr: "Vous devez céder le passage aux piétons et véhicules prioritaires", en: "You must yield to pedestrians and priority vehicles" },
+            C: { fr: "Le feu est en panne, appliquez la priorité à droite", en: "The light is broken, apply priority to the right" },
+            D: { fr: "Vous devez obligatoirement vous arrêter", en: "You must stop" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Un feu jaune clignotant signifie que vous pouvez passer mais avec prudence. Vous devez céder le passage aux piétons qui traversent et aux véhicules prioritaires. Ce n'est pas un signe de panne — c'est un mode volontaire, souvent la nuit. Il n'impose pas un arrêt obligatoire.",
+        explanationEn: "A flashing yellow light means you may proceed but with caution. You must yield to crossing pedestrians and priority vehicles. It's not a sign of malfunction — it's an intentional mode, often at night. It does not require a mandatory stop.",
+        trapNote: "Flashing yellow is NOT broken — it's a deliberate reduced-control mode. No stop required, just caution.",
+        distractorNotes: { C: "Flashing yellow is a normal operational mode, not a malfunction.", D: "No mandatory stop — but caution and yielding to pedestrians is required." }
+    },
+    {
+        id: "sign-154",
+        topic: "signalisation",
+        difficulty: 2,
+        questionFr: "Quelles informations les panonceaux (petits panneaux rectangulaires sous les panneaux principaux) peuvent-ils donner ?",
+        questionEn: "What information can supplementary plates (small rectangular signs below main signs) give?",
+        options: {
+            A: { fr: "La distance jusqu'au danger ou à la prescription", en: "The distance to the danger or regulation" },
+            B: { fr: "La catégorie de véhicules concernée", en: "The category of vehicles concerned" },
+            C: { fr: "La vitesse recommandée", en: "The recommended speed" },
+            D: { fr: "Le nom de la prochaine ville", en: "The name of the next town" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Les panonceaux précisent le panneau principal : distance (ex: à 200 m), catégorie de véhicules (ex: poids lourds), étendue, direction. Ils n'indiquent pas la vitesse recommandée (c'est un panneau carré bleu) ni le nom des villes (panneaux directionnels).",
+        explanationEn: "Supplementary plates clarify the main sign: distance (e.g., in 200m), vehicle category (e.g., heavy goods), extent, direction. They don't show recommended speed (that's a blue square sign) or town names (directional signs).",
+        trapNote: "Supplementary plates always modify the sign above — they don't stand alone.",
+        distractorNotes: { C: "Recommended speed is shown on a separate blue square sign, not a supplementary plate.", D: "Town names appear on directional signs, not supplementary plates." }
+    },
+    {
+        id: "sign-155",
+        topic: "signalisation",
+        difficulty: 2,
+        questionFr: "Quelles affirmations sur les panneaux ronds à fond bleu sont correctes ?",
+        questionEn: "Which statements about round signs with a blue background are correct?",
+        options: {
+            A: { fr: "Ils indiquent une obligation", en: "They indicate an obligation" },
+            B: { fr: "Ils peuvent indiquer une vitesse minimale", en: "They can indicate a minimum speed" },
+            C: { fr: "Ils signalent un danger", en: "They signal a danger" },
+            D: { fr: "Ils indiquent toujours une direction obligatoire", en: "They always indicate a mandatory direction" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Les panneaux ronds à fond bleu sont des panneaux d'obligation. Ils peuvent indiquer une vitesse minimale, une direction obligatoire, une voie réservée, etc. Ils ne signalent pas de danger (panneaux triangulaires) et n'indiquent pas toujours une direction — certains indiquent une vitesse minimale ou un chemin obligatoire pour piétons/vélos.",
+        explanationEn: "Round blue signs are obligation signs. They can indicate minimum speed, mandatory direction, reserved lane, etc. They don't signal danger (triangular signs) and don't always indicate direction — some show minimum speed or mandatory pedestrian/cycle paths.",
+        trapNote: "Blue circle = obligation. Red circle = prohibition. Triangle = danger.",
+        distractorNotes: { C: "Danger signs are triangular with red borders, not round blue.", D: "Blue circles can also indicate minimum speed or reserved lanes, not just direction." }
+    },
+    {
+        id: "sign-156",
+        topic: "signalisation",
+        difficulty: 3,
+        questionFr: "Que signifie une ligne de dissuasion (ligne blanche axiale avec des traits plus rapprochés) ?",
+        questionEn: "What does a dissuasion line (white centre line with closer-spaced dashes) mean?",
+        options: {
+            A: { fr: "Le dépassement est fortement déconseillé mais reste autorisé", en: "Overtaking is strongly discouraged but remains permitted" },
+            B: { fr: "Elle annonce souvent une ligne continue à venir", en: "It often announces an upcoming continuous line" },
+            C: { fr: "Le franchissement est interdit comme une ligne continue", en: "Crossing is forbidden like a continuous line" },
+            D: { fr: "Elle indique une zone de stationnement interdit", en: "It indicates a no-parking zone" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "La ligne de dissuasion (type T3) a des traits plus rapprochés que la ligne normale. Le dépassement reste légalement autorisé mais est déconseillé car la visibilité est réduite. Elle annonce généralement une ligne continue à venir. Ce n'est pas une interdiction formelle comme la ligne continue.",
+        explanationEn: "The dissuasion line (T3 type) has closer-spaced dashes than the normal line. Overtaking remains legally permitted but is discouraged due to reduced visibility. It generally announces an upcoming continuous line. It's not a formal prohibition like the continuous line.",
+        trapNote: "Dissuasion line = LEGAL to cross but DISCOURAGED. It's a warning, not a ban.",
+        distractorNotes: { C: "Unlike a continuous line, crossing a dissuasion line is not forbidden.", D: "It has nothing to do with parking — it's about overtaking visibility." }
+    },
+    {
+        id: "sign-157",
+        topic: "signalisation",
+        difficulty: 2,
+        questionFr: "Quelles sont les caractéristiques d'un panneau STOP ?",
+        questionEn: "What are the characteristics of a STOP sign?",
+        options: {
+            A: { fr: "Vous devez marquer un arrêt complet au niveau de la ligne d'arrêt", en: "You must come to a complete stop at the stop line" },
+            B: { fr: "C'est le seul panneau de forme octogonale en France", en: "It is the only octagonal sign in France" },
+            C: { fr: "Vous pouvez ralentir sans vous arrêter si la voie est libre", en: "You can slow down without stopping if the road is clear" },
+            D: { fr: "Il a le même effet qu'un cédez le passage", en: "It has the same effect as a yield sign" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Le panneau STOP impose un arrêt complet et total, même si aucun véhicule n'arrive. C'est le seul panneau octogonal en France, reconnaissable même de dos. Ralentir sans s'arrêter est une infraction. Le STOP est plus contraignant qu'un cédez le passage (qui permet de passer sans s'arrêter si la voie est libre).",
+        explanationEn: "The STOP sign requires a complete and total stop, even if no vehicle is coming. It's the only octagonal sign in France, recognizable even from behind. Slowing without stopping is a violation. STOP is stricter than yield (which allows passing without stopping if clear).",
+        trapNote: "You MUST stop completely at a STOP sign — rolling through is a violation even with no traffic.",
+        distractorNotes: { C: "A complete stop is mandatory regardless of traffic conditions.", D: "STOP requires a full stop; yield only requires stopping if traffic is present." }
+    },
+    {
+        id: "sign-158",
+        topic: "signalisation",
+        difficulty: 2,
+        questionFr: "Que signifient les flèches vertes directionnelles sur un feu tricolore ?",
+        questionEn: "What do green directional arrows on a traffic light mean?",
+        options: {
+            A: { fr: "Seuls les véhicules allant dans la direction de la flèche peuvent passer", en: "Only vehicles going in the arrow's direction may proceed" },
+            B: { fr: "Les piétons dans cette direction peuvent aussi avoir le feu vert", en: "Pedestrians in that direction may also have a green light" },
+            C: { fr: "Tous les véhicules peuvent passer dans toutes les directions", en: "All vehicles can proceed in all directions" },
+            D: { fr: "La flèche verte remplace le feu principal et a la même valeur", en: "The green arrow replaces the main light and has the same value" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Les flèches vertes (feux directionnels) n'autorisent le passage que dans la direction indiquée. Les piétons traversant dans la même direction peuvent aussi avoir leur feu vert simultanément — soyez vigilant. Elles ne donnent pas le passage dans toutes les directions et fonctionnent en complément du feu principal, pas en remplacement.",
+        explanationEn: "Green arrows (directional lights) only allow passage in the indicated direction. Pedestrians crossing in the same direction may also have their green light simultaneously — be vigilant. They don't allow passage in all directions and work alongside the main light, not as a replacement.",
+        trapNote: "Even with a green arrow, watch for pedestrians who may also have a green phase.",
+        distractorNotes: { C: "The arrow restricts movement to ONE specific direction only.", D: "Green arrows supplement the main light — they don't replace it." }
+    },
+    {
+        id: "sign-159",
+        topic: "signalisation",
+        difficulty: 2,
+        questionFr: "Quelles affirmations sur le marquage en damier (zébra) au sol sont correctes ?",
+        questionEn: "Which statements about hatched road markings (zebra) are correct?",
+        options: {
+            A: { fr: "Il est interdit de circuler ou de stationner dessus", en: "It is forbidden to drive or park on them" },
+            B: { fr: "Ils servent à séparer les courants de circulation", en: "They serve to separate traffic flows" },
+            C: { fr: "Ils indiquent un passage piéton", en: "They indicate a pedestrian crossing" },
+            D: { fr: "On peut les franchir pour dépasser un véhicule lent", en: "You can cross them to overtake a slow vehicle" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Les hachures au sol (zébras) sont des zones neutralisées : il est interdit d'y circuler ou de s'y arrêter. Elles séparent les courants de circulation ou protègent des zones (îlots directionnels). Elles n'indiquent pas un passage piéton (bandes blanches parallèles). On ne peut pas les franchir pour dépasser.",
+        explanationEn: "Hatched markings (zebras) are neutralized zones: it is forbidden to drive on or stop there. They separate traffic flows or protect areas (directional islands). They don't indicate pedestrian crossings (parallel white bands). You cannot cross them to overtake.",
+        trapNote: "Don't confuse hatched markings (diagonal lines in a zone) with pedestrian crossings (parallel white bars).",
+        distractorNotes: { C: "Pedestrian crossings are parallel white bands, not hatched diagonal markings.", D: "Driving on hatched markings is forbidden — no overtaking exception." }
+    },
+    {
+        id: "sign-160",
+        topic: "signalisation",
+        difficulty: 3,
+        questionFr: "Que signifie un panneau rond rouge barré de blanc (sens interdit) combiné avec un panonceau 'sauf bus et vélos' ?",
+        questionEn: "What does a red and white no-entry sign combined with an 'except buses and bikes' plate mean?",
+        options: {
+            A: { fr: "Les voitures et motos ne peuvent pas emprunter cette voie", en: "Cars and motorcycles cannot use this road" },
+            B: { fr: "Les bus et vélos circulent en contresens sur cette voie", en: "Buses and bikes travel in the opposite direction on this road" },
+            C: { fr: "Les vélos doivent descendre et pousser leur vélo", en: "Cyclists must dismount and walk their bike" },
+            D: { fr: "Seuls les véhicules d'urgence et bus sont autorisés", en: "Only emergency vehicles and buses are allowed" }
+        },
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "Un sens interdit avec 'sauf bus et vélos' signifie que les voitures et motos ne peuvent pas entrer, mais que bus et vélos peuvent circuler en contresens. Les cyclistes n'ont pas besoin de descendre — ils roulent normalement. Ce n'est pas limité aux véhicules d'urgence — les bus de transport public et tous les vélos sont autorisés.",
+        explanationEn: "A no-entry sign with 'except buses and bikes' means cars and motorcycles cannot enter, but buses and bikes may travel in the opposite direction. Cyclists don't need to dismount — they ride normally. It's not limited to emergency vehicles — public buses and all bicycles are allowed.",
+        trapNote: "This creates a contraflow lane for buses and cyclists — watch for them when driving on the other side.",
+        distractorNotes: { C: "The 'except' plate means cyclists CAN ride through normally.", D: "The exception is for buses AND bicycles, not emergency vehicles." }
     },
     // === NOTIONS DIVERSES (General Knowledge) ===,
     {
