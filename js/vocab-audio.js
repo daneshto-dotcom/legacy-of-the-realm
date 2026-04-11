@@ -1,6 +1,6 @@
 /* ============================================
    Vocabulary Audio — Pronunciation Manifest
-   270 key driving terms with TTS audio
+   300 key driving terms with TTS audio
    Generated via GCP Chirp 3 HD (fr-FR)
    ============================================ */
 
@@ -372,7 +372,51 @@ const VOCAB_AUDIO = {
   "éthylotest anti-démarrage": "assets/audio/vocab/ethylotest-anti-demarrage.mp3",
   "ethylotest anti-demarrage": "assets/audio/vocab/ethylotest-anti-demarrage.mp3",
   "monoxyde de carbone": "assets/audio/vocab/monoxyde-de-carbone.mp3",
-  "engin agricole": "assets/audio/vocab/engin-agricole.mp3"
+  "engin agricole": "assets/audio/vocab/engin-agricole.mp3",
+  // --- Batch 6: 31 new words (Session 25) ---
+  "carrefour giratoire": "assets/audio/vocab/carrefour-giratoire.mp3",
+  "voie express": "assets/audio/vocab/voie-express.mp3",
+  "abri de sécurité": "assets/audio/vocab/abri-de-securite.mp3",
+  "abri de securite": "assets/audio/vocab/abri-de-securite.mp3",
+  "terre-plein central": "assets/audio/vocab/terre-plein-central.mp3",
+  "annulation du permis": "assets/audio/vocab/annulation-du-permis.mp3",
+  "zone scolaire": "assets/audio/vocab/zone-scolaire.mp3",
+  "délit de fuite": "assets/audio/vocab/delit-de-fuite.mp3",
+  "delit de fuite": "assets/audio/vocab/delit-de-fuite.mp3",
+  "téléphone au volant": "assets/audio/vocab/telephone-au-volant.mp3",
+  "telephone au volant": "assets/audio/vocab/telephone-au-volant.mp3",
+  "triangle de signalisation": "assets/audio/vocab/triangle-de-signalisation.mp3",
+  "agent de la circulation": "assets/audio/vocab/agent-de-la-circulation.mp3",
+  "bretelle de sortie": "assets/audio/vocab/bretelle-de-sortie.mp3",
+  "chemin de terre": "assets/audio/vocab/chemin-de-terre.mp3",
+  "manifester l'intention": "assets/audio/vocab/manifester-l-intention.mp3",
+  "marche arrière": "assets/audio/vocab/marche-arriere.mp3",
+  "marche arriere": "assets/audio/vocab/marche-arriere.mp3",
+  "se ranger": "assets/audio/vocab/se-ranger.mp3",
+  "voie d'accélération": "assets/audio/vocab/voie-d-acceleration.mp3",
+  "voie d'acceleration": "assets/audio/vocab/voie-d-acceleration.mp3",
+  "aire de repos": "assets/audio/vocab/aire-de-repos.mp3",
+  "borne kilométrique": "assets/audio/vocab/borne-kilometrique.mp3",
+  "borne kilometrique": "assets/audio/vocab/borne-kilometrique.mp3",
+  "glissière de sécurité": "assets/audio/vocab/glissiere-de-securite.mp3",
+  "glissiere de securite": "assets/audio/vocab/glissiere-de-securite.mp3",
+  "poste d'appel d'urgence": "assets/audio/vocab/poste-d-appel-d-urgence.mp3",
+  "vent latéral": "assets/audio/vocab/vent-lateral.mp3",
+  "vent lateral": "assets/audio/vocab/vent-lateral.mp3",
+  "fin d'interdiction": "assets/audio/vocab/fin-d-interdiction.mp3",
+  "marquage au sol": "assets/audio/vocab/marquage-au-sol.mp3",
+  "panneau à message variable": "assets/audio/vocab/panneau-a-message-variable.mp3",
+  "panneau a message variable": "assets/audio/vocab/panneau-a-message-variable.mp3",
+  "panneau d'annulation": "assets/audio/vocab/panneau-d-annulation.mp3",
+  "arrêt absolu": "assets/audio/vocab/arret-absolu.mp3",
+  "arret absolu": "assets/audio/vocab/arret-absolu.mp3",
+  "matières dangereuses": "assets/audio/vocab/matieres-dangereuses.mp3",
+  "matieres dangereuses": "assets/audio/vocab/matieres-dangereuses.mp3",
+  "niche de sécurité": "assets/audio/vocab/niche-de-securite.mp3",
+  "niche de securite": "assets/audio/vocab/niche-de-securite.mp3",
+  "feu clignotant": "assets/audio/vocab/feu-clignotant.mp3",
+  "griller un feu rouge": "assets/audio/vocab/griller-un-feu-rouge.mp3",
+  "marquage en zigzag": "assets/audio/vocab/marquage-en-zigzag.mp3"
 };
 
 // Audio player singleton
