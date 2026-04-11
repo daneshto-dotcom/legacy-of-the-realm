@@ -371,6 +371,13 @@
     "questionId": "arret-054"
   },
   {
+    "wordFr": "stationnement autorisé",
+    "wordEn": "authorized parking",
+    "definition": "A zone where parking is permitted",
+    "topic": "arret_stationnement",
+    "questionId": "media-116"
+  },
+  {
     "wordFr": "stationnement dangereux",
     "wordEn": "dangerous parking",
     "definition": "Parking that creates a direct risk of collision due to poor visibility or road geometry",
@@ -4205,6 +4212,13 @@
     "definition": "A long elevated bridge carrying a road over a valley or other obstacle",
     "topic": "route",
     "questionId": "rout-048"
+  },
+  {
+    "wordFr": "virage dangereux",
+    "wordEn": "dangerous curve",
+    "definition": "A sharp bend in the road requiring reduced speed",
+    "topic": "route",
+    "questionId": "media-120"
   },
   {
     "wordFr": "voie de décélération",

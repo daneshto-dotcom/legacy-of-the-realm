@@ -1,5 +1,5 @@
 /* ============================================
-   Question Bank — 720 Bilingual Questions
+   Question Bank — 726 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
    ============================================
@@ -1641,6 +1641,30 @@ const QUESTION_BANK = [
         distractorNotes: { B: "No left turn uses a different arrow symbol.", C: "No overtaking shows two vehicles side by side.", D: "Reversing is not indicated by this type of sign." },
         vocabulary: [
             { wordFr: "demi-tour interdit", wordEn: "no U-turn", definition: "Turning your vehicle around to go in the opposite direction is prohibited here" }
+        ]
+    },
+    {
+        id: "media-119",
+        topic: "circulation",
+        difficulty: 1,
+        signs: ["speed_limit_30"],
+        media: { type: "image", src: "assets/images/signs/speed-limit-30.webp", alt: "Round sign with red border showing 30" },
+        questionFr: "Que signifie ce panneau rond avec le nombre 30 ?",
+        questionEn: "What does this round sign with the number 30 mean?",
+        options: {
+            A: { fr: "Vitesse minimale obligatoire de 30 km/h", en: "Minimum speed of 30 km/h required" },
+            B: { fr: "Vitesse maximale limitée à 30 km/h", en: "Maximum speed limited to 30 km/h" },
+            C: { fr: "Distance de 30 mètres à respecter", en: "Keep 30 metres distance" },
+            D: { fr: "Zone à 30 voitures maximum", en: "Zone limited to 30 cars" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Un panneau rond avec un bord rouge et un nombre indique une limitation de vitesse. Ici, la vitesse est limitée à 30 km/h.",
+        explanationEn: "A round sign with a red border and a number indicates a speed limit. Here, the speed is limited to 30 km/h.",
+        trapNote: "Red border circle = prohibition/restriction. Blue circle = obligation (minimum speed would be blue with white number).",
+        distractorNotes: { A: "Minimum speed signs are blue circles with white numbers.", C: "Distance signs look completely different.", D: "There is no such sign for vehicle count limits." },
+        vocabulary: [
+            { wordFr: "limitation de vitesse", wordEn: "speed limit", definition: "The maximum speed allowed on that section of road" }
         ]
     },
     // === CONDUCTEUR ===,
@@ -4799,6 +4823,30 @@ const QUESTION_BANK = [
             { wordFr: "chevaucher", wordEn: "to straddle", definition: "To drive with one wheel on each side of a line" }
         ]
     },
+    {
+        id: "media-120",
+        topic: "route",
+        difficulty: 1,
+        signs: ["sharp_curve"],
+        media: { type: "image", src: "assets/images/signs/sharp-curve-sign.webp", alt: "Triangle sign with curved arrow" },
+        questionFr: "Que vous indique ce panneau de danger ?",
+        questionEn: "What does this warning sign tell you?",
+        options: {
+            A: { fr: "Virage dangereux à droite", en: "Dangerous curve to the right" },
+            B: { fr: "Route à sens unique", en: "One-way road" },
+            C: { fr: "Déviation obligatoire à droite", en: "Mandatory detour to the right" },
+            D: { fr: "Bretelle d'autoroute", en: "Motorway slip road" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Ce panneau triangulaire avec une flèche courbée avertit d'un virage dangereux. Vous devez ralentir avant le virage.",
+        explanationEn: "This triangular sign with a curved arrow warns of a dangerous bend. You must slow down before the curve.",
+        trapNote: "Triangle = warning of danger ahead. The arrow shows the direction of the curve.",
+        distractorNotes: { B: "One-way roads use rectangular blue signs with an arrow.", C: "Mandatory detours use different signage with text.", D: "Motorway slip roads have specific green signs." },
+        vocabulary: [
+            { wordFr: "virage dangereux", wordEn: "dangerous curve", definition: "A sharp bend in the road requiring reduced speed" }
+        ]
+    },
     // === AUTRES_USAGERS ===,
     {
         id: "autr-001",
@@ -6518,6 +6566,30 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "véhicule prioritaire", wordEn: "priority vehicle", definition: "Emergency vehicles that have right of way when using sirens and lights" },
             { wordFr: "gyrophare", wordEn: "flashing light", definition: "A rotating or flashing light on top of emergency vehicles" }
+        ]
+    },
+    {
+        id: "media-121",
+        topic: "autres_usagers",
+        difficulty: 1,
+        signs: ["school_zone"],
+        media: { type: "image", src: "assets/images/signs/school-zone-sign.webp", alt: "Triangle sign with children silhouettes" },
+        questionFr: "Que signifie ce panneau avec des silhouettes d'enfants ?",
+        questionEn: "What does this sign with children silhouettes mean?",
+        options: {
+            A: { fr: "Parc de jeux pour enfants", en: "Children's playground" },
+            B: { fr: "Attention, proximité d'école ou endroit fréquenté par des enfants", en: "Warning, school nearby or area frequented by children" },
+            C: { fr: "Zone interdite aux enfants", en: "Area forbidden to children" },
+            D: { fr: "Garderie à proximité", en: "Nursery nearby" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Ce panneau triangulaire avertit de la proximité d'un endroit fréquenté par des enfants (school, aire de jeux). Vous devez redoubler de prudence et réduire votre vitesse.",
+        explanationEn: "This triangular sign warns of an area frequented by children (school, playground). You must be extra cautious and reduce your speed.",
+        trapNote: "Children are unpredictable. This sign means slow down and watch for children who may run onto the road.",
+        distractorNotes: { A: "Playground signs are different information signs.", C: "There is no sign forbidding children from an area.", D: "This warns drivers about children, not directs them to a nursery." },
+        vocabulary: [
+            { wordFr: "zone scolaire", wordEn: "school zone", definition: "An area near a school where children may be present on or near the road" }
         ]
     },
     // === PRIORITE (Right of Way) ===,
@@ -8342,6 +8414,30 @@ const QUESTION_BANK = [
         distractorNotes: { B: "The start of a priority road is the same diamond without stripes.", C: "End of speed limit uses a round white sign with grey stripes.", D: "Construction zones use different triangular warning signs." },
         vocabulary: [
             { wordFr: "fin de route prioritaire", wordEn: "end of priority road", definition: "The road you are on is no longer a priority road" }
+        ]
+    },
+    {
+        id: "media-117",
+        topic: "priorite",
+        difficulty: 1,
+        signs: ["yield"],
+        media: { type: "image", src: "assets/images/signs/yield-sign-2.webp", alt: "Inverted triangle with red border" },
+        questionFr: "Que devez-vous faire lorsque vous voyez ce panneau ?",
+        questionEn: "What must you do when you see this sign?",
+        options: {
+            A: { fr: "Accélérer pour passer en premier", en: "Speed up to go first" },
+            B: { fr: "Céder le passage aux véhicules sur la route prioritaire", en: "Give way to vehicles on the priority road" },
+            C: { fr: "S'arrêter obligatoirement", en: "You must stop completely" },
+            D: { fr: "Faire demi-tour", en: "Make a U-turn" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Le triangle inversé à bord rouge signifie « cédez le passage ». Vous devez laisser passer les véhicules prioritaires, mais vous n'êtes pas obligé de vous arrêter si la voie est libre.",
+        explanationEn: "The inverted triangle with red border means 'give way'. You must let priority vehicles pass, but you don't have to stop if the way is clear.",
+        trapNote: "Yield ≠ Stop. You slow down and give way, but don't need to stop if clear. Stop sign (octagon) requires a complete stop.",
+        distractorNotes: { A: "You must never accelerate to force your way through.", C: "A complete stop is required only at a STOP sign (octagon). Yield means give way.", D: "A U-turn has nothing to do with this sign." },
+        vocabulary: [
+            { wordFr: "cédez le passage", wordEn: "give way / yield", definition: "Slow down and let other vehicles pass before proceeding" }
         ]
     },
     // === CROISEMENT_DEPASSEMENT ===,
@@ -11777,6 +11873,30 @@ const QUESTION_BANK = [
             { wordFr: "double file", wordEn: "double-parking", definition: "Parking alongside a car already parked at the kerb" }
         ]
     },
+    {
+        id: "media-116",
+        topic: "arret_stationnement",
+        difficulty: 1,
+        signs: ["parking"],
+        media: { type: "image", src: "assets/images/signs/parking-sign.webp", alt: "Blue square sign with white P" },
+        questionFr: "Que signifie ce panneau ?",
+        questionEn: "What does this sign mean?",
+        options: {
+            A: { fr: "Stationnement autorisé", en: "Parking allowed" },
+            B: { fr: "Péage à proximité", en: "Toll nearby" },
+            C: { fr: "Arrêt de bus", en: "Bus stop" },
+            D: { fr: "Point de rendez-vous", en: "Meeting point" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Le panneau bleu avec un P blanc indique une zone de stationnement autorisé.",
+        explanationEn: "The blue sign with a white P indicates an authorized parking area.",
+        trapNote: "P = Parking. This is an information sign (blue square = information).",
+        distractorNotes: { B: "Toll booths have specific signs with money symbols.", C: "Bus stops use a bus icon, not a P.", D: "Meeting points use different symbols." },
+        vocabulary: [
+            { wordFr: "stationnement autorisé", wordEn: "authorized parking", definition: "A zone where parking is permitted" }
+        ]
+    },
     // === TUNNELS & PASSAGES A NIVEAU (Tunnels & Level Crossings) ===,
     {
         id: "tunn-001",
@@ -15188,6 +15308,30 @@ const QUESTION_BANK = [
         distractorNotes: { B: "Lane merge has a different graphic showing lanes converging.", C: "Underground passages have different dedicated signage.", D: "While a narrow bridge could trigger this sign, the sign specifically indicates the road narrows." },
         vocabulary: [
             { wordFr: "rétrécissement de chaussée", wordEn: "road narrows", definition: "The road becomes narrower ahead" }
+        ]
+    },
+    {
+        id: "media-118",
+        topic: "signalisation",
+        difficulty: 1,
+        signs: ["pedestrian_crossing_warning"],
+        media: { type: "image", src: "assets/images/signs/pedestrian-crossing-warning.webp", alt: "Triangle sign with pedestrian on crosswalk" },
+        questionFr: "Que signifie ce panneau triangulaire ?",
+        questionEn: "What does this triangular sign mean?",
+        options: {
+            A: { fr: "Zone piétonne — accès interdit aux voitures", en: "Pedestrian zone — cars not allowed" },
+            B: { fr: "Attention, passage piéton à proximité", en: "Warning, pedestrian crossing ahead" },
+            C: { fr: "Arrêt obligatoire pour piétons", en: "Mandatory stop for pedestrians" },
+            D: { fr: "Chemin de randonnée", en: "Hiking trail" }
+        },
+        correctAnswers: ["B"],
+        answerCount: 1,
+        explanationFr: "Ce panneau triangulaire avertit de la proximité d'un passage piéton. Vous devez ralentir et être prêt à céder le passage aux piétons.",
+        explanationEn: "This triangular sign warns of a nearby pedestrian crossing. You must slow down and be ready to give way to pedestrians.",
+        trapNote: "Triangle = warning. This warns you a crossing is ahead — it doesn't create a pedestrian zone.",
+        distractorNotes: { A: "Pedestrian zones use blue round signs, not triangles.", C: "There's no 'mandatory stop for pedestrians' sign in France.", D: "Hiking trails use specific recreational signs." },
+        vocabulary: [
+            { wordFr: "passage piéton", wordEn: "pedestrian crossing", definition: "A marked area where pedestrians cross the road" }
         ]
     },
     // === NOTIONS DIVERSES (General Knowledge) ===,
