@@ -370,7 +370,12 @@ const URLS_TO_CACHE = [
     './assets/images/signs/speed-limit-110.webp',
     './assets/images/signs/speed-limit-130.webp',
     './assets/images/signs/end-of-restriction.webp',
-    './assets/images/signs/priority-over-oncoming.webp'
+    './assets/images/signs/priority-over-oncoming.webp',
+    // --- Session 25: 4 new signs ---
+    './assets/images/signs/highway-sign.webp',
+    './assets/images/signs/tunnel-sign.webp',
+    './assets/images/signs/weight-limit.webp',
+    './assets/images/signs/height-limit.webp'
 ];
 
 // Install — cache core assets

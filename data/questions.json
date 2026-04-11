@@ -37894,5 +37894,292 @@
         "definition": "Before a point in the direction of traffic flow"
       }
     ]
+  },
+  {
+    "id": "media-131",
+    "topic": "circulation",
+    "difficulty": 1,
+    "signs": [
+      "highway-sign"
+    ],
+    "questionFr": "Que signifie ce panneau bleu avec un symbole d'autoroute ?",
+    "questionEn": "What does this blue sign with a motorway symbol mean?",
+    "options": {
+      "A": {
+        "fr": "Vous entrez sur une autoroute",
+        "en": "You are entering a motorway"
+      },
+      "B": {
+        "fr": "Vous approchez d'un pont",
+        "en": "You are approaching a bridge"
+      },
+      "C": {
+        "fr": "Vous entrez dans un tunnel",
+        "en": "You are entering a tunnel"
+      },
+      "D": {
+        "fr": "Vous approchez d'un péage",
+        "en": "You are approaching a toll booth"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Ce panneau bleu rectangulaire avec le symbole de deux voies indique l'entrée sur une autoroute. La vitesse maximale est de 130 km/h par temps sec.",
+    "explanationEn": "This blue rectangular sign with the two-lane symbol indicates entering a motorway. The maximum speed is 130 km/h in dry weather.",
+    "trapNote": "Blue rectangular = information/direction sign. Motorway symbol = two lanes converging. Speed: 130 dry, 110 rain.",
+    "distractorNotes": {
+      "B": "Bridge signs are different (usually warning triangles).",
+      "C": "Tunnel signs show a tunnel arch, not highway lanes.",
+      "D": "Toll booth signs show a barrier gate symbol."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "panneau d'autoroute",
+        "wordEn": "motorway sign",
+        "definition": "Blue sign indicating the start of a motorway section"
+      }
+    ]
+  },
+  {
+    "id": "media-132",
+    "topic": "circulation",
+    "difficulty": 2,
+    "signs": [
+      "highway-sign"
+    ],
+    "questionFr": "Vous voyez ce panneau. Quelle est la vitesse maximale pour un conducteur novice ?",
+    "questionEn": "You see this sign. What is the maximum speed for a novice driver?",
+    "options": {
+      "A": {
+        "fr": "130 km/h",
+        "en": "130 km/h"
+      },
+      "B": {
+        "fr": "110 km/h",
+        "en": "110 km/h"
+      },
+      "C": {
+        "fr": "90 km/h",
+        "en": "90 km/h"
+      },
+      "D": {
+        "fr": "100 km/h",
+        "en": "100 km/h"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Sur autoroute, les conducteurs novices (permis probatoire) sont limités à 110 km/h au lieu de 130 km/h.",
+    "explanationEn": "On a motorway, novice drivers (probationary license) are limited to 110 km/h instead of 130 km/h.",
+    "trapNote": "Novice drivers: autoroute 110 (not 130), voie express 100 (not 110), route 80 (same).",
+    "distractorNotes": {
+      "A": "130 km/h is for experienced drivers only.",
+      "C": "90 km/h was the old rural road limit, not for motorways.",
+      "D": "100 km/h is the novice limit on expressways, not motorways."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "conducteur novice",
+        "wordEn": "novice driver",
+        "definition": "A driver with a probationary license (permis probatoire), subject to lower speed limits"
+      }
+    ]
+  },
+  {
+    "id": "media-133",
+    "topic": "tunnels_passages_niveau",
+    "difficulty": 1,
+    "signs": [
+      "tunnel-sign"
+    ],
+    "questionFr": "Que signifie ce panneau bleu avec un symbole de tunnel ?",
+    "questionEn": "What does this blue sign with a tunnel symbol mean?",
+    "options": {
+      "A": {
+        "fr": "Vous entrez dans un tunnel",
+        "en": "You are entering a tunnel"
+      },
+      "B": {
+        "fr": "Vous approchez d'un passage souterrain piéton",
+        "en": "You are approaching a pedestrian underpass"
+      },
+      "C": {
+        "fr": "Vous devez allumer vos feux de route",
+        "en": "You must turn on your high beams"
+      },
+      "D": {
+        "fr": "Parking souterrain à proximité",
+        "en": "Underground parking nearby"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Ce panneau indique l'entrée d'un tunnel. Vous devez allumer vos feux de croisement, retirer vos lunettes de soleil, et respecter la distance de sécurité.",
+    "explanationEn": "This sign indicates a tunnel entrance. You must turn on your dipped headlights, remove sunglasses, and maintain safe following distance.",
+    "trapNote": "Tunnel entry: dipped headlights (NOT high beams), remove sunglasses, keep distance, no U-turns.",
+    "distractorNotes": {
+      "B": "Pedestrian underpasses have different signage.",
+      "C": "You must use dipped headlights (croisement), NOT high beams in tunnels.",
+      "D": "Underground parking has a P symbol, not a tunnel arch."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "tunnel",
+        "wordEn": "tunnel",
+        "definition": "An enclosed passage through a mountain or under a body of water"
+      }
+    ]
+  },
+  {
+    "id": "media-134",
+    "topic": "tunnels_passages_niveau",
+    "difficulty": 2,
+    "signs": [
+      "tunnel-sign"
+    ],
+    "questionFr": "Vous voyez ce panneau. Quelles actions devez-vous effectuer ? (2 réponses)",
+    "questionEn": "You see this sign. What actions must you take? (2 answers)",
+    "options": {
+      "A": {
+        "fr": "Allumer les feux de croisement",
+        "en": "Turn on dipped headlights"
+      },
+      "B": {
+        "fr": "Allumer les feux de route",
+        "en": "Turn on high beams"
+      },
+      "C": {
+        "fr": "Retirer vos lunettes de soleil",
+        "en": "Remove your sunglasses"
+      },
+      "D": {
+        "fr": "Accélérer pour traverser rapidement",
+        "en": "Accelerate to pass through quickly"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "answerCount": 2,
+    "explanationFr": "En entrant dans un tunnel, vous devez allumer vos feux de croisement (PAS les feux de route qui éblouissent) et retirer vos lunettes de soleil pour adapter votre vision.",
+    "explanationEn": "When entering a tunnel, you must turn on your dipped headlights (NOT high beams which blind others) and remove your sunglasses to adapt your vision.",
+    "trapNote": "Two correct answers. Croisement + remove sunglasses. NEVER high beams in tunnel.",
+    "distractorNotes": {
+      "B": "High beams are forbidden in tunnels — they blind other drivers in the enclosed space.",
+      "D": "You should maintain or reduce speed in tunnels, never accelerate."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "lunettes de soleil",
+        "wordEn": "sunglasses",
+        "definition": "Tinted glasses that must be removed when entering a tunnel"
+      }
+    ]
+  },
+  {
+    "id": "media-135",
+    "topic": "circulation",
+    "difficulty": 1,
+    "signs": [
+      "weight-limit"
+    ],
+    "questionFr": "Que signifie ce panneau rond avec '3,5t' ?",
+    "questionEn": "What does this round sign with '3.5t' mean?",
+    "options": {
+      "A": {
+        "fr": "Vitesse limitée à 3,5 km/h",
+        "en": "Speed limited to 3.5 km/h"
+      },
+      "B": {
+        "fr": "Accès interdit aux véhicules de plus de 3,5 tonnes",
+        "en": "Access forbidden for vehicles over 3.5 tonnes"
+      },
+      "C": {
+        "fr": "Distance de sécurité de 3,5 mètres",
+        "en": "Safety distance of 3.5 metres"
+      },
+      "D": {
+        "fr": "Hauteur limitée à 3,5 mètres",
+        "en": "Height limited to 3.5 metres"
+      }
+    },
+    "correctAnswers": [
+      "B"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Ce panneau d'interdiction (rond, bordure rouge) interdit l'accès aux véhicules dont le poids total autorisé en charge (PTAC) dépasse 3,5 tonnes.",
+    "explanationEn": "This prohibition sign (round, red border) forbids access for vehicles whose gross vehicle weight exceeds 3.5 tonnes.",
+    "trapNote": "Round + red border = prohibition. 't' = tonnes (weight). 'm' = metres (height). Don't confuse.",
+    "distractorNotes": {
+      "A": "Speed limits show km/h, not tonnes.",
+      "C": "Safety distances are not shown with this type of sign.",
+      "D": "Height limits show 'm' for metres, not 't' for tonnes."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "limitation de poids",
+        "wordEn": "weight limit",
+        "definition": "A restriction on the maximum weight of vehicles allowed on a road or bridge"
+      },
+      {
+        "wordFr": "PTAC",
+        "wordEn": "gross vehicle weight (GVW)",
+        "definition": "Poids Total Autorisé en Charge — the maximum loaded weight of a vehicle"
+      }
+    ]
+  },
+  {
+    "id": "media-136",
+    "topic": "circulation",
+    "difficulty": 1,
+    "signs": [
+      "height-limit"
+    ],
+    "questionFr": "Que signifie ce panneau rond avec '3,5m' et des flèches verticales ?",
+    "questionEn": "What does this round sign with '3.5m' and vertical arrows mean?",
+    "options": {
+      "A": {
+        "fr": "Accès interdit aux véhicules de plus de 3,5 mètres de hauteur",
+        "en": "Access forbidden for vehicles over 3.5 metres high"
+      },
+      "B": {
+        "fr": "Accès interdit aux véhicules de plus de 3,5 tonnes",
+        "en": "Access forbidden for vehicles over 3.5 tonnes"
+      },
+      "C": {
+        "fr": "Distance minimale de 3,5 mètres entre véhicules",
+        "en": "Minimum 3.5 metre distance between vehicles"
+      },
+      "D": {
+        "fr": "Largeur maximale de 3,5 mètres",
+        "en": "Maximum width of 3.5 metres"
+      }
+    },
+    "correctAnswers": [
+      "A"
+    ],
+    "answerCount": 1,
+    "explanationFr": "Ce panneau indique une limitation de hauteur. Les véhicules de plus de 3,5 mètres de haut ne peuvent pas passer (souvent à l'entrée de tunnels ou de parkings souterrains).",
+    "explanationEn": "This sign indicates a height restriction. Vehicles taller than 3.5 metres cannot pass (often at tunnel or underground parking entrances).",
+    "trapNote": "Vertical arrows + 'm' = height limit. Found at tunnels, bridges, underpasses. 't' would be weight.",
+    "distractorNotes": {
+      "B": "Weight limits use 't' for tonnes, not 'm' for metres.",
+      "C": "Following distances are not shown with prohibition signs.",
+      "D": "Width limits use a horizontal arrow symbol."
+    },
+    "vocabulary": [
+      {
+        "wordFr": "limitation de hauteur",
+        "wordEn": "height limit",
+        "definition": "A restriction on the maximum height of vehicles, often at tunnels and underpasses"
+      }
+    ]
   }
 ]
