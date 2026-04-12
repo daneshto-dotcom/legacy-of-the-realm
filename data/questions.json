@@ -50347,5 +50347,1175 @@
       "C": "Good visibility doesn't reduce the risk in a tunnel — the confined space remains dangerous regardless."
     },
     "vocabulary": []
+  },
+  {
+    "id": "noti-131",
+    "topic": "notions_diverses",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Quels documents devez-vous obligatoirement avoir à bord de votre véhicule ?",
+    "questionEn": "What documents must you have in your vehicle at all times?",
+    "options": {
+      "A": {
+        "fr": "Le certificat d'immatriculation (carte grise)",
+        "en": "The registration certificate (carte grise)"
+      },
+      "B": {
+        "fr": "L'attestation d'assurance valide",
+        "en": "A valid insurance certificate"
+      },
+      "C": {
+        "fr": "Le carnet d'entretien du véhicule",
+        "en": "The vehicle maintenance booklet"
+      },
+      "D": {
+        "fr": "Le permis de conduire en cours de validité",
+        "en": "A valid driving license"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Trois documents sont obligatoires à bord : le certificat d'immatriculation, l'attestation d'assurance, et le permis de conduire. Le carnet d'entretien est recommandé mais pas obligatoire.",
+    "explanationEn": "Three documents are mandatory: the registration certificate, insurance certificate, and driving license. The maintenance booklet is recommended but not mandatory.",
+    "trapNote": "The maintenance booklet is useful but never legally required in the vehicle.",
+    "distractorNotes": {
+      "C": "The maintenance booklet has no legal requirement to be carried in the vehicle."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "noti-132",
+    "topic": "notions_diverses",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Dans quelles situations l'usage du téléphone au volant est-il sanctionné ?",
+    "questionEn": "In which situations is using a phone while driving penalized?",
+    "options": {
+      "A": {
+        "fr": "Tenir le téléphone en main pendant la conduite",
+        "en": "Holding the phone in hand while driving"
+      },
+      "B": {
+        "fr": "Utiliser des écouteurs ou un casque audio",
+        "en": "Using earphones or a headset"
+      },
+      "C": {
+        "fr": "Utiliser le haut-parleur du véhicule intégré au tableau de bord",
+        "en": "Using the vehicle's built-in dashboard speaker"
+      },
+      "D": {
+        "fr": "Porter des oreillettes Bluetooth (depuis 2015)",
+        "en": "Wearing Bluetooth earpieces (since 2015)"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Depuis 2015, il est interdit de tenir le téléphone en main, d'utiliser des écouteurs, un casque ou des oreillettes Bluetooth. Seul le haut-parleur intégré au véhicule est autorisé.",
+    "explanationEn": "Since 2015, it is prohibited to hold the phone, use earphones, headsets, or Bluetooth earpieces. Only the vehicle's built-in speaker system is permitted.",
+    "trapNote": "Bluetooth earpieces are banned since 2015 — many candidates think they're allowed because they're 'hands-free'.",
+    "distractorNotes": {
+      "C": "The built-in speaker system is the only authorized hands-free option."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "noti-133",
+    "topic": "notions_diverses",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Quels sont les effets de l'alcool sur la conduite ?",
+    "questionEn": "What are the effects of alcohol on driving?",
+    "options": {
+      "A": {
+        "fr": "Augmentation du temps de réaction",
+        "en": "Increased reaction time"
+      },
+      "B": {
+        "fr": "Réduction du champ visuel",
+        "en": "Reduced field of vision"
+      },
+      "C": {
+        "fr": "Amélioration de la concentration",
+        "en": "Improved concentration"
+      },
+      "D": {
+        "fr": "Surestimation de ses capacités",
+        "en": "Overestimation of one's abilities"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "L'alcool augmente le temps de réaction, réduit le champ visuel, et donne un faux sentiment de sécurité. Il ne peut en aucun cas améliorer la concentration.",
+    "explanationEn": "Alcohol increases reaction time, reduces the field of vision, and creates a false sense of security. It can never improve concentration.",
+    "trapNote": "Alcohol creates overconfidence — drivers think they're fine while their abilities are impaired.",
+    "distractorNotes": {
+      "C": "Alcohol always impairs concentration — it is a depressant, not a stimulant."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "noti-134",
+    "topic": "notions_diverses",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Quelles sont les obligations en cas d'accident corporel ?",
+    "questionEn": "What are the obligations in case of an injury accident?",
+    "options": {
+      "A": {
+        "fr": "Protéger la zone de l'accident (baliser)",
+        "en": "Protect the accident zone (mark it)"
+      },
+      "B": {
+        "fr": "Alerter les secours (15, 18 ou 112)",
+        "en": "Alert emergency services (15, 18, or 112)"
+      },
+      "C": {
+        "fr": "Déplacer immédiatement les blessés hors de la chaussée",
+        "en": "Immediately move the injured off the road"
+      },
+      "D": {
+        "fr": "Secourir les victimes dans la limite de ses compétences",
+        "en": "Assist the victims within the limits of one's abilities"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Les trois étapes sont : Protéger, Alerter, Secourir (PAS). On ne déplace jamais un blessé sauf danger immédiat (incendie, explosion) car on risque d'aggraver ses blessures.",
+    "explanationEn": "The three steps are: Protect, Alert, Assist (PAS). Never move an injured person unless there's immediate danger (fire, explosion) as you risk worsening their injuries.",
+    "trapNote": "PAS = Protéger, Alerter, Secourir. Moving an injured person can cause spinal damage — only do it if there's fire or imminent danger.",
+    "distractorNotes": {
+      "C": "Never move injured people unless there's immediate danger like fire — you could worsen spinal injuries."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "noti-135",
+    "topic": "notions_diverses",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Quelles affirmations sont vraies concernant la ceinture de sécurité ?",
+    "questionEn": "Which statements about seatbelts are true?",
+    "options": {
+      "A": {
+        "fr": "Elle est obligatoire pour tous les passagers, avant et arrière",
+        "en": "It is mandatory for all passengers, front and rear"
+      },
+      "B": {
+        "fr": "Le conducteur est responsable du port de la ceinture par les passagers mineurs",
+        "en": "The driver is responsible for minors wearing their seatbelt"
+      },
+      "C": {
+        "fr": "Elle n'est pas obligatoire en ville à moins de 50 km/h",
+        "en": "It is not mandatory in town under 50 km/h"
+      },
+      "D": {
+        "fr": "L'amende pour non-port est de 135 €",
+        "en": "The fine for not wearing it is €135"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "La ceinture est obligatoire partout, pour tous, quelle que soit la vitesse. Le conducteur est responsable des mineurs. L'amende est de 135 € par passager non attaché.",
+    "explanationEn": "Seatbelts are mandatory everywhere, for everyone, regardless of speed. The driver is responsible for minors. The fine is €135 per unbelted passenger.",
+    "trapNote": "No speed exception exists — seatbelts are mandatory even at 30 km/h in a parking lot.",
+    "distractorNotes": {
+      "C": "Speed has nothing to do with the seatbelt requirement — it's mandatory at all speeds, in all areas."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "noti-136",
+    "topic": "notions_diverses",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Quelles sont les sanctions pour un jeune conducteur dont le taux d'alcoolémie dépasse 0,2 g/l de sang ?",
+    "questionEn": "What are the penalties for a young driver whose blood alcohol level exceeds 0.2 g/l?",
+    "options": {
+      "A": {
+        "fr": "Retrait de 6 points sur le permis",
+        "en": "Loss of 6 points on the license"
+      },
+      "B": {
+        "fr": "Une amende forfaitaire de 135 €",
+        "en": "A fixed fine of €135"
+      },
+      "C": {
+        "fr": "Un simple avertissement pour la première infraction",
+        "en": "A simple warning for the first offense"
+      },
+      "D": {
+        "fr": "Immobilisation possible du véhicule",
+        "en": "Possible immobilization of the vehicle"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Un jeune conducteur (permis probatoire) au-delà de 0,2 g/l perd 6 points, reçoit une amende de 135 €, et son véhicule peut être immobilisé. Il n'y a jamais de simple avertissement.",
+    "explanationEn": "A young driver (probationary license) over 0.2 g/l loses 6 points, receives a €135 fine, and the vehicle can be immobilized. There is never a simple warning.",
+    "trapNote": "Young drivers have a 0.2 g/l limit (vs 0.5 g/l for experienced drivers). The penalties are immediate and severe.",
+    "distractorNotes": {
+      "C": "There are no warnings for drink-driving — penalties apply from the first offense."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "noti-137",
+    "topic": "notions_diverses",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Quels équipements de sécurité sont obligatoires dans un véhicule ?",
+    "questionEn": "What safety equipment is mandatory in a vehicle?",
+    "options": {
+      "A": {
+        "fr": "Un gilet de haute visibilité accessible depuis l'habitacle",
+        "en": "A high-visibility vest accessible from inside the cabin"
+      },
+      "B": {
+        "fr": "Un triangle de présignalisation",
+        "en": "A warning triangle"
+      },
+      "C": {
+        "fr": "Un extincteur",
+        "en": "A fire extinguisher"
+      },
+      "D": {
+        "fr": "Un éthylotest (non obligatoire depuis 2020 mais recommandé)",
+        "en": "A breathalyzer (not mandatory since 2020 but recommended)"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "answerCount": 2,
+    "explanationFr": "Le gilet de haute visibilité et le triangle de présignalisation sont les deux équipements obligatoires. L'extincteur n'est pas obligatoire pour les véhicules légers, et l'éthylotest n'est plus sanctionné depuis 2020.",
+    "explanationEn": "The high-visibility vest and warning triangle are the two mandatory items. A fire extinguisher is not required for passenger vehicles, and the breathalyzer is no longer penalized since 2020.",
+    "trapNote": "The breathalyzer was once mandatory but the penalty was removed in 2020. The fire extinguisher is only for buses and trucks.",
+    "distractorNotes": {
+      "C": "Fire extinguishers are mandatory for transport vehicles, not private cars.",
+      "D": "The breathalyzer obligation was never enforced and the penalty was officially dropped."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "noti-138",
+    "topic": "notions_diverses",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Quels sont les effets de la fatigue sur la conduite ?",
+    "questionEn": "What are the effects of fatigue on driving?",
+    "options": {
+      "A": {
+        "fr": "Diminution de la vigilance et de l'attention",
+        "en": "Decreased alertness and attention"
+      },
+      "B": {
+        "fr": "Risque de micro-sommeils involontaires",
+        "en": "Risk of involuntary micro-sleeps"
+      },
+      "C": {
+        "fr": "Amélioration des réflexes grâce à l'adrénaline",
+        "en": "Improved reflexes thanks to adrenaline"
+      },
+      "D": {
+        "fr": "Allongement du temps de réaction",
+        "en": "Increased reaction time"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "La fatigue réduit la vigilance, provoque des micro-sommeils et allonge le temps de réaction. L'adrénaline ne compense pas les effets de la fatigue — c'est une illusion dangereuse.",
+    "explanationEn": "Fatigue reduces alertness, causes micro-sleeps, and increases reaction time. Adrenaline does not compensate for fatigue effects — that's a dangerous illusion.",
+    "trapNote": "Fatigue is responsible for ~20% of fatal accidents in France. The only real cure is sleep, not coffee or fresh air.",
+    "distractorNotes": {
+      "C": "Adrenaline provides temporary alertness but cannot overcome genuine fatigue — it's a myth."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "noti-139",
+    "topic": "notions_diverses",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Que risquez-vous en cas de délit de fuite après un accident ?",
+    "questionEn": "What do you risk in case of hit-and-run after an accident?",
+    "options": {
+      "A": {
+        "fr": "Jusqu'à 3 ans d'emprisonnement",
+        "en": "Up to 3 years imprisonment"
+      },
+      "B": {
+        "fr": "Une amende pouvant atteindre 75 000 €",
+        "en": "A fine of up to €75,000"
+      },
+      "C": {
+        "fr": "Une simple contravention de 135 €",
+        "en": "A simple €135 fine"
+      },
+      "D": {
+        "fr": "La suspension ou l'annulation du permis de conduire",
+        "en": "Suspension or cancellation of the driving license"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Le délit de fuite est un délit pénal grave : jusqu'à 3 ans de prison, 75 000 € d'amende, et suspension ou annulation du permis. Ce n'est absolument pas une simple contravention.",
+    "explanationEn": "Hit-and-run is a serious criminal offense: up to 3 years in prison, €75,000 fine, and license suspension or cancellation. It is absolutely not a simple fine.",
+    "trapNote": "Hit-and-run is a CRIME (délit), not a traffic violation. The penalties are extremely severe.",
+    "distractorNotes": {
+      "C": "A €135 fine is for minor traffic violations. Hit-and-run is a criminal offense with much heavier penalties."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "noti-140",
+    "topic": "notions_diverses",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Quelles affirmations sont correctes concernant l'éco-conduite ?",
+    "questionEn": "Which statements about eco-driving are correct?",
+    "options": {
+      "A": {
+        "fr": "Anticiper le trafic permet de réduire la consommation de carburant",
+        "en": "Anticipating traffic helps reduce fuel consumption"
+      },
+      "B": {
+        "fr": "Passer les vitesses à bas régime économise du carburant",
+        "en": "Shifting gears at low RPM saves fuel"
+      },
+      "C": {
+        "fr": "Rouler en sous-régime permanent est la meilleure stratégie",
+        "en": "Driving in constant low RPM is the best strategy"
+      },
+      "D": {
+        "fr": "Maintenir une vitesse stable consomme moins qu'accélérer et freiner",
+        "en": "Maintaining a steady speed uses less fuel than accelerating and braking"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "L'éco-conduite repose sur l'anticipation, le passage des vitesses à bas régime, et le maintien d'une vitesse stable. Rouler en sous-régime permanent use le moteur et n'est pas recommandé.",
+    "explanationEn": "Eco-driving is based on anticipation, shifting at low RPM, and maintaining steady speed. Constant low RPM operation strains the engine and is not recommended.",
+    "trapNote": "Low RPM shifting is good, but permanently lugging the engine is harmful and inefficient.",
+    "distractorNotes": {
+      "C": "Constant low RPM strains the engine and can actually increase consumption in some situations."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "croi-148",
+    "topic": "croisement_depassement",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Quelles conditions doivent être réunies avant d'effectuer un dépassement ?",
+    "questionEn": "What conditions must be met before overtaking?",
+    "options": {
+      "A": {
+        "fr": "Avoir une visibilité suffisante vers l'avant",
+        "en": "Having sufficient forward visibility"
+      },
+      "B": {
+        "fr": "S'assurer que personne n'est déjà en train de vous dépasser",
+        "en": "Making sure nobody is already overtaking you"
+      },
+      "C": {
+        "fr": "Vérifier que la ligne médiane est continue",
+        "en": "Checking that the center line is solid"
+      },
+      "D": {
+        "fr": "Avoir la puissance nécessaire pour effectuer le dépassement rapidement",
+        "en": "Having enough power to overtake quickly"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Avant de dépasser : visibilité suffisante, personne ne vous dépasse, et puissance suffisante pour revenir rapidement sur votre voie. Une ligne continue INTERDIT le dépassement, donc vérifier qu'elle est continue n'est pas une condition pour dépasser.",
+    "explanationEn": "Before overtaking: sufficient visibility, no one overtaking you, and enough power to return quickly to your lane. A solid line PROHIBITS overtaking, so checking it is solid is not a condition for overtaking.",
+    "trapNote": "C is a trick — a solid line means you CAN'T overtake, not that you should check for it as a precondition.",
+    "distractorNotes": {
+      "C": "If the center line is solid (continuous), overtaking is prohibited. This is a prohibition, not a precondition."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "croi-149",
+    "topic": "croisement_depassement",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Dans quelles situations le dépassement par la droite est-il autorisé ?",
+    "questionEn": "In which situations is overtaking on the right permitted?",
+    "options": {
+      "A": {
+        "fr": "Quand le véhicule devant vous tourne à gauche et que vous pouvez passer à droite en sécurité",
+        "en": "When the vehicle ahead is turning left and you can safely pass on the right"
+      },
+      "B": {
+        "fr": "Sur une route à sens unique avec plusieurs voies",
+        "en": "On a one-way street with multiple lanes"
+      },
+      "C": {
+        "fr": "Sur autoroute quand la voie de gauche est encombrée",
+        "en": "On a motorway when the left lane is congested"
+      },
+      "D": {
+        "fr": "En circulation dense quand les files avancent à des vitesses différentes",
+        "en": "In heavy traffic when lanes move at different speeds"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Le dépassement par la droite est autorisé quand le véhicule devant tourne à gauche, sur route à sens unique, et en circulation dense avec des files à vitesses différentes. Sur autoroute, le dépassement par la droite reste interdit même si la gauche est lente.",
+    "explanationEn": "Overtaking on the right is allowed when the vehicle ahead turns left, on one-way roads, and in heavy traffic with lanes at different speeds. On motorways, right-side overtaking remains prohibited even if the left is slow.",
+    "trapNote": "Motorway right-side overtaking is a common trap — it's always prohibited, even in traffic jams.",
+    "distractorNotes": {
+      "C": "On motorways, overtaking on the right is always prohibited regardless of traffic conditions."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "croi-150",
+    "topic": "croisement_depassement",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Lors d'un croisement sur route étroite en montagne, qui a la priorité ?",
+    "questionEn": "When passing on a narrow mountain road, who has priority?",
+    "options": {
+      "A": {
+        "fr": "Le véhicule qui monte a la priorité",
+        "en": "The vehicle going uphill has priority"
+      },
+      "B": {
+        "fr": "Le véhicule qui descend doit reculer ou s'écarter",
+        "en": "The vehicle going downhill must reverse or move aside"
+      },
+      "C": {
+        "fr": "Le véhicule le plus lourd a toujours la priorité",
+        "en": "The heaviest vehicle always has priority"
+      },
+      "D": {
+        "fr": "Cette règle s'applique car il est plus difficile de repartir en côte",
+        "en": "This rule applies because it's harder to restart on a slope"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "En montagne sur route étroite, le véhicule montant a priorité car repartir en côte est plus difficile. Le véhicule descendant doit manœuvrer pour laisser passer.",
+    "explanationEn": "On narrow mountain roads, the uphill vehicle has priority because restarting on a slope is harder. The downhill vehicle must maneuver to let it pass.",
+    "trapNote": "Weight is irrelevant — it's always the uphill vehicle that has priority, regardless of size.",
+    "distractorNotes": {
+      "C": "Vehicle weight has nothing to do with mountain road priority — it's based on direction (uphill vs downhill)."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "croi-151",
+    "topic": "croisement_depassement",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Quelles sont les interdictions de dépassement à proximité d'un passage à niveau ?",
+    "questionEn": "What are the overtaking prohibitions near a level crossing?",
+    "options": {
+      "A": {
+        "fr": "Le dépassement est interdit à moins de 50 mètres d'un passage à niveau sans barrières",
+        "en": "Overtaking is prohibited within 50 meters of a level crossing without barriers"
+      },
+      "B": {
+        "fr": "Cette interdiction vise à garantir la visibilité pour tous les usagers",
+        "en": "This prohibition aims to ensure visibility for all road users"
+      },
+      "C": {
+        "fr": "Le dépassement est autorisé si les barrières sont ouvertes",
+        "en": "Overtaking is permitted if the barriers are open"
+      },
+      "D": {
+        "fr": "L'interdiction s'applique aussi aux véhicules lents comme les tracteurs",
+        "en": "The prohibition also applies to slow vehicles like tractors"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Le dépassement est interdit dans les 50 mètres précédant un passage à niveau sans barrières. Cette règle s'applique à tous les véhicules, quels que soient leur vitesse ou type, pour garantir la sécurité et la visibilité.",
+    "explanationEn": "Overtaking is prohibited within 50 meters of a level crossing without barriers. This rule applies to all vehicles, regardless of speed or type, to ensure safety and visibility.",
+    "trapNote": "Open barriers do NOT lift the overtaking ban — the prohibition is based on proximity, not barrier status.",
+    "distractorNotes": {
+      "C": "Barrier status is irrelevant — the 50-meter overtaking prohibition applies regardless."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "croi-152",
+    "topic": "croisement_depassement",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Pendant un dépassement, quelles actions devez-vous effectuer ?",
+    "questionEn": "During overtaking, what actions must you perform?",
+    "options": {
+      "A": {
+        "fr": "Signaler votre intention avec le clignotant gauche avant de déboîter",
+        "en": "Signal your intention with the left indicator before pulling out"
+      },
+      "B": {
+        "fr": "Vérifier les rétroviseurs et l'angle mort",
+        "en": "Check mirrors and blind spot"
+      },
+      "C": {
+        "fr": "Klaxonner pour avertir le véhicule dépassé",
+        "en": "Honk to warn the overtaken vehicle"
+      },
+      "D": {
+        "fr": "Remettre le clignotant droit avant de se rabattre",
+        "en": "Signal right before returning to your lane"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Pour dépasser : clignotant gauche, vérification rétroviseurs + angle mort, dépassement, puis clignotant droit et rabattement. Le klaxon n'est obligatoire que hors agglomération sur route à visibilité réduite.",
+    "explanationEn": "To overtake: left indicator, mirror + blind spot check, overtake, then right indicator and return. Honking is only mandatory outside built-up areas on roads with reduced visibility.",
+    "trapNote": "Honking is NOT part of the standard overtaking procedure — it's only for specific rural/visibility situations.",
+    "distractorNotes": {
+      "C": "Honking is only required in specific situations (outside town, poor visibility). It's not standard."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "croi-153",
+    "topic": "croisement_depassement",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Quelles affirmations sont vraies concernant le dépassement d'un cycliste ?",
+    "questionEn": "Which statements are true about overtaking a cyclist?",
+    "options": {
+      "A": {
+        "fr": "La distance latérale minimale est de 1 mètre en agglomération",
+        "en": "The minimum lateral distance is 1 meter in built-up areas"
+      },
+      "B": {
+        "fr": "La distance latérale minimale est de 1,50 mètre hors agglomération",
+        "en": "The minimum lateral distance is 1.50 meters outside built-up areas"
+      },
+      "C": {
+        "fr": "Vous pouvez frôler le cycliste si vous roulez lentement",
+        "en": "You can pass close to the cyclist if you're driving slowly"
+      },
+      "D": {
+        "fr": "Il peut être nécessaire de franchir la ligne continue pour respecter ces distances",
+        "en": "It may be necessary to cross the solid line to respect these distances"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "En agglomération, la distance latérale minimum est de 1 m, hors agglomération 1,50 m. Si nécessaire, vous pouvez franchir la ligne continue pour respecter ces distances de sécurité.",
+    "explanationEn": "In built-up areas, the minimum lateral distance is 1m; outside, 1.5m. If necessary, you may cross the solid line to maintain these safety distances.",
+    "trapNote": "Yes, you CAN cross a solid line to safely pass a cyclist — safety of vulnerable users overrides the line rule.",
+    "distractorNotes": {
+      "C": "Speed does not reduce the required lateral distance. The 1m/1.5m rule applies at all speeds."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "croi-154",
+    "topic": "croisement_depassement",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Quand est-il interdit de dépasser ?",
+    "questionEn": "When is overtaking prohibited?",
+    "options": {
+      "A": {
+        "fr": "Dans un virage sans visibilité",
+        "en": "In a bend without visibility"
+      },
+      "B": {
+        "fr": "Au sommet d'une côte sans visibilité",
+        "en": "At the top of a hill without visibility"
+      },
+      "C": {
+        "fr": "Sur une ligne droite avec bonne visibilité et marquage discontinu",
+        "en": "On a straight road with good visibility and dashed markings"
+      },
+      "D": {
+        "fr": "À proximité d'une intersection sans signalisation",
+        "en": "Near an intersection without signage"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Le dépassement est interdit dans les virages et au sommet des côtes sans visibilité, et près des intersections non signalées. Une ligne droite avec bonne visibilité et marquage discontinu permet le dépassement.",
+    "explanationEn": "Overtaking is prohibited in bends and at hilltops without visibility, and near unsigned intersections. A straight road with good visibility and dashed markings allows overtaking.",
+    "trapNote": "The key factor is always visibility. Good visibility + dashed line = overtaking allowed.",
+    "distractorNotes": {
+      "C": "This describes ideal overtaking conditions — straight road, good visibility, dashed line."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "croi-155",
+    "topic": "croisement_depassement",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "En cas de croisement difficile avec un poids lourd, quelles précautions prenez-vous ?",
+    "questionEn": "When having a difficult passing encounter with a heavy truck, what precautions do you take?",
+    "options": {
+      "A": {
+        "fr": "Serrer à droite le plus possible",
+        "en": "Move as far right as possible"
+      },
+      "B": {
+        "fr": "Réduire votre vitesse",
+        "en": "Reduce your speed"
+      },
+      "C": {
+        "fr": "Maintenir votre vitesse pour éviter de bloquer la route",
+        "en": "Maintain your speed to avoid blocking the road"
+      },
+      "D": {
+        "fr": "Tenir fermement le volant à cause du souffle d'air",
+        "en": "Hold the steering wheel firmly because of the air blast"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Face à un poids lourd en croisement : serrez à droite, ralentissez, et tenez fermement le volant car le déplacement d'air d'un camion peut déstabiliser votre véhicule.",
+    "explanationEn": "When crossing with a truck: move right, slow down, and hold the wheel firmly because the air displacement from a truck can destabilize your vehicle.",
+    "trapNote": "The air blast from a truck is a real physical force — it can push a small car sideways. Firm grip is essential.",
+    "distractorNotes": {
+      "C": "You should always slow down when crossing with a truck — maintaining speed increases the air blast effect."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "croi-156",
+    "topic": "croisement_depassement",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Quelles sont les règles pour se rabattre après un dépassement ?",
+    "questionEn": "What are the rules for returning to your lane after overtaking?",
+    "options": {
+      "A": {
+        "fr": "Voir le véhicule dépassé dans votre rétroviseur intérieur avant de vous rabattre",
+        "en": "See the overtaken vehicle in your interior mirror before returning"
+      },
+      "B": {
+        "fr": "Mettre le clignotant droit pour signaler votre intention",
+        "en": "Use the right indicator to signal your intention"
+      },
+      "C": {
+        "fr": "Se rabattre immédiatement après avoir dépassé le véhicule",
+        "en": "Return to your lane immediately after passing the vehicle"
+      },
+      "D": {
+        "fr": "Ne pas ralentir brusquement après le rabattement",
+        "en": "Do not brake sharply after returning to your lane"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Après un dépassement : attendez de voir le véhicule dépassé dans le rétroviseur intérieur, mettez le clignotant droit, rabattez-vous, et ne freinez pas brusquement. Un rabattement trop rapide est dangereux.",
+    "explanationEn": "After overtaking: wait until you see the overtaken vehicle in your interior mirror, signal right, return, and don't brake sharply. Cutting back in too soon is dangerous.",
+    "trapNote": "Interior mirror, not side mirror — if you see them in the interior mirror, there's enough distance.",
+    "distractorNotes": {
+      "C": "Returning immediately is dangerous — you need sufficient distance to avoid cutting off the other driver."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "croi-157",
+    "topic": "croisement_depassement",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Quand un véhicule vous dépasse, quelles sont vos obligations ?",
+    "questionEn": "When a vehicle is overtaking you, what are your obligations?",
+    "options": {
+      "A": {
+        "fr": "Ne pas accélérer pendant le dépassement",
+        "en": "Not accelerate during the overtaking"
+      },
+      "B": {
+        "fr": "Faciliter le dépassement en serrant à droite si nécessaire",
+        "en": "Facilitate the overtaking by moving right if necessary"
+      },
+      "C": {
+        "fr": "Accélérer pour aider le dépasseur à se rabattre plus vite",
+        "en": "Accelerate to help the overtaker return faster"
+      },
+      "D": {
+        "fr": "Maintenir une trajectoire stable et prévisible",
+        "en": "Maintain a stable and predictable trajectory"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Quand on vous dépasse : n'accélérez pas, serrez à droite si besoin, et restez prévisible. Accélérer pendant un dépassement est dangereux et interdit.",
+    "explanationEn": "When being overtaken: don't accelerate, move right if needed, and stay predictable. Accelerating during someone's overtaking is dangerous and prohibited.",
+    "trapNote": "Accelerating when being overtaken is an offense — it forces the overtaker into oncoming traffic longer.",
+    "distractorNotes": {
+      "C": "Accelerating does not help — it extends the time the overtaker spends in the opposing lane."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "autr-089",
+    "topic": "autres_usagers",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Quelles précautions devez-vous prendre à proximité d'un cycliste ?",
+    "questionEn": "What precautions should you take near a cyclist?",
+    "options": {
+      "A": {
+        "fr": "Laisser au moins 1 mètre de distance latérale en ville",
+        "en": "Leave at least 1 meter lateral distance in town"
+      },
+      "B": {
+        "fr": "Anticiper les écarts possibles du cycliste (nids-de-poule, portières)",
+        "en": "Anticipate possible swerves by the cyclist (potholes, car doors)"
+      },
+      "C": {
+        "fr": "Klaxonner pour signaler votre présence",
+        "en": "Honk to signal your presence"
+      },
+      "D": {
+        "fr": "Réduire votre vitesse lors du dépassement",
+        "en": "Reduce your speed when overtaking"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Près d'un cycliste : gardez 1 m minimum en ville (1,50 m hors ville), anticipez ses écarts possibles, et ralentissez. Klaxonner peut effrayer le cycliste et provoquer une chute.",
+    "explanationEn": "Near a cyclist: keep 1m minimum in town (1.5m outside), anticipate possible swerves, and slow down. Honking can startle the cyclist and cause a fall.",
+    "trapNote": "Honking near cyclists is counterproductive — the sudden noise can cause them to swerve or fall.",
+    "distractorNotes": {
+      "C": "Honking near a cyclist is dangerous — the noise can startle them and cause an accident."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "autr-090",
+    "topic": "autres_usagers",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Quelles affirmations sont vraies concernant les piétons ?",
+    "questionEn": "Which statements about pedestrians are true?",
+    "options": {
+      "A": {
+        "fr": "Les enfants sont particulièrement imprévisibles dans leurs déplacements",
+        "en": "Children are particularly unpredictable in their movements"
+      },
+      "B": {
+        "fr": "Les personnes âgées peuvent avoir des difficultés à évaluer les distances",
+        "en": "Elderly people may have difficulty judging distances"
+      },
+      "C": {
+        "fr": "Les piétons doivent toujours traverser sur un passage protégé",
+        "en": "Pedestrians must always cross at a designated crossing"
+      },
+      "D": {
+        "fr": "Un piéton avec une canne blanche a toujours la priorité",
+        "en": "A pedestrian with a white cane always has priority"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Les enfants sont imprévisibles, les personnes âgées ont des difficultés sensorielles, et les personnes avec canne blanche (malvoyantes) ont une priorité absolue. Les piétons peuvent traverser hors passage protégé s'il n'y en a pas à moins de 50 m.",
+    "explanationEn": "Children are unpredictable, elderly people have sensory difficulties, and people with white canes (visually impaired) have absolute priority. Pedestrians can cross outside designated crossings if there's none within 50m.",
+    "trapNote": "Pedestrians are NOT required to use a crossing if there's none within 50 meters — a common exam misconception.",
+    "distractorNotes": {
+      "C": "Pedestrians may cross outside crossings if none exists within 50 meters of their position."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "autr-091",
+    "topic": "autres_usagers",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Quelles précautions prenez-vous en présence d'un bus scolaire arrêté ?",
+    "questionEn": "What precautions do you take when a school bus is stopped?",
+    "options": {
+      "A": {
+        "fr": "Ralentir fortement et être prêt à s'arrêter",
+        "en": "Slow down significantly and be ready to stop"
+      },
+      "B": {
+        "fr": "Des enfants peuvent surgir de n'importe quel côté du bus",
+        "en": "Children may appear from either side of the bus"
+      },
+      "C": {
+        "fr": "Accélérer pour dépasser le bus rapidement",
+        "en": "Accelerate to pass the bus quickly"
+      },
+      "D": {
+        "fr": "Redoubler de vigilance même après le départ du bus",
+        "en": "Remain extra vigilant even after the bus leaves"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Près d'un bus scolaire : ralentissez, préparez-vous à vous arrêter, surveillez les deux côtés car les enfants peuvent traverser de manière imprévisible, et restez vigilant après le départ du bus.",
+    "explanationEn": "Near a school bus: slow down, be ready to stop, watch both sides as children may cross unpredictably, and stay alert after the bus departs.",
+    "trapNote": "The danger persists AFTER the bus leaves — children who missed it may run after it.",
+    "distractorNotes": {
+      "C": "Accelerating near a stopped school bus is extremely dangerous and shows a lack of awareness."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "autr-092",
+    "topic": "autres_usagers",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Quelles sont les caractéristiques des deux-roues motorisés dont vous devez tenir compte ?",
+    "questionEn": "What characteristics of powered two-wheelers should you be aware of?",
+    "options": {
+      "A": {
+        "fr": "Ils sont moins visibles que les voitures, surtout la nuit",
+        "en": "They are less visible than cars, especially at night"
+      },
+      "B": {
+        "fr": "Leur vitesse peut être sous-estimée à cause de leur petite taille",
+        "en": "Their speed can be underestimated due to their small size"
+      },
+      "C": {
+        "fr": "Ils sont plus stables qu'une voiture grâce à leur poids léger",
+        "en": "They are more stable than a car thanks to their light weight"
+      },
+      "D": {
+        "fr": "Ils peuvent être déséquilibrés par le vent ou les nids-de-poule",
+        "en": "They can be destabilized by wind or potholes"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Les deux-roues sont moins visibles, leur vitesse est souvent sous-estimée, et ils sont sensibles au vent, aux nids-de-poule et aux déformations de la chaussée. Ils ne sont pas plus stables qu'une voiture.",
+    "explanationEn": "Two-wheelers are less visible, their speed is often underestimated, and they're sensitive to wind, potholes, and road irregularities. They are not more stable than a car.",
+    "trapNote": "Light weight = LESS stable, not more. Two-wheelers are vulnerable to every road imperfection.",
+    "distractorNotes": {
+      "C": "Light weight makes two-wheelers LESS stable, not more — they lack the 4-point contact of a car."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "autr-093",
+    "topic": "autres_usagers",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Que devez-vous vérifier avant d'ouvrir votre portière en stationnement ?",
+    "questionEn": "What should you check before opening your door while parked?",
+    "options": {
+      "A": {
+        "fr": "Qu'aucun véhicule n'arrive dans le rétroviseur",
+        "en": "That no vehicle is approaching in the mirror"
+      },
+      "B": {
+        "fr": "Qu'aucun cycliste ou piéton ne passe sur le côté",
+        "en": "That no cyclist or pedestrian is passing on that side"
+      },
+      "C": {
+        "fr": "Rien de spécial, la portière s'ouvre de votre côté privé",
+        "en": "Nothing special, the door opens on your private side"
+      },
+      "D": {
+        "fr": "Utiliser la technique de la main hollandaise (ouvrir avec la main opposée)",
+        "en": "Use the Dutch reach technique (open with the far hand)"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Avant d'ouvrir : vérifiez le rétroviseur et l'angle mort côté ouverture. La technique hollandaise (ouvrir avec la main opposée) force votre corps à se tourner et voir derrière. Les portières mal ouvertes blessent des cyclistes chaque année.",
+    "explanationEn": "Before opening: check the mirror and blind spot on the opening side. The Dutch reach (opening with the far hand) forces your body to turn and look behind. Carelessly opened doors injure cyclists every year.",
+    "trapNote": "The Dutch reach is increasingly taught in French driving schools — it's a simple life-saving habit.",
+    "distractorNotes": {
+      "C": "There is no 'private side' — your door opens into a public road where others travel."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "autr-094",
+    "topic": "autres_usagers",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Quelles règles s'appliquent aux trottinettes électriques en circulation ?",
+    "questionEn": "What rules apply to electric scooters in traffic?",
+    "options": {
+      "A": {
+        "fr": "Elles doivent circuler sur les pistes cyclables quand elles existent",
+        "en": "They must use cycle paths when available"
+      },
+      "B": {
+        "fr": "Leur vitesse est limitée à 25 km/h",
+        "en": "Their speed is limited to 25 km/h"
+      },
+      "C": {
+        "fr": "Elles peuvent rouler sur les trottoirs librement",
+        "en": "They can ride on sidewalks freely"
+      },
+      "D": {
+        "fr": "Les utilisateurs doivent avoir au moins 14 ans",
+        "en": "Users must be at least 14 years old"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Les trottinettes électriques utilisent les pistes cyclables (ou la chaussée), sont limitées à 25 km/h, et réservées aux 14 ans et plus. La circulation sur trottoir est interdite sauf si le maire l'autorise à vitesse piéton.",
+    "explanationEn": "Electric scooters use cycle paths (or the road), are limited to 25 km/h, and restricted to ages 14+. Riding on sidewalks is prohibited unless the mayor authorizes it at walking speed.",
+    "trapNote": "Sidewalk riding is prohibited by default — this is one of the most common violations and exam questions.",
+    "distractorNotes": {
+      "C": "Sidewalk riding is prohibited by default — it endangers pedestrians and is fined €135."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "autr-095",
+    "topic": "autres_usagers",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Comment devez-vous réagir face à un convoi de véhicules prioritaires ?",
+    "questionEn": "How should you react when facing a convoy of priority vehicles?",
+    "options": {
+      "A": {
+        "fr": "Vous ranger sur le côté et ne pas repartir tant que le convoi n'est pas passé",
+        "en": "Pull over and do not restart until the convoy has passed"
+      },
+      "B": {
+        "fr": "Le dernier véhicule du convoi a un feu bleu clignotant",
+        "en": "The last vehicle in the convoy has a flashing blue light"
+      },
+      "C": {
+        "fr": "Vous pouvez vous insérer entre les véhicules du convoi s'il y a de l'espace",
+        "en": "You can merge between convoy vehicles if there's space"
+      },
+      "D": {
+        "fr": "Réduire votre vitesse et faciliter leur passage",
+        "en": "Reduce your speed and facilitate their passage"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Face à un convoi prioritaire : rangez-vous, attendez que le dernier véhicule (identifiable par son feu bleu) soit passé, et facilitez leur passage. Ne vous insérez jamais dans un convoi.",
+    "explanationEn": "Facing a priority convoy: pull over, wait for the last vehicle (identifiable by its blue light) to pass, and facilitate their passage. Never merge into a convoy.",
+    "trapNote": "Wait for the LAST vehicle — don't restart just because there's a gap. The convoy moves as a unit.",
+    "distractorNotes": {
+      "C": "Inserting yourself into a convoy is extremely dangerous and illegal — the vehicles move as one unit."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "autr-096",
+    "topic": "autres_usagers",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Quelles précautions prenez-vous en zone résidentielle avec des enfants ?",
+    "questionEn": "What precautions do you take in a residential area with children?",
+    "options": {
+      "A": {
+        "fr": "Rouler à vitesse très réduite (moins de 20 km/h)",
+        "en": "Drive at very low speed (under 20 km/h)"
+      },
+      "B": {
+        "fr": "Être prêt à s'arrêter à tout moment car les enfants sont imprévisibles",
+        "en": "Be ready to stop at any moment because children are unpredictable"
+      },
+      "C": {
+        "fr": "Klaxonner régulièrement pour signaler votre présence",
+        "en": "Honk regularly to signal your presence"
+      },
+      "D": {
+        "fr": "Surveiller entre les véhicules stationnés où un enfant pourrait surgir",
+        "en": "Watch between parked vehicles where a child could appear"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "En zone résidentielle avec enfants : roulez très lentement, soyez prêt à vous arrêter, et surveillez les espaces entre les voitures garées. Le klaxon intempestif est interdit et ne remplace pas la vigilance.",
+    "explanationEn": "In residential areas with children: drive very slowly, be ready to stop, and watch gaps between parked cars. Unnecessary honking is prohibited and doesn't replace vigilance.",
+    "trapNote": "Children don't think about traffic — they chase balls, run after friends, and appear from behind parked cars without warning.",
+    "distractorNotes": {
+      "C": "Excessive honking is prohibited in residential areas and frightens rather than protects children."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "autr-097",
+    "topic": "autres_usagers",
+    "difficulty": 2,
+    "signs": [],
+    "questionFr": "Quelles sont les particularités des véhicules lourds que vous devez connaître en tant qu'automobiliste ?",
+    "questionEn": "What characteristics of heavy vehicles should you know as a car driver?",
+    "options": {
+      "A": {
+        "fr": "Ils ont des angles morts beaucoup plus importants qu'une voiture",
+        "en": "They have much larger blind spots than a car"
+      },
+      "B": {
+        "fr": "Leur distance de freinage est considérablement plus longue",
+        "en": "Their braking distance is considerably longer"
+      },
+      "C": {
+        "fr": "Ils peuvent s'arrêter aussi rapidement qu'une voiture grâce à leurs gros freins",
+        "en": "They can stop as quickly as a car thanks to their large brakes"
+      },
+      "D": {
+        "fr": "Ils ont besoin de plus d'espace pour tourner (giration)",
+        "en": "They need more space to turn (turning radius)"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Les poids lourds ont de vastes angles morts, une distance de freinage bien plus longue que les voitures, et nécessitent beaucoup plus d'espace pour les manœuvres. Leurs gros freins ne compensent pas leur masse.",
+    "explanationEn": "Heavy vehicles have vast blind spots, much longer braking distances than cars, and need much more space for maneuvers. Their large brakes don't compensate for their mass.",
+    "trapNote": "Bigger brakes ≠ shorter stopping distance. Mass always wins — physics doesn't care about brake size.",
+    "distractorNotes": {
+      "C": "Despite large brakes, the enormous mass of trucks means they take much longer to stop than cars."
+    },
+    "vocabulary": []
+  },
+  {
+    "id": "autr-098",
+    "topic": "autres_usagers",
+    "difficulty": 3,
+    "signs": [],
+    "questionFr": "Parmi ces propositions, lesquelles décrivent des usagers vulnérables de la route ?",
+    "questionEn": "Which of these describe vulnerable road users?",
+    "options": {
+      "A": {
+        "fr": "Les piétons, cyclistes et utilisateurs de trottinettes",
+        "en": "Pedestrians, cyclists, and scooter users"
+      },
+      "B": {
+        "fr": "Les personnes à mobilité réduite en fauteuil roulant",
+        "en": "People with reduced mobility in wheelchairs"
+      },
+      "C": {
+        "fr": "Les conducteurs de SUV car ils sont en hauteur",
+        "en": "SUV drivers because they sit higher"
+      },
+      "D": {
+        "fr": "Les cavaliers et les conducteurs d'animaux",
+        "en": "Horse riders and animal handlers"
+      }
+    },
+    "correctAnswers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "answerCount": 3,
+    "explanationFr": "Les usagers vulnérables sont ceux sans protection carrossée : piétons, cyclistes, trottinettes, personnes en fauteuil, cavaliers et conducteurs d'animaux. Les SUV sont des véhicules motorisés protégés.",
+    "explanationEn": "Vulnerable users are those without vehicle protection: pedestrians, cyclists, scooters, wheelchair users, horse riders, and animal handlers. SUVs are protected motorized vehicles.",
+    "trapNote": "Vulnerability = no protective shell. Anyone without a car body around them is vulnerable.",
+    "distractorNotes": {
+      "C": "SUV drivers are inside a protected vehicle — sitting higher makes them less vulnerable, not more."
+    },
+    "vocabulary": []
   }
 ]
