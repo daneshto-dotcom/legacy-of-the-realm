@@ -1,5 +1,5 @@
 /* ============================================
-   Question Bank — 974 Bilingual Questions
+   Question Bank — 1004 Bilingual Questions
    All 10 ETG themes, multi-answer support
    Based on French Code de la route public law
    ============================================
@@ -2301,6 +2301,196 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "taux d'alcoolémie", wordEn: "blood alcohol level / BAC", definition: "Alcohol concentration in blood, grams per liter" }
         ]
+    },
+    {
+        id: "circ-72",
+        topic: "circulation",
+        difficulty: 2,
+        questionFr: "Quelles sont les règles de circulation sur un rond-point ?",
+        questionEn: "What are the traffic rules on a roundabout?",
+        options: [
+            { letter: "A", text: "Céder le passage aux véhicules déjà engagés dans le rond-point", textEn: "Give way to vehicles already in the roundabout" },
+            { letter: "B", text: "Les véhicules entrant ont toujours la priorité", textEn: "Vehicles entering always have priority" },
+            { letter: "C", text: "Utiliser le clignotant droit pour sortir du rond-point", textEn: "Use the right indicator to exit the roundabout" },
+            { letter: "D", text: "Rouler le plus vite possible pour ne pas gêner", textEn: "Drive as fast as possible to avoid disruption" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Sur un rond-point, on cède le passage aux véhicules déjà engagés et on met le clignotant droit avant de sortir.",
+        explanationEn: "On a roundabout, yield to vehicles already inside and signal right before exiting.",
+        trapNote: "Don't confuse roundabout (priority to those inside) with carrefour giratoire à priorité à droite (old-style, entering vehicles have priority).",
+        distractorNotes: { B: "On modern roundabouts, entering vehicles must yield to those inside.", D: "Speed should be moderate and adapted to traffic density." }
+    },
+    {
+        id: "circ-73",
+        topic: "circulation",
+        difficulty: 2,
+        questionFr: "Quelles sont les distances de sécurité à respecter sur autoroute par temps sec ?",
+        questionEn: "What safety distances must be maintained on a motorway in dry weather?",
+        options: [
+            { letter: "A", text: "Au moins 2 secondes par rapport au véhicule qui précède", textEn: "At least 2 seconds from the vehicle ahead" },
+            { letter: "B", text: "Un mètre par km/h de vitesse", textEn: "One meter per km/h of speed" },
+            { letter: "C", text: "Environ 90 mètres à 130 km/h", textEn: "About 90 meters at 130 km/h" },
+            { letter: "D", text: "La longueur de 2 voitures suffit", textEn: "Two car lengths is sufficient" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "La règle des 2 secondes s'applique. À 130 km/h, cela correspond à environ 90 mètres (ou 2 bandes blanches d'intervalle sur autoroute).",
+        explanationEn: "The 2-second rule applies. At 130 km/h, this equals about 90 meters (or 2 white line intervals on a motorway).",
+        trapNote: "Two car lengths (~10m) is dangerously short at motorway speed. 1m per km/h is an approximation, not the actual rule.",
+        distractorNotes: { B: "This is a rough approximation — the official rule is the 2-second interval.", D: "Two car lengths at 130 km/h gives less than 0.3 seconds reaction time." }
+    },
+    {
+        id: "circ-74",
+        topic: "circulation",
+        difficulty: 3,
+        questionFr: "Quelles sont les vitesses maximales autorisées pour un jeune conducteur sur autoroute et route nationale ?",
+        questionEn: "What are the maximum speeds for a new driver on motorways and national roads?",
+        options: [
+            { letter: "A", text: "110 km/h sur autoroute", textEn: "110 km/h on motorways" },
+            { letter: "B", text: "130 km/h sur autoroute comme tous les conducteurs", textEn: "130 km/h on motorways like all drivers" },
+            { letter: "C", text: "80 km/h sur route à double sens sans séparateur", textEn: "80 km/h on two-way roads without separator" },
+            { letter: "D", text: "100 km/h sur route à chaussées séparées", textEn: "100 km/h on dual carriageways" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Les jeunes conducteurs (permis probatoire) sont limités à 110 km/h sur autoroute, 100 km/h sur route à chaussées séparées, et 80 km/h sur route bidirectionnelle.",
+        explanationEn: "New drivers (probationary licence) are limited to 110 km/h on motorways, 100 km/h on dual carriageways, and 80 km/h on two-way roads.",
+        trapNote: "The 80 km/h limit on two-way roads applies to ALL drivers since 2018, not just young ones. But young drivers have lower limits elsewhere.",
+        distractorNotes: { B: "130 km/h is for experienced drivers — young drivers are limited to 110.", D: "100 km/h is correct for young drivers on dual carriageways but isn't one of the correct answers here." }
+    },
+    {
+        id: "circ-75",
+        topic: "circulation",
+        difficulty: 2,
+        questionFr: "Par temps de pluie, quelles précautions devez-vous prendre ?",
+        questionEn: "In rainy weather, what precautions must you take?",
+        options: [
+            { letter: "A", text: "Réduire votre vitesse et augmenter les distances de sécurité", textEn: "Reduce speed and increase safety distances" },
+            { letter: "B", text: "Allumer les feux de brouillard arrière", textEn: "Turn on rear fog lights" },
+            { letter: "C", text: "Allumer les feux de croisement", textEn: "Turn on dipped headlights" },
+            { letter: "D", text: "Rouler dans les traces du véhicule précédent pour éviter l'aquaplaning", textEn: "Drive in the tracks of the vehicle ahead to avoid aquaplaning" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Par temps de pluie : réduire la vitesse, augmenter les distances, allumer les feux de croisement. Les feux de brouillard arrière ne sont utilisés que par visibilité < 50 m.",
+        explanationEn: "In rain: reduce speed, increase distances, turn on dipped headlights. Rear fog lights are only for visibility below 50m.",
+        trapNote: "Rear fog lights in normal rain dazzle following drivers. Driving in tracks doesn't prevent aquaplaning.",
+        distractorNotes: { B: "Rear fog lights are only for fog/heavy snow with visibility under 50m.", D: "Tracks of the vehicle ahead may have more standing water, increasing aquaplaning risk." }
+    },
+    {
+        id: "circ-76",
+        topic: "circulation",
+        difficulty: 3,
+        questionFr: "Quelles sont les règles pour circuler dans une zone 30 ?",
+        questionEn: "What are the rules for driving in a 30 km/h zone?",
+        options: [
+            { letter: "A", text: "La vitesse est limitée à 30 km/h", textEn: "Speed is limited to 30 km/h" },
+            { letter: "B", text: "Le stationnement est interdit partout", textEn: "Parking is prohibited everywhere" },
+            { letter: "C", text: "Les piétons peuvent traverser partout mais n'ont pas la priorité absolue", textEn: "Pedestrians can cross anywhere but don't have absolute priority" },
+            { letter: "D", text: "Les cyclistes doivent rouler sur le trottoir", textEn: "Cyclists must ride on the sidewalk" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "En zone 30, la vitesse est limitée à 30 km/h et les piétons peuvent traverser en dehors des passages piétons, mais les véhicules gardent la priorité (sauf aux passages piétons).",
+        explanationEn: "In a 30 zone, speed is limited to 30 km/h and pedestrians may cross outside crossings, but vehicles keep priority (except at crossings).",
+        trapNote: "Zone 30 ≠ zone de rencontre. In zone 30, pedestrians can cross anywhere but vehicles still have priority outside crosswalks.",
+        distractorNotes: { B: "Parking rules follow normal urban regulations in zone 30.", D: "Cyclists use the road, not the sidewalk — even in zone 30." }
+    },
+    {
+        id: "circ-77",
+        topic: "circulation",
+        difficulty: 2,
+        questionFr: "Que signifie la règle de la priorité à droite en agglomération ?",
+        questionEn: "What does the priority to the right rule mean in urban areas?",
+        options: [
+            { letter: "A", text: "Vous devez céder le passage aux véhicules venant de votre droite", textEn: "You must yield to vehicles coming from your right" },
+            { letter: "B", text: "Vous avez toujours la priorité si vous venez de la droite", textEn: "You always have priority if you come from the right" },
+            { letter: "C", text: "Elle s'applique à toute intersection sans signalisation contraire", textEn: "It applies at any intersection without contrary signage" },
+            { letter: "D", text: "Elle ne s'applique qu'aux routes nationales", textEn: "It only applies on national roads" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "La priorité à droite est la règle par défaut à toute intersection non signalisée. Vous devez céder le passage aux véhicules arrivant par la droite.",
+        explanationEn: "Priority to the right is the default rule at any unsigned intersection. You must yield to vehicles arriving from the right.",
+        trapNote: "The rule applies everywhere without contrary signage — not just national roads.",
+        distractorNotes: { B: "Having priority doesn't mean you should force your way — you must still drive prudently.", D: "Priority to the right applies on all roads without signage, not just nationals." }
+    },
+    {
+        id: "circ-78",
+        topic: "circulation",
+        difficulty: 3,
+        questionFr: "Quelles sont les conditions pour emprunter la bande d'arrêt d'urgence sur autoroute ?",
+        questionEn: "Under what conditions can you use the motorway hard shoulder?",
+        options: [
+            { letter: "A", text: "En cas de panne ou de malaise du conducteur", textEn: "In case of breakdown or driver illness" },
+            { letter: "B", text: "Pour dépasser un bouchon", textEn: "To bypass a traffic jam" },
+            { letter: "C", text: "En cas d'urgence médicale nécessitant un arrêt immédiat", textEn: "In case of a medical emergency requiring immediate stop" },
+            { letter: "D", text: "Pour consulter une carte routière", textEn: "To check a road map" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "La bande d'arrêt d'urgence est réservée aux situations d'urgence : panne mécanique, malaise, urgence médicale. Il est interdit de s'y arrêter pour convenance.",
+        explanationEn: "The hard shoulder is reserved for emergencies: mechanical breakdown, illness, medical emergency. Stopping for convenience is prohibited.",
+        trapNote: "Checking a map is not an emergency — use a rest area. Bypassing traffic is illegal and dangerous.",
+        distractorNotes: { B: "Using the hard shoulder to skip traffic is a serious offense (€135 fine, 3 points).", D: "Consulting a map is not an emergency — pull into a rest area." }
+    },
+    {
+        id: "circ-79",
+        topic: "circulation",
+        difficulty: 2,
+        questionFr: "Quand devez-vous allumer vos feux de croisement ?",
+        questionEn: "When must you turn on your dipped headlights?",
+        options: [
+            { letter: "A", text: "De nuit sur toutes les routes éclairées ou non", textEn: "At night on all roads, lit or unlit" },
+            { letter: "B", text: "Uniquement quand il fait complètement noir", textEn: "Only when it is completely dark" },
+            { letter: "C", text: "De jour par temps de pluie ou de brouillard", textEn: "During the day in rain or fog" },
+            { letter: "D", text: "Seulement hors agglomération la nuit", textEn: "Only outside urban areas at night" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Les feux de croisement sont obligatoires de nuit (partout) et de jour en cas de visibilité réduite (pluie, brouillard, neige).",
+        explanationEn: "Dipped headlights are mandatory at night (everywhere) and during the day with reduced visibility (rain, fog, snow).",
+        trapNote: "You don't need to wait for complete darkness — dipped headlights should be used at dusk too.",
+        distractorNotes: { B: "Dipped headlights should be on before complete darkness, starting at dusk.", D: "Dipped headlights are required both inside and outside urban areas." }
+    },
+    {
+        id: "circ-80",
+        topic: "circulation",
+        difficulty: 3,
+        questionFr: "Que devez-vous faire en cas d'aquaplaning ?",
+        questionEn: "What should you do in case of aquaplaning?",
+        options: [
+            { letter: "A", text: "Ne pas freiner brusquement", textEn: "Do not brake suddenly" },
+            { letter: "B", text: "Freiner fort pour ralentir immédiatement", textEn: "Brake hard to slow down immediately" },
+            { letter: "C", text: "Maintenir le volant droit et lever le pied de l'accélérateur", textEn: "Keep the steering wheel straight and ease off the accelerator" },
+            { letter: "D", text: "Accélérer pour traverser la flaque d'eau plus vite", textEn: "Accelerate to cross the water puddle faster" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "En aquaplaning, il faut garder le volant droit, ne pas freiner (les roues ne touchent plus le sol), et lever le pied jusqu'à reprendre l'adhérence.",
+        explanationEn: "During aquaplaning, keep the wheel straight, don't brake (the wheels are no longer touching the ground), and ease off the accelerator until grip returns.",
+        trapNote: "Braking during aquaplaning can cause loss of control since the tires have no grip. Accelerating makes it worse.",
+        distractorNotes: { B: "Hard braking on water causes the car to skid uncontrollably.", D: "Accelerating increases the water layer under the tires." }
+    },
+    {
+        id: "circ-81",
+        topic: "circulation",
+        difficulty: 2,
+        questionFr: "Quelles règles s'appliquent aux voies réservées aux bus en ville ?",
+        questionEn: "What rules apply to bus lanes in the city?",
+        options: [
+            { letter: "A", text: "Les taxis et vélos peuvent les emprunter si indiqué", textEn: "Taxis and bicycles may use them if indicated" },
+            { letter: "B", text: "Tous les véhicules peuvent les utiliser aux heures creuses", textEn: "All vehicles may use them during off-peak hours" },
+            { letter: "C", text: "Les voitures particulières ne peuvent pas y circuler", textEn: "Private cars may not drive in them" },
+            { letter: "D", text: "Elles n'existent que sur les boulevards principaux", textEn: "They only exist on main boulevards" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Les voies de bus sont réservées aux transports en commun. Les taxis et vélos peuvent les emprunter si un panneau l'autorise. Les voitures particulières y sont interdites.",
+        explanationEn: "Bus lanes are reserved for public transport. Taxis and bicycles may use them if signage permits. Private cars are prohibited.",
+        trapNote: "Off-peak hours do NOT open bus lanes to regular traffic — they remain reserved 24/7 unless signage says otherwise.",
+        distractorNotes: { B: "Bus lanes are reserved at all times unless specific signage indicates otherwise.", D: "Bus lanes can be on any street, not just main boulevards." }
     },
     // === CONDUCTEUR ===,
     {
@@ -8563,6 +8753,196 @@ const QUESTION_BANK = [
             { wordFr: "feu piéton", wordEn: "pedestrian light", definition: "A traffic signal specifically for pedestrians showing when they may cross" }
         ]
     },
+    {
+        id: "autr-79",
+        topic: "autres_usagers",
+        difficulty: 2,
+        questionFr: "Quels usagers sont particulièrement vulnérables en agglomération ?",
+        questionEn: "Which road users are particularly vulnerable in urban areas?",
+        options: [
+            { letter: "A", text: "Les piétons", textEn: "Pedestrians" },
+            { letter: "B", text: "Les conducteurs de poids lourds", textEn: "Truck drivers" },
+            { letter: "C", text: "Les cyclistes", textEn: "Cyclists" },
+            { letter: "D", text: "Les conducteurs d'autobus", textEn: "Bus drivers" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Les piétons et les cyclistes sont les usagers les plus vulnérables car ils ne sont pas protégés par un habitacle.",
+        explanationEn: "Pedestrians and cyclists are the most vulnerable because they are not protected by a vehicle body.",
+        trapNote: "Bus and truck drivers are professional drivers in large vehicles — they are not considered vulnerable road users.",
+        distractorNotes: { B: "Truck drivers are inside a heavy vehicle, making them less vulnerable.", D: "Bus drivers are protected by the bus structure." }
+    },
+    {
+        id: "autr-80",
+        topic: "autres_usagers",
+        difficulty: 2,
+        questionFr: "Que devez-vous faire en croisant un convoi de cyclistes ?",
+        questionEn: "What must you do when encountering a group of cyclists?",
+        options: [
+            { letter: "A", text: "Ralentir et laisser un espace latéral d'au moins 1 mètre", textEn: "Slow down and leave at least 1 meter lateral space" },
+            { letter: "B", text: "Klaxonner pour les avertir de votre présence", textEn: "Honk to warn them of your presence" },
+            { letter: "C", text: "Attendre pour dépasser si l'espace est insuffisant", textEn: "Wait to overtake if space is insufficient" },
+            { letter: "D", text: "Accélérer pour les dépasser rapidement", textEn: "Accelerate to pass them quickly" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Il faut ralentir, respecter la distance latérale de sécurité (1 m en ville, 1,50 m hors agglomération) et attendre si le dépassement est impossible.",
+        explanationEn: "You must slow down, respect the lateral safety distance (1m in town, 1.5m outside), and wait if overtaking is not possible.",
+        trapNote: "Honking can startle cyclists and cause an accident. Accelerating to pass quickly is dangerous.",
+        distractorNotes: { B: "Honking near cyclists can cause them to swerve.", D: "Speeding past creates a dangerous air draft." }
+    },
+    {
+        id: "autr-81",
+        topic: "autres_usagers",
+        difficulty: 3,
+        questionFr: "Un bus scolaire est arrêté avec ses feux de détresse allumés. Que devez-vous faire ?",
+        questionEn: "A school bus has stopped with its hazard lights on. What must you do?",
+        options: [
+            { letter: "A", text: "Ralentir et être prêt à vous arrêter", textEn: "Slow down and be ready to stop" },
+            { letter: "B", text: "Continuer à vitesse normale s'il n'y a pas d'enfants visibles", textEn: "Continue at normal speed if no children are visible" },
+            { letter: "C", text: "Surveiller attentivement les enfants pouvant traverser", textEn: "Carefully watch for children who may cross" },
+            { letter: "D", text: "Dépasser le bus par la gauche rapidement", textEn: "Overtake the bus on the left quickly" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Les enfants sont imprévisibles. Il faut toujours ralentir près d'un bus scolaire arrêté et surveiller les éventuelles traversées.",
+        explanationEn: "Children are unpredictable. You must always slow down near a stopped school bus and watch for possible crossings.",
+        trapNote: "Even if you can't see children, they may emerge suddenly from behind the bus.",
+        distractorNotes: { B: "Children may be hidden behind the bus — never assume none are present.", D: "Overtaking quickly near a stopped school bus is extremely dangerous." }
+    },
+    {
+        id: "autr-82",
+        topic: "autres_usagers",
+        difficulty: 2,
+        questionFr: "Quelles précautions prendre en présence de piétons âgés ?",
+        questionEn: "What precautions should you take around elderly pedestrians?",
+        options: [
+            { letter: "A", text: "Leur laisser plus de temps pour traverser", textEn: "Give them more time to cross" },
+            { letter: "B", text: "Klaxonner pour qu'ils se dépêchent", textEn: "Honk so they hurry up" },
+            { letter: "C", text: "Adapter votre vitesse car ils peuvent changer de direction", textEn: "Adjust your speed as they may change direction" },
+            { letter: "D", text: "Les dépasser au plus vite pour ne pas les gêner", textEn: "Pass them quickly to avoid inconveniencing them" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Les personnes âgées se déplacent plus lentement et peuvent avoir des réactions imprévisibles. Patience et vigilance sont essentielles.",
+        explanationEn: "Elderly people move more slowly and may react unpredictably. Patience and vigilance are essential.",
+        trapNote: "Honking or rushing past elderly pedestrians shows dangerous impatience and may cause panic.",
+        distractorNotes: { B: "Honking at elderly pedestrians can disorient or frighten them.", D: "Rushing past creates danger — they may step into your path." }
+    },
+    {
+        id: "autr-83",
+        topic: "autres_usagers",
+        difficulty: 3,
+        questionFr: "En présence d'un cavalier sur la route, quelles sont les bonnes réactions ?",
+        questionEn: "When encountering a horse rider on the road, what are the correct reactions?",
+        options: [
+            { letter: "A", text: "Ralentir progressivement sans bruit brusque", textEn: "Slow down gradually without sudden noise" },
+            { letter: "B", text: "Klaxonner pour signaler votre approche", textEn: "Honk to signal your approach" },
+            { letter: "C", text: "Laisser un espace latéral important en dépassant", textEn: "Leave a wide lateral gap when overtaking" },
+            { letter: "D", text: "Accélérer pour ne pas rester longtemps à côté du cheval", textEn: "Accelerate to avoid staying alongside the horse" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Les chevaux sont des animaux craintifs. Il faut ralentir sans bruit et laisser un large espace en dépassant pour éviter de les effrayer.",
+        explanationEn: "Horses are easily frightened. Slow down quietly and leave a wide gap when passing to avoid startling them.",
+        trapNote: "Loud noises or sudden acceleration can spook a horse, putting both rider and you at risk.",
+        distractorNotes: { B: "Honking can terrify a horse and cause it to bolt.", D: "Engine acceleration noise may startle the horse." }
+    },
+    {
+        id: "autr-84",
+        topic: "autres_usagers",
+        difficulty: 2,
+        questionFr: "Quels sont les risques liés aux trottinettes électriques en ville ?",
+        questionEn: "What are the risks associated with electric scooters in urban areas?",
+        options: [
+            { letter: "A", text: "Elles sont silencieuses et difficiles à détecter", textEn: "They are silent and hard to detect" },
+            { letter: "B", text: "Elles roulent toujours sur le trottoir", textEn: "They always ride on the sidewalk" },
+            { letter: "C", text: "Leurs conducteurs peuvent faire des changements de direction brusques", textEn: "Their riders may make sudden direction changes" },
+            { letter: "D", text: "Elles ne sont pas autorisées en agglomération", textEn: "They are not permitted in urban areas" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Les trottinettes électriques sont silencieuses et leurs conducteurs peuvent changer de direction brusquement, ce qui les rend difficiles à anticiper.",
+        explanationEn: "Electric scooters are silent and their riders may swerve suddenly, making them hard to anticipate.",
+        trapNote: "Scooters ARE allowed in cities (on bike lanes or roads) — they are not restricted to sidewalks.",
+        distractorNotes: { B: "Since 2019, scooters must use bike lanes or roads, not sidewalks.", D: "Electric scooters are fully legal in urban areas with specific rules." }
+    },
+    {
+        id: "autr-85",
+        topic: "autres_usagers",
+        difficulty: 2,
+        questionFr: "Vous approchez d'un passage piéton. Quelles actions sont correctes ?",
+        questionEn: "You are approaching a pedestrian crossing. Which actions are correct?",
+        options: [
+            { letter: "A", text: "Ralentir et céder le passage aux piétons engagés", textEn: "Slow down and yield to pedestrians who have started crossing" },
+            { letter: "B", text: "Accélérer si aucun piéton n'est visible", textEn: "Accelerate if no pedestrian is visible" },
+            { letter: "C", text: "S'arrêter si un piéton manifeste l'intention de traverser", textEn: "Stop if a pedestrian shows intent to cross" },
+            { letter: "D", text: "Klaxonner pour prévenir les piétons de votre arrivée", textEn: "Honk to warn pedestrians of your arrival" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Le code de la route impose de céder le passage aux piétons engagés ou montrant l'intention de traverser (amende de 135 € et 6 points en cas d'infraction).",
+        explanationEn: "Traffic law requires yielding to pedestrians who have started crossing or show intent to cross (€135 fine and 6 points for violation).",
+        trapNote: "Since 2018, French law requires stopping when a pedestrian merely shows intention to cross, not just when they're already on the crossing.",
+        distractorNotes: { B: "You must never accelerate near a crossing — pedestrians may appear suddenly.", D: "Honking near crossings is unnecessary and can startle pedestrians." }
+    },
+    {
+        id: "autr-86",
+        topic: "autres_usagers",
+        difficulty: 3,
+        questionFr: "Quels véhicules prioritaires doivent être laissés passer immédiatement ?",
+        questionEn: "Which priority vehicles must be given way to immediately?",
+        options: [
+            { letter: "A", text: "Les ambulances avec gyrophare et sirène en action", textEn: "Ambulances with flashing lights and siren active" },
+            { letter: "B", text: "Les taxis en service", textEn: "Taxis in service" },
+            { letter: "C", text: "Les véhicules de pompiers avec avertisseurs en action", textEn: "Fire trucks with warning signals active" },
+            { letter: "D", text: "Les dépanneuses sur autoroute", textEn: "Tow trucks on motorways" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Seuls les véhicules d'urgence (ambulance, pompiers, police, SAMU) avec gyrophare ET sirène en fonctionnement sont prioritaires.",
+        explanationEn: "Only emergency vehicles (ambulance, fire, police, SAMU) with BOTH flashing lights AND siren active have priority.",
+        trapNote: "A vehicle with only flashing lights (no siren) is not using its priority — you don't have to yield.",
+        distractorNotes: { B: "Taxis have no priority status regardless of their service state.", D: "Tow trucks are not emergency vehicles and have no priority." }
+    },
+    {
+        id: "autr-87",
+        topic: "autres_usagers",
+        difficulty: 2,
+        questionFr: "Quels dangers présentent les deux-roues motorisés pour les automobilistes ?",
+        questionEn: "What dangers do motorized two-wheelers pose to motorists?",
+        options: [
+            { letter: "A", text: "Ils peuvent se trouver dans les angles morts", textEn: "They can be in blind spots" },
+            { letter: "B", text: "Ils sont toujours plus rapides que les voitures", textEn: "They are always faster than cars" },
+            { letter: "C", text: "Leur petite taille rend l'évaluation des distances difficile", textEn: "Their small size makes distance estimation difficult" },
+            { letter: "D", text: "Ils ne respectent jamais le code de la route", textEn: "They never follow traffic rules" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Les motos et scooters sont petits et se glissent facilement dans les angles morts. Leur taille réduite fausse aussi l'estimation de distance et de vitesse.",
+        explanationEn: "Motorcycles and scooters are small and easily end up in blind spots. Their reduced size also distorts distance and speed estimation.",
+        trapNote: "The generalizations in B and D are false — not all motorcyclists are faster or reckless.",
+        distractorNotes: { B: "Speed depends on the vehicle and situation — this is a false generalization.", D: "Most motorcyclists follow traffic rules — this is prejudice." }
+    },
+    {
+        id: "autr-88",
+        topic: "autres_usagers",
+        difficulty: 3,
+        questionFr: "Un piéton aveugle avec une canne blanche traverse devant vous. Que faites-vous ?",
+        questionEn: "A blind pedestrian with a white cane is crossing in front of you. What do you do?",
+        options: [
+            { letter: "A", text: "Vous vous arrêtez et attendez qu'il ait fini de traverser", textEn: "You stop and wait until they finish crossing" },
+            { letter: "B", text: "Vous klaxonnez pour l'avertir de votre présence", textEn: "You honk to warn them of your presence" },
+            { letter: "C", text: "Vous ne redémarrez pas tant qu'il n'a pas atteint le trottoir", textEn: "You do not restart until they have reached the sidewalk" },
+            { letter: "D", text: "Vous le contournez lentement par la gauche", textEn: "You slowly go around them on the left" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Une personne aveugle ne peut pas voir votre véhicule. Il faut s'arrêter complètement et attendre qu'elle ait atteint le trottoir en sécurité.",
+        explanationEn: "A blind person cannot see your vehicle. You must stop completely and wait until they have safely reached the sidewalk.",
+        trapNote: "Honking disorients blind pedestrians who rely on sound. Going around them is risky as they may change direction.",
+        distractorNotes: { B: "Blind people use hearing to navigate — honking disrupts their orientation.", D: "They may change direction without warning since they cannot see you." }
+    },
     // === PRIORITE (Right of Way) ===,
     {
         id: "prio-001",
@@ -13237,6 +13617,196 @@ const QUESTION_BANK = [
         vocabulary: [
             { wordFr: "ligne mixte", wordEn: "mixed line", definition: "Solid on one side, broken on the other" }
         ]
+    },
+    {
+        id: "croi-138",
+        topic: "croisement_depassement",
+        difficulty: 2,
+        questionFr: "Dans quels cas le dépassement par la droite est-il autorisé ?",
+        questionEn: "In which cases is overtaking on the right permitted?",
+        options: [
+            { letter: "A", text: "Quand le véhicule devant tourne à gauche", textEn: "When the vehicle ahead is turning left" },
+            { letter: "B", text: "Sur autoroute quand on roule plus vite que la file de gauche", textEn: "On motorways when driving faster than the left lane" },
+            { letter: "C", text: "Quand la circulation s'effectue en files parallèles", textEn: "When traffic is moving in parallel lanes" },
+            { letter: "D", text: "Quand on est pressé et que la voie de gauche est occupée", textEn: "When in a hurry and the left lane is occupied" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Le dépassement par la droite est autorisé quand le véhicule devant tourne à gauche, ou en circulation en files parallèles (embouteillage).",
+        explanationEn: "Overtaking on the right is allowed when the vehicle ahead turns left, or in parallel lane traffic (traffic jams).",
+        trapNote: "Being in a hurry is never a valid reason. On motorways, you must use the left lane to overtake.",
+        distractorNotes: { B: "Even on motorways, overtaking must be done on the left.", D: "Impatience is never a legal justification for right-side overtaking." }
+    },
+    {
+        id: "croi-139",
+        topic: "croisement_depassement",
+        difficulty: 3,
+        questionFr: "Quelles sont les conditions pour dépasser en toute sécurité ?",
+        questionEn: "What are the conditions for overtaking safely?",
+        options: [
+            { letter: "A", text: "Avoir une visibilité suffisante vers l'avant", textEn: "Having sufficient forward visibility" },
+            { letter: "B", text: "Rouler au moins 20 km/h plus vite que le véhicule dépassé", textEn: "Driving at least 20 km/h faster than the overtaken vehicle" },
+            { letter: "C", text: "Vérifier qu'aucun véhicule n'arrive en sens inverse", textEn: "Checking that no vehicle is coming from the opposite direction" },
+            { letter: "D", text: "Mettre les feux de détresse pendant le dépassement", textEn: "Putting on hazard lights during overtaking" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Pour dépasser en sécurité, il faut une bonne visibilité et s'assurer qu'aucun véhicule ne vient en face. Il n'y a pas de vitesse minimale requise.",
+        explanationEn: "To overtake safely, you need good visibility and must ensure no vehicle is approaching. There is no required minimum speed difference.",
+        trapNote: "There's no rule about a 20 km/h speed difference. Hazard lights are for breakdowns, not overtaking.",
+        distractorNotes: { B: "No law requires a specific speed difference — just enough to complete the maneuver safely.", D: "Hazard lights during overtaking would confuse other drivers." }
+    },
+    {
+        id: "croi-140",
+        topic: "croisement_depassement",
+        difficulty: 2,
+        questionFr: "Vous êtes sur une route étroite et croisez un véhicule venant en face. Que faites-vous ?",
+        questionEn: "You are on a narrow road and meet a vehicle coming from the opposite direction. What do you do?",
+        options: [
+            { letter: "A", text: "Serrer à droite pour faciliter le croisement", textEn: "Move to the right to ease the passing" },
+            { letter: "B", text: "Accélérer pour passer le premier", textEn: "Accelerate to pass first" },
+            { letter: "C", text: "Ralentir si nécessaire, voire s'arrêter", textEn: "Slow down if necessary, or even stop" },
+            { letter: "D", text: "Utiliser le klaxon en continu pour avertir l'autre conducteur", textEn: "Use the horn continuously to warn the other driver" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Sur une route étroite, il faut serrer à droite et adapter sa vitesse, jusqu'à s'arrêter si le croisement l'exige.",
+        explanationEn: "On a narrow road, you must move right and adjust your speed, even stopping if the crossing requires it.",
+        trapNote: "Accelerating or using the horn aggressively are dangerous behaviors.",
+        distractorNotes: { B: "Racing to pass first creates a head-on collision risk.", D: "Continuous honking is illegal in urban areas and aggressive on rural roads." }
+    },
+    {
+        id: "croi-141",
+        topic: "croisement_depassement",
+        difficulty: 3,
+        questionFr: "En montagne, qui a la priorité lors d'un croisement difficile ?",
+        questionEn: "In the mountains, who has priority during a difficult crossing?",
+        options: [
+            { letter: "A", text: "Le véhicule montant a la priorité", textEn: "The vehicle going uphill has priority" },
+            { letter: "B", text: "Le véhicule descendant doit reculer si possible", textEn: "The vehicle going downhill must reverse if possible" },
+            { letter: "C", text: "Le véhicule le plus petit doit toujours reculer", textEn: "The smallest vehicle must always reverse" },
+            { letter: "D", text: "Le véhicule le plus rapide a la priorité", textEn: "The fastest vehicle has priority" }
+        ],
+        correctAnswers: ["A", "B"],
+        answerCount: 2,
+        explanationFr: "En montagne, le véhicule montant a la priorité car il est plus difficile de repartir en côte. Le véhicule descendant doit reculer jusqu'à un endroit permettant le croisement.",
+        explanationEn: "In the mountains, the uphill vehicle has priority because restarting on a slope is harder. The downhill vehicle must reverse to a passing point.",
+        trapNote: "Size and speed are irrelevant — the rule is based on the direction of travel (uphill priority).",
+        distractorNotes: { C: "Vehicle size does not determine mountain crossing priority.", D: "Speed is never a factor in determining priority." }
+    },
+    {
+        id: "croi-142",
+        topic: "croisement_depassement",
+        difficulty: 2,
+        questionFr: "Quels sont les endroits où le dépassement est interdit ?",
+        questionEn: "Where is overtaking prohibited?",
+        options: [
+            { letter: "A", text: "Au sommet d'une côte sans visibilité", textEn: "At the top of a hill without visibility" },
+            { letter: "B", text: "Sur une ligne droite dégagée", textEn: "On a clear straight road" },
+            { letter: "C", text: "Dans un virage sans visibilité suffisante", textEn: "In a bend without sufficient visibility" },
+            { letter: "D", text: "Sur une route à 4 voies séparées", textEn: "On a 4-lane divided road" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Le dépassement est interdit partout où la visibilité est insuffisante : sommet de côte, virage serré, passage à niveau, intersection.",
+        explanationEn: "Overtaking is prohibited wherever visibility is insufficient: hilltops, sharp bends, level crossings, intersections.",
+        trapNote: "Clear straight roads and divided 4-lane roads allow overtaking with proper signaling.",
+        distractorNotes: { B: "A clear straight road with good visibility is where overtaking IS allowed.", D: "Divided roads with separate carriageways allow overtaking safely." }
+    },
+    {
+        id: "croi-143",
+        topic: "croisement_depassement",
+        difficulty: 2,
+        questionFr: "Que devez-vous vérifier avant de commencer un dépassement ?",
+        questionEn: "What must you check before starting to overtake?",
+        options: [
+            { letter: "A", text: "Qu'aucun véhicule derrière vous n'a commencé à vous dépasser", textEn: "That no vehicle behind has started overtaking you" },
+            { letter: "B", text: "Que votre réservoir est suffisamment plein", textEn: "That your fuel tank is sufficiently full" },
+            { letter: "C", text: "Que vous pouvez reprendre votre place à droite sans gêner", textEn: "That you can return to the right lane without causing disruption" },
+            { letter: "D", text: "Que la musique dans votre véhicule n'est pas trop forte", textEn: "That the music in your vehicle is not too loud" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Avant de dépasser : vérifier les rétroviseurs (personne ne vous dépasse) et s'assurer de pouvoir se rabattre sans gêner.",
+        explanationEn: "Before overtaking: check mirrors (nobody is overtaking you) and ensure you can merge back without disruption.",
+        trapNote: "Fuel level and music volume are not part of the overtaking safety check.",
+        distractorNotes: { B: "Fuel level is irrelevant to overtaking decisions.", D: "Music volume, while important for driving, is not an overtaking prerequisite." }
+    },
+    {
+        id: "croi-144",
+        topic: "croisement_depassement",
+        difficulty: 3,
+        questionFr: "Quelles règles s'appliquent au dépassement d'un tramway ?",
+        questionEn: "What rules apply when overtaking a tram?",
+        options: [
+            { letter: "A", text: "On dépasse un tramway par la droite en règle générale", textEn: "You generally overtake a tram on the right" },
+            { letter: "B", text: "On dépasse un tramway par la gauche comme tout véhicule", textEn: "You overtake a tram on the left like any vehicle" },
+            { letter: "C", text: "Il est interdit de dépasser un tramway à l'arrêt débarquant des passagers", textEn: "It is forbidden to overtake a stopped tram unloading passengers" },
+            { letter: "D", text: "Le dépassement d'un tramway est toujours interdit", textEn: "Overtaking a tram is always forbidden" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Le tramway se dépasse par la droite (sauf rue à sens unique). Il est interdit de dépasser un tramway à l'arrêt quand des passagers montent ou descendent.",
+        explanationEn: "Trams are overtaken on the right (except on one-way streets). You must not pass a stopped tram when passengers are boarding or alighting.",
+        trapNote: "Unlike all other vehicles, trams are overtaken on the RIGHT. This is a frequently tested exception.",
+        distractorNotes: { B: "Trams are the exception — they are overtaken on the right, not left.", D: "Overtaking a tram is allowed when it's moving and no passengers are boarding." }
+    },
+    {
+        id: "croi-145",
+        topic: "croisement_depassement",
+        difficulty: 2,
+        questionFr: "Quels signaux devez-vous utiliser lors d'un dépassement ?",
+        questionEn: "What signals must you use when overtaking?",
+        options: [
+            { letter: "A", text: "Le clignotant gauche avant de déboîter", textEn: "Left indicator before pulling out" },
+            { letter: "B", text: "Un appel de phares en agglomération", textEn: "Headlight flash in urban areas" },
+            { letter: "C", text: "Le clignotant droit pour se rabattre", textEn: "Right indicator to merge back" },
+            { letter: "D", text: "Les feux de détresse pendant le dépassement", textEn: "Hazard lights during overtaking" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Le dépassement nécessite deux signaux : clignotant gauche pour déboîter, puis clignotant droit pour se rabattre.",
+        explanationEn: "Overtaking requires two signals: left indicator to pull out, then right indicator to merge back.",
+        trapNote: "Headlight flashes are for warning, not for overtaking. Hazard lights signal a breakdown or danger.",
+        distractorNotes: { B: "Headlight flashes in urban areas are reserved for danger warnings.", D: "Hazard lights during overtaking confuse other drivers about your intentions." }
+    },
+    {
+        id: "croi-146",
+        topic: "croisement_depassement",
+        difficulty: 3,
+        questionFr: "Que faites-vous si un véhicule que vous doublez accélère pendant votre dépassement ?",
+        questionEn: "What do you do if a vehicle you're overtaking accelerates during your maneuver?",
+        options: [
+            { letter: "A", text: "Vous accélérez davantage pour terminer le dépassement", textEn: "You accelerate more to complete the overtaking" },
+            { letter: "B", text: "Vous abandonnez le dépassement si possible et vous vous rabattez", textEn: "You abandon the overtaking if possible and merge back" },
+            { letter: "C", text: "Vous ne dépassez pas la vitesse maximale autorisée", textEn: "You do not exceed the maximum permitted speed" },
+            { letter: "D", text: "Vous klaxonnez pour qu'il ralentisse", textEn: "You honk for them to slow down" }
+        ],
+        correctAnswers: ["B", "C"],
+        answerCount: 2,
+        explanationFr: "Si le dépassement devient dangereux, il faut l'abandonner et se rabattre. Dans tous les cas, il est interdit de dépasser la vitesse autorisée, même pour dépasser.",
+        explanationEn: "If overtaking becomes dangerous, abandon it and merge back. In all cases, exceeding the speed limit is forbidden, even while overtaking.",
+        trapNote: "You are NEVER allowed to exceed the speed limit to complete an overtaking — this is a common trap.",
+        distractorNotes: { A: "Accelerating further may exceed the speed limit and increase danger.", D: "Honking does not legally compel the other driver to slow down." }
+    },
+    {
+        id: "croi-147",
+        topic: "croisement_depassement",
+        difficulty: 2,
+        questionFr: "Lors d'un croisement de nuit, quels éclairages devez-vous utiliser ?",
+        questionEn: "During a nighttime crossing, what lighting must you use?",
+        options: [
+            { letter: "A", text: "Passer en feux de croisement à 150 mètres du véhicule en face", textEn: "Switch to dipped headlights at 150 meters from the oncoming vehicle" },
+            { letter: "B", text: "Garder les feux de route pour mieux voir", textEn: "Keep full beam headlights for better visibility" },
+            { letter: "C", text: "Regarder le bord droit de la route pour éviter l'éblouissement", textEn: "Look at the right edge of the road to avoid being dazzled" },
+            { letter: "D", text: "Éteindre tous les feux pour ne pas éblouir l'autre conducteur", textEn: "Turn off all lights to avoid dazzling the other driver" }
+        ],
+        correctAnswers: ["A", "C"],
+        answerCount: 2,
+        explanationFr: "Lors d'un croisement de nuit, il faut passer en feux de croisement (codes) et fixer le bord droit de la route pour éviter l'éblouissement.",
+        explanationEn: "During a nighttime crossing, switch to dipped headlights and look at the right road edge to avoid being dazzled.",
+        trapNote: "Never keep full beams on when facing another vehicle, and never turn off all lights — both are dangerous.",
+        distractorNotes: { B: "Full beam headlights blind the oncoming driver — switch to dipped.", D: "Driving without lights is illegal and extremely dangerous." }
     },
     // === ARRET & STATIONNEMENT (Stopping & Parking) ===,
     {
