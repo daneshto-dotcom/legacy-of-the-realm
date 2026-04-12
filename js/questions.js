@@ -26062,7 +26062,7 @@ const QUESTION_BANK = [
         trapNote: "Low RPM shifting is good, but permanently lugging the engine is harmful and inefficient.",
         distractorNotes: { C: "Constant low RPM strains the engine and can actually increase consumption in some situations." },
         vocabulary: []
-    }
+    },
     // === B02 CHUNK 11 — S34: autres (autr-099..108), circulation (circ-092..101), priorite (prio-184..193) ===,
 
     // --- AUTRES USAGERS (autr-099 to autr-108) — multi-answer ---
