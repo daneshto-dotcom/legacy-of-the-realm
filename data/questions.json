@@ -47936,5 +47936,1235 @@
       "D": "Bus lanes can be on any street, not just main boulevards."
     },
     "questionFr": "Quelles règles s'appliquent aux voies réservées aux bus en ville ?"
+  },
+  {
+    "id": "rout-157",
+    "topic": "route",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quelles précautions prendre en abordant un virage sur route de montagne ?",
+    "questionEn": "What precautions should you take when approaching a mountain road curve?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Réduire la vitesse avant le virage",
+        "textEn": "Reduce speed before the curve"
+      },
+      {
+        "letter": "B",
+        "text": "Accélérer dans le virage pour maintenir la stabilité",
+        "textEn": "Accelerate in the curve to maintain stability"
+      },
+      {
+        "letter": "C",
+        "text": "Rester dans votre voie et serrer à droite",
+        "textEn": "Stay in your lane and keep to the right"
+      },
+      {
+        "letter": "D",
+        "text": "Couper le virage pour réduire la distance",
+        "textEn": "Cut the curve to reduce the distance"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "En montagne, il faut réduire la vitesse AVANT d'entrer dans le virage et rester dans sa voie en serrant à droite pour éviter un face-à-face.",
+    "explanationEn": "On mountain roads, reduce speed BEFORE entering the curve and stay in your lane keeping right to avoid a head-on collision.",
+    "trapNote": "Cutting a curve means crossing into the oncoming lane — extremely dangerous on mountain roads.",
+    "distractorNotes": {
+      "B": "Accelerating in a curve pushes the car outward (understeer) — dangerous on mountain roads.",
+      "D": "Cutting the curve puts you in the path of oncoming traffic."
+    }
+  },
+  {
+    "id": "rout-158",
+    "topic": "route",
+    "difficulty": 3,
+    "answerCount": 2,
+    "questionFr": "Quels équipements sont obligatoires en hiver dans certaines zones montagneuses françaises ?",
+    "questionEn": "What equipment is mandatory in winter in certain French mountain zones?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Des pneus hiver ou des chaînes (loi Montagne)",
+        "textEn": "Winter tires or chains (Mountain Law)"
+      },
+      {
+        "letter": "B",
+        "text": "Un gilet de haute visibilité supplémentaire",
+        "textEn": "An additional high-visibility vest"
+      },
+      {
+        "letter": "C",
+        "text": "Des pneus hiver marqués 3PMSF ou M+S",
+        "textEn": "Winter tires marked 3PMSF or M+S"
+      },
+      {
+        "letter": "D",
+        "text": "Des phares antibrouillard obligatoires",
+        "textEn": "Mandatory fog lights"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "La loi Montagne (depuis 2021) impose des pneus hiver (3PMSF ou M+S) ou des chaînes dans 48 départements de montagne du 1er novembre au 31 mars.",
+    "explanationEn": "The Mountain Law (since 2021) requires winter tires (3PMSF or M+S) or chains in 48 mountain departments from November 1 to March 31.",
+    "trapNote": "An extra vest and fog lights are not part of the Mountain Law requirements.",
+    "distractorNotes": {
+      "B": "Only one high-visibility vest is required — the Mountain Law doesn't add another.",
+      "D": "Fog lights are standard equipment but not a winter-specific requirement."
+    }
+  },
+  {
+    "id": "rout-159",
+    "topic": "route",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Que signifient les bandes rugueuses sur le bord de la chaussée ?",
+    "questionEn": "What do rumble strips on the road edge mean?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Elles alertent le conducteur qui quitte sa voie",
+        "textEn": "They alert the driver who is leaving their lane"
+      },
+      {
+        "letter": "B",
+        "text": "Elles indiquent une zone de stationnement",
+        "textEn": "They indicate a parking zone"
+      },
+      {
+        "letter": "C",
+        "text": "Elles préviennent de la fatigue et de l'inattention",
+        "textEn": "They warn of fatigue and inattention"
+      },
+      {
+        "letter": "D",
+        "text": "Elles signalent une zone de travaux",
+        "textEn": "They signal a construction zone"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Les bandes rugueuses vibrent sous les pneus pour alerter un conducteur distrait ou somnolent qui dérive hors de sa voie.",
+    "explanationEn": "Rumble strips vibrate under the tires to alert a distracted or drowsy driver who is drifting out of their lane.",
+    "trapNote": "Rumble strips are a safety feature, not parking or construction indicators.",
+    "distractorNotes": {
+      "B": "Rumble strips have nothing to do with parking zones.",
+      "D": "Construction zones use orange cones and signs, not permanent rumble strips."
+    }
+  },
+  {
+    "id": "rout-160",
+    "topic": "route",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quelles caractéristiques distinguent une route express d'une autoroute ?",
+    "questionEn": "What characteristics distinguish an expressway from a motorway?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "La vitesse maximale peut être de 110 km/h au lieu de 130",
+        "textEn": "Maximum speed may be 110 km/h instead of 130"
+      },
+      {
+        "letter": "B",
+        "text": "Elle est toujours gratuite",
+        "textEn": "It is always free"
+      },
+      {
+        "letter": "C",
+        "text": "Elle peut avoir des carrefours à niveau",
+        "textEn": "It may have at-grade intersections"
+      },
+      {
+        "letter": "D",
+        "text": "Les piétons peuvent y circuler",
+        "textEn": "Pedestrians may walk on it"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Une route express a une vitesse limite souvent de 110 km/h et peut avoir des croisements à niveau, contrairement à l'autoroute qui est entièrement dénivelée.",
+    "explanationEn": "An expressway often has a 110 km/h limit and may have at-grade crossings, unlike a motorway which has grade-separated interchanges.",
+    "trapNote": "Expressways are not always free (some have tolls). Pedestrians are forbidden on expressways.",
+    "distractorNotes": {
+      "B": "Some expressways have tolls, like certain sections of national routes.",
+      "D": "Pedestrians, cyclists, and mopeds are prohibited on expressways."
+    }
+  },
+  {
+    "id": "rout-161",
+    "topic": "route",
+    "difficulty": 3,
+    "answerCount": 2,
+    "questionFr": "Que devez-vous faire en cas de forte pluie sur autoroute avec visibilité réduite à moins de 50 mètres ?",
+    "questionEn": "What must you do in heavy rain on a motorway with visibility below 50 meters?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Réduire votre vitesse à 50 km/h maximum",
+        "textEn": "Reduce speed to 50 km/h maximum"
+      },
+      {
+        "letter": "B",
+        "text": "S'arrêter sur la bande d'arrêt d'urgence",
+        "textEn": "Stop on the hard shoulder"
+      },
+      {
+        "letter": "C",
+        "text": "Allumer vos feux de brouillard avant et arrière",
+        "textEn": "Turn on front and rear fog lights"
+      },
+      {
+        "letter": "D",
+        "text": "Continuer à 110 km/h avec les essuie-glaces au maximum",
+        "textEn": "Continue at 110 km/h with wipers on maximum"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Par visibilité inférieure à 50 m : vitesse maximale 50 km/h, feux de brouillard avant et arrière allumés. Ne pas s'arrêter sur la BAU sauf urgence.",
+    "explanationEn": "With visibility below 50m: maximum speed 50 km/h, front and rear fog lights on. Do not stop on the hard shoulder except in emergencies.",
+    "trapNote": "Stopping on the hard shoulder in poor visibility is extremely dangerous — you risk being rear-ended.",
+    "distractorNotes": {
+      "B": "The hard shoulder in fog/rain is one of the most dangerous places to stop.",
+      "D": "110 km/h with 50m visibility gives less than 2 seconds to react — far too fast."
+    }
+  },
+  {
+    "id": "rout-162",
+    "topic": "route",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quels sont les avantages du frein moteur en descente ?",
+    "questionEn": "What are the benefits of engine braking when going downhill?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Il évite la surchauffe des freins",
+        "textEn": "It prevents brake overheating"
+      },
+      {
+        "letter": "B",
+        "text": "Il consomme plus de carburant mais est plus efficace",
+        "textEn": "It uses more fuel but is more effective"
+      },
+      {
+        "letter": "C",
+        "text": "Il maintient une vitesse stable sans user les plaquettes",
+        "textEn": "It maintains steady speed without wearing brake pads"
+      },
+      {
+        "letter": "D",
+        "text": "Il n'est efficace qu'avec une boîte manuelle",
+        "textEn": "It is only effective with a manual gearbox"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Le frein moteur ralentit le véhicule sans utiliser les freins, évitant leur surchauffe (fade) et l'usure des plaquettes, particulièrement utile en longue descente.",
+    "explanationEn": "Engine braking slows the vehicle without using brakes, preventing overheating (fade) and pad wear, especially useful on long descents.",
+    "trapNote": "Engine braking actually uses LESS fuel (fuel cut-off in deceleration) and works with automatic gearboxes too.",
+    "distractorNotes": {
+      "B": "Engine braking activates fuel cut-off — it uses zero fuel in most modern cars.",
+      "D": "Automatic gearboxes also provide engine braking, especially in L or manual mode."
+    }
+  },
+  {
+    "id": "rout-163",
+    "topic": "route",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quelles sont les règles concernant l'utilisation des voies sur une route à 3 voies dans le même sens ?",
+    "questionEn": "What are the rules for lane usage on a 3-lane road in the same direction?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "On doit rouler le plus à droite possible",
+        "textEn": "You must drive as far right as possible"
+      },
+      {
+        "letter": "B",
+        "text": "La voie de gauche est réservée au dépassement",
+        "textEn": "The left lane is reserved for overtaking"
+      },
+      {
+        "letter": "C",
+        "text": "On peut rouler en permanence sur la voie du milieu",
+        "textEn": "You may permanently drive in the middle lane"
+      },
+      {
+        "letter": "D",
+        "text": "La voie de droite est réservée aux poids lourds",
+        "textEn": "The right lane is reserved for heavy trucks"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "B"
+    ],
+    "explanationFr": "Sur une route à plusieurs voies, on doit circuler sur la voie la plus à droite. La voie de gauche est réservée au dépassement.",
+    "explanationEn": "On a multi-lane road, you must drive in the rightmost lane. The left lane is reserved for overtaking.",
+    "trapNote": "Staying permanently in the middle lane ('middle lane hogging') is an infraction punishable by a fine.",
+    "distractorNotes": {
+      "C": "Occupying the middle lane without reason is a 35€ fine — you must keep right.",
+      "D": "The right lane is for all vehicles, not just trucks."
+    }
+  },
+  {
+    "id": "rout-164",
+    "topic": "route",
+    "difficulty": 3,
+    "answerCount": 2,
+    "questionFr": "Que faire si vous manquez votre sortie d'autoroute ?",
+    "questionEn": "What should you do if you miss your motorway exit?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Continuer jusqu'à la prochaine sortie",
+        "textEn": "Continue to the next exit"
+      },
+      {
+        "letter": "B",
+        "text": "Faire marche arrière sur la bande d'arrêt d'urgence",
+        "textEn": "Reverse on the hard shoulder"
+      },
+      {
+        "letter": "C",
+        "text": "Ne jamais s'arrêter ni reculer sur l'autoroute",
+        "textEn": "Never stop or reverse on the motorway"
+      },
+      {
+        "letter": "D",
+        "text": "Faire demi-tour si la chaussée est dégagée",
+        "textEn": "Make a U-turn if the road is clear"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Manquer une sortie n'est pas une urgence. Il est strictement interdit de s'arrêter, reculer ou faire demi-tour sur l'autoroute. Continuez jusqu'à la prochaine sortie.",
+    "explanationEn": "Missing an exit is not an emergency. It is strictly forbidden to stop, reverse, or make a U-turn on the motorway. Continue to the next exit.",
+    "trapNote": "Reversing on the hard shoulder is one of the most dangerous actions on a motorway — it causes fatal accidents.",
+    "distractorNotes": {
+      "B": "Reversing on any motorway surface is illegal and potentially fatal.",
+      "D": "U-turns on motorways are strictly prohibited under all circumstances."
+    }
+  },
+  {
+    "id": "rout-165",
+    "topic": "route",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quels dangers sont spécifiques aux routes bordées d'arbres ?",
+    "questionEn": "What dangers are specific to tree-lined roads?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Les arbres constituent des obstacles fixes en cas de sortie de route",
+        "textEn": "Trees are fixed obstacles in case of going off the road"
+      },
+      {
+        "letter": "B",
+        "text": "Les feuilles mortes rendent la chaussée plus adhérente",
+        "textEn": "Dead leaves make the road surface grippier"
+      },
+      {
+        "letter": "C",
+        "text": "Les zones d'ombre et de lumière alternées peuvent gêner la vision",
+        "textEn": "Alternating shadow and light zones can impair vision"
+      },
+      {
+        "letter": "D",
+        "text": "Les arbres protègent du vent latéral",
+        "textEn": "Trees protect from crosswind"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Les arbres sont des obstacles fixes mortels en cas de sortie de route, et l'alternance ombre/lumière (effet stroboscopique) peut fatiguer les yeux et masquer des dangers.",
+    "explanationEn": "Trees are deadly fixed obstacles if you leave the road, and shadow/light alternation (strobe effect) can fatigue the eyes and mask dangers.",
+    "trapNote": "Dead leaves REDUCE grip (slippery when wet). Trees DON'T always protect from wind — gaps create sudden gusts.",
+    "distractorNotes": {
+      "B": "Wet dead leaves are extremely slippery — they reduce grip significantly.",
+      "D": "Trees can channel wind, creating sudden gusty gaps between them."
+    }
+  },
+  {
+    "id": "rout-166",
+    "topic": "route",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quelles sont les règles pour entrer sur une autoroute ?",
+    "questionEn": "What are the rules for entering a motorway?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Utiliser la voie d'accélération pour atteindre la vitesse du trafic",
+        "textEn": "Use the acceleration lane to reach traffic speed"
+      },
+      {
+        "letter": "B",
+        "text": "S'arrêter en bout de voie d'accélération si aucun espace n'est libre",
+        "textEn": "Stop at the end of the acceleration lane if no space is available"
+      },
+      {
+        "letter": "C",
+        "text": "Céder le passage aux véhicules déjà sur l'autoroute",
+        "textEn": "Yield to vehicles already on the motorway"
+      },
+      {
+        "letter": "D",
+        "text": "Les véhicules sur l'autoroute doivent vous laisser entrer",
+        "textEn": "Vehicles on the motorway must let you enter"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "La voie d'accélération sert à atteindre la vitesse de l'autoroute. Les véhicules entrant doivent céder le passage — ceux déjà sur l'autoroute n'ont aucune obligation de se décaler.",
+    "explanationEn": "The acceleration lane is for reaching motorway speed. Entering vehicles must yield — those already on the motorway have no obligation to move over.",
+    "trapNote": "Vehicles on the motorway have NO legal obligation to let you merge — the responsibility is entirely yours.",
+    "distractorNotes": {
+      "B": "Stopping on the acceleration lane is dangerous — adjust speed and find a gap.",
+      "D": "There is no 'zipper rule' on motorway entries in France."
+    }
+  },
+  {
+    "id": "sign-161",
+    "topic": "signalisation",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Que signifient les panneaux de forme ronde à fond bleu ?",
+    "questionEn": "What do round signs with a blue background mean?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Une obligation (vitesse minimale, direction obligatoire)",
+        "textEn": "An obligation (minimum speed, mandatory direction)"
+      },
+      {
+        "letter": "B",
+        "text": "Une interdiction spécifique",
+        "textEn": "A specific prohibition"
+      },
+      {
+        "letter": "C",
+        "text": "Ils prescrivent un comportement à adopter",
+        "textEn": "They prescribe a behavior to follow"
+      },
+      {
+        "letter": "D",
+        "text": "Ils signalent un danger à proximité",
+        "textEn": "They signal a nearby danger"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Les panneaux ronds bleus sont des panneaux d'obligation : vitesse minimale, direction obligatoire, voie réservée, etc.",
+    "explanationEn": "Round blue signs are obligation signs: minimum speed, mandatory direction, reserved lane, etc.",
+    "trapNote": "Round signs with RED borders are prohibitions. Round BLUE signs are obligations — opposite meanings.",
+    "distractorNotes": {
+      "B": "Prohibition signs are round with a red border on a white background.",
+      "D": "Danger signs are triangular with a red border."
+    }
+  },
+  {
+    "id": "sign-162",
+    "topic": "signalisation",
+    "difficulty": 3,
+    "answerCount": 2,
+    "questionFr": "Que signifie un panneau triangulaire rouge avec un point d'exclamation ?",
+    "questionEn": "What does a triangular red sign with an exclamation mark mean?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Danger non précisé — redoubler de vigilance",
+        "textEn": "Unspecified danger — exercise extra caution"
+      },
+      {
+        "letter": "B",
+        "text": "Zone de travaux obligatoire",
+        "textEn": "Mandatory construction zone"
+      },
+      {
+        "letter": "C",
+        "text": "Un pannonceau en dessous peut préciser la nature du danger",
+        "textEn": "A supplementary plate below may specify the nature of the danger"
+      },
+      {
+        "letter": "D",
+        "text": "Il indique un poste de police à proximité",
+        "textEn": "It indicates a police station nearby"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Le panneau danger avec point d'exclamation signale un danger non couvert par les autres panneaux. Un pannonceau peut préciser le danger (vent latéral, route dégradée, etc.).",
+    "explanationEn": "The danger sign with an exclamation mark signals a danger not covered by other signs. A supplementary plate may specify it (crosswind, poor road, etc.).",
+    "trapNote": "This sign is generic — it does NOT specifically mean construction or police.",
+    "distractorNotes": {
+      "B": "Construction zones have their own specific signage with orange cones.",
+      "D": "Police stations are not indicated by danger signs."
+    }
+  },
+  {
+    "id": "sign-163",
+    "topic": "signalisation",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quelles informations les panneaux directionnels verts donnent-ils ?",
+    "questionEn": "What information do green directional signs provide?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Les directions vers les autoroutes",
+        "textEn": "Directions to motorways"
+      },
+      {
+        "letter": "B",
+        "text": "Les directions vers les hôpitaux",
+        "textEn": "Directions to hospitals"
+      },
+      {
+        "letter": "C",
+        "text": "Les numéros des autoroutes et distances",
+        "textEn": "Motorway numbers and distances"
+      },
+      {
+        "letter": "D",
+        "text": "Les itinéraires de déviation",
+        "textEn": "Detour routes"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Les panneaux verts indiquent les directions autoroutières avec les numéros d'autoroute (A1, A6, etc.) et les distances jusqu'aux destinations.",
+    "explanationEn": "Green signs indicate motorway directions with motorway numbers (A1, A6, etc.) and distances to destinations.",
+    "trapNote": "Blue signs = national/departmental roads. Yellow signs = temporary/detour. White = local. Green = motorway.",
+    "distractorNotes": {
+      "B": "Hospital directions use white signs with a red cross or H symbol.",
+      "D": "Detour routes use yellow directional signs."
+    }
+  },
+  {
+    "id": "sign-164",
+    "topic": "signalisation",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Que signifie une ligne blanche continue au sol ?",
+    "questionEn": "What does a continuous white line on the road mean?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Interdiction de la franchir ou de la chevaucher",
+        "textEn": "Prohibited to cross or straddle"
+      },
+      {
+        "letter": "B",
+        "text": "On peut la franchir pour dépasser un cycliste",
+        "textEn": "You can cross it to overtake a cyclist"
+      },
+      {
+        "letter": "C",
+        "text": "Elle sépare les sens de circulation de façon permanente",
+        "textEn": "It permanently separates traffic directions"
+      },
+      {
+        "letter": "D",
+        "text": "Elle peut être franchie si la route est dégagée",
+        "textEn": "It can be crossed if the road is clear"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "La ligne blanche continue est infranchissable. Elle sépare les sens de circulation et son franchissement est une infraction (3 points, 135 €).",
+    "explanationEn": "A continuous white line must not be crossed. It separates traffic directions and crossing it is an offense (3 points, €135).",
+    "trapNote": "Even to overtake a cyclist, you cannot cross a continuous white line — wait or find another opportunity.",
+    "distractorNotes": {
+      "B": "Overtaking a cyclist across a continuous line is forbidden — wait for a broken line zone.",
+      "D": "A continuous line is NEVER allowed to be crossed, regardless of traffic conditions."
+    }
+  },
+  {
+    "id": "sign-165",
+    "topic": "signalisation",
+    "difficulty": 3,
+    "answerCount": 2,
+    "questionFr": "Que signifient les flèches directionnelles peintes au sol ?",
+    "questionEn": "What do directional arrows painted on the road mean?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Elles indiquent la direction obligatoire de la voie",
+        "textEn": "They indicate the mandatory direction of the lane"
+      },
+      {
+        "letter": "B",
+        "text": "Elles sont seulement indicatives, pas obligatoires",
+        "textEn": "They are only indicative, not mandatory"
+      },
+      {
+        "letter": "C",
+        "text": "Vous devez vous placer dans la voie correspondant à votre direction avant l'intersection",
+        "textEn": "You must position yourself in the lane matching your direction before the intersection"
+      },
+      {
+        "letter": "D",
+        "text": "Elles ne s'appliquent qu'aux poids lourds",
+        "textEn": "They only apply to heavy trucks"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Les flèches au sol sont obligatoires. Elles imposent la direction de la voie et vous devez vous présélectionner dans la bonne voie avant l'intersection.",
+    "explanationEn": "Road arrows are mandatory. They impose the lane direction and you must pre-select the correct lane before the intersection.",
+    "trapNote": "Road arrows are NOT indicative — they are mandatory. Changing lanes across a solid line at an intersection after seeing arrows is prohibited.",
+    "distractorNotes": {
+      "B": "Road arrows have the same legal force as vertical signs — they are mandatory.",
+      "D": "Directional arrows apply to all vehicles, not just trucks."
+    }
+  },
+  {
+    "id": "sign-166",
+    "topic": "signalisation",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Que signifie un feu clignotant orange seul ?",
+    "questionEn": "What does a single flashing orange light mean?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Attention, danger — ralentir et être prudent",
+        "textEn": "Caution, danger — slow down and be careful"
+      },
+      {
+        "letter": "B",
+        "text": "Le feu est en panne, vous pouvez passer",
+        "textEn": "The light is broken, you can pass"
+      },
+      {
+        "letter": "C",
+        "text": "La priorité à droite s'applique",
+        "textEn": "Priority to the right applies"
+      },
+      {
+        "letter": "D",
+        "text": "Vous devez vous arrêter obligatoirement",
+        "textEn": "You must stop mandatorily"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Un feu orange clignotant signifie attention et danger. En l'absence d'autre signalisation, c'est la priorité à droite qui s'applique.",
+    "explanationEn": "A flashing orange light means caution and danger. Without other signage, priority to the right applies.",
+    "trapNote": "A flashing orange is NOT a broken light — it's a deliberate signal, often used at night or at low-traffic intersections.",
+    "distractorNotes": {
+      "B": "It's not a malfunction — it's an intentional traffic management signal.",
+      "D": "You must slow down but not necessarily stop — unlike a red light."
+    }
+  },
+  {
+    "id": "sign-167",
+    "topic": "signalisation",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Que signifient les zigzags jaunes peints au bord de la chaussée ?",
+    "questionEn": "What do yellow zigzag lines painted at the road edge mean?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Interdiction de stationner",
+        "textEn": "No parking"
+      },
+      {
+        "letter": "B",
+        "text": "Zone de livraison uniquement",
+        "textEn": "Delivery zone only"
+      },
+      {
+        "letter": "C",
+        "text": "Arrêt de bus — interdiction de s'arrêter et de stationner",
+        "textEn": "Bus stop — no stopping or parking"
+      },
+      {
+        "letter": "D",
+        "text": "Place réservée aux personnes handicapées",
+        "textEn": "Space reserved for disabled persons"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Les zigzags jaunes marquent un arrêt de bus où il est interdit de stationner et de s'arrêter (sauf pour les bus).",
+    "explanationEn": "Yellow zigzag lines mark a bus stop where stopping and parking are prohibited (except for buses).",
+    "trapNote": "Yellow zigzags are specifically for bus stops — not delivery zones (which use yellow dashes) or disabled spots (which use blue markings).",
+    "distractorNotes": {
+      "B": "Delivery zones use different markings — typically yellow broken lines.",
+      "D": "Disabled parking spaces have blue markings with a wheelchair symbol."
+    }
+  },
+  {
+    "id": "sign-168",
+    "topic": "signalisation",
+    "difficulty": 3,
+    "answerCount": 2,
+    "questionFr": "Que signifie un panneau carré bleu avec un 'P' blanc et un pictogramme de voiture ?",
+    "questionEn": "What does a blue square sign with a white 'P' and a car pictogram mean?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Parc relais (parking + transports en commun)",
+        "textEn": "Park and ride (parking + public transport)"
+      },
+      {
+        "letter": "B",
+        "text": "Parking privé réservé aux résidents",
+        "textEn": "Private parking for residents only"
+      },
+      {
+        "letter": "C",
+        "text": "Il incite à laisser sa voiture pour prendre les transports en commun",
+        "textEn": "It encourages leaving your car to take public transport"
+      },
+      {
+        "letter": "D",
+        "text": "Parking gratuit illimité",
+        "textEn": "Unlimited free parking"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Le panneau P+R (parc relais) indique un parking à proximité d'une gare ou d'un arrêt de transport en commun pour encourager l'intermodalité.",
+    "explanationEn": "The P+R (park and ride) sign indicates parking near a station or public transport stop to encourage intermodal travel.",
+    "trapNote": "P+R is not free parking — it's specifically designed to connect to public transport.",
+    "distractorNotes": {
+      "B": "P+R is public, not private — it's meant to reduce urban traffic.",
+      "D": "P+R parking often has fees and time limits."
+    }
+  },
+  {
+    "id": "sign-169",
+    "topic": "signalisation",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Que signifient les panneaux de fin d'interdiction (rond, blanc, barré de noir) ?",
+    "questionEn": "What do end-of-prohibition signs (round, white, black diagonal stripe) mean?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Toutes les interdictions précédemment signalées prennent fin",
+        "textEn": "All previously signaled prohibitions end"
+      },
+      {
+        "letter": "B",
+        "text": "La vitesse est limitée à 50 km/h",
+        "textEn": "Speed is limited to 50 km/h"
+      },
+      {
+        "letter": "C",
+        "text": "Les règles générales du code de la route s'appliquent à nouveau",
+        "textEn": "General traffic rules apply again"
+      },
+      {
+        "letter": "D",
+        "text": "On entre dans une zone sans aucune règle de circulation",
+        "textEn": "You enter a zone with no traffic rules"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Le panneau de fin de toutes interdictions (fond blanc barré de noir) annule toutes les restrictions locales. Les règles générales reprennent (vitesse par défaut de la route, etc.).",
+    "explanationEn": "The end-of-all-restrictions sign (white background with black stripe) cancels all local restrictions. General rules resume (default speed for the road type, etc.).",
+    "trapNote": "This doesn't mean 'no rules' — it means default national rules apply again.",
+    "distractorNotes": {
+      "B": "The sign doesn't set a specific speed — the default road speed applies.",
+      "D": "Traffic rules always apply — this sign just removes local additions."
+    }
+  },
+  {
+    "id": "sign-170",
+    "topic": "signalisation",
+    "difficulty": 3,
+    "answerCount": 2,
+    "questionFr": "Que signifie un panneau rectangulaire bleu avec une flèche blanche vers le bas et un vélo ?",
+    "questionEn": "What does a rectangular blue sign with a white downward arrow and a bicycle mean?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Voie réservée aux cyclistes en contresens",
+        "textEn": "Lane reserved for cyclists going against traffic"
+      },
+      {
+        "letter": "B",
+        "text": "Fin de piste cyclable",
+        "textEn": "End of cycle path"
+      },
+      {
+        "letter": "C",
+        "text": "Les automobilistes doivent surveiller les cyclistes venant en face",
+        "textEn": "Motorists must watch for cyclists coming from the opposite direction"
+      },
+      {
+        "letter": "D",
+        "text": "Les cyclistes doivent descendre de vélo",
+        "textEn": "Cyclists must dismount"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Ce panneau indique un double-sens cyclable : les cyclistes circulent en contresens sur cette rue à sens unique. Les automobilistes doivent être vigilants.",
+    "explanationEn": "This sign indicates a contraflow cycle lane: cyclists travel against traffic on this one-way street. Motorists must be vigilant.",
+    "trapNote": "The downward arrow + bike means cyclists come TOWARD you — don't confuse with end of cycle path.",
+    "distractorNotes": {
+      "B": "End of cycle path uses a different sign with a red line through the bicycle.",
+      "D": "This sign regulates cycling direction, not dismounting."
+    }
+  },
+  {
+    "id": "cond-124",
+    "topic": "conducteur",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quels sont les effets de l'alcool sur la conduite ?",
+    "questionEn": "What are the effects of alcohol on driving?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Le temps de réaction augmente",
+        "textEn": "Reaction time increases"
+      },
+      {
+        "letter": "B",
+        "text": "La vision nocturne s'améliore",
+        "textEn": "Night vision improves"
+      },
+      {
+        "letter": "C",
+        "text": "Le champ visuel se rétrécit (effet tunnel)",
+        "textEn": "The visual field narrows (tunnel effect)"
+      },
+      {
+        "letter": "D",
+        "text": "La confiance en soi augmente, compensant les effets négatifs",
+        "textEn": "Self-confidence increases, compensating for negative effects"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "L'alcool allonge le temps de réaction et rétrécit le champ visuel (vision tunnel). La fausse confiance qu'il procure aggrave le danger.",
+    "explanationEn": "Alcohol lengthens reaction time and narrows the visual field (tunnel vision). The false confidence it provides worsens the danger.",
+    "trapNote": "Increased confidence from alcohol is a DANGER, not a benefit — it leads to risk-taking.",
+    "distractorNotes": {
+      "B": "Alcohol impairs ALL vision, especially night vision and glare recovery.",
+      "D": "False confidence is one of the most dangerous alcohol effects — it masks impairment."
+    }
+  },
+  {
+    "id": "cond-125",
+    "topic": "conducteur",
+    "difficulty": 3,
+    "answerCount": 2,
+    "questionFr": "Quel est le taux d'alcool maximal autorisé pour un conducteur en période probatoire ?",
+    "questionEn": "What is the maximum allowed blood alcohol level for a driver with a probationary licence?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "0,2 g/L de sang",
+        "textEn": "0.2 g/L of blood"
+      },
+      {
+        "letter": "B",
+        "text": "0,5 g/L de sang comme tous les conducteurs",
+        "textEn": "0.5 g/L of blood like all drivers"
+      },
+      {
+        "letter": "C",
+        "text": "Cela correspond à environ zéro verre d'alcool",
+        "textEn": "This corresponds to approximately zero glasses of alcohol"
+      },
+      {
+        "letter": "D",
+        "text": "0,8 g/L de sang",
+        "textEn": "0.8 g/L of blood"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Le taux est de 0,2 g/L pour les conducteurs en période probatoire (3 ans, ou 2 ans avec conduite accompagnée). 0,2 g/L = pratiquement zéro verre.",
+    "explanationEn": "The limit is 0.2 g/L for probationary licence holders (3 years, or 2 with accompanied driving). 0.2 g/L = practically zero glasses.",
+    "trapNote": "0.2 g/L accounts for residual alcohol from medication or mouthwash — it means NO drinking.",
+    "distractorNotes": {
+      "B": "0.5 g/L is for experienced drivers only — probationary drivers have a stricter limit.",
+      "D": "0.8 g/L is the threshold for criminal offense, not the legal limit."
+    }
+  },
+  {
+    "id": "cond-126",
+    "topic": "conducteur",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quels sont les signes de fatigue au volant nécessitant un arrêt ?",
+    "questionEn": "What are the signs of driving fatigue that require stopping?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Des bâillements fréquents et les yeux qui piquent",
+        "textEn": "Frequent yawning and stinging eyes"
+      },
+      {
+        "letter": "B",
+        "text": "Une envie d'écouter la radio plus fort",
+        "textEn": "A desire to turn up the radio"
+      },
+      {
+        "letter": "C",
+        "text": "Des écarts de trajectoire involontaires",
+        "textEn": "Involuntary lane drifting"
+      },
+      {
+        "letter": "D",
+        "text": "Une sensation de faim",
+        "textEn": "A feeling of hunger"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Les bâillements, les yeux qui piquent et les écarts de trajectoire sont des signes critiques de fatigue. La seule solution efficace est de s'arrêter et dormir 15-20 minutes.",
+    "explanationEn": "Yawning, stinging eyes, and lane drifting are critical fatigue signs. The only effective solution is to stop and sleep 15-20 minutes.",
+    "trapNote": "Turning up the radio or opening the window are FALSE remedies — they don't prevent micro-sleep.",
+    "distractorNotes": {
+      "B": "Wanting louder music may be a fatigue sign, but the action itself doesn't fight fatigue.",
+      "D": "Hunger is unrelated to dangerous drowsiness."
+    }
+  },
+  {
+    "id": "cond-127",
+    "topic": "conducteur",
+    "difficulty": 3,
+    "answerCount": 2,
+    "questionFr": "Quelles sont les sanctions en cas de conduite sous l'emprise de stupéfiants ?",
+    "questionEn": "What are the penalties for driving under the influence of drugs?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Jusqu'à 2 ans d'emprisonnement et 4 500 € d'amende",
+        "textEn": "Up to 2 years imprisonment and €4,500 fine"
+      },
+      {
+        "letter": "B",
+        "text": "Un simple avertissement pour la première infraction",
+        "textEn": "Just a warning for the first offense"
+      },
+      {
+        "letter": "C",
+        "text": "Retrait de 6 points sur le permis de conduire",
+        "textEn": "6-point deduction on the driving licence"
+      },
+      {
+        "letter": "D",
+        "text": "Interdiction de conduire pendant 1 mois seulement",
+        "textEn": "Driving ban for only 1 month"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "La conduite sous stupéfiants est un délit puni de 2 ans de prison, 4 500 € d'amende et 6 points retirés. Si combiné avec l'alcool : 3 ans et 9 000 €.",
+    "explanationEn": "Driving under drugs is a criminal offense: 2 years prison, €4,500 fine, 6-point deduction. Combined with alcohol: 3 years and €9,000.",
+    "trapNote": "There is NO warning for drug driving — it's a criminal offense from the first instance.",
+    "distractorNotes": {
+      "B": "Drug driving is always treated as a serious criminal offense, never a warning.",
+      "D": "The driving ban can be up to 3 years, not just 1 month."
+    }
+  },
+  {
+    "id": "cond-128",
+    "topic": "conducteur",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quels sont les dangers de l'utilisation du téléphone au volant ?",
+    "questionEn": "What are the dangers of using a phone while driving?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Le temps de réaction est multiplié par 3",
+        "textEn": "Reaction time is tripled"
+      },
+      {
+        "letter": "B",
+        "text": "Le kit mains-libres élimine totalement le danger",
+        "textEn": "Hands-free kits completely eliminate the danger"
+      },
+      {
+        "letter": "C",
+        "text": "L'attention visuelle et cognitive est détournée de la route",
+        "textEn": "Visual and cognitive attention is diverted from the road"
+      },
+      {
+        "letter": "D",
+        "text": "Le téléphone est autorisé à l'arrêt à un feu rouge",
+        "textEn": "Phone use is allowed when stopped at a red light"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Le téléphone au volant triple le temps de réaction et détourne l'attention visuelle et cognitive. Même le kit mains-libres réduit l'attention de 30%.",
+    "explanationEn": "Using a phone while driving triples reaction time and diverts visual and cognitive attention. Even hands-free kits reduce attention by 30%.",
+    "trapNote": "Hands-free kits reduce but do NOT eliminate cognitive distraction. Phone use at a red light IS still an offense.",
+    "distractorNotes": {
+      "B": "Hands-free still causes cognitive distraction — the conversation diverts mental focus.",
+      "D": "Since 2020, using a phone at a red light is forbidden (the vehicle is still in traffic)."
+    }
+  },
+  {
+    "id": "cond-129",
+    "topic": "conducteur",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quelles sont les obligations du conducteur après un accident corporel ?",
+    "questionEn": "What are the driver's obligations after an injury accident?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "S'arrêter, protéger les lieux, alerter les secours",
+        "textEn": "Stop, protect the scene, alert emergency services"
+      },
+      {
+        "letter": "B",
+        "text": "Déplacer les blessés immédiatement",
+        "textEn": "Move the injured immediately"
+      },
+      {
+        "letter": "C",
+        "text": "Ne pas quitter les lieux avant l'arrivée des forces de l'ordre",
+        "textEn": "Do not leave before police arrive"
+      },
+      {
+        "letter": "D",
+        "text": "Faire un constat amiable suffit en cas de blessure légère",
+        "textEn": "An accident report form is sufficient for minor injuries"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Après un accident corporel : PAS (Protéger, Alerter, Secourir). Ne jamais quitter les lieux — c'est un délit de fuite. Ne pas déplacer les blessés sauf danger immédiat.",
+    "explanationEn": "After an injury accident: PAS (Protect, Alert, Rescue). Never leave the scene — that's hit and run. Do not move injured people unless there's immediate danger.",
+    "trapNote": "Moving injured people can worsen spinal injuries. A friendly report is NOT sufficient for injury accidents — police are required.",
+    "distractorNotes": {
+      "B": "Moving the injured risks aggravating neck/spinal injuries — only move if there's fire or explosion risk.",
+      "D": "Any accident with injuries requires police and emergency services, not just a report."
+    }
+  },
+  {
+    "id": "cond-130",
+    "topic": "conducteur",
+    "difficulty": 3,
+    "answerCount": 2,
+    "questionFr": "Quels médicaments peuvent affecter la capacité de conduite ?",
+    "questionEn": "Which medications can affect driving ability?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Les antihistaminiques (contre les allergies)",
+        "textEn": "Antihistamines (for allergies)"
+      },
+      {
+        "letter": "B",
+        "text": "Les vitamines et compléments alimentaires",
+        "textEn": "Vitamins and dietary supplements"
+      },
+      {
+        "letter": "C",
+        "text": "Les anxiolytiques et les somnifères",
+        "textEn": "Anti-anxiety drugs and sleeping pills"
+      },
+      {
+        "letter": "D",
+        "text": "Les médicaments homéopathiques",
+        "textEn": "Homeopathic medications"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Les antihistaminiques (surtout de 1ère génération) et les anxiolytiques/somnifères causent de la somnolence. Vérifier le pictogramme de danger sur la boîte (niveaux 1, 2 ou 3).",
+    "explanationEn": "Antihistamines (especially 1st generation) and anti-anxiety/sleeping pills cause drowsiness. Check the danger pictogram on the box (levels 1, 2, or 3).",
+    "trapNote": "France uses a 3-level pictogram system on medication boxes to warn about driving effects.",
+    "distractorNotes": {
+      "B": "Standard vitamins and supplements have no effect on driving ability.",
+      "D": "Homeopathic preparations are pharmacologically inert and don't affect driving."
+    }
+  },
+  {
+    "id": "cond-131",
+    "topic": "conducteur",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Quels sont les principes de l'éco-conduite ?",
+    "questionEn": "What are the principles of eco-driving?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Anticiper le trafic et éviter les freinages brusques",
+        "textEn": "Anticipate traffic and avoid harsh braking"
+      },
+      {
+        "letter": "B",
+        "text": "Rouler au maximum du régime moteur pour plus d'efficacité",
+        "textEn": "Drive at maximum engine RPM for more efficiency"
+      },
+      {
+        "letter": "C",
+        "text": "Passer les vitesses à bas régime (environ 2000 tr/min)",
+        "textEn": "Shift gears at low RPM (around 2000 rpm)"
+      },
+      {
+        "letter": "D",
+        "text": "Utiliser la climatisation au maximum pour le confort",
+        "textEn": "Use air conditioning at maximum for comfort"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "L'éco-conduite repose sur l'anticipation (moins de freinages), le passage des vitesses à bas régime, et une conduite souple. Cela réduit la consommation de 15-20%.",
+    "explanationEn": "Eco-driving is based on anticipation (less braking), shifting at low RPM, and smooth driving. This reduces fuel consumption by 15-20%.",
+    "trapNote": "High RPM wastes fuel. Maximum AC increases fuel consumption by 10-20%.",
+    "distractorNotes": {
+      "B": "High RPM dramatically increases fuel consumption — shift early for efficiency.",
+      "D": "AC on maximum increases fuel consumption significantly."
+    }
+  },
+  {
+    "id": "cond-132",
+    "topic": "conducteur",
+    "difficulty": 3,
+    "answerCount": 2,
+    "questionFr": "Que risque un conducteur en cas de grand excès de vitesse (plus de 50 km/h au-dessus de la limite) ?",
+    "questionEn": "What does a driver risk for a major speeding offense (more than 50 km/h over the limit)?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "Retrait de 6 points et suspension de permis jusqu'à 3 ans",
+        "textEn": "6-point deduction and licence suspension up to 3 years"
+      },
+      {
+        "letter": "B",
+        "text": "Une simple amende forfaitaire de 135 €",
+        "textEn": "Just a flat-rate fine of €135"
+      },
+      {
+        "letter": "C",
+        "text": "La confiscation possible du véhicule",
+        "textEn": "Possible confiscation of the vehicle"
+      },
+      {
+        "letter": "D",
+        "text": "Un avertissement pour la première infraction",
+        "textEn": "A warning for the first offense"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Un excès de plus de 50 km/h est un délit passible de 6 points retirés, suspension de permis jusqu'à 3 ans, amende jusqu'à 1 500 €, et confiscation possible du véhicule.",
+    "explanationEn": "Speeding by more than 50 km/h is a criminal offense: 6-point deduction, licence suspension up to 3 years, fine up to €1,500, and possible vehicle confiscation.",
+    "trapNote": "€135 is for minor speeding (< 20 km/h). Major speeding is a CRIMINAL offense, not a simple fine.",
+    "distractorNotes": {
+      "B": "€135 is for minor infractions — major speeding carries much heavier penalties.",
+      "D": "There is no warning for major speeding offenses — sanctions are automatic."
+    }
+  },
+  {
+    "id": "cond-133",
+    "topic": "conducteur",
+    "difficulty": 2,
+    "answerCount": 2,
+    "questionFr": "Que doit vérifier un conducteur avant de prendre la route ?",
+    "questionEn": "What must a driver check before taking the road?",
+    "options": [
+      {
+        "letter": "A",
+        "text": "L'état des pneus (pression, usure)",
+        "textEn": "Tire condition (pressure, wear)"
+      },
+      {
+        "letter": "B",
+        "text": "Le nombre de passagers dans les véhicules voisins",
+        "textEn": "The number of passengers in neighboring vehicles"
+      },
+      {
+        "letter": "C",
+        "text": "Le bon fonctionnement des feux et des rétroviseurs",
+        "textEn": "Proper functioning of lights and mirrors"
+      },
+      {
+        "letter": "D",
+        "text": "La couleur du liquide de lave-glace",
+        "textEn": "The color of the windshield washer fluid"
+      }
+    ],
+    "correctAnswers": [
+      "A",
+      "C"
+    ],
+    "explanationFr": "Avant de partir : vérifier les pneus (pression, usure, pas de coupure), les feux (tous fonctionnels), les rétroviseurs (propres et bien réglés), et les niveaux.",
+    "explanationEn": "Before departing: check tires (pressure, wear, no cuts), lights (all functional), mirrors (clean and properly adjusted), and fluid levels.",
+    "trapNote": "Neighboring vehicles and washer fluid color are irrelevant to vehicle safety checks.",
+    "distractorNotes": {
+      "B": "Other vehicles' passenger counts are completely irrelevant to your pre-trip check.",
+      "D": "Washer fluid color doesn't matter — what matters is having enough fluid."
+    }
   }
 ]
