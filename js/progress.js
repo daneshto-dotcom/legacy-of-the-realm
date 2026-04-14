@@ -13,6 +13,17 @@ const Progress = {
         document.getElementById('progress-accuracy').textContent = `${stats.accuracy}%`;
         document.getElementById('progress-exams').textContent = exams.length;
 
+        // Readiness score (B11)
+        const readiness = Storage.getReadinessScore();
+        const readinessEl = document.getElementById('progress-readiness');
+        if (readinessEl) {
+            readinessEl.textContent = readiness !== null ? readiness : '--';
+            if (readiness !== null) {
+                readinessEl.style.color = readiness >= 85 ? 'var(--success)'
+                    : readiness >= 70 ? 'var(--warning)' : 'var(--text)';
+            }
+        }
+
         // Compute exam topic trends (shared between mastery + exam sections)
         this._examTopicTrends = this._computeExamTopicTrends(exams);
 
@@ -141,14 +152,12 @@ const Progress = {
             </div>
         `;
 
-        // Wire up topic practice buttons
+        // Wire up topic practice buttons — launch focus session (B04)
         container.querySelectorAll('.focus-topic-btn, .focus-topic-card').forEach(el => {
             el.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const topicId = el.dataset.topic;
-                if (!topicId) return;
-                const count = getQuestionsByTopic(topicId).length;
-                Practice.startSession('drill', { topicFilter: topicId, count: Math.min(count, 15) });
+                Practice.startSession('focus', { count: 20 });
+                App.navigate('practice');
             });
         });
 

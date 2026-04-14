@@ -65,6 +65,9 @@ const Practice = {
                     this.sessionQuestions = getRandomQuestions(count);
                 }
                 break;
+            case 'focus':
+                this.sessionQuestions = getFocusQuestions(count);
+                break;
             case 'custom':
                 const topicFilters = options.topicFilters || ETG_TOPICS.map(t => t.id);
                 const pool = QUESTION_BANK.filter(q => topicFilters.includes(q.topic));

@@ -28824,3 +28824,61 @@ function getWeakSpotQuestions(count = 10) {
 
     return selected.sort(() => Math.random() - 0.5);
 }
+
+/* ============================================
+   Focus Practice Selection (B04)
+   Uses B03 getFocusAreas() API: most-missed questions + weak topic pool
+   Cold-start guard: falls back to random if <20 attempts
+   ============================================ */
+function getFocusQuestions(count = 20) {
+    const focus = Storage.getFocusAreas();
+
+    // Cold-start: not enough data
+    if (focus.totalAttempts < 20) {
+        return getRandomQuestions(count);
+    }
+
+    const usedIds = new Set();
+    const selected = [];
+
+    // Phase 1: most-missed questions (up to half the session)
+    const missedLimit = Math.floor(count / 2);
+    for (const m of focus.mostMissed) {
+        if (selected.length >= missedLimit) break;
+        const q = getQuestionById(m.questionId);
+        if (q && !usedIds.has(q.id)) {
+            selected.push(q);
+            usedIds.add(q.id);
+        }
+    }
+
+    // Phase 2: fill from weak topic pools (round-robin across weak topics)
+    if (focus.weakTopics.length > 0) {
+        const topicPools = focus.weakTopics.map(t => {
+            const pool = getQuestionsByTopic(t.topic).filter(q => !usedIds.has(q.id));
+            return [...pool].sort(() => Math.random() - 0.5);
+        });
+
+        let topicIdx = 0;
+        while (selected.length < count && topicPools.some(p => p.length > 0)) {
+            const pool = topicPools[topicIdx % topicPools.length];
+            if (pool.length > 0) {
+                const q = pool.shift();
+                selected.push(q);
+                usedIds.add(q.id);
+            }
+            topicIdx++;
+        }
+    }
+
+    // Phase 3: pad with random if still short
+    while (selected.length < count) {
+        const remaining = QUESTION_BANK.filter(q => !usedIds.has(q.id));
+        if (remaining.length === 0) break;
+        const pick = remaining[Math.floor(Math.random() * remaining.length)];
+        selected.push(pick);
+        usedIds.add(pick.id);
+    }
+
+    return selected.sort(() => Math.random() - 0.5);
+}

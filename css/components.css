@@ -334,6 +334,42 @@
     margin-top: 2px;
 }
 
+/* Exam readiness section (B11) */
+.exam-readiness-section {
+    margin-top: var(--space-lg);
+    text-align: center;
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+}
+.exam-readiness-section h3 {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--space-sm);
+}
+.readiness-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+}
+.readiness-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+.readiness-out-of {
+    font-size: var(--font-size-md);
+    color: var(--text-secondary);
+}
+.readiness-high .readiness-number { color: var(--success); }
+.readiness-mid .readiness-number { color: var(--warning); }
+.readiness-low .readiness-number { color: var(--text-secondary); }
+.readiness-label {
+    margin-top: var(--space-xs);
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+}
+
 /* Question Card */
 .question-card {
     padding: var(--space-lg);

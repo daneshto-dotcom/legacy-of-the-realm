@@ -173,6 +173,10 @@ const App = {
                         Practice.startSession('weakspots');
                         this.navigate('practice');
                         break;
+                    case 'focus':
+                        Practice.startSession('focus', { count: 20 });
+                        this.navigate('practice');
+                        break;
                     case 'review':
                         Practice.startSession('review');
                         this.navigate('practice');

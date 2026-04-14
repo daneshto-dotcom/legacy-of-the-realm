@@ -472,6 +472,28 @@ const Exam = {
         `;
         topicsDiv.after(timeAnalytics);
 
+        // Readiness score (B11)
+        const readiness = Storage.getReadinessScore();
+        if (readiness !== null) {
+            let readinessLabel, readinessClass;
+            if (readiness >= 85) { readinessLabel = "You're ready!"; readinessClass = 'readiness-high'; }
+            else if (readiness >= 70) { readinessLabel = 'Almost ready!'; readinessClass = 'readiness-mid'; }
+            else if (readiness >= 40) { readinessLabel = 'Getting closer!'; readinessClass = 'readiness-low'; }
+            else { readinessLabel = 'Keep practicing!'; readinessClass = 'readiness-low'; }
+
+            const readinessDiv = document.createElement('div');
+            readinessDiv.className = 'exam-readiness-section';
+            readinessDiv.innerHTML = `
+                <h3>📊 Exam Readiness</h3>
+                <div class="readiness-display ${readinessClass}">
+                    <span class="readiness-number">${readiness}</span>
+                    <span class="readiness-out-of">/ 100</span>
+                </div>
+                <p class="readiness-label">${readinessLabel}</p>
+            `;
+            timeAnalytics.after(readinessDiv);
+        }
+
         // Wire buttons
         document.getElementById('review-exam-mistakes-btn').onclick = () => {
             const wrongIds = this.results.filter(r => !r.correct).map(r => r.questionId);
