@@ -28639,6 +28639,291 @@ const QUESTION_BANK = [
         distractorNotes: {
             D: "The infraction itself is sanctioned — accident or not."
         }
+    },
+    // === S39 B07 — 20 new sign-based questions for exam coverage ===
+    {
+        id: "sign-001", topic: "signalisation", difficulty: 1, signs: ["minimum_speed"],
+        questionFr: "Que signifie ce panneau rond bleu avec un chiffre blanc ?",
+        questionEn: "What does this blue round sign with a white number mean?",
+        options: {
+            A: { fr: "Vitesse maximale autorisée", en: "Maximum speed allowed" },
+            B: { fr: "Vitesse minimale obligatoire", en: "Minimum mandatory speed" },
+            C: { fr: "Vitesse conseillée", en: "Recommended speed" },
+            D: { fr: "Fin de limitation", en: "End of speed limit" }
+        },
+        correctAnswers: ["B"], answerCount: 1,
+        explanationFr: "Un panneau rond bleu avec un chiffre blanc indique une vitesse minimale obligatoire. Ne pas rouler plus lentement sauf circonstances exceptionnelles.",
+        explanationEn: "A blue round sign with a white number indicates a mandatory minimum speed. Do not drive slower except in exceptional circumstances.",
+        trapNote: "Attention : rond bleu = obligation. Rond rouge = interdiction."
+    },
+    {
+        id: "sign-002", topic: "signalisation", difficulty: 2, signs: ["end_zone_30"],
+        questionFr: "Que signifie ce panneau indiquant la fin de zone 30 ?",
+        questionEn: "What does this 'end of zone 30' sign mean?",
+        options: {
+            A: { fr: "La vitesse est libre", en: "Speed is unrestricted" },
+            B: { fr: "Retour aux règles générales de circulation", en: "Return to general traffic rules" },
+            C: { fr: "La vitesse limite redevient 50 km/h en agglomération", en: "Speed limit returns to 50 km/h in built-up areas" },
+            D: { fr: "Vitesse maximale 30 km/h", en: "Max speed 30 km/h" }
+        },
+        correctAnswers: ["B","C"], answerCount: 2,
+        explanationFr: "Fin de zone 30 : les règles générales s'appliquent à nouveau. En agglomération, retour aux 50 km/h sauf autre signalisation.",
+        explanationEn: "End of zone 30: general rules apply again. In built-up areas, the limit returns to 50 km/h unless otherwise signed.",
+        distractorNotes: { A: "La vitesse reste réglementée par les limites générales." }
+    },
+    {
+        id: "sign-003", topic: "croisement_depassement", difficulty: 2, signs: ["end_no_overtaking"],
+        questionFr: "Ce panneau indique :",
+        questionEn: "This sign indicates:",
+        options: {
+            A: { fr: "Fin d'interdiction de dépasser", en: "End of overtaking prohibition" },
+            B: { fr: "Interdiction de dépasser", en: "No overtaking" },
+            C: { fr: "Dépassement recommandé", en: "Overtaking recommended" },
+            D: { fr: "Le dépassement redevient autorisé dans le respect des règles générales", en: "Overtaking becomes allowed again following general rules" }
+        },
+        correctAnswers: ["A","D"], answerCount: 2,
+        explanationFr: "Les barres grises diagonales indiquent la fin d'une interdiction. Le dépassement redevient autorisé mais reste soumis aux règles générales (visibilité, ligne continue, etc.).",
+        explanationEn: "Grey diagonal bars indicate the end of a prohibition. Overtaking is allowed again but remains subject to general rules (visibility, solid line, etc.)."
+    },
+    {
+        id: "sign-004", topic: "circulation", difficulty: 1, signs: ["no_heavy_vehicles"],
+        questionFr: "Ce panneau interdit l'accès :",
+        questionEn: "This sign prohibits access to:",
+        options: {
+            A: { fr: "À tous les véhicules", en: "All vehicles" },
+            B: { fr: "Aux poids lourds", en: "Heavy goods vehicles" },
+            C: { fr: "Aux voitures particulières", en: "Private cars" },
+            D: { fr: "Aux motos", en: "Motorcycles" }
+        },
+        correctAnswers: ["B"], answerCount: 1,
+        explanationFr: "Panneau rond rouge avec silhouette de camion : accès interdit aux poids lourds (véhicules dont le PTAC dépasse la limite indiquée, généralement 3,5 t).",
+        explanationEn: "Red round sign with truck silhouette: access forbidden to heavy vehicles (trucks exceeding the indicated gross weight, usually 3.5 tonnes)."
+    },
+    {
+        id: "sign-005", topic: "autres_usagers", difficulty: 1, signs: ["no_pedestrians"],
+        questionFr: "Que signifie ce panneau ?",
+        questionEn: "What does this sign mean?",
+        options: {
+            A: { fr: "Passage piéton", en: "Pedestrian crossing" },
+            B: { fr: "Accès interdit aux piétons", en: "No pedestrian access" },
+            C: { fr: "Priorité aux piétons", en: "Pedestrian priority" },
+            D: { fr: "Zone piétonne", en: "Pedestrian zone" }
+        },
+        correctAnswers: ["B"], answerCount: 1,
+        explanationFr: "Cercle rouge avec piéton barré : accès interdit aux piétons. Typique sur voies rapides et autoroutes.",
+        explanationEn: "Red circle with crossed pedestrian: no pedestrian access. Typical on expressways and motorways."
+    },
+    {
+        id: "sign-006", topic: "signalisation", difficulty: 2, signs: ["mandatory_right"],
+        questionFr: "Ce panneau vous oblige à :",
+        questionEn: "This sign requires you to:",
+        options: {
+            A: { fr: "Tourner à droite", en: "Turn right" },
+            B: { fr: "Continuer tout droit", en: "Continue straight" },
+            C: { fr: "Céder le passage à droite", en: "Yield to the right" },
+            D: { fr: "Ne pas tourner à gauche", en: "Not turn left" }
+        },
+        correctAnswers: ["A"], answerCount: 1,
+        explanationFr: "Panneau rond bleu avec flèche blanche : obligation de suivre la direction indiquée. Ici, tourner à droite.",
+        explanationEn: "Blue round sign with white arrow: mandatory direction. Here, turn right."
+    },
+    {
+        id: "sign-007", topic: "circulation", difficulty: 2, signs: ["weight_limit"],
+        questionFr: "Ce panneau indique une limitation de poids. Que fait-on si on dépasse la limite ?",
+        questionEn: "This sign indicates a weight limit. What if you exceed the limit?",
+        options: {
+            A: { fr: "On peut passer quand même", en: "You can pass anyway" },
+            B: { fr: "Accès interdit au-delà du poids indiqué", en: "Access forbidden beyond the indicated weight" },
+            C: { fr: "On risque une amende et des dégâts à la chaussée ou à un ouvrage d'art", en: "Risk of fine and damage to road or bridge" },
+            D: { fr: "Il s'agit d'une simple indication", en: "It is just an indication" }
+        },
+        correctAnswers: ["B","C"], answerCount: 2,
+        explanationFr: "La limitation de poids est impérative — souvent due à la résistance d'un pont ou d'une chaussée. Le franchissement peut causer un effondrement.",
+        explanationEn: "Weight limit is mandatory — often due to a bridge or road's structural capacity. Exceeding it can cause collapse."
+    },
+    {
+        id: "sign-008", topic: "circulation", difficulty: 1, signs: ["height_limit"],
+        questionFr: "Ce panneau indique :",
+        questionEn: "This sign indicates:",
+        options: {
+            A: { fr: "Hauteur maximale autorisée", en: "Maximum allowed height" },
+            B: { fr: "Hauteur minimale du véhicule", en: "Minimum vehicle height" },
+            C: { fr: "Largeur maximale", en: "Maximum width" },
+            D: { fr: "Longueur maximale", en: "Maximum length" }
+        },
+        correctAnswers: ["A"], answerCount: 1,
+        explanationFr: "Cercle rouge avec deux flèches verticales et une mesure : hauteur maximale autorisée (typiquement pour tunnels et passages voûtés).",
+        explanationEn: "Red circle with two vertical arrows and a measurement: maximum allowed height (typically for tunnels and arched passages)."
+    },
+    {
+        id: "sign-009", topic: "route", difficulty: 2, signs: ["road_works"],
+        questionFr: "À l'approche de ce panneau, vous devez :",
+        questionEn: "Approaching this sign, you must:",
+        options: {
+            A: { fr: "Réduire votre vitesse", en: "Reduce your speed" },
+            B: { fr: "Être prêt à vous arrêter", en: "Be prepared to stop" },
+            C: { fr: "Respecter les signaleurs et la signalisation temporaire", en: "Respect signalers and temporary signage" },
+            D: { fr: "Accélérer pour passer vite", en: "Accelerate to pass quickly" }
+        },
+        correctAnswers: ["A","B","C"], answerCount: 3,
+        explanationFr: "Panneau travaux : danger. Ralentir, anticiper un arrêt possible, respecter signaleurs et signalisation temporaire (panneaux jaunes prioritaires sur fixes).",
+        explanationEn: "Roadworks sign: danger. Slow down, anticipate possible stop, respect signalers and temporary signage (yellow signs override fixed ones)."
+    },
+    {
+        id: "sign-010", topic: "circulation", difficulty: 2, signs: ["two_way_traffic"],
+        questionFr: "Que signifie ce panneau ?",
+        questionEn: "What does this sign mean?",
+        options: {
+            A: { fr: "Circulation à double sens", en: "Two-way traffic" },
+            B: { fr: "Fin d'une portion à sens unique : attention aux véhicules venant en sens inverse", en: "End of one-way section: watch for oncoming vehicles" },
+            C: { fr: "Autoroute", en: "Motorway" },
+            D: { fr: "Dépassement autorisé", en: "Overtaking allowed" }
+        },
+        correctAnswers: ["A","B"], answerCount: 2,
+        explanationFr: "Triangle de danger avec deux flèches opposées : annonce un changement vers circulation à double sens, fréquemment en sortie de voies séparées.",
+        explanationEn: "Danger triangle with two opposing arrows: announces a change to two-way traffic, often exiting from separated lanes."
+    },
+    {
+        id: "sign-011", topic: "route", difficulty: 1, signs: ["uneven_road"],
+        questionFr: "Ce panneau signale :",
+        questionEn: "This sign warns of:",
+        options: {
+            A: { fr: "Route en bon état", en: "Road in good condition" },
+            B: { fr: "Chaussée déformée ou dos d'âne", en: "Uneven road or speed bump" },
+            C: { fr: "Travaux", en: "Road works" },
+            D: { fr: "Virage dangereux", en: "Dangerous curve" }
+        },
+        correctAnswers: ["B"], answerCount: 1,
+        explanationFr: "Triangle de danger avec vagues : chaussée déformée. Ralentir pour éviter la perte de contrôle ou d'adhérence.",
+        explanationEn: "Danger triangle with waves: uneven road. Slow down to avoid losing control or grip."
+    },
+    {
+        id: "sign-012", topic: "route", difficulty: 2, signs: ["crosswind"],
+        questionFr: "À la vue de ce panneau de vent latéral, que devez-vous faire ?",
+        questionEn: "Seeing this crosswind sign, what should you do?",
+        options: {
+            A: { fr: "Ralentir", en: "Slow down" },
+            B: { fr: "Tenir fermement le volant", en: "Grip the steering wheel firmly" },
+            C: { fr: "Anticiper les rafales, surtout en sortie d'obstacle (pont, tunnel)", en: "Anticipate gusts, especially exiting obstacles (bridges, tunnels)" },
+            D: { fr: "Continuer normalement", en: "Continue normally" }
+        },
+        correctAnswers: ["A","B","C"], answerCount: 3,
+        explanationFr: "Vent latéral : risque de déport. Ralentir, tenir le volant à deux mains, anticiper rafales en sortie d'ouvrage. Véhicules hauts particulièrement vulnérables.",
+        explanationEn: "Crosswind: risk of drift. Slow down, grip wheel with both hands, anticipate gusts when exiting structures. Tall vehicles particularly vulnerable."
+    },
+    {
+        id: "sign-013", topic: "circulation", difficulty: 2, signs: ["bus_lane"],
+        questionFr: "Cette voie est réservée. Qui peut y circuler ?",
+        questionEn: "This lane is reserved. Who can use it?",
+        options: {
+            A: { fr: "Les autobus", en: "Buses" },
+            B: { fr: "Les taxis (selon signalisation complémentaire)", en: "Taxis (per additional signage)" },
+            C: { fr: "Les vélos et véhicules d'urgence en intervention", en: "Bicycles and emergency vehicles on call" },
+            D: { fr: "Les voitures particulières", en: "Private cars" }
+        },
+        correctAnswers: ["A","B","C"], answerCount: 3,
+        explanationFr: "Voie bus : autobus, taxis (si autorisés), deux-roues, véhicules d'urgence en intervention. Voitures particulières interdites — sanction possible.",
+        explanationEn: "Bus lane: buses, taxis (if authorized), two-wheelers, emergency vehicles on call. Private cars forbidden — sanctionable."
+    },
+    {
+        id: "sign-014", topic: "autres_usagers", difficulty: 2, signs: ["tram_crossing"],
+        questionFr: "Ce panneau annonce un passage de tramway. Règles :",
+        questionEn: "This sign announces a tram crossing. Rules:",
+        options: {
+            A: { fr: "Le tramway a la priorité", en: "The tram has priority" },
+            B: { fr: "Ralentir et vérifier l'approche du tramway", en: "Slow down and check for approaching trams" },
+            C: { fr: "Ne jamais s'arrêter sur les rails", en: "Never stop on the rails" },
+            D: { fr: "On peut forcer le passage", en: "You can force passage" }
+        },
+        correctAnswers: ["A","B","C"], answerCount: 3,
+        explanationFr: "Tramway : toujours prioritaire (distance d'arrêt longue, ne peut pas dévier). Ralentir, vérifier visuellement, ne jamais stopper sur les rails.",
+        explanationEn: "Tram: always has priority (long stopping distance, cannot swerve). Slow down, check visually, never stop on the rails."
+    },
+    {
+        id: "sign-015", topic: "circulation", difficulty: 2, signs: ["end_residential_zone"],
+        questionFr: "Que signifie la fin de zone de rencontre ?",
+        questionEn: "What does 'end of residential zone' mean?",
+        options: {
+            A: { fr: "Les piétons n'ont plus la priorité sur toute la chaussée", en: "Pedestrians no longer have priority over the entire roadway" },
+            B: { fr: "La limite de vitesse remonte aux règles générales", en: "Speed limit returns to general rules" },
+            C: { fr: "Les piétons conservent priorité absolue", en: "Pedestrians keep absolute priority" },
+            D: { fr: "Accès piéton interdit", en: "No pedestrian access" }
+        },
+        correctAnswers: ["A","B"], answerCount: 2,
+        explanationFr: "Fin de zone de rencontre : retour aux règles normales. En zone, 20 km/h max et piétons prioritaires partout ; à la sortie, règles classiques.",
+        explanationEn: "End of residential zone: return to normal rules. Inside zone, 20 km/h max and pedestrians have full priority; outside, classic rules apply."
+    },
+    {
+        id: "sign-016", topic: "notions_diverses", difficulty: 1, signs: ["hospital"],
+        questionFr: "Ce panneau signale un hôpital. Que devez-vous faire ?",
+        questionEn: "This sign indicates a hospital. What should you do?",
+        options: {
+            A: { fr: "Éviter le klaxon et le bruit", en: "Avoid horn and noise" },
+            B: { fr: "Être attentif aux véhicules d'urgence entrant et sortant", en: "Watch for emergency vehicles entering and leaving" },
+            C: { fr: "Klaxonner en continu", en: "Honk continuously" },
+            D: { fr: "Ignorer les piétons", en: "Ignore pedestrians" }
+        },
+        correctAnswers: ["A","B"], answerCount: 2,
+        explanationFr: "Abords d'hôpital : silence (interdiction de klaxonner sauf danger immédiat), vigilance accrue pour ambulances et piétons.",
+        explanationEn: "Near a hospital: silence (no honking except in immediate danger), heightened vigilance for ambulances and pedestrians."
+    },
+    {
+        id: "sign-017", topic: "notions_diverses", difficulty: 1, signs: ["gas_station"],
+        questionFr: "Ce panneau indique :",
+        questionEn: "This sign indicates:",
+        options: {
+            A: { fr: "Une station-service", en: "A gas station" },
+            B: { fr: "Un service d'aide aux usagers", en: "A driver service" },
+            C: { fr: "Un parking", en: "A parking lot" },
+            D: { fr: "Un restaurant", en: "A restaurant" }
+        },
+        correctAnswers: ["A"], answerCount: 1,
+        explanationFr: "Panneau bleu de service : station-service (carburant). Les panneaux de services sont bleus carrés.",
+        explanationEn: "Blue service sign: gas/petrol station (fuel). Service signs are blue squares."
+    },
+    {
+        id: "sign-018", topic: "signalisation", difficulty: 2, signs: ["expressway_start"],
+        questionFr: "Que signifie le panneau de route pour automobiles ?",
+        questionEn: "What does the expressway sign mean?",
+        options: {
+            A: { fr: "Voie réservée aux véhicules à moteur capables d'une certaine vitesse", en: "Lane reserved for motorized vehicles capable of a certain speed" },
+            B: { fr: "Autoroute", en: "Motorway" },
+            C: { fr: "Vitesse maximale généralement 110 km/h", en: "Maximum speed usually 110 km/h" },
+            D: { fr: "Interdit aux piétons, vélos, animaux", en: "Forbidden to pedestrians, bikes, animals" }
+        },
+        correctAnswers: ["A","C","D"], answerCount: 3,
+        explanationFr: "Route pour automobiles (voie rapide) : pas une autoroute, mais règles similaires. Interdite piétons/vélos/cyclos. Vitesse 110 km/h (90 si pluie).",
+        explanationEn: "Expressway (not motorway): similar rules. Pedestrians/bikes/mopeds forbidden. Speed 110 km/h (90 if rain).",
+        distractorNotes: { B: "Ce n'est pas une autoroute (le panneau autoroute a une autre icône)." }
+    },
+    {
+        id: "sign-019", topic: "signalisation", difficulty: 2, signs: ["expressway_end"],
+        questionFr: "Ce panneau indique :",
+        questionEn: "This sign indicates:",
+        options: {
+            A: { fr: "Fin de route pour automobiles", en: "End of expressway" },
+            B: { fr: "Retour aux règles de circulation normales", en: "Return to normal traffic rules" },
+            C: { fr: "Piétons et vélos à nouveau autorisés (sur voies non interdites)", en: "Pedestrians and bikes again allowed (on non-restricted roads)" },
+            D: { fr: "Vitesse libre", en: "Unrestricted speed" }
+        },
+        correctAnswers: ["A","B","C"], answerCount: 3,
+        explanationFr: "Fin de voie rapide : règles normales reprennent. La vitesse retombe aux limites générales (80/90 km/h hors agglomération).",
+        explanationEn: "End of expressway: normal rules resume. Speed drops to general limits (80/90 km/h outside built-up areas)."
+    },
+    {
+        id: "sign-020", topic: "conducteur", difficulty: 2, signs: ["snow_chains"],
+        questionFr: "Ce panneau indique que les chaînes à neige sont obligatoires. Si vous n'en avez pas :",
+        questionEn: "This sign indicates snow chains are mandatory. If you don't have them:",
+        options: {
+            A: { fr: "Vous ne pouvez pas emprunter cette route", en: "You cannot use this road" },
+            B: { fr: "Vous pouvez passer prudemment", en: "You can pass carefully" },
+            C: { fr: "Les pneus hiver peuvent être acceptés en alternative (selon signalisation)", en: "Winter tyres may be accepted as alternative (per signage)" },
+            D: { fr: "Risque d'amende et de mise en danger", en: "Risk of fine and endangerment" }
+        },
+        correctAnswers: ["A","C","D"], answerCount: 3,
+        explanationFr: "Panneau B26 : chaînes à neige obligatoires sur au moins deux roues motrices. Pneus hiver parfois acceptés (panonceau). Sans équipement adapté : passage interdit, amende.",
+        explanationEn: "Sign B26: snow chains mandatory on at least two driving wheels. Winter tyres sometimes accepted (sub-sign). Without proper equipment: passage forbidden, fine.",
+        trapNote: "Loi Montagne (depuis 2021) : équipement hivernal obligatoire dans certaines zones du 1er nov au 31 mars."
     }
 ];
 

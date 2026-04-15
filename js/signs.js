@@ -64,6 +64,27 @@ const RoadSigns = {
         'dead_end': 'Voie sans issue',
         'bicycle_lane': 'Piste cyclable obligatoire',
         'end_speed_limit': 'Fin de limitation de vitesse',
+        // S39 B07 additions (20 new signs for exam coverage)
+        'minimum_speed': 'Vitesse minimale obligatoire',
+        'end_zone_30': 'Fin de zone 30',
+        'end_no_overtaking': 'Fin d\'interdiction de dépasser',
+        'no_heavy_vehicles': 'Accès interdit aux poids lourds',
+        'no_pedestrians': 'Accès interdit aux piétons',
+        'mandatory_right': 'Obligation de tourner à droite',
+        'weight_limit': 'Limitation de poids',
+        'height_limit': 'Limitation de hauteur',
+        'road_works': 'Travaux sur la chaussée',
+        'two_way_traffic': 'Circulation à double sens',
+        'uneven_road': 'Chaussée déformée',
+        'crosswind': 'Vent latéral',
+        'bus_lane': 'Voie réservée aux autobus',
+        'tram_crossing': 'Passage de tramway',
+        'end_residential_zone': 'Fin de zone de rencontre',
+        'hospital': 'Hôpital',
+        'gas_station': 'Station-service',
+        'expressway_start': 'Route pour automobiles',
+        'expressway_end': 'Fin de route pour automobiles',
+        'snow_chains': 'Chaînes à neige obligatoires',
     },
 
     signs: {
@@ -295,6 +316,184 @@ const RoadSigns = {
             <line x1="18" y1="82" x2="82" y2="18" stroke="#999" stroke-width="3"/>
             <line x1="22" y1="85" x2="85" y2="22" stroke="#999" stroke-width="3"/>
             <line x1="15" y1="78" x2="78" y2="15" stroke="#999" stroke-width="3"/>
+        </svg>`,
+
+        // === S39 B07 — 20 new signs for exam coverage ===
+
+        // === MINIMUM SPEED (blue circle, white number) ===
+        'minimum_speed': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <circle cx="50" cy="50" r="45" fill="#2E5984" stroke="white" stroke-width="3"/>
+            <text x="50" y="62" text-anchor="middle" fill="white" font-size="34" font-weight="bold" font-family="Arial">30</text>
+        </svg>`,
+
+        // === END OF ZONE 30 (white sq with "30" crossed) ===
+        'end_zone_30': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <rect x="5" y="5" width="90" height="90" rx="5" fill="white" stroke="#333" stroke-width="3"/>
+            <text x="50" y="45" text-anchor="middle" fill="#333" font-size="16" font-weight="bold" font-family="Arial">ZONE</text>
+            <circle cx="50" cy="65" r="18" fill="white" stroke="#333" stroke-width="3"/>
+            <text x="50" y="71" text-anchor="middle" fill="#333" font-size="14" font-weight="bold" font-family="Arial">30</text>
+            <line x1="15" y1="85" x2="85" y2="15" stroke="#333" stroke-width="3"/>
+        </svg>`,
+
+        // === END NO OVERTAKING (white circle + two cars + grey bars) ===
+        'end_no_overtaking': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <circle cx="50" cy="50" r="45" fill="white" stroke="#999" stroke-width="4"/>
+            <rect x="22" y="38" width="22" height="24" rx="8" fill="#333"/>
+            <rect x="56" y="38" width="22" height="24" rx="8" fill="#CC0000"/>
+            <line x1="18" y1="82" x2="82" y2="18" stroke="#999" stroke-width="3"/>
+            <line x1="22" y1="85" x2="85" y2="22" stroke="#999" stroke-width="3"/>
+        </svg>`,
+
+        // === NO HEAVY VEHICLES (red circle + truck silhouette) ===
+        'no_heavy_vehicles': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <circle cx="50" cy="50" r="45" fill="white" stroke="#CC0000" stroke-width="6"/>
+            <rect x="20" y="42" width="38" height="20" fill="#333"/>
+            <rect x="58" y="48" width="18" height="14" fill="#333"/>
+            <circle cx="30" cy="64" r="4" fill="#333"/>
+            <circle cx="50" cy="64" r="4" fill="#333"/>
+            <circle cx="68" cy="64" r="4" fill="#333"/>
+        </svg>`,
+
+        // === NO PEDESTRIANS (red circle + pedestrian crossed) ===
+        'no_pedestrians': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <circle cx="50" cy="50" r="45" fill="white" stroke="#CC0000" stroke-width="6"/>
+            <circle cx="50" cy="32" r="5" fill="#333"/>
+            <line x1="50" y1="37" x2="50" y2="60" stroke="#333" stroke-width="3.5"/>
+            <line x1="50" y1="46" x2="40" y2="52" stroke="#333" stroke-width="3"/>
+            <line x1="50" y1="46" x2="60" y2="52" stroke="#333" stroke-width="3"/>
+            <line x1="50" y1="60" x2="42" y2="75" stroke="#333" stroke-width="3"/>
+            <line x1="50" y1="60" x2="58" y2="75" stroke="#333" stroke-width="3"/>
+            <line x1="18" y1="82" x2="82" y2="18" stroke="#CC0000" stroke-width="6"/>
+        </svg>`,
+
+        // === MANDATORY TURN RIGHT (blue circle + white right arrow) ===
+        'mandatory_right': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <circle cx="50" cy="50" r="45" fill="#2E5984" stroke="white" stroke-width="3"/>
+            <polygon points="20,42 60,42 60,28 82,50 60,72 60,58 20,58" fill="white"/>
+        </svg>`,
+
+        // === WEIGHT LIMIT (red circle + tonnage) ===
+        'weight_limit': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <circle cx="50" cy="50" r="45" fill="white" stroke="#CC0000" stroke-width="7"/>
+            <text x="50" y="58" text-anchor="middle" fill="#333" font-size="24" font-weight="bold" font-family="Arial">3,5t</text>
+        </svg>`,
+
+        // === HEIGHT LIMIT (red circle + meter arrows) ===
+        'height_limit': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <circle cx="50" cy="50" r="45" fill="white" stroke="#CC0000" stroke-width="7"/>
+            <polygon points="50,25 44,35 56,35" fill="#333"/>
+            <polygon points="50,75 44,65 56,65" fill="#333"/>
+            <line x1="50" y1="35" x2="50" y2="65" stroke="#333" stroke-width="3"/>
+            <text x="50" y="56" text-anchor="middle" fill="#333" font-size="16" font-weight="bold" font-family="Arial">3m</text>
+        </svg>`,
+
+        // === ROAD WORKS (danger triangle + worker figure) ===
+        'road_works': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <polygon points="50,8 95,90 5,90" fill="white" stroke="#CC0000" stroke-width="5"/>
+            <circle cx="50" cy="38" r="4" fill="#333"/>
+            <rect x="45" y="42" width="10" height="14" fill="#333"/>
+            <line x1="45" y1="48" x2="35" y2="58" stroke="#333" stroke-width="3"/>
+            <line x1="55" y1="48" x2="65" y2="42" stroke="#333" stroke-width="3"/>
+            <rect x="62" y="38" width="4" height="10" fill="#333"/>
+            <line x1="50" y1="56" x2="46" y2="72" stroke="#333" stroke-width="3"/>
+            <line x1="50" y1="56" x2="54" y2="72" stroke="#333" stroke-width="3"/>
+        </svg>`,
+
+        // === TWO-WAY TRAFFIC (danger triangle + double arrow) ===
+        'two_way_traffic': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <polygon points="50,8 95,90 5,90" fill="white" stroke="#CC0000" stroke-width="5"/>
+            <polygon points="40,32 40,72 32,72 46,82 46,32" fill="#333"/>
+            <polygon points="60,82 60,42 68,42 54,32 54,82" fill="#333"/>
+        </svg>`,
+
+        // === UNEVEN ROAD (danger triangle + bumps) ===
+        'uneven_road': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <polygon points="50,8 95,90 5,90" fill="white" stroke="#CC0000" stroke-width="5"/>
+            <path d="M20,72 Q32,50 44,72 Q56,50 68,72 Q76,62 82,72" fill="none" stroke="#333" stroke-width="4" stroke-linecap="round"/>
+        </svg>`,
+
+        // === CROSSWIND (danger triangle + windsock) ===
+        'crosswind': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <polygon points="50,8 95,90 5,90" fill="white" stroke="#CC0000" stroke-width="5"/>
+            <line x1="30" y1="40" x2="30" y2="75" stroke="#333" stroke-width="3"/>
+            <polygon points="30,40 66,42 58,48 64,54 56,60 62,66 30,68" fill="#CC0000" stroke="#333" stroke-width="1"/>
+        </svg>`,
+
+        // === BUS LANE (blue square + white bus) ===
+        'bus_lane': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <rect x="5" y="5" width="90" height="90" rx="5" fill="#2E5984" stroke="white" stroke-width="2"/>
+            <rect x="22" y="28" width="56" height="40" rx="4" fill="white"/>
+            <rect x="28" y="34" width="12" height="10" fill="#2E5984"/>
+            <rect x="44" y="34" width="12" height="10" fill="#2E5984"/>
+            <rect x="60" y="34" width="12" height="10" fill="#2E5984"/>
+            <circle cx="32" cy="72" r="5" fill="white" stroke="#333" stroke-width="2"/>
+            <circle cx="68" cy="72" r="5" fill="white" stroke="#333" stroke-width="2"/>
+        </svg>`,
+
+        // === TRAM CROSSING (danger triangle + tram icon) ===
+        'tram_crossing': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <polygon points="50,8 95,90 5,90" fill="white" stroke="#CC0000" stroke-width="5"/>
+            <rect x="35" y="40" width="30" height="30" rx="3" fill="#333"/>
+            <rect x="38" y="44" width="10" height="10" fill="white"/>
+            <rect x="52" y="44" width="10" height="10" fill="white"/>
+            <circle cx="42" cy="72" r="3" fill="#333"/>
+            <circle cx="58" cy="72" r="3" fill="#333"/>
+            <line x1="50" y1="32" x2="50" y2="40" stroke="#333" stroke-width="2"/>
+        </svg>`,
+
+        // === END RESIDENTIAL ZONE (white w/ residential icon + bar) ===
+        'end_residential_zone': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <rect x="5" y="5" width="90" height="90" rx="5" fill="white" stroke="#2E5984" stroke-width="3"/>
+            <polygon points="50,25 25,45 25,70 75,70 75,45" fill="#2E5984"/>
+            <rect x="42" y="55" width="16" height="15" fill="white"/>
+            <line x1="15" y1="85" x2="85" y2="15" stroke="#CC0000" stroke-width="4"/>
+        </svg>`,
+
+        // === HOSPITAL (blue square + white H) ===
+        'hospital': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <rect x="5" y="5" width="90" height="90" rx="5" fill="#2E5984" stroke="white" stroke-width="2"/>
+            <text x="50" y="72" text-anchor="middle" fill="white" font-size="56" font-weight="bold" font-family="Arial">H</text>
+        </svg>`,
+
+        // === GAS STATION (blue square + pump) ===
+        'gas_station': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <rect x="5" y="5" width="90" height="90" rx="5" fill="#2E5984" stroke="white" stroke-width="2"/>
+            <rect x="30" y="25" width="30" height="55" rx="2" fill="white"/>
+            <rect x="35" y="30" width="20" height="15" fill="#2E5984"/>
+            <path d="M60,40 L72,40 L72,65 A5,5 0 0 1 67,70 A5,5 0 0 1 62,65 L62,55" fill="none" stroke="white" stroke-width="3"/>
+            <rect x="28" y="80" width="34" height="3" fill="white"/>
+        </svg>`,
+
+        // === EXPRESSWAY START (blue rectangle + white car) ===
+        'expressway_start': () => `<svg viewBox="0 0 120 80" width="100" height="67">
+            <rect x="2" y="2" width="116" height="76" rx="5" fill="#2E5984" stroke="white" stroke-width="3"/>
+            <rect x="30" y="35" width="60" height="20" rx="4" fill="white"/>
+            <rect x="40" y="28" width="40" height="10" rx="3" fill="white"/>
+            <circle cx="40" cy="58" r="5" fill="white"/>
+            <circle cx="80" cy="58" r="5" fill="white"/>
+        </svg>`,
+
+        // === EXPRESSWAY END (blue rect + car + red diagonal) ===
+        'expressway_end': () => `<svg viewBox="0 0 120 80" width="100" height="67">
+            <rect x="2" y="2" width="116" height="76" rx="5" fill="#2E5984" stroke="white" stroke-width="3"/>
+            <rect x="30" y="35" width="60" height="20" rx="4" fill="white"/>
+            <rect x="40" y="28" width="40" height="10" rx="3" fill="white"/>
+            <circle cx="40" cy="58" r="5" fill="white"/>
+            <circle cx="80" cy="58" r="5" fill="white"/>
+            <line x1="10" y1="70" x2="110" y2="10" stroke="#CC0000" stroke-width="5"/>
+        </svg>`,
+
+        // === SNOW CHAINS OBLIGATORY (blue circle + tire with chains) ===
+        'snow_chains': () => `<svg viewBox="0 0 100 100" width="80" height="80">
+            <circle cx="50" cy="50" r="45" fill="#2E5984" stroke="white" stroke-width="3"/>
+            <circle cx="50" cy="55" r="22" fill="none" stroke="white" stroke-width="4"/>
+            <circle cx="50" cy="55" r="8" fill="white"/>
+            <line x1="35" y1="38" x2="45" y2="48" stroke="white" stroke-width="2.5"/>
+            <line x1="65" y1="38" x2="55" y2="48" stroke="white" stroke-width="2.5"/>
+            <line x1="30" y1="58" x2="40" y2="62" stroke="white" stroke-width="2.5"/>
+            <line x1="70" y1="58" x2="60" y2="62" stroke="white" stroke-width="2.5"/>
+            <line x1="40" y1="72" x2="48" y2="68" stroke="white" stroke-width="2.5"/>
+            <line x1="60" y1="72" x2="52" y2="68" stroke="white" stroke-width="2.5"/>
         </svg>`,
     }
 };
