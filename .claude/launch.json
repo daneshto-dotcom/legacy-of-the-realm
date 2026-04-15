@@ -4,8 +4,8 @@
     {
       "name": "fdtta-dev",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "33926", "--bind", "127.0.0.1"],
-      "port": 33926
+      "runtimeArgs": ["-m", "http.server", "22903", "--bind", "127.0.0.1"],
+      "port": 22903
     }
   ]
 }

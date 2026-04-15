@@ -207,14 +207,39 @@ const Practice = {
         optionsContainer.innerHTML = '';
         optionsContainer.classList.add('stagger-enter');
 
+        // B14 — multi-answer UX: checkbox-style tiles + "Select N" prompt
+        const isMulti = q.answerCount > 1;
+        optionsContainer.classList.toggle('multi-mode', isMulti);
+        optionsContainer.setAttribute('role', isMulti ? 'group' : 'radiogroup');
+        // Dynamic prompt ("Sélectionnez N réponses" / "Select N answers")
+        let promptEl = document.getElementById('multi-answer-prompt');
+        if (!promptEl) {
+            promptEl = document.createElement('div');
+            promptEl.id = 'multi-answer-prompt';
+            promptEl.className = 'multi-answer-prompt';
+            optionsContainer.parentElement.insertBefore(promptEl, optionsContainer);
+        }
+        if (isMulti) {
+            promptEl.innerHTML = `<strong>Sélectionnez ${q.answerCount} réponses</strong> <span class="prompt-en">(Select ${q.answerCount} answers)</span>`;
+            promptEl.classList.remove('hidden');
+        } else {
+            promptEl.classList.add('hidden');
+            promptEl.innerHTML = '';
+        }
+
         const letters = ['A', 'B', 'C', 'D'];
         for (const letter of letters) {
             const option = q.options[letter];
             if (!option) continue;
 
             const tile = document.createElement('div');
-            tile.className = 'answer-tile';
+            tile.className = 'answer-tile' + (isMulti ? ' multi' : '');
             tile.dataset.letter = letter;
+            tile.setAttribute('role', isMulti ? 'checkbox' : 'radio');
+            tile.setAttribute('aria-checked', 'false');
+            tile.setAttribute('tabindex', '0');
+            tile.setAttribute('aria-label',
+                `${isMulti ? 'Checkbox' : 'Option'} ${letter}: ${option.fr}`);
             tile.innerHTML = `
                 <div class="answer-letter">${letter}</div>
                 <div class="answer-content">
@@ -308,7 +333,9 @@ const Practice = {
     highlightSelected() {
         document.querySelectorAll('.answer-tile').forEach(tile => {
             const letter = tile.dataset.letter;
-            if (this.selectedAnswers.includes(letter)) {
+            const isSelected = this.selectedAnswers.includes(letter);
+            tile.setAttribute('aria-checked', isSelected ? 'true' : 'false');
+            if (isSelected) {
                 tile.classList.add('selected');
             } else {
                 tile.classList.remove('selected');

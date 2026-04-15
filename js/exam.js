@@ -138,13 +138,37 @@ const Exam = {
         let examSelected = [];
         this._answered = false;
 
+        // B14 — multi-answer UX: checkbox-style tiles + "Select N" prompt
+        const isMulti = q.answerCount > 1;
+        optionsContainer.classList.toggle('multi-mode', isMulti);
+        optionsContainer.setAttribute('role', isMulti ? 'group' : 'radiogroup');
+        let promptEl = document.getElementById('exam-multi-answer-prompt');
+        if (!promptEl) {
+            promptEl = document.createElement('div');
+            promptEl.id = 'exam-multi-answer-prompt';
+            promptEl.className = 'multi-answer-prompt';
+            optionsContainer.parentElement.insertBefore(promptEl, optionsContainer);
+        }
+        if (isMulti) {
+            promptEl.innerHTML = `<strong>Sélectionnez ${q.answerCount} réponses</strong> <span class="prompt-en">(Select ${q.answerCount} answers)</span>`;
+            promptEl.classList.remove('hidden');
+        } else {
+            promptEl.classList.add('hidden');
+            promptEl.innerHTML = '';
+        }
+
         for (const letter of letters) {
             const option = q.options[letter];
             if (!option) continue;
 
             const tile = document.createElement('div');
-            tile.className = 'answer-tile';
+            tile.className = 'answer-tile' + (isMulti ? ' multi' : '');
             tile.dataset.letter = letter;
+            tile.setAttribute('role', isMulti ? 'checkbox' : 'radio');
+            tile.setAttribute('aria-checked', 'false');
+            tile.setAttribute('tabindex', '0');
+            tile.setAttribute('aria-label',
+                `${isMulti ? 'Checkbox' : 'Option'} ${letter}: ${option.fr}`);
             tile.innerHTML = `
                 <div class="answer-letter">${letter}</div>
                 <div class="answer-content">

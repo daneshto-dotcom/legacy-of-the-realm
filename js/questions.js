@@ -28642,7 +28642,7 @@ const QUESTION_BANK = [
     },
     // === S39 B07 — 20 new sign-based questions for exam coverage ===
     {
-        id: "sign-001", topic: "signalisation", difficulty: 1, signs: ["minimum_speed"],
+        id: "s39-001", topic: "signalisation", difficulty: 1, signs: ["minimum_speed"],
         questionFr: "Que signifie ce panneau rond bleu avec un chiffre blanc ?",
         questionEn: "What does this blue round sign with a white number mean?",
         options: {
@@ -28657,7 +28657,7 @@ const QUESTION_BANK = [
         trapNote: "Attention : rond bleu = obligation. Rond rouge = interdiction."
     },
     {
-        id: "sign-002", topic: "signalisation", difficulty: 2, signs: ["end_zone_30"],
+        id: "s39-002", topic: "signalisation", difficulty: 2, signs: ["end_zone_30"],
         questionFr: "Que signifie ce panneau indiquant la fin de zone 30 ?",
         questionEn: "What does this 'end of zone 30' sign mean?",
         options: {
@@ -28672,7 +28672,7 @@ const QUESTION_BANK = [
         distractorNotes: { A: "La vitesse reste réglementée par les limites générales." }
     },
     {
-        id: "sign-003", topic: "croisement_depassement", difficulty: 2, signs: ["end_no_overtaking"],
+        id: "s39-003", topic: "croisement_depassement", difficulty: 2, signs: ["end_no_overtaking"],
         questionFr: "Ce panneau indique :",
         questionEn: "This sign indicates:",
         options: {
@@ -28686,7 +28686,7 @@ const QUESTION_BANK = [
         explanationEn: "Grey diagonal bars indicate the end of a prohibition. Overtaking is allowed again but remains subject to general rules (visibility, solid line, etc.)."
     },
     {
-        id: "sign-004", topic: "circulation", difficulty: 1, signs: ["no_heavy_vehicles"],
+        id: "s39-004", topic: "circulation", difficulty: 1, signs: ["no_heavy_vehicles"],
         questionFr: "Ce panneau interdit l'accès :",
         questionEn: "This sign prohibits access to:",
         options: {
@@ -28700,7 +28700,7 @@ const QUESTION_BANK = [
         explanationEn: "Red round sign with truck silhouette: access forbidden to heavy vehicles (trucks exceeding the indicated gross weight, usually 3.5 tonnes)."
     },
     {
-        id: "sign-005", topic: "autres_usagers", difficulty: 1, signs: ["no_pedestrians"],
+        id: "s39-005", topic: "autres_usagers", difficulty: 1, signs: ["no_pedestrians"],
         questionFr: "Que signifie ce panneau ?",
         questionEn: "What does this sign mean?",
         options: {
@@ -28714,7 +28714,7 @@ const QUESTION_BANK = [
         explanationEn: "Red circle with crossed pedestrian: no pedestrian access. Typical on expressways and motorways."
     },
     {
-        id: "sign-006", topic: "signalisation", difficulty: 2, signs: ["mandatory_right"],
+        id: "s39-006", topic: "signalisation", difficulty: 2, signs: ["mandatory_right"],
         questionFr: "Ce panneau vous oblige à :",
         questionEn: "This sign requires you to:",
         options: {
@@ -28728,7 +28728,7 @@ const QUESTION_BANK = [
         explanationEn: "Blue round sign with white arrow: mandatory direction. Here, turn right."
     },
     {
-        id: "sign-007", topic: "circulation", difficulty: 2, signs: ["weight_limit"],
+        id: "s39-007", topic: "circulation", difficulty: 2, signs: ["weight_limit"],
         questionFr: "Ce panneau indique une limitation de poids. Que fait-on si on dépasse la limite ?",
         questionEn: "This sign indicates a weight limit. What if you exceed the limit?",
         options: {
@@ -28742,7 +28742,7 @@ const QUESTION_BANK = [
         explanationEn: "Weight limit is mandatory — often due to a bridge or road's structural capacity. Exceeding it can cause collapse."
     },
     {
-        id: "sign-008", topic: "circulation", difficulty: 1, signs: ["height_limit"],
+        id: "s39-008", topic: "circulation", difficulty: 1, signs: ["height_limit"],
         questionFr: "Ce panneau indique :",
         questionEn: "This sign indicates:",
         options: {
@@ -28756,7 +28756,7 @@ const QUESTION_BANK = [
         explanationEn: "Red circle with two vertical arrows and a measurement: maximum allowed height (typically for tunnels and arched passages)."
     },
     {
-        id: "sign-009", topic: "route", difficulty: 2, signs: ["road_works"],
+        id: "s39-009", topic: "route", difficulty: 2, signs: ["road_works"],
         questionFr: "À l'approche de ce panneau, vous devez :",
         questionEn: "Approaching this sign, you must:",
         options: {
@@ -28770,7 +28770,7 @@ const QUESTION_BANK = [
         explanationEn: "Roadworks sign: danger. Slow down, anticipate possible stop, respect signalers and temporary signage (yellow signs override fixed ones)."
     },
     {
-        id: "sign-010", topic: "circulation", difficulty: 2, signs: ["two_way_traffic"],
+        id: "s39-010", topic: "circulation", difficulty: 2, signs: ["two_way_traffic"],
         questionFr: "Que signifie ce panneau ?",
         questionEn: "What does this sign mean?",
         options: {
@@ -28784,7 +28784,7 @@ const QUESTION_BANK = [
         explanationEn: "Danger triangle with two opposing arrows: announces a change to two-way traffic, often exiting from separated lanes."
     },
     {
-        id: "sign-011", topic: "route", difficulty: 1, signs: ["uneven_road"],
+        id: "s39-011", topic: "route", difficulty: 1, signs: ["uneven_road"],
         questionFr: "Ce panneau signale :",
         questionEn: "This sign warns of:",
         options: {
@@ -28798,7 +28798,7 @@ const QUESTION_BANK = [
         explanationEn: "Danger triangle with waves: uneven road. Slow down to avoid losing control or grip."
     },
     {
-        id: "sign-012", topic: "route", difficulty: 2, signs: ["crosswind"],
+        id: "s39-012", topic: "route", difficulty: 2, signs: ["crosswind"],
         questionFr: "À la vue de ce panneau de vent latéral, que devez-vous faire ?",
         questionEn: "Seeing this crosswind sign, what should you do?",
         options: {
@@ -28812,7 +28812,7 @@ const QUESTION_BANK = [
         explanationEn: "Crosswind: risk of drift. Slow down, grip wheel with both hands, anticipate gusts when exiting structures. Tall vehicles particularly vulnerable."
     },
     {
-        id: "sign-013", topic: "circulation", difficulty: 2, signs: ["bus_lane"],
+        id: "s39-013", topic: "circulation", difficulty: 2, signs: ["bus_lane"],
         questionFr: "Cette voie est réservée. Qui peut y circuler ?",
         questionEn: "This lane is reserved. Who can use it?",
         options: {
@@ -28826,7 +28826,7 @@ const QUESTION_BANK = [
         explanationEn: "Bus lane: buses, taxis (if authorized), two-wheelers, emergency vehicles on call. Private cars forbidden — sanctionable."
     },
     {
-        id: "sign-014", topic: "autres_usagers", difficulty: 2, signs: ["tram_crossing"],
+        id: "s39-014", topic: "autres_usagers", difficulty: 2, signs: ["tram_crossing"],
         questionFr: "Ce panneau annonce un passage de tramway. Règles :",
         questionEn: "This sign announces a tram crossing. Rules:",
         options: {
@@ -28840,7 +28840,7 @@ const QUESTION_BANK = [
         explanationEn: "Tram: always has priority (long stopping distance, cannot swerve). Slow down, check visually, never stop on the rails."
     },
     {
-        id: "sign-015", topic: "circulation", difficulty: 2, signs: ["end_residential_zone"],
+        id: "s39-015", topic: "circulation", difficulty: 2, signs: ["end_residential_zone"],
         questionFr: "Que signifie la fin de zone de rencontre ?",
         questionEn: "What does 'end of residential zone' mean?",
         options: {
@@ -28854,7 +28854,7 @@ const QUESTION_BANK = [
         explanationEn: "End of residential zone: return to normal rules. Inside zone, 20 km/h max and pedestrians have full priority; outside, classic rules apply."
     },
     {
-        id: "sign-016", topic: "notions_diverses", difficulty: 1, signs: ["hospital"],
+        id: "s39-016", topic: "notions_diverses", difficulty: 1, signs: ["hospital"],
         questionFr: "Ce panneau signale un hôpital. Que devez-vous faire ?",
         questionEn: "This sign indicates a hospital. What should you do?",
         options: {
@@ -28868,7 +28868,7 @@ const QUESTION_BANK = [
         explanationEn: "Near a hospital: silence (no honking except in immediate danger), heightened vigilance for ambulances and pedestrians."
     },
     {
-        id: "sign-017", topic: "notions_diverses", difficulty: 1, signs: ["gas_station"],
+        id: "s39-017", topic: "notions_diverses", difficulty: 1, signs: ["gas_station"],
         questionFr: "Ce panneau indique :",
         questionEn: "This sign indicates:",
         options: {
@@ -28882,7 +28882,7 @@ const QUESTION_BANK = [
         explanationEn: "Blue service sign: gas/petrol station (fuel). Service signs are blue squares."
     },
     {
-        id: "sign-018", topic: "signalisation", difficulty: 2, signs: ["expressway_start"],
+        id: "s39-018", topic: "signalisation", difficulty: 2, signs: ["expressway_start"],
         questionFr: "Que signifie le panneau de route pour automobiles ?",
         questionEn: "What does the expressway sign mean?",
         options: {
@@ -28897,7 +28897,7 @@ const QUESTION_BANK = [
         distractorNotes: { B: "Ce n'est pas une autoroute (le panneau autoroute a une autre icône)." }
     },
     {
-        id: "sign-019", topic: "signalisation", difficulty: 2, signs: ["expressway_end"],
+        id: "s39-019", topic: "signalisation", difficulty: 2, signs: ["expressway_end"],
         questionFr: "Ce panneau indique :",
         questionEn: "This sign indicates:",
         options: {
@@ -28911,7 +28911,7 @@ const QUESTION_BANK = [
         explanationEn: "End of expressway: normal rules resume. Speed drops to general limits (80/90 km/h outside built-up areas)."
     },
     {
-        id: "sign-020", topic: "conducteur", difficulty: 2, signs: ["snow_chains"],
+        id: "s39-020", topic: "conducteur", difficulty: 2, signs: ["snow_chains"],
         questionFr: "Ce panneau indique que les chaînes à neige sont obligatoires. Si vous n'en avez pas :",
         questionEn: "This sign indicates snow chains are mandatory. If you don't have them:",
         options: {

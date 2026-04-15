@@ -626,6 +626,100 @@
     align-self: center;
 }
 
+/* === B14 Multi-Answer UX Polish === */
+/* Dynamic "Select N answers" prompt above options */
+.multi-answer-prompt {
+    margin: var(--space-xs) 0 var(--space-sm);
+    padding: 8px 12px;
+    background: var(--info-bg, rgba(59, 130, 246, 0.08));
+    border-left: 3px solid var(--primary, #3b82f6);
+    border-radius: 4px;
+    font-size: var(--font-size-sm);
+    color: var(--text-primary);
+}
+
+.multi-answer-prompt .prompt-en {
+    color: var(--text-secondary);
+    font-size: var(--font-size-xs);
+    font-style: italic;
+}
+
+.multi-answer-prompt.hidden {
+    display: none;
+}
+
+/* Multi-answer tiles: checkbox square indicator */
+.answer-tile.multi .answer-indicator {
+    width: 28px;
+    height: 28px;
+    position: relative;
+}
+
+.answer-tile.multi .answer-indicator::before {
+    content: '';
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--text-tertiary);
+    border-radius: 4px;
+    background: transparent;
+    transition: all 0.15s ease;
+}
+
+/* Ensure the whole tile is a 44px+ tap target for mobile */
+.answer-tile {
+    min-height: 44px;
+}
+
+/* Selected: filled checkmark */
+.answer-tile.multi.selected .answer-indicator::before {
+    background: var(--primary, #3b82f6);
+    border-color: var(--primary, #3b82f6);
+}
+
+.answer-tile.multi.selected .answer-indicator::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* Single-answer (default): keep existing radio style via answer-indicator content */
+.answer-tile:not(.multi) .answer-indicator::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--text-tertiary);
+    border-radius: 50%;
+    background: transparent;
+    display: block;
+}
+
+.answer-tile:not(.multi).selected .answer-indicator::before {
+    border-color: var(--primary, #3b82f6);
+}
+
+.answer-tile:not(.multi).selected .answer-indicator::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary, #3b82f6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.answer-tile:not(.multi) .answer-indicator {
+    position: relative;
+}
+
 /* Confirm Button */
 .btn-confirm {
     margin-top: var(--space-md);
