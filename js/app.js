@@ -152,6 +152,39 @@ const App = {
         this.navigate('home');
     },
 
+    // === TOPIC PRACTICE CARDS (B12) ===
+    // Dynamically render 10 topic cards from ETG_TOPICS with mastery % + Q count.
+    // Per Council: derive from data, not hardcoded HTML.
+    renderTopicPracticeCards() {
+        const grid = document.getElementById('topic-practice-grid');
+        if (!grid) return;
+        const mastery = Storage.getTopicMastery();
+        grid.innerHTML = '';
+        for (const topic of ETG_TOPICS) {
+            const qCount = QUESTION_BANK.filter(q => q.topic === topic.id).length;
+            const tm = mastery[topic.id];
+            const masteryPct = (tm && tm.totalAttempts > 0) ? Math.round(tm.accuracy) : null;
+            const masteryLabel = masteryPct !== null ? `${masteryPct}% mastery` : 'Not started';
+            const masteryClass = masteryPct === null ? 'muted'
+                : masteryPct >= 80 ? 'strong' : masteryPct >= 60 ? 'ok' : 'weak';
+            const card = document.createElement('div');
+            card.className = 'preset-card card topic-practice-card';
+            card.dataset.topic = topic.id;
+            card.setAttribute('aria-label', `${topic.nameEn} — ${masteryLabel}, ${qCount} questions`);
+            card.innerHTML = `
+                <div class="preset-icon">${topic.icon}</div>
+                <div class="preset-name">${topic.nameEn}</div>
+                <div class="preset-desc topic-mastery ${masteryClass}">${masteryLabel}</div>
+                <div class="topic-qcount">${qCount} questions</div>
+            `;
+            card.addEventListener('click', () => {
+                Practice.startSession('drill', { topicFilter: topic.id, count: 15 });
+                this.navigate('practice');
+            });
+            grid.appendChild(card);
+        }
+    },
+
     setupNavigation() {
         document.querySelectorAll('.nav-item').forEach(item => {
             item.addEventListener('click', () => {
@@ -448,6 +481,9 @@ const App = {
         } else {
             bookmarkSection.classList.add('hidden');
         }
+
+        // Topic Practice cards (B12) — dynamic from ETG_TOPICS
+        this.renderTopicPracticeCards();
 
         // Daily challenge card
         const challengeContainer = document.getElementById('daily-challenge');

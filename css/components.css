@@ -157,6 +157,51 @@
     color: var(--text-tertiary);
 }
 
+/* === B12 Topic Practice Grid === */
+.topic-practice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.topic-practice-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    min-height: 110px;
+}
+
+.topic-mastery {
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+.topic-mastery.strong { color: var(--success, #22c55e); }
+.topic-mastery.ok     { color: var(--warning, #f59e0b); }
+.topic-mastery.weak   { color: var(--danger, #ef4444); }
+.topic-mastery.muted  { color: var(--text-tertiary); }
+
+.topic-qcount {
+    font-size: var(--font-size-xs);
+    color: var(--text-tertiary);
+    opacity: 0.8;
+}
+
+/* === B12 Topic Mastery Delta (end-of-session) === */
+.topic-mastery-delta {
+    margin: var(--space-sm) 0;
+    padding: var(--space-sm);
+    background: var(--bg-subtle, rgba(0,0,0,0.04));
+    border-radius: var(--radius-sm, 8px);
+    font-size: var(--font-size-sm);
+}
+
+.topic-mastery-delta .delta-up { color: var(--success, #22c55e); font-weight: 700; }
+.topic-mastery-delta .delta-down { color: var(--danger, #ef4444); font-weight: 700; }
+.topic-mastery-delta .delta-same { color: var(--text-tertiary); font-weight: 600; }
+
 /* Topic List */
 .topic-list {
     display: flex;

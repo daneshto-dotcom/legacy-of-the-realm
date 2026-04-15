@@ -28,6 +28,12 @@ const Practice = {
         this.retryQueue = [];
         this.isRetry = false;
         this.sessionStartTime = Date.now();
+        // B12 — snapshot pre-drill mastery for delta display at endSession
+        this.preSessionMastery = null;
+        if (type === 'drill' && this.topicFilter) {
+            const tm = Storage.getTopicMastery()[this.topicFilter];
+            this.preSessionMastery = (tm && tm.totalAttempts > 0) ? tm.accuracy : 0;
+        }
         // Timer: custom practice uses its own setting; others use global practice timer if enabled
         if (options.timerSeconds !== undefined) {
             this.timerPerQuestion = options.timerSeconds;
@@ -608,6 +614,22 @@ const Practice = {
             summaryHtml += `<div class="summary-stat"><span class="summary-label">vs 7-day avg</span><span class="summary-value">${deltaLabel} (${weekAccuracy}%)</span></div>`;
         }
         summaryHtml += `</div>`;
+
+        // B12 — topic mastery delta for drill sessions
+        if (this.sessionType === 'drill' && this.topicFilter && this.preSessionMastery !== null) {
+            const topic = ETG_TOPICS.find(t => t.id === this.topicFilter);
+            const postTm = Storage.getTopicMastery()[this.topicFilter];
+            const postPct = postTm ? Math.round(postTm.accuracy) : 0;
+            const prePct = Math.round(this.preSessionMastery);
+            const deltaPct = postPct - prePct;
+            const deltaClass = deltaPct > 0 ? 'delta-up' : deltaPct < 0 ? 'delta-down' : 'delta-same';
+            const deltaStr = deltaPct > 0 ? `+${deltaPct}%` : deltaPct < 0 ? `${deltaPct}%` : '±0%';
+            summaryHtml += `<div class="topic-mastery-delta">`;
+            summaryHtml += `<strong>${topic?.icon || ''} ${topic?.nameEn || this.topicFilter} mastery:</strong> `;
+            summaryHtml += `${prePct}% → ${postPct}% <span class="${deltaClass}">${deltaStr}</span>`;
+            summaryHtml += `</div>`;
+        }
+
         summaryHtml += `<strong>Topic Breakdown:</strong><br>`;
 
         for (const [topicId, data] of Object.entries(topicStats)) {
