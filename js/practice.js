@@ -91,6 +91,9 @@ const Practice = {
     },
 
     loadQuestion() {
+        // B16: Stop any active read-aloud from previous question
+        TTS.stopReadAloud();
+
         // Check if we should insert a retry question (every 3 new questions)
         if (this.retryQueue.length > 0 && this.sessionIndex > 0 && this.sessionIndex % 3 === 0) {
             this.currentQuestion = this.retryQueue.shift();
@@ -260,15 +263,26 @@ const Practice = {
         // Hide explanation
         document.getElementById('explanation-panel').classList.add('hidden');
 
-        // TTS: auto-read question
+        // TTS: auto-read question (or full read-aloud if enabled)
         if (settings.ttsEnabled) {
-            setTimeout(() => TTS.speakQuestion(q), 300);
+            if (settings.readAloudMode) {
+                setTimeout(() => TTS.speakFullQuestion(q), 300);
+            } else {
+                setTimeout(() => TTS.speakQuestion(q), 300);
+            }
         }
 
-        // TTS replay button
+        // TTS replay button (question only)
         const ttsBtn = document.getElementById('tts-play-btn');
         if (ttsBtn) {
             ttsBtn.onclick = () => TTS.speakQuestion(q);
+        }
+
+        // B16: Read-aloud button (question + all answers)
+        const readAloudBtn = document.getElementById('tts-readaloud-btn');
+        if (readAloudBtn) {
+            readAloudBtn.onclick = () => TTS.toggleReadAloud(q);
+            TTS._updateReadAloudBtn(); // Reset icon state
         }
 
         // Animate card entrance

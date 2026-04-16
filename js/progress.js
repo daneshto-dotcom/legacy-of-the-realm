@@ -30,6 +30,9 @@ const Progress = {
         // Focus Areas (B03 v1 — top of screen, action-oriented)
         this.renderFocusAreas();
 
+        // Visual Dashboard charts (B15)
+        this.renderCharts(mastery, exams);
+
         // Mastery list (with exam trend indicators)
         this.renderMasteryList(mastery);
 
@@ -50,6 +53,198 @@ const Progress = {
         const container = document.getElementById('achievements-section');
         if (!container) return;
         container.innerHTML = Achievements.renderSection();
+    },
+
+    // === VISUAL DASHBOARD CHARTS (B15) ===
+    // Chart.js instances (destroyed on re-render to prevent memory leaks)
+    _radarChart: null,
+    _trendChart: null,
+
+    renderCharts(mastery, exams) {
+        if (typeof Chart === 'undefined') return; // Chart.js not loaded yet
+
+        this._renderRadarChart(mastery);
+        this._renderExamTrendChart(exams);
+    },
+
+    _renderRadarChart(mastery) {
+        const canvas = document.getElementById('chart-topic-radar');
+        if (!canvas) return;
+
+        // Destroy previous instance
+        if (this._radarChart) { this._radarChart.destroy(); this._radarChart = null; }
+
+        // Sort alphabetically for consistent radar shape
+        const sorted = [...mastery].sort((a, b) => (a.nameEn || '').localeCompare(b.nameEn || ''));
+        // Shorten long labels for mobile readability
+        const labels = sorted.map(t => {
+            const name = t.nameEn || t.topic;
+            if (name.length > 14) return name.replace(' & ', ' & \n').substring(0, 20);
+            return name;
+        });
+        const data = sorted.map(t => t.accuracy);
+        const attempts = sorted.map(t => t.totalAttempts);
+
+        // Color based on accuracy
+        const bgColors = data.map(acc =>
+            acc >= 80 ? 'rgba(76, 175, 80, 0.25)' :
+            acc >= 50 ? 'rgba(255, 152, 0, 0.25)' :
+            'rgba(229, 115, 115, 0.25)'
+        );
+        const borderColors = data.map(acc =>
+            acc >= 80 ? 'rgba(76, 175, 80, 0.8)' :
+            acc >= 50 ? 'rgba(255, 152, 0, 0.8)' :
+            'rgba(229, 115, 115, 0.8)'
+        );
+
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+            (document.documentElement.getAttribute('data-theme') === 'auto' &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches);
+        const gridColor = isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.08)';
+        const labelColor = isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.6)';
+
+        this._radarChart = new Chart(canvas, {
+            type: 'radar',
+            data: {
+                labels,
+                datasets: [{
+                    label: 'Accuracy %',
+                    data,
+                    backgroundColor: 'rgba(46, 89, 132, 0.2)',
+                    borderColor: 'rgba(46, 89, 132, 0.8)',
+                    borderWidth: 2,
+                    pointBackgroundColor: borderColors,
+                    pointBorderColor: borderColors,
+                    pointRadius: 4,
+                    pointHoverRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                animation: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const i = ctx.dataIndex;
+                                return `${ctx.raw}% (${attempts[i]} attempts)`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            stepSize: 25,
+                            color: labelColor,
+                            backdropColor: 'transparent',
+                            font: { size: 10 }
+                        },
+                        pointLabels: {
+                            color: labelColor,
+                            font: { size: 11 }
+                        },
+                        grid: { color: gridColor },
+                        angleLines: { color: gridColor }
+                    }
+                }
+            }
+        });
+    },
+
+    _renderExamTrendChart(exams) {
+        const canvas = document.getElementById('chart-exam-trend');
+        const emptyMsg = document.getElementById('chart-exam-empty');
+        if (!canvas) return;
+
+        // Destroy previous instance
+        if (this._trendChart) { this._trendChart.destroy(); this._trendChart = null; }
+
+        if (exams.length < 2) {
+            canvas.style.display = 'none';
+            if (emptyMsg) emptyMsg.classList.remove('hidden');
+            return;
+        }
+        canvas.style.display = '';
+        if (emptyMsg) emptyMsg.classList.add('hidden');
+
+        const recent = [...exams].slice(-10);
+        const labels = recent.map(e => {
+            const d = new Date(e.timestamp);
+            return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        });
+        const scores = recent.map(e => Math.round((e.correctCount / e.totalQuestions) * 100));
+        const passThreshold = Math.round((typeof EXAM_PASS_THRESHOLD !== 'undefined' ? EXAM_PASS_THRESHOLD : 35) / 40 * 100);
+
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+            (document.documentElement.getAttribute('data-theme') === 'auto' &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches);
+        const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
+        const labelColor = isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.6)';
+
+        this._trendChart = new Chart(canvas, {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [
+                    {
+                        label: 'Score %',
+                        data: scores,
+                        borderColor: 'rgba(46, 89, 132, 0.9)',
+                        backgroundColor: 'rgba(46, 89, 132, 0.15)',
+                        fill: true,
+                        tension: 0.3,
+                        borderWidth: 2.5,
+                        pointBackgroundColor: scores.map(s => s >= passThreshold ? '#4CAF50' : '#E57373'),
+                        pointBorderColor: scores.map(s => s >= passThreshold ? '#4CAF50' : '#E57373'),
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    },
+                    {
+                        label: 'Pass threshold',
+                        data: Array(labels.length).fill(passThreshold),
+                        borderColor: 'rgba(76, 175, 80, 0.5)',
+                        borderWidth: 1.5,
+                        borderDash: [6, 4],
+                        pointRadius: 0,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                animation: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                if (ctx.datasetIndex === 1) return `Pass: ${passThreshold}%`;
+                                const exam = recent[ctx.dataIndex];
+                                return `${exam.correctCount}/${exam.totalQuestions} (${ctx.raw}%)`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { color: labelColor, stepSize: 25, font: { size: 10 } },
+                        grid: { color: gridColor }
+                    },
+                    x: {
+                        ticks: { color: labelColor, font: { size: 10 } },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
     },
 
     // === FOCUS AREAS (B03 v1) ===

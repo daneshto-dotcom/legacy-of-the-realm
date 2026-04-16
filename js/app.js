@@ -217,6 +217,10 @@ const App = {
                     case 'exam':
                         this.navigate('exam');
                         break;
+                    case 'timer':
+                        this.navigate('study-timer');
+                        StudyTimer.init();
+                        break;
                 }
             });
         });
@@ -676,6 +680,13 @@ const App = {
             Storage.saveSetting('ttsEnabled', tts.checked);
         });
 
+        // B16: Read-aloud mode toggle
+        const readAloud = document.getElementById('setting-readaloud');
+        readAloud.checked = settings.readAloudMode || false;
+        readAloud.addEventListener('change', () => {
+            Storage.saveSetting('readAloudMode', readAloud.checked);
+        });
+
         // TTS Speed
         const ttsSpeed = document.getElementById('setting-tts-speed');
         ttsSpeed.value = settings.ttsSpeed?.toString() || '1.0';
@@ -790,6 +801,7 @@ const App = {
         const settings = Storage.getSettings();
         document.getElementById('setting-show-english').checked = settings.showEnglish;
         document.getElementById('setting-tts').checked = settings.ttsEnabled;
+        document.getElementById('setting-readaloud').checked = settings.readAloudMode || false;
         document.getElementById('setting-tts-speed').value = settings.ttsSpeed?.toString() || '1.0';
         document.getElementById('setting-exam-date').value = settings.examDate || '';
         document.getElementById('setting-confidence').checked = settings.confidenceEnabled;
