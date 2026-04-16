@@ -28,6 +28,12 @@ const Practice = {
         this.retryQueue = [];
         this.isRetry = false;
         this.sessionStartTime = Date.now();
+        // B12 — snapshot pre-drill mastery for delta display at endSession
+        this.preSessionMastery = null;
+        if (type === 'drill' && this.topicFilter) {
+            const tm = Storage.getTopicMastery()[this.topicFilter];
+            this.preSessionMastery = (tm && tm.totalAttempts > 0) ? tm.accuracy : 0;
+        }
         // Timer: custom practice uses its own setting; others use global practice timer if enabled
         if (options.timerSeconds !== undefined) {
             this.timerPerQuestion = options.timerSeconds;
@@ -65,6 +71,9 @@ const Practice = {
                     this.sessionQuestions = getRandomQuestions(count);
                 }
                 break;
+            case 'focus':
+                this.sessionQuestions = getFocusQuestions(count);
+                break;
             case 'custom':
                 const topicFilters = options.topicFilters || ETG_TOPICS.map(t => t.id);
                 const pool = QUESTION_BANK.filter(q => topicFilters.includes(q.topic));
@@ -82,6 +91,9 @@ const Practice = {
     },
 
     loadQuestion() {
+        // B16: Stop any active read-aloud from previous question
+        TTS.stopReadAloud();
+
         // Check if we should insert a retry question (every 3 new questions)
         if (this.retryQueue.length > 0 && this.sessionIndex > 0 && this.sessionIndex % 3 === 0) {
             this.currentQuestion = this.retryQueue.shift();
@@ -102,6 +114,7 @@ const Practice = {
 
         this.selectedAnswers = [];
         this.answered = false;
+        this.questionStartMs = performance.now();
         this.renderQuestion();
 
         // Start per-question timer if configured
@@ -197,14 +210,39 @@ const Practice = {
         optionsContainer.innerHTML = '';
         optionsContainer.classList.add('stagger-enter');
 
+        // B14 — multi-answer UX: checkbox-style tiles + "Select N" prompt
+        const isMulti = q.answerCount > 1;
+        optionsContainer.classList.toggle('multi-mode', isMulti);
+        optionsContainer.setAttribute('role', isMulti ? 'group' : 'radiogroup');
+        // Dynamic prompt ("Sélectionnez N réponses" / "Select N answers")
+        let promptEl = document.getElementById('multi-answer-prompt');
+        if (!promptEl) {
+            promptEl = document.createElement('div');
+            promptEl.id = 'multi-answer-prompt';
+            promptEl.className = 'multi-answer-prompt';
+            optionsContainer.parentElement.insertBefore(promptEl, optionsContainer);
+        }
+        if (isMulti) {
+            promptEl.innerHTML = `<strong>Sélectionnez ${q.answerCount} réponses</strong> <span class="prompt-en">(Select ${q.answerCount} answers)</span>`;
+            promptEl.classList.remove('hidden');
+        } else {
+            promptEl.classList.add('hidden');
+            promptEl.innerHTML = '';
+        }
+
         const letters = ['A', 'B', 'C', 'D'];
         for (const letter of letters) {
             const option = q.options[letter];
             if (!option) continue;
 
             const tile = document.createElement('div');
-            tile.className = 'answer-tile';
+            tile.className = 'answer-tile' + (isMulti ? ' multi' : '');
             tile.dataset.letter = letter;
+            tile.setAttribute('role', isMulti ? 'checkbox' : 'radio');
+            tile.setAttribute('aria-checked', 'false');
+            tile.setAttribute('tabindex', '0');
+            tile.setAttribute('aria-label',
+                `${isMulti ? 'Checkbox' : 'Option'} ${letter}: ${option.fr}`);
             tile.innerHTML = `
                 <div class="answer-letter">${letter}</div>
                 <div class="answer-content">
@@ -225,15 +263,26 @@ const Practice = {
         // Hide explanation
         document.getElementById('explanation-panel').classList.add('hidden');
 
-        // TTS: auto-read question
+        // TTS: auto-read question (or full read-aloud if enabled)
         if (settings.ttsEnabled) {
-            setTimeout(() => TTS.speakQuestion(q), 300);
+            if (settings.readAloudMode) {
+                setTimeout(() => TTS.speakFullQuestion(q), 300);
+            } else {
+                setTimeout(() => TTS.speakQuestion(q), 300);
+            }
         }
 
-        // TTS replay button
+        // TTS replay button (question only)
         const ttsBtn = document.getElementById('tts-play-btn');
         if (ttsBtn) {
             ttsBtn.onclick = () => TTS.speakQuestion(q);
+        }
+
+        // B16: Read-aloud button (question + all answers)
+        const readAloudBtn = document.getElementById('tts-readaloud-btn');
+        if (readAloudBtn) {
+            readAloudBtn.onclick = () => TTS.toggleReadAloud(q);
+            TTS._updateReadAloudBtn(); // Reset icon state
         }
 
         // Animate card entrance
@@ -298,7 +347,9 @@ const Practice = {
     highlightSelected() {
         document.querySelectorAll('.answer-tile').forEach(tile => {
             const letter = tile.dataset.letter;
-            if (this.selectedAnswers.includes(letter)) {
+            const isSelected = this.selectedAnswers.includes(letter);
+            tile.setAttribute('aria-checked', isSelected ? 'true' : 'false');
+            if (isSelected) {
                 tile.classList.add('selected');
             } else {
                 tile.classList.remove('selected');
@@ -329,13 +380,15 @@ const Practice = {
         this.showAnswerFeedback(correct);
 
         // Record attempt
+        const responseMs = this.questionStartMs ? Math.round(performance.now() - this.questionStartMs) : null;
         const attempt = {
             questionId: q.id,
             topic: q.topic,
             selectedAnswers: [...this.selectedAnswers],
             isCorrect: correct,
             confidence: null,
-            sessionType: this.sessionType
+            sessionType: this.sessionType,
+            responseMs: responseMs
         };
 
         // Check if confidence rating enabled
@@ -401,12 +454,8 @@ const Practice = {
     recordAttempt(attempt) {
         Storage.saveAttempt(attempt);
 
-        // Schedule for review if wrong or guessed
-        if (!attempt.isCorrect || attempt.confidence === 1) {
-            Storage.scheduleForReview(attempt.questionId, attempt.isCorrect, attempt.confidence);
-        } else if (attempt.confidence >= 2) {
-            Storage.scheduleForReview(attempt.questionId, attempt.isCorrect, attempt.confidence);
-        }
+        // Schedule for review (ELO-enhanced: always update ratings)
+        Storage.scheduleForReview(attempt.questionId, attempt.isCorrect, attempt.confidence, attempt.responseMs);
 
         // Show explanation (not in exam mode)
         if (this.sessionType !== 'exam') {
@@ -514,6 +563,31 @@ const Practice = {
             };
         }
 
+        // B10: Weakness alert — show proactive tip offer when wrong in a weak topic
+        const weaknessAlert = document.getElementById('weakness-alert');
+        if (weaknessAlert) {
+            if (!correct && typeof Tutor !== 'undefined' && Tutor.isAvailable() && Tutor.isWeakTopic(q.topic)) {
+                const topicAccuracy = Tutor.getTopicAccuracy(q.topic);
+                const topicName = ETG_TOPICS.find(t => t.id === q.topic)?.nameFr || q.topic;
+                weaknessAlert.innerHTML = `
+                    <div class="weakness-alert-content">
+                        <span class="weakness-alert-icon">⚠️</span>
+                        <div class="weakness-alert-text">
+                            <strong>Weak area detected:</strong> ${topicName} (${topicAccuracy !== null ? Math.round(topicAccuracy * 100) + '%' : '—'})
+                        </div>
+                        <button class="weakness-ask-btn" id="weakness-ask-btn">Ask Dani for help 💬</button>
+                    </div>`;
+                weaknessAlert.classList.remove('hidden');
+                document.getElementById('weakness-ask-btn').onclick = () => {
+                    Tutor.askWeaknessTip(q, topicAccuracy || 0);
+                    weaknessAlert.classList.add('hidden');
+                };
+            } else {
+                weaknessAlert.classList.add('hidden');
+                weaknessAlert.innerHTML = '';
+            }
+        }
+
         // Next button — only advance index for non-retry questions
         document.getElementById('next-question-btn').onclick = () => {
             if (!this.isRetry) {
@@ -606,6 +680,22 @@ const Practice = {
             summaryHtml += `<div class="summary-stat"><span class="summary-label">vs 7-day avg</span><span class="summary-value">${deltaLabel} (${weekAccuracy}%)</span></div>`;
         }
         summaryHtml += `</div>`;
+
+        // B12 — topic mastery delta for drill sessions
+        if (this.sessionType === 'drill' && this.topicFilter && this.preSessionMastery !== null) {
+            const topic = ETG_TOPICS.find(t => t.id === this.topicFilter);
+            const postTm = Storage.getTopicMastery()[this.topicFilter];
+            const postPct = postTm ? Math.round(postTm.accuracy) : 0;
+            const prePct = Math.round(this.preSessionMastery);
+            const deltaPct = postPct - prePct;
+            const deltaClass = deltaPct > 0 ? 'delta-up' : deltaPct < 0 ? 'delta-down' : 'delta-same';
+            const deltaStr = deltaPct > 0 ? `+${deltaPct}%` : deltaPct < 0 ? `${deltaPct}%` : '±0%';
+            summaryHtml += `<div class="topic-mastery-delta">`;
+            summaryHtml += `<strong>${topic?.icon || ''} ${topic?.nameEn || this.topicFilter} mastery:</strong> `;
+            summaryHtml += `${prePct}% → ${postPct}% <span class="${deltaClass}">${deltaStr}</span>`;
+            summaryHtml += `</div>`;
+        }
+
         summaryHtml += `<strong>Topic Breakdown:</strong><br>`;
 
         for (const [topicId, data] of Object.entries(topicStats)) {

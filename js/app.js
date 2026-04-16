@@ -61,14 +61,23 @@ const App = {
         Achievements.checkAll();
         Challenges.updateProgress();
 
-        // Listen for service worker update notifications
+        // Auto-reload on service worker update (seamless updates for TWA/mobile)
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.addEventListener('message', (event) => {
                 if (event.data?.type === 'SW_UPDATED') {
-                    showToast('App updated! Refresh for latest version.', 'success');
+                    this._pendingUpdate = true;
+                    // Fallback: if no navigation within 60s, reload anyway
+                    this._updateTimer = setTimeout(() => {
+                        if (this._pendingUpdate && !sessionStorage.getItem('sw_reloading')) {
+                            sessionStorage.setItem('sw_reloading', '1');
+                            window.location.reload();
+                        }
+                    }, 60000);
                 }
             });
         }
+        // Clear reload guard from previous reload
+        sessionStorage.removeItem('sw_reloading');
     },
 
     // === THEME MANAGEMENT ===
@@ -143,6 +152,39 @@ const App = {
         this.navigate('home');
     },
 
+    // === TOPIC PRACTICE CARDS (B12) ===
+    // Dynamically render 10 topic cards from ETG_TOPICS with mastery % + Q count.
+    // Per Council: derive from data, not hardcoded HTML.
+    renderTopicPracticeCards() {
+        const grid = document.getElementById('topic-practice-grid');
+        if (!grid) return;
+        const mastery = Storage.getTopicMastery();
+        grid.innerHTML = '';
+        for (const topic of ETG_TOPICS) {
+            const qCount = QUESTION_BANK.filter(q => q.topic === topic.id).length;
+            const tm = mastery[topic.id];
+            const masteryPct = (tm && tm.totalAttempts > 0) ? Math.round(tm.accuracy) : null;
+            const masteryLabel = masteryPct !== null ? `${masteryPct}% mastery` : 'Not started';
+            const masteryClass = masteryPct === null ? 'muted'
+                : masteryPct >= 80 ? 'strong' : masteryPct >= 60 ? 'ok' : 'weak';
+            const card = document.createElement('div');
+            card.className = 'preset-card card topic-practice-card';
+            card.dataset.topic = topic.id;
+            card.setAttribute('aria-label', `${topic.nameEn} — ${masteryLabel}, ${qCount} questions`);
+            card.innerHTML = `
+                <div class="preset-icon">${topic.icon}</div>
+                <div class="preset-name">${topic.nameEn}</div>
+                <div class="preset-desc topic-mastery ${masteryClass}">${masteryLabel}</div>
+                <div class="topic-qcount">${qCount} questions</div>
+            `;
+            card.addEventListener('click', () => {
+                Practice.startSession('drill', { topicFilter: topic.id, count: 15 });
+                this.navigate('practice');
+            });
+            grid.appendChild(card);
+        }
+    },
+
     setupNavigation() {
         document.querySelectorAll('.nav-item').forEach(item => {
             item.addEventListener('click', () => {
@@ -164,12 +206,20 @@ const App = {
                         Practice.startSession('weakspots');
                         this.navigate('practice');
                         break;
+                    case 'focus':
+                        Practice.startSession('focus', { count: 20 });
+                        this.navigate('practice');
+                        break;
                     case 'review':
                         Practice.startSession('review');
                         this.navigate('practice');
                         break;
                     case 'exam':
                         this.navigate('exam');
+                        break;
+                    case 'timer':
+                        this.navigate('study-timer');
+                        StudyTimer.init();
                         break;
                 }
             });
@@ -275,6 +325,14 @@ const App = {
     },
 
     navigate(viewName) {
+        // Auto-reload if SW update is pending (seamless update on tab switch)
+        if (this._pendingUpdate && !sessionStorage.getItem('sw_reloading')) {
+            clearTimeout(this._updateTimer);
+            sessionStorage.setItem('sw_reloading', '1');
+            window.location.reload();
+            return;
+        }
+
         // Don't navigate away from exam while active
         if (Exam.active && viewName !== 'exam') {
             if (!confirm('Leave the exam? Your progress will be lost.')) return;
@@ -427,6 +485,9 @@ const App = {
         } else {
             bookmarkSection.classList.add('hidden');
         }
+
+        // Topic Practice cards (B12) — dynamic from ETG_TOPICS
+        this.renderTopicPracticeCards();
 
         // Daily challenge card
         const challengeContainer = document.getElementById('daily-challenge');
@@ -619,6 +680,13 @@ const App = {
             Storage.saveSetting('ttsEnabled', tts.checked);
         });
 
+        // B16: Read-aloud mode toggle
+        const readAloud = document.getElementById('setting-readaloud');
+        readAloud.checked = settings.readAloudMode || false;
+        readAloud.addEventListener('change', () => {
+            Storage.saveSetting('readAloudMode', readAloud.checked);
+        });
+
         // TTS Speed
         const ttsSpeed = document.getElementById('setting-tts-speed');
         ttsSpeed.value = settings.ttsSpeed?.toString() || '1.0';
@@ -733,6 +801,7 @@ const App = {
         const settings = Storage.getSettings();
         document.getElementById('setting-show-english').checked = settings.showEnglish;
         document.getElementById('setting-tts').checked = settings.ttsEnabled;
+        document.getElementById('setting-readaloud').checked = settings.readAloudMode || false;
         document.getElementById('setting-tts-speed').value = settings.ttsSpeed?.toString() || '1.0';
         document.getElementById('setting-exam-date').value = settings.examDate || '';
         document.getElementById('setting-confidence').checked = settings.confidenceEnabled;
@@ -767,15 +836,8 @@ if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js')
             .then(reg => {
-                // Check for updates
-                reg.addEventListener('updatefound', () => {
-                    const newWorker = reg.installing;
-                    newWorker.addEventListener('statechange', () => {
-                        if (newWorker.state === 'activated') {
-                            showToast('App updated! Refresh for latest version.', 'success');
-                        }
-                    });
-                });
+                // Check for updates periodically (every 30 min)
+                setInterval(() => reg.update(), 30 * 60 * 1000);
             })
             .catch(() => {});
     });

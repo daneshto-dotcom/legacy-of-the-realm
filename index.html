@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js" defer></script>
 </head>
 <body>
     <div id="app">
@@ -166,10 +167,10 @@
                             <div class="preset-name">Quick 10</div>
                             <div class="preset-desc">~5 min</div>
                         </div>
-                        <div class="preset-card card" data-preset="weakspots">
+                        <div class="preset-card card" data-preset="focus">
                             <div class="preset-icon">🎯</div>
-                            <div class="preset-name">Weak Spots</div>
-                            <div class="preset-desc">Focus areas</div>
+                            <div class="preset-name">Focus Practice</div>
+                            <div class="preset-desc">Your weak areas</div>
                         </div>
                         <div class="preset-card card" data-preset="review">
                             <div class="preset-icon">🔄</div>
@@ -180,6 +181,11 @@
                             <div class="preset-icon">📝</div>
                             <div class="preset-name">Mock Exam</div>
                             <div class="preset-desc">40 questions</div>
+                        </div>
+                        <div class="preset-card card" data-preset="timer">
+                            <div class="preset-icon">⏱️</div>
+                            <div class="preset-name">Study Timer</div>
+                            <div class="preset-desc">Focus mode</div>
                         </div>
                     </div>
 
@@ -194,6 +200,10 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Topic Practice (B12) — 10 topic-specific drill modes -->
+                    <h3 class="section-title">Topic Practice</h3>
+                    <div class="topic-practice-grid" id="topic-practice-grid"></div>
 
                     <!-- Custom Practice -->
                     <h3 class="section-title">Custom Practice</h3>
@@ -283,7 +293,10 @@
                         <div class="intersection-container hidden" id="intersection-scenario"></div>
                         <div class="question-text-fr" id="question-fr"></div>
                         <div class="question-text-en" id="question-en"></div>
-                        <button class="tts-btn" id="tts-play-btn" title="Listen in French" aria-label="Listen to question in French">🔊</button>
+                        <div class="tts-btn-row">
+                            <button class="tts-btn" id="tts-play-btn" title="Listen in French" aria-label="Listen to question in French">🔊</button>
+                            <button class="tts-btn tts-readaloud-btn" id="tts-readaloud-btn" title="Read aloud (question + answers)" aria-label="Read aloud question and answers">📖</button>
+                        </div>
                     </div>
 
                     <!-- Answer Options -->
@@ -318,6 +331,8 @@
                             </div>
                             <div class="hidden" id="knowledge-insight-container"></div>
                         </div>
+                        <!-- B10: Weakness alert for weak topic wrong answers -->
+                        <div class="weakness-alert hidden" id="weakness-alert"></div>
                         <div class="explanation-actions">
                             <button class="btn btn-primary btn-lg" id="next-question-btn">Next Question</button>
                             <button class="btn btn-outline btn-sm" id="flag-btn">🔖 Bookmark</button>
@@ -385,6 +400,29 @@
                             <div class="stat-card-value" id="progress-exams">0</div>
                             <div class="stat-card-label">Exams</div>
                         </div>
+                        <div class="stat-card card" id="progress-readiness-card">
+                            <div class="stat-card-value" id="progress-readiness">--</div>
+                            <div class="stat-card-label">Readiness</div>
+                        </div>
+                    </div>
+
+                    <div id="focus-areas-section"></div>
+
+                    <h3 class="section-title">Visual Dashboard</h3>
+                    <div id="charts-section" class="charts-section">
+                        <div class="chart-card card">
+                            <div class="chart-card-title">Topic Mastery</div>
+                            <div class="chart-canvas-wrap">
+                                <canvas id="chart-topic-radar"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-card card">
+                            <div class="chart-card-title">Exam Score Trend</div>
+                            <div class="chart-canvas-wrap">
+                                <canvas id="chart-exam-trend"></canvas>
+                            </div>
+                            <div id="chart-exam-empty" class="chart-empty hidden">Take 2+ mock exams to see your trend</div>
+                        </div>
                     </div>
 
                     <h3 class="section-title">Achievements</h3>
@@ -419,6 +457,33 @@
                     <h3 class="section-title">Exam History</h3>
                     <div id="exam-history-list" class="exam-history-list">
                         <p class="empty-state">No mock exams taken yet</p>
+                    </div>
+                </div>
+
+                <!-- B17: Study Timer View -->
+                <div id="study-timer-view" class="view">
+                    <div class="timer-container">
+                        <div class="timer-presets">
+                            <button class="timer-preset-btn" data-ms="900000">15 min</button>
+                            <button class="timer-preset-btn active" data-ms="1500000">25 min</button>
+                            <button class="timer-preset-btn" data-ms="2700000">45 min</button>
+                        </div>
+                        <div class="timer-ring-container">
+                            <svg class="timer-ring" viewBox="0 0 200 200">
+                                <circle class="timer-ring-bg" cx="100" cy="100" r="90" />
+                                <circle class="timer-ring-progress" id="timer-ring-progress" cx="100" cy="100" r="90" />
+                            </svg>
+                            <div class="timer-display" id="timer-display">25:00</div>
+                        </div>
+                        <div class="timer-controls">
+                            <button class="btn btn-primary btn-lg" id="timer-start-btn">Start</button>
+                            <button class="btn btn-primary btn-lg hidden" id="timer-pause-btn">Pause</button>
+                            <button class="btn btn-outline" id="timer-reset-btn">Reset</button>
+                            <button class="btn btn-outline timer-fs-btn" id="timer-fullscreen-btn" title="Toggle fullscreen">⛶</button>
+                        </div>
+                        <div class="timer-motivation">
+                            <p>Focus mode — minimize distractions and study smarter 🎯</p>
+                        </div>
                     </div>
                 </div>
 
@@ -481,6 +546,16 @@
                                 <input type="checkbox" id="setting-tts" checked>
                                 <span class="toggle-slider"></span>
                             </label>
+                        </div>
+                        <div class="setting-item">
+                            <label>Read-Aloud Mode</label>
+                            <label class="toggle">
+                                <input type="checkbox" id="setting-readaloud">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-item setting-hint">
+                            <span class="setting-hint-text">When enabled, auto-reads question + all answers aloud. Great for commuting.</span>
                         </div>
                         <div class="setting-item">
                             <label>TTS Speed</label>
@@ -596,6 +671,26 @@
         </div>
     </div>
 
+    <!-- Focus Area Question Review Modal (B03) -->
+    <div class="modal hidden" id="focus-review-modal" role="dialog" aria-label="Question review">
+        <div class="modal-content focus-review-content">
+            <button class="modal-close" aria-label="Close" onclick="document.getElementById('focus-review-modal').classList.add('hidden')">×</button>
+            <div class="review-topic"></div>
+            <h3 class="review-question"></h3>
+            <p class="review-question-en"></p>
+            <div class="review-section">
+                <h4>Correct answer</h4>
+                <div class="review-correct"></div>
+            </div>
+            <div class="review-section">
+                <h4>Why</h4>
+                <p class="review-explanation"></p>
+                <p class="review-explanation-en"></p>
+            </div>
+            <button class="btn btn-primary review-drill-btn">Drill this topic</button>
+        </div>
+    </div>
+
     <!-- Toast Container -->
     <div id="toast-container" role="status" aria-live="polite"></div>
 
@@ -611,12 +706,14 @@
     <script src="js/exam.js"></script>
     <script src="js/progress.js"></script>
     <script src="js/vocab-data.js"></script>
+    <script src="js/vocab-audio.js"></script>
     <script src="js/vocab.js"></script>
     <script src="js/achievements.js"></script>
     <script src="js/challenges.js"></script>
     <script src="js/content-sync.js"></script>
     <script src="js/notifications.js"></script>
     <script src="js/tutor.js"></script>
+    <script src="js/study-timer.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

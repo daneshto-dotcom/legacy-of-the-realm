@@ -13,8 +13,25 @@ const Progress = {
         document.getElementById('progress-accuracy').textContent = `${stats.accuracy}%`;
         document.getElementById('progress-exams').textContent = exams.length;
 
+        // Readiness score (B11)
+        const readiness = Storage.getReadinessScore();
+        const readinessEl = document.getElementById('progress-readiness');
+        if (readinessEl) {
+            readinessEl.textContent = readiness !== null ? readiness : '--';
+            if (readiness !== null) {
+                readinessEl.style.color = readiness >= 85 ? 'var(--success)'
+                    : readiness >= 70 ? 'var(--warning)' : 'var(--text)';
+            }
+        }
+
         // Compute exam topic trends (shared between mastery + exam sections)
         this._examTopicTrends = this._computeExamTopicTrends(exams);
+
+        // Focus Areas (B03 v1 — top of screen, action-oriented)
+        this.renderFocusAreas();
+
+        // Visual Dashboard charts (B15)
+        this.renderCharts(mastery, exams);
 
         // Mastery list (with exam trend indicators)
         this.renderMasteryList(mastery);
@@ -36,6 +53,345 @@ const Progress = {
         const container = document.getElementById('achievements-section');
         if (!container) return;
         container.innerHTML = Achievements.renderSection();
+    },
+
+    // === VISUAL DASHBOARD CHARTS (B15) ===
+    // Chart.js instances (destroyed on re-render to prevent memory leaks)
+    _radarChart: null,
+    _trendChart: null,
+
+    renderCharts(mastery, exams) {
+        if (typeof Chart === 'undefined') return; // Chart.js not loaded yet
+
+        this._renderRadarChart(mastery);
+        this._renderExamTrendChart(exams);
+    },
+
+    _renderRadarChart(mastery) {
+        const canvas = document.getElementById('chart-topic-radar');
+        if (!canvas) return;
+
+        // Destroy previous instance
+        if (this._radarChart) { this._radarChart.destroy(); this._radarChart = null; }
+
+        // Sort alphabetically for consistent radar shape
+        const sorted = [...mastery].sort((a, b) => (a.nameEn || '').localeCompare(b.nameEn || ''));
+        // Shorten long labels for mobile readability
+        const labels = sorted.map(t => {
+            const name = t.nameEn || t.topic;
+            if (name.length > 14) return name.replace(' & ', ' & \n').substring(0, 20);
+            return name;
+        });
+        const data = sorted.map(t => t.accuracy);
+        const attempts = sorted.map(t => t.totalAttempts);
+
+        // Color based on accuracy
+        const bgColors = data.map(acc =>
+            acc >= 80 ? 'rgba(76, 175, 80, 0.25)' :
+            acc >= 50 ? 'rgba(255, 152, 0, 0.25)' :
+            'rgba(229, 115, 115, 0.25)'
+        );
+        const borderColors = data.map(acc =>
+            acc >= 80 ? 'rgba(76, 175, 80, 0.8)' :
+            acc >= 50 ? 'rgba(255, 152, 0, 0.8)' :
+            'rgba(229, 115, 115, 0.8)'
+        );
+
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+            (document.documentElement.getAttribute('data-theme') === 'auto' &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches);
+        const gridColor = isDark ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.08)';
+        const labelColor = isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.6)';
+
+        this._radarChart = new Chart(canvas, {
+            type: 'radar',
+            data: {
+                labels,
+                datasets: [{
+                    label: 'Accuracy %',
+                    data,
+                    backgroundColor: 'rgba(46, 89, 132, 0.2)',
+                    borderColor: 'rgba(46, 89, 132, 0.8)',
+                    borderWidth: 2,
+                    pointBackgroundColor: borderColors,
+                    pointBorderColor: borderColors,
+                    pointRadius: 4,
+                    pointHoverRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                animation: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                const i = ctx.dataIndex;
+                                return `${ctx.raw}% (${attempts[i]} attempts)`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            stepSize: 25,
+                            color: labelColor,
+                            backdropColor: 'transparent',
+                            font: { size: 10 }
+                        },
+                        pointLabels: {
+                            color: labelColor,
+                            font: { size: 11 }
+                        },
+                        grid: { color: gridColor },
+                        angleLines: { color: gridColor }
+                    }
+                }
+            }
+        });
+    },
+
+    _renderExamTrendChart(exams) {
+        const canvas = document.getElementById('chart-exam-trend');
+        const emptyMsg = document.getElementById('chart-exam-empty');
+        if (!canvas) return;
+
+        // Destroy previous instance
+        if (this._trendChart) { this._trendChart.destroy(); this._trendChart = null; }
+
+        if (exams.length < 2) {
+            canvas.style.display = 'none';
+            if (emptyMsg) emptyMsg.classList.remove('hidden');
+            return;
+        }
+        canvas.style.display = '';
+        if (emptyMsg) emptyMsg.classList.add('hidden');
+
+        const recent = [...exams].slice(-10);
+        const labels = recent.map(e => {
+            const d = new Date(e.timestamp);
+            return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        });
+        const scores = recent.map(e => Math.round((e.correctCount / e.totalQuestions) * 100));
+        const passThreshold = Math.round((typeof EXAM_PASS_THRESHOLD !== 'undefined' ? EXAM_PASS_THRESHOLD : 35) / 40 * 100);
+
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark' ||
+            (document.documentElement.getAttribute('data-theme') === 'auto' &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches);
+        const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
+        const labelColor = isDark ? 'rgba(255,255,255,0.7)' : 'rgba(0,0,0,0.6)';
+
+        this._trendChart = new Chart(canvas, {
+            type: 'line',
+            data: {
+                labels,
+                datasets: [
+                    {
+                        label: 'Score %',
+                        data: scores,
+                        borderColor: 'rgba(46, 89, 132, 0.9)',
+                        backgroundColor: 'rgba(46, 89, 132, 0.15)',
+                        fill: true,
+                        tension: 0.3,
+                        borderWidth: 2.5,
+                        pointBackgroundColor: scores.map(s => s >= passThreshold ? '#4CAF50' : '#E57373'),
+                        pointBorderColor: scores.map(s => s >= passThreshold ? '#4CAF50' : '#E57373'),
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    },
+                    {
+                        label: 'Pass threshold',
+                        data: Array(labels.length).fill(passThreshold),
+                        borderColor: 'rgba(76, 175, 80, 0.5)',
+                        borderWidth: 1.5,
+                        borderDash: [6, 4],
+                        pointRadius: 0,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                animation: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: (ctx) => {
+                                if (ctx.datasetIndex === 1) return `Pass: ${passThreshold}%`;
+                                const exam = recent[ctx.dataIndex];
+                                return `${exam.correctCount}/${exam.totalQuestions} (${ctx.raw}%)`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { color: labelColor, stepSize: 25, font: { size: 10 } },
+                        grid: { color: gridColor }
+                    },
+                    x: {
+                        ticks: { color: labelColor, font: { size: 10 } },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    },
+
+    // === FOCUS AREAS (B03 v1) ===
+    // Action-oriented weakness dashboard. Topic-first (prominent) + Qs collapsible.
+    renderFocusAreas() {
+        const container = document.getElementById('focus-areas-section');
+        if (!container) return;
+
+        let focus;
+        try {
+            focus = Storage.getFocusAreas();
+        } catch (e) {
+            console.error('Focus Areas render failed:', e);
+            container.innerHTML = '';
+            return;
+        }
+        const MIN_ATTEMPTS_FOR_SIGNAL = 20;
+
+        // Empty state — not enough data yet
+        if (focus.totalAttempts < MIN_ATTEMPTS_FOR_SIGNAL) {
+            const needed = MIN_ATTEMPTS_FOR_SIGNAL - focus.totalAttempts;
+            container.innerHTML = `
+                <div class="focus-areas-card focus-empty">
+                    <h3>🎯 Focus Areas</h3>
+                    <p class="focus-empty-msg">Complete ${needed} more practice question${needed === 1 ? '' : 's'} to unlock your personalized focus recommendations.</p>
+                    <p class="focus-empty-detail">Your Focus Areas will show which topics need the most work — so you can study smarter, not longer.</p>
+                </div>
+            `;
+            return;
+        }
+
+        // Build weak-topics cards (prominent)
+        let topicsHtml = '';
+        if (focus.weakTopics.length > 0) {
+            topicsHtml = '<div class="focus-topics-list">' + focus.weakTopics.map(t => {
+                const topic = ETG_TOPICS.find(x => x.id === t.topic);
+                const pct = Math.round(t.accuracy * 100);
+                const icon = topic?.icon || '📚';
+                const name = topic?.nameEn || t.topic;
+                const nameFr = topic?.nameFr || '';
+                const color = pct < 50 ? 'var(--danger)' : pct < 70 ? 'var(--warning)' : 'var(--success)';
+                return `
+                    <div class="focus-topic-card" data-topic="${t.topic}" tabindex="0" role="button" aria-label="Practice ${name}">
+                        <div class="focus-topic-header">
+                            <span class="focus-topic-icon">${icon}</span>
+                            <div class="focus-topic-name">
+                                <div>${name}</div>
+                                <div class="focus-topic-name-fr">${nameFr}</div>
+                            </div>
+                        </div>
+                        <div class="focus-topic-stats">
+                            <div class="focus-topic-accuracy" style="color: ${color};">${pct}%</div>
+                            <div class="focus-topic-attempts">${t.attempts} attempts</div>
+                        </div>
+                        <button class="btn btn-primary btn-sm focus-topic-btn" data-topic="${t.topic}">Practice this topic →</button>
+                    </div>
+                `;
+            }).join('') + '</div>';
+        } else {
+            topicsHtml = '<p class="focus-empty-msg">No weak topics detected — all topics at similar accuracy. Keep practicing!</p>';
+        }
+
+        // Build missed-Qs collapsible
+        let missedHtml = '';
+        if (focus.mostMissed.length > 0) {
+            const rows = focus.mostMissed.map(m => {
+                const pct = Math.round(m.errorRate * 100);
+                const topic = ETG_TOPICS.find(x => x.id === m.topic);
+                const topicIcon = topic?.icon || '📚';
+                // Short hash for privacy-minded listing
+                const shortId = m.questionId.length > 12 ? m.questionId.substring(0, 12) : m.questionId;
+                return `
+                    <li class="focus-missed-row" data-qid="${m.questionId}" tabindex="0" role="button">
+                        <span class="focus-missed-icon">${topicIcon}</span>
+                        <span class="focus-missed-id">${shortId}</span>
+                        <span class="focus-missed-stats">${m.wrongs}/${m.attempts} wrong (${pct}%)</span>
+                    </li>
+                `;
+            }).join('');
+            missedHtml = `
+                <details class="focus-missed-details">
+                    <summary>Questions to review (${focus.mostMissed.length})</summary>
+                    <ul class="focus-missed-list">${rows}</ul>
+                </details>
+            `;
+        }
+
+        const avgTimeHtml = focus.avgResponseMs
+            ? `<span class="focus-avg-time">Avg response: ${(focus.avgResponseMs / 1000).toFixed(1)}s</span>`
+            : '';
+
+        container.innerHTML = `
+            <div class="focus-areas-card">
+                <div class="focus-header">
+                    <h3>🎯 Focus Areas</h3>
+                    <span class="focus-data-note">Based on last 90 days · ${focus.totalAttempts} practice attempts ${avgTimeHtml}</span>
+                </div>
+                ${topicsHtml}
+                ${missedHtml}
+            </div>
+        `;
+
+        // Wire up topic practice buttons — launch focus session (B04)
+        container.querySelectorAll('.focus-topic-btn, .focus-topic-card').forEach(el => {
+            el.addEventListener('click', (e) => {
+                e.stopPropagation();
+                Practice.startSession('focus', { count: 20 });
+                App.navigate('practice');
+            });
+        });
+
+        // Wire up missed-Q clicks → show explanation modal
+        container.querySelectorAll('.focus-missed-row').forEach(row => {
+            row.addEventListener('click', () => {
+                const qid = row.dataset.qid;
+                this.showQuestionReviewModal(qid);
+            });
+        });
+    },
+
+    // Show a modal with the full question, correct answer, explanation,
+    // and a "Drill topic" CTA. Pedagogy-first per Gemini council synthesis.
+    showQuestionReviewModal(questionId) {
+        const q = QUESTION_BANK.find(x => x.id === questionId);
+        if (!q) return;
+        const topic = ETG_TOPICS.find(t => t.id === q.topic);
+        const correctLetters = q.correctAnswers.join(', ');
+        const correctTexts = q.correctAnswers.map(letter => {
+            const opt = q.options[letter];
+            return opt ? `<strong>${letter})</strong> ${opt.fr}` : letter;
+        }).join('<br>');
+
+        const modal = document.getElementById('focus-review-modal');
+        if (!modal) return;
+        modal.querySelector('.review-topic').innerHTML = `${topic?.icon || ''} ${topic?.nameEn || q.topic}`;
+        modal.querySelector('.review-question').textContent = q.questionFr;
+        modal.querySelector('.review-question-en').textContent = q.questionEn || '';
+        modal.querySelector('.review-correct').innerHTML = correctTexts;
+        modal.querySelector('.review-explanation').textContent = q.explanationFr || '';
+        modal.querySelector('.review-explanation-en').textContent = q.explanationEn || '';
+        const drillBtn = modal.querySelector('.review-drill-btn');
+        drillBtn.onclick = () => {
+            modal.classList.add('hidden');
+            const count = getQuestionsByTopic(q.topic).length;
+            Practice.startSession('drill', { topicFilter: q.topic, count: Math.min(count, 15) });
+        };
+        modal.classList.remove('hidden');
     },
 
     renderMasteryList(mastery) {

@@ -21,7 +21,9 @@ const Storage = {
         ACHIEVEMENTS: 'fdtta_achievements',
         DAILY_CHALLENGE: 'fdtta_daily_challenge',
         STREAK_FREEZES: 'fdtta_streak_freezes',
-        CUSTOM_PRACTICE: 'fdtta_custom_practice'
+        CUSTOM_PRACTICE: 'fdtta_custom_practice',
+        USER_RATING: 'fdtta_user_rating',
+        QUESTION_DIFFICULTY: 'fdtta_question_difficulty'
     },
 
     MAX_ATTEMPTS: 5000, // prune beyond this to prevent quota exhaustion
@@ -101,6 +103,68 @@ const Storage = {
         return attempts.slice(-count);
     },
 
+    // === FOCUS AREAS (B03 analytics v1) ===
+    // Most-missed questions: aggregate attempts, rank by errorRate desc
+    // sinceMs defaults to 30 days. minAttempts filters one-offs.
+    getMostMissedQuestions(limit = 10, minAttempts = 2, sinceMs = 90 * 86400000) {
+        const cutoff = Date.now() - sinceMs;
+        const attempts = this.getAttempts().filter(a => (a.timestamp || 0) >= cutoff && a.sessionType !== 'exam');
+        const byQ = {};
+        for (const a of attempts) {
+            if (!a.questionId) continue;
+            if (!byQ[a.questionId]) byQ[a.questionId] = { questionId: a.questionId, topic: a.topic, attempts: 0, wrongs: 0 };
+            byQ[a.questionId].attempts++;
+            if (!a.isCorrect) byQ[a.questionId].wrongs++;
+        }
+        const list = Object.values(byQ)
+            .filter(r => r.attempts >= minAttempts && r.wrongs > 0)
+            .map(r => ({
+                ...r,
+                errorRate: r.attempts > 0 ? r.wrongs / r.attempts : 0
+            }))
+            .sort((a, b) => b.errorRate - a.errorRate || b.attempts - a.attempts);
+        return list.slice(0, limit);
+    },
+
+    // Weakest topics: topics with lowest accuracy, filtered by minAttempts
+    getWeakestTopics(n = 3, minAttempts = 5, sinceMs = 90 * 86400000) {
+        const cutoff = Date.now() - sinceMs;
+        const attempts = this.getAttempts().filter(a => (a.timestamp || 0) >= cutoff && a.sessionType !== 'exam');
+        const byTopic = {};
+        for (const a of attempts) {
+            if (!a.topic) continue;
+            if (!byTopic[a.topic]) byTopic[a.topic] = { topic: a.topic, attempts: 0, correct: 0 };
+            byTopic[a.topic].attempts++;
+            if (a.isCorrect) byTopic[a.topic].correct++;
+        }
+        const list = Object.values(byTopic)
+            .filter(r => r.attempts >= minAttempts)
+            .map(r => ({
+                ...r,
+                accuracy: r.attempts > 0 ? r.correct / r.attempts : 0
+            }))
+            .sort((a, b) => a.accuracy - b.accuracy);
+        return list.slice(0, n);
+    },
+
+    // Combined API for future B04 adaptive practice consumer
+    getFocusAreas(sinceMs = 90 * 86400000) {
+        const cutoff = Date.now() - sinceMs;
+        const attempts = this.getAttempts().filter(a => (a.timestamp || 0) >= cutoff && a.sessionType !== 'exam');
+        const withMs = attempts.filter(a => typeof a.responseMs === 'number' && a.responseMs > 0);
+        const avgResponseMs = withMs.length > 0
+            ? Math.round(withMs.reduce((s, a) => s + a.responseMs, 0) / withMs.length)
+            : null;
+        return {
+            version: 1,
+            totalAttempts: attempts.length,
+            weakTopics: this.getWeakestTopics(3, 5, sinceMs),
+            mostMissed: this.getMostMissedQuestions(10, 2, sinceMs),
+            avgResponseMs: avgResponseMs,
+            sinceMs: sinceMs
+        };
+    },
+
     // === TOPIC MASTERY ===
     getTopicMastery() {
         const stored = JSON.parse(localStorage.getItem(this.KEYS.TOPIC_MASTERY) || '{}');
@@ -141,19 +205,75 @@ const Storage = {
         }));
     },
 
-    // === REVIEW SCHEDULE (Spaced Repetition) ===
+    // === ELO DIFFICULTY SYSTEM ===
+    getUserRating() {
+        return parseFloat(localStorage.getItem(this.KEYS.USER_RATING) || '1500');
+    },
+
+    _setUserRating(rating) {
+        this._safeSet(this.KEYS.USER_RATING, Math.round(rating).toString());
+    },
+
+    getQuestionDifficulty() {
+        return JSON.parse(localStorage.getItem(this.KEYS.QUESTION_DIFFICULTY) || '{}');
+    },
+
+    getQuestionDifficultyRating(questionId) {
+        const diff = this.getQuestionDifficulty();
+        return diff[questionId] || 1500;
+    },
+
+    _updateElo(questionId, isCorrect, responseMs) {
+        const userRating = this.getUserRating();
+        const diff = this.getQuestionDifficulty();
+        const qRating = diff[questionId] || 1500;
+        const qReviews = (diff[questionId + '_n'] || 0);
+
+        // K-factor: decays from 32 to 16 after 20 reviews
+        const K = qReviews < 20 ? 32 : 16;
+
+        // Expected score (probability user answers correctly)
+        const expected = 1 / (1 + Math.pow(10, (qRating - userRating) / 400));
+
+        const actual = isCorrect ? 1 : 0;
+        const delta = K * (actual - expected);
+
+        // Update user rating
+        this._setUserRating(userRating + delta);
+
+        // Update question difficulty (inverse: if user got it right, question gets easier)
+        diff[questionId] = Math.max(800, Math.min(2200, qRating - delta));
+        diff[questionId + '_n'] = qReviews + 1;
+        this._safeSet(this.KEYS.QUESTION_DIFFICULTY, JSON.stringify(diff));
+
+        return { userRating: userRating + delta, qRating: diff[questionId], expected };
+    },
+
+    // === REVIEW SCHEDULE (ELO-Enhanced Spaced Repetition) ===
     getReviewSchedule() {
         return JSON.parse(localStorage.getItem(this.KEYS.REVIEW_SCHEDULE) || '{}');
     },
 
-    scheduleForReview(questionId, isCorrect, confidence) {
+    scheduleForReview(questionId, isCorrect, confidence, responseMs) {
         const schedule = this.getReviewSchedule();
         const now = Date.now();
         const HOUR = 3600000;
-        const DAY = 86400000;
+        const MIN_INTERVAL = 1;    // 1 hour minimum
+        const MAX_INTERVAL = 720;  // 30 days maximum
+
+        // Update ELO ratings
+        this._updateElo(questionId, isCorrect, responseMs);
+        const qDifficulty = this.getQuestionDifficultyRating(questionId);
+
+        // Difficulty multiplier: harder questions (>1600) get shorter intervals
+        const diffMultiplier = qDifficulty > 1600 ? 0.8 :
+                               qDifficulty < 1400 ? 1.2 : 1.0;
+
+        // Response time weight for ease adjustment
+        // Slow correct = less confident = smaller ease bump
+        const rtWeight = responseMs > 0 ? Math.max(0.5, Math.min(1.5, 8000 / responseMs)) : 1.0;
 
         if (!schedule[questionId]) {
-            // First time wrong or guessed-correct
             if (!isCorrect || confidence === 1) {
                 schedule[questionId] = {
                     nextReviewAt: now + 4 * HOUR,
@@ -161,23 +281,29 @@ const Storage = {
                     easeFactor: 2.5,
                     consecutiveCorrect: 0,
                     totalReviews: 0,
-                    status: 'active'
+                    status: 'active',
+                    schemaVersion: 2
                 };
             }
         } else {
             const entry = schedule[questionId];
             entry.totalReviews++;
+            if (!entry.schemaVersion) entry.schemaVersion = 2;
 
             if (isCorrect && confidence >= 2) {
                 entry.consecutiveCorrect++;
                 if (entry.consecutiveCorrect === 1) {
-                    entry.intervalHours = 24;
+                    entry.intervalHours = 24 * diffMultiplier;
                 } else if (entry.consecutiveCorrect === 2) {
-                    entry.intervalHours = 72;
+                    entry.intervalHours = 72 * diffMultiplier;
                 } else {
-                    entry.intervalHours = entry.intervalHours * entry.easeFactor;
+                    entry.intervalHours = entry.intervalHours * entry.easeFactor * diffMultiplier;
                 }
-                entry.easeFactor = Math.max(1.3, entry.easeFactor + 0.1);
+                // Ease bump weighted by response time
+                entry.easeFactor = Math.max(1.3, entry.easeFactor + 0.1 * rtWeight);
+
+                // Clamp interval
+                entry.intervalHours = Math.max(MIN_INTERVAL, Math.min(MAX_INTERVAL, entry.intervalHours));
                 entry.nextReviewAt = now + entry.intervalHours * HOUR;
 
                 // Graduation check

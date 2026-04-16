@@ -104,6 +104,16 @@ const Achievements = {
                 return speedRecords.some(r => r.correct >= 10 && r.durationSec <= 180);
             }
 
+            // B18: Additional triggers
+            case 'exam_high_score': {
+                return Storage.getExamResults().some(e => e.correctCount >= achievement.value);
+            }
+
+            case 'study_timer_complete': {
+                const sessions = JSON.parse(localStorage.getItem('fdtta_study_sessions') || '[]');
+                return sessions.filter(s => s.completed).length >= achievement.value;
+            }
+
             default:
                 return false;
         }

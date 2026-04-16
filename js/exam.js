@@ -138,13 +138,37 @@ const Exam = {
         let examSelected = [];
         this._answered = false;
 
+        // B14 — multi-answer UX: checkbox-style tiles + "Select N" prompt
+        const isMulti = q.answerCount > 1;
+        optionsContainer.classList.toggle('multi-mode', isMulti);
+        optionsContainer.setAttribute('role', isMulti ? 'group' : 'radiogroup');
+        let promptEl = document.getElementById('exam-multi-answer-prompt');
+        if (!promptEl) {
+            promptEl = document.createElement('div');
+            promptEl.id = 'exam-multi-answer-prompt';
+            promptEl.className = 'multi-answer-prompt';
+            optionsContainer.parentElement.insertBefore(promptEl, optionsContainer);
+        }
+        if (isMulti) {
+            promptEl.innerHTML = `<strong>Sélectionnez ${q.answerCount} réponses</strong> <span class="prompt-en">(Select ${q.answerCount} answers)</span>`;
+            promptEl.classList.remove('hidden');
+        } else {
+            promptEl.classList.add('hidden');
+            promptEl.innerHTML = '';
+        }
+
         for (const letter of letters) {
             const option = q.options[letter];
             if (!option) continue;
 
             const tile = document.createElement('div');
-            tile.className = 'answer-tile';
+            tile.className = 'answer-tile' + (isMulti ? ' multi' : '');
             tile.dataset.letter = letter;
+            tile.setAttribute('role', isMulti ? 'checkbox' : 'radio');
+            tile.setAttribute('aria-checked', 'false');
+            tile.setAttribute('tabindex', '0');
+            tile.setAttribute('aria-label',
+                `${isMulti ? 'Checkbox' : 'Option'} ${letter}: ${option.fr}`);
             tile.innerHTML = `
                 <div class="answer-letter">${letter}</div>
                 <div class="answer-content">
@@ -248,7 +272,8 @@ const Exam = {
             selectedAnswers: selected,
             isCorrect: correct,
             confidence: null,
-            sessionType: 'exam'
+            sessionType: 'exam',
+            responseMs: this._questionStartTime ? (Date.now() - this._questionStartTime) : null
         });
 
         // If wrong, schedule for review
@@ -351,7 +376,7 @@ const Exam = {
             const correct = selected.sort().join(',') === [...q.correctAnswers].sort().join(',');
             if (correct) this.correctCount++;
             this.results.push({ questionId: q.id, topic: q.topic, selected, correct, timeTaken });
-            Storage.saveAttempt({ questionId: q.id, topic: q.topic, selectedAnswers: selected, isCorrect: correct, confidence: null, sessionType: 'exam' });
+            Storage.saveAttempt({ questionId: q.id, topic: q.topic, selectedAnswers: selected, isCorrect: correct, confidence: null, sessionType: 'exam', responseMs: this._questionStartTime ? (Date.now() - this._questionStartTime) : null });
             if (!correct) Storage.scheduleForReview(q.id, false, null);
             this.currentIndex++;
         }
@@ -360,7 +385,7 @@ const Exam = {
         while (this.currentIndex < this.questions.length) {
             const q = this.questions[this.currentIndex];
             this.results.push({ questionId: q.id, topic: q.topic, selected: [], correct: false, timeTaken: 0 });
-            Storage.saveAttempt({ questionId: q.id, topic: q.topic, selectedAnswers: [], isCorrect: false, confidence: null, sessionType: 'exam' });
+            Storage.saveAttempt({ questionId: q.id, topic: q.topic, selectedAnswers: [], isCorrect: false, confidence: null, sessionType: 'exam', responseMs: null });
             Storage.scheduleForReview(q.id, false, null);
             this.currentIndex++;
         }
@@ -470,6 +495,28 @@ const Exam = {
             </div>
         `;
         topicsDiv.after(timeAnalytics);
+
+        // Readiness score (B11)
+        const readiness = Storage.getReadinessScore();
+        if (readiness !== null) {
+            let readinessLabel, readinessClass;
+            if (readiness >= 85) { readinessLabel = "You're ready!"; readinessClass = 'readiness-high'; }
+            else if (readiness >= 70) { readinessLabel = 'Almost ready!'; readinessClass = 'readiness-mid'; }
+            else if (readiness >= 40) { readinessLabel = 'Getting closer!'; readinessClass = 'readiness-low'; }
+            else { readinessLabel = 'Keep practicing!'; readinessClass = 'readiness-low'; }
+
+            const readinessDiv = document.createElement('div');
+            readinessDiv.className = 'exam-readiness-section';
+            readinessDiv.innerHTML = `
+                <h3>📊 Exam Readiness</h3>
+                <div class="readiness-display ${readinessClass}">
+                    <span class="readiness-number">${readiness}</span>
+                    <span class="readiness-out-of">/ 100</span>
+                </div>
+                <p class="readiness-label">${readinessLabel}</p>
+            `;
+            timeAnalytics.after(readinessDiv);
+        }
 
         // Wire buttons
         document.getElementById('review-exam-mistakes-btn').onclick = () => {

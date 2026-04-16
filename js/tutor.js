@@ -15,6 +15,13 @@ const Tutor = {
         const settings = Storage.getSettings();
         this.ENDPOINT = settings.tutorEndpoint || this.DEFAULT_ENDPOINT;
 
+        // Generate or retrieve persistent session ID for conversation memory
+        this.sessionId = localStorage.getItem('tutorSessionId');
+        if (!this.sessionId) {
+            this.sessionId = crypto.randomUUID();
+            localStorage.setItem('tutorSessionId', this.sessionId);
+        }
+
         // Create chat UI (hidden by default)
         this.createChatUI();
 
@@ -128,11 +135,62 @@ const Tutor = {
                     Practice.selectedAnswers.sort().join(',') === [...Practice.currentQuestion.correctAnswers].sort().join(',') : null;
             }
 
+            // Add session stats (streak, accuracy, total)
+            const stats = Storage.getOverallStats();
+            context.sessionStats = {
+                total: stats.total,
+                accuracy: stats.accuracy,
+                streak: stats.streak
+            };
+
+            // Add last exam result
+            const exams = Storage.getExamResults();
+            if (exams.length > 0) {
+                const last = exams[exams.length - 1];
+                const weakTopics = [];
+                if (last.results) {
+                    const topicScores = {};
+                    last.results.forEach(r => {
+                        if (!topicScores[r.topic]) topicScores[r.topic] = { correct: 0, total: 0 };
+                        topicScores[r.topic].total++;
+                        if (r.correct) topicScores[r.topic].correct++;
+                    });
+                    Object.entries(topicScores).forEach(([t, s]) => {
+                        if (s.total > 0 && (s.correct / s.total) < 0.5) weakTopics.push(t);
+                    });
+                }
+                context.lastExam = {
+                    score: `${last.correctCount}/${last.totalQuestions}`,
+                    passed: last.passed,
+                    weakTopics: weakTopics.join(', ') || 'none'
+                };
+            }
+
             // Add weak topics
             const mastery = Storage.getTopicMasteryArray();
             const weak = mastery.filter(t => t.accuracy < 60 && t.totalAttempts > 0).map(t => t.nameEn);
             if (weak.length > 0) {
                 context.topicMastery = weak.join(', ');
+            }
+
+            // B10: Add Focus Areas data for weakness-aware tutoring
+            if (typeof Storage.getFocusAreas === 'function') {
+                const focus = Storage.getFocusAreas();
+                if (focus.totalAttempts >= 20) {
+                    context.focusAreas = {
+                        weakTopics: focus.weakTopics.map(t => ({
+                            topic: t.topic,
+                            accuracy: Math.round(t.accuracy * 100) + '%',
+                            attempts: t.attempts
+                        })),
+                        mostMissed: focus.mostMissed.map(m => ({
+                            id: m.questionId,
+                            wrongCount: m.wrongs,
+                            totalAttempts: m.attempts
+                        })).slice(0, 5),
+                        avgResponseMs: focus.avgResponseMs
+                    };
+                }
             }
 
             // Enrich with knowledge graph insights
@@ -149,6 +207,7 @@ const Tutor = {
                 body: JSON.stringify({
                     messages: this.conversationHistory,
                     context,
+                    sessionId: this.sessionId,
                 }),
                 signal: controller.signal,
             });
@@ -215,5 +274,32 @@ const Tutor = {
 
         document.getElementById('tutor-input').value = prompt;
         this.sendMessage();
+    },
+
+    // B10: Proactive weakness tip — auto-triggered when wrong in a weak topic
+    askWeaknessTip(question, topicAccuracy) {
+        if (!this.isAvailable()) return;
+        if (!this.isOpen) this.toggle();
+
+        const topicName = ETG_TOPICS.find(t => t.id === question.topic)?.nameEn || question.topic;
+        const prompt = `I just got "${question.questionEn}" wrong. This is one of my weakest topics (${topicName}, ${Math.round(topicAccuracy * 100)}% accuracy). Give me a quick targeted tip to remember this rule better.`;
+
+        document.getElementById('tutor-input').value = prompt;
+        this.sendMessage();
+    },
+
+    // B10: Check if a topic is in the user's weak areas
+    isWeakTopic(topicId) {
+        if (typeof Storage.getWeakestTopics !== 'function') return false;
+        const weakTopics = Storage.getWeakestTopics(5);
+        return weakTopics.some(t => t.topic === topicId);
+    },
+
+    // B10: Get topic accuracy for weakness display
+    getTopicAccuracy(topicId) {
+        if (typeof Storage.getWeakestTopics !== 'function') return null;
+        const all = Storage.getWeakestTopics(10);
+        const match = all.find(t => t.topic === topicId);
+        return match ? match.accuracy : null;
     }
 };

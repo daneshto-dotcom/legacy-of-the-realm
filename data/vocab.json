@@ -21,6 +21,13 @@
     "questionId": "arret-008"
   },
   {
+    "wordFr": "arrêt et stationnement interdits",
+    "wordEn": "no stopping and no parking",
+    "definition": "You cannot stop or park your vehicle at all in this zone",
+    "topic": "arret_stationnement",
+    "questionId": "media-114"
+  },
+  {
     "wordFr": "arrêt interdit",
     "wordEn": "no stopping",
     "definition": "You cannot stop the vehicle at all in this area",
@@ -96,6 +103,13 @@
     "definition": "A minor criminal offense in French law, categorized by class (1st through 5th)",
     "topic": "arret_stationnement",
     "questionId": "arret-037"
+  },
+  {
+    "wordFr": "côte descendante",
+    "wordEn": "downhill slope",
+    "definition": "A road that goes downward in the direction of travel",
+    "topic": "arret_stationnement",
+    "questionId": "arret-056"
   },
   {
     "wordFr": "côté droit",
@@ -259,6 +273,13 @@
     "questionId": "arret-047"
   },
   {
+    "wordFr": "marquage en zigzag",
+    "wordEn": "zigzag marking",
+    "definition": "Yellow zigzag lines painted at bus stops indicating no stopping",
+    "topic": "arret_stationnement",
+    "questionId": "arret-065"
+  },
+  {
     "wordFr": "marquage jaune",
     "wordEn": "yellow marking",
     "definition": "Temporary or local road markings painted on kerbs indicating parking/stopping restrictions",
@@ -357,11 +378,25 @@
     "questionId": "arret-001"
   },
   {
+    "wordFr": "stationnement alterné",
+    "wordEn": "alternate parking",
+    "definition": "A system where parking alternates between sides of the road on set dates",
+    "topic": "arret_stationnement",
+    "questionId": "arret-073"
+  },
+  {
     "wordFr": "stationnement alterné semi-mensuel",
     "wordEn": "semi-monthly alternating parking",
     "definition": "A system where the permitted parking side of the street changes twice per month",
     "topic": "arret_stationnement",
     "questionId": "arret-054"
+  },
+  {
+    "wordFr": "stationnement autorisé",
+    "wordEn": "authorized parking",
+    "definition": "A zone where parking is permitted",
+    "topic": "arret_stationnement",
+    "questionId": "media-116"
   },
   {
     "wordFr": "stationnement dangereux",
@@ -686,6 +721,20 @@
     "questionId": "autr-004"
   },
   {
+    "wordFr": "cyclomoteur",
+    "wordEn": "moped",
+    "definition": "A small motorised two-wheeler with limited speed, requiring registration",
+    "topic": "autres_usagers",
+    "questionId": "autr-068"
+  },
+  {
+    "wordFr": "de front",
+    "wordEn": "abreast/side by side",
+    "definition": "Riding next to each other in the same lane",
+    "topic": "autres_usagers",
+    "questionId": "autr-069"
+  },
+  {
     "wordFr": "dépasser",
     "wordEn": "to overtake",
     "definition": "To pass another vehicle or cyclist",
@@ -749,6 +798,20 @@
     "questionId": "autr-042"
   },
   {
+    "wordFr": "feu jaune clignotant",
+    "wordEn": "flashing yellow light",
+    "definition": "A traffic signal meaning caution — proceed with care and yield to pedestrians",
+    "topic": "autres_usagers",
+    "questionId": "autr-066"
+  },
+  {
+    "wordFr": "feu piéton",
+    "wordEn": "pedestrian light",
+    "definition": "A traffic signal specifically for pedestrians showing when they may cross",
+    "topic": "autres_usagers",
+    "questionId": "autr-078"
+  },
+  {
     "wordFr": "feux clignotants",
     "wordEn": "flashing lights",
     "definition": "Warning lights that blink on and off",
@@ -796,6 +859,13 @@
     "definition": "The minimum lateral distance required when overtaking vulnerable road users",
     "topic": "autres_usagers",
     "questionId": "autr-044"
+  },
+  {
+    "wordFr": "malvoyant",
+    "wordEn": "visually impaired",
+    "definition": "A person with significantly reduced vision",
+    "topic": "autres_usagers",
+    "questionId": "autr-062"
   },
   {
     "wordFr": "manifester l'intention de traverser",
@@ -901,6 +971,13 @@
     "definition": "To reduce your speed",
     "topic": "autres_usagers",
     "questionId": "autr-006"
+  },
+  {
+    "wordFr": "refuge",
+    "wordEn": "passenger refuge/island",
+    "definition": "A raised platform between the road and tram tracks for passenger safety",
+    "topic": "autres_usagers",
+    "questionId": "autr-065"
   },
   {
     "wordFr": "rehausseur",
@@ -1022,6 +1099,13 @@
     "questionId": "autr-023"
   },
   {
+    "wordFr": "véhicule d'intérêt général prioritaire",
+    "wordEn": "priority public-interest vehicle",
+    "definition": "Emergency vehicles (fire, ambulance, police) with absolute priority when lights and siren are active",
+    "topic": "autres_usagers",
+    "questionId": "autr-076"
+  },
+  {
     "wordFr": "véhicule pilote",
     "wordEn": "pilot / escort vehicle",
     "definition": "A car that precedes or follows an oversized transport to warn other drivers",
@@ -1120,6 +1204,13 @@
     "questionId": "circ-005"
   },
   {
+    "wordFr": "chargement",
+    "wordEn": "load / cargo",
+    "definition": "Items carried in or on a vehicle",
+    "topic": "circulation",
+    "questionId": "circ-069"
+  },
+  {
     "wordFr": "chaussées séparées",
     "wordEn": "dual carriageway",
     "definition": "A road where opposing traffic lanes are physically separated",
@@ -1146,6 +1237,13 @@
     "definition": "A sudden, present threat requiring warning",
     "topic": "circulation",
     "questionId": "circ-016"
+  },
+  {
+    "wordFr": "demi-tour interdit",
+    "wordEn": "no U-turn",
+    "definition": "Turning your vehicle around to go in the opposite direction is prohibited here",
+    "topic": "circulation",
+    "questionId": "media-112"
   },
   {
     "wordFr": "depassement dans les deux sens",
@@ -1211,6 +1309,13 @@
     "questionId": "circ-009"
   },
   {
+    "wordFr": "feu de brouillard arrière",
+    "wordEn": "rear fog light",
+    "definition": "Very bright red light only for heavy fog",
+    "topic": "circulation",
+    "questionId": "circ-066"
+  },
+  {
     "wordFr": "feux d'affectation de voie",
     "wordEn": "lane control signals",
     "definition": "Overhead signals (green arrow, red X, yellow flash) indicating whether a lane is open, closed, or transitioning",
@@ -1246,6 +1351,13 @@
     "questionId": "circ-006"
   },
   {
+    "wordFr": "kit mains libres",
+    "wordEn": "hands-free kit",
+    "definition": "Phone device now banned while driving",
+    "topic": "circulation",
+    "questionId": "circ-062"
+  },
+  {
     "wordFr": "klaxon",
     "wordEn": "horn",
     "definition": "The audible warning device on a vehicle",
@@ -1253,11 +1365,32 @@
     "questionId": "circ-016"
   },
   {
+    "wordFr": "limitation de hauteur",
+    "wordEn": "height limit",
+    "definition": "A restriction on the maximum height of vehicles, often at tunnels and underpasses",
+    "topic": "circulation",
+    "questionId": "media-136"
+  },
+  {
+    "wordFr": "limitation de poids",
+    "wordEn": "weight limit",
+    "definition": "A restriction on the maximum weight of vehicles allowed on a road or bridge",
+    "topic": "circulation",
+    "questionId": "media-135"
+  },
+  {
     "wordFr": "limitation temporaire",
     "wordEn": "temporary speed limit",
     "definition": "A reduced speed limit imposed for a specific zone, often near roadworks",
     "topic": "circulation",
     "questionId": "circ-043"
+  },
+  {
+    "wordFr": "panneau d'autoroute",
+    "wordEn": "motorway sign",
+    "definition": "Blue sign indicating the start of a motorway section",
+    "topic": "circulation",
+    "questionId": "media-131"
   },
   {
     "wordFr": "panneau de fin de limitation",
@@ -1328,6 +1461,13 @@
     "definition": "Unless there is a sign showing a different rule",
     "topic": "circulation",
     "questionId": "circ-001"
+  },
+  {
+    "wordFr": "sens de circulation",
+    "wordEn": "traffic direction",
+    "definition": "The way vehicles must travel",
+    "topic": "circulation",
+    "questionId": "circ-056"
   },
   {
     "wordFr": "séparateur central",
@@ -1405,6 +1545,20 @@
     "definition": "Conditions where seeing distance is significantly decreased",
     "topic": "circulation",
     "questionId": "circ-044"
+  },
+  {
+    "wordFr": "vitesse maximale",
+    "wordEn": "maximum speed",
+    "definition": "Highest legal speed",
+    "topic": "circulation",
+    "questionId": "circ-054"
+  },
+  {
+    "wordFr": "vitesse par défaut",
+    "wordEn": "default speed",
+    "definition": "The standard speed limit that applies when no specific sign is posted",
+    "topic": "circulation",
+    "questionId": "media-129"
   },
   {
     "wordFr": "voie",
@@ -1533,6 +1687,13 @@
     "questionId": "cond-001"
   },
   {
+    "wordFr": "amende",
+    "wordEn": "fine",
+    "definition": "Monetary penalty",
+    "topic": "conducteur",
+    "questionId": "cond-052"
+  },
+  {
     "wordFr": "amende forfaitaire",
     "wordEn": "fixed fine",
     "definition": "A standard fine amount set by law",
@@ -1568,11 +1729,25 @@
     "questionId": "cond-047"
   },
   {
+    "wordFr": "auto-école",
+    "wordEn": "driving school",
+    "definition": "A school where you learn to drive",
+    "topic": "conducteur",
+    "questionId": "cond-103"
+  },
+  {
     "wordFr": "avis medical",
     "wordEn": "medical advice",
     "definition": "",
     "topic": "conducteur",
     "questionId": "media-098"
+  },
+  {
+    "wordFr": "banquette arrière",
+    "wordEn": "rear seat/back seat",
+    "definition": "The rear seating area of a vehicle",
+    "topic": "conducteur",
+    "questionId": "cond-115"
   },
   {
     "wordFr": "bâillement",
@@ -1601,6 +1776,13 @@
     "definition": "Mandatory qualification card for professional goods or passenger transport drivers",
     "topic": "conducteur",
     "questionId": "cond-049"
+  },
+  {
+    "wordFr": "centre agréé",
+    "wordEn": "approved centre",
+    "definition": "An officially authorised facility for vehicle inspections",
+    "topic": "conducteur",
+    "questionId": "cond-119"
   },
   {
     "wordFr": "certificat médical",
@@ -1659,6 +1841,13 @@
     "questionId": "cond-046"
   },
   {
+    "wordFr": "confiscation du véhicule",
+    "wordEn": "vehicle confiscation",
+    "definition": "Seizure of the vehicle by authorities, which may become permanent",
+    "topic": "conducteur",
+    "questionId": "cond-109"
+  },
+  {
     "wordFr": "contre-indication",
     "wordEn": "contraindication",
     "definition": "A medical condition that makes an activity inadvisable or prohibited",
@@ -1687,6 +1876,13 @@
     "questionId": "cond-023"
   },
   {
+    "wordFr": "démarrer",
+    "wordEn": "to start",
+    "definition": "Turn on engine",
+    "topic": "conducteur",
+    "questionId": "cond-051"
+  },
+  {
     "wordFr": "dépistage de stupéfiants",
     "wordEn": "drug screening",
     "definition": "A test conducted by law enforcement to detect the presence of illegal drugs",
@@ -1708,6 +1904,13 @@
     "questionId": "media-014"
   },
   {
+    "wordFr": "ébloui",
+    "wordEn": "dazzled/blinded",
+    "definition": "Temporarily unable to see clearly due to bright light",
+    "topic": "conducteur",
+    "questionId": "cond-107"
+  },
+  {
     "wordFr": "échange de permis",
     "wordEn": "licence exchange",
     "definition": "The administrative process of converting a foreign driving licence to a French one",
@@ -1720,6 +1923,13 @@
     "definition": "Small audio devices inserted into or placed over the ears",
     "topic": "conducteur",
     "questionId": "cond-025"
+  },
+  {
+    "wordFr": "emprise",
+    "wordEn": "influence/effect",
+    "definition": "Being under the effect of a substance that alters behaviour",
+    "topic": "conducteur",
+    "questionId": "cond-116"
   },
   {
     "wordFr": "endormissement",
@@ -1748,6 +1958,13 @@
     "definition": "35-hour refresher course required every 5 years for professional transport drivers",
     "topic": "conducteur",
     "questionId": "cond-049"
+  },
+  {
+    "wordFr": "immobilisation",
+    "wordEn": "vehicle immobilisation",
+    "definition": "When police prevent you from moving your vehicle",
+    "topic": "conducteur",
+    "questionId": "cond-102"
   },
   {
     "wordFr": "intervalle",
@@ -1783,6 +2000,13 @@
     "definition": "A coded annotation on a driving licence indicating mandatory conditions for driving",
     "topic": "conducteur",
     "questionId": "cond-041"
+  },
+  {
+    "wordFr": "micro-sommeil",
+    "wordEn": "micro-sleep",
+    "definition": "A brief involuntary episode of sleep lasting a few seconds",
+    "topic": "conducteur",
+    "questionId": "cond-101"
   },
   {
     "wordFr": "monoxyde de carbone",
@@ -1855,6 +2079,13 @@
     "questionId": "cond-001"
   },
   {
+    "wordFr": "phares",
+    "wordEn": "headlights",
+    "definition": "The main forward-facing lights of a vehicle",
+    "topic": "conducteur",
+    "questionId": "cond-107"
+  },
+  {
     "wordFr": "pictogramme",
     "wordEn": "pictogram",
     "definition": "A small symbol/image on medication packaging warning about driving",
@@ -1895,6 +2126,13 @@
     "definition": "The process of restoring lost points on the driving licence",
     "topic": "conducteur",
     "questionId": "cond-029"
+  },
+  {
+    "wordFr": "refus de se soumettre",
+    "wordEn": "refusal to comply",
+    "definition": "Refusing to undergo a mandatory test ordered by authorities",
+    "topic": "conducteur",
+    "questionId": "cond-120"
   },
   {
     "wordFr": "retrait de points",
@@ -1995,6 +2233,13 @@
     "questionId": "cond-042"
   },
   {
+    "wordFr": "téléphone au volant",
+    "wordEn": "phone while driving",
+    "definition": "Forbidden if handheld",
+    "topic": "conducteur",
+    "questionId": "cond-052"
+  },
+  {
     "wordFr": "téléphone tenu en main",
     "wordEn": "handheld phone",
     "definition": "A phone held in your hand, not on a mount or hands-free",
@@ -2007,6 +2252,13 @@
     "definition": "The continuous period spent actively driving a vehicle",
     "topic": "conducteur",
     "questionId": "cond-038"
+  },
+  {
+    "wordFr": "temps de réaction",
+    "wordEn": "reaction time",
+    "definition": "Time to perceive and act",
+    "topic": "conducteur",
+    "questionId": "cond-053"
   },
   {
     "wordFr": "test salivaire",
@@ -2072,6 +2324,13 @@
     "questionId": "croi-023"
   },
   {
+    "wordFr": "aspiration",
+    "wordEn": "slipstream / draft effect",
+    "definition": "Air turbulence from a large vehicle",
+    "topic": "croisement_depassement",
+    "questionId": "croi-131"
+  },
+  {
     "wordFr": "aux abords de",
     "wordEn": "near/in the vicinity of",
     "definition": "Close to, in the area around",
@@ -2084,6 +2343,13 @@
     "definition": "The emergency stopping lane on the right side of a motorway",
     "topic": "croisement_depassement",
     "questionId": "croi-029"
+  },
+  {
+    "wordFr": "chaussée étroite",
+    "wordEn": "narrow road",
+    "definition": "A road too narrow for two vehicles to pass comfortably side by side",
+    "topic": "croisement_depassement",
+    "questionId": "croi-120"
   },
   {
     "wordFr": "circulation dense",
@@ -2126,6 +2392,13 @@
     "definition": "When two vehicles meet on a road too narrow for both to pass simultaneously",
     "topic": "croisement_depassement",
     "questionId": "croi-054"
+  },
+  {
+    "wordFr": "croiser",
+    "wordEn": "to meet/cross",
+    "definition": "Encountering a vehicle coming from the opposite direction",
+    "topic": "croisement_depassement",
+    "questionId": "croi-106"
   },
   {
     "wordFr": "déboîter",
@@ -2268,6 +2541,13 @@
     "questionId": "media-087"
   },
   {
+    "wordFr": "interdiction de dépasser",
+    "wordEn": "no overtaking",
+    "definition": "Passing the vehicle ahead is forbidden in this zone",
+    "topic": "croisement_depassement",
+    "questionId": "media-105"
+  },
+  {
     "wordFr": "ligne mixte",
     "wordEn": "mixed line marking",
     "definition": "A road marking with one continuous and one dashed line side by side",
@@ -2345,6 +2625,13 @@
     "questionId": "croi-038"
   },
   {
+    "wordFr": "priorité sur la circulation inverse",
+    "wordEn": "priority over oncoming traffic",
+    "definition": "A sign giving you right of way in a narrow passage where only one direction can pass at a time",
+    "topic": "croisement_depassement",
+    "questionId": "media-127"
+  },
+  {
     "wordFr": "reculer",
     "wordEn": "to reverse",
     "definition": "To drive backwards",
@@ -2373,6 +2660,13 @@
     "questionId": "croi-009"
   },
   {
+    "wordFr": "route étroite",
+    "wordEn": "narrow road",
+    "definition": "A road too narrow for two vehicles",
+    "topic": "croisement_depassement",
+    "questionId": "croi-057"
+  },
+  {
     "wordFr": "se déporter",
     "wordEn": "to move over/swerve",
     "definition": "When a vehicle shifts its position laterally within or across lanes",
@@ -2380,11 +2674,25 @@
     "questionId": "croi-031"
   },
   {
+    "wordFr": "se faire dépasser",
+    "wordEn": "to be overtaken",
+    "definition": "When another vehicle passes you",
+    "topic": "croisement_depassement",
+    "questionId": "croi-128"
+  },
+  {
     "wordFr": "se rabattre",
     "wordEn": "to pull back in",
     "definition": "Returning to your original lane after overtaking",
     "topic": "croisement_depassement",
     "questionId": "croi-009"
+  },
+  {
+    "wordFr": "serrer à droite",
+    "wordEn": "move to the right",
+    "definition": "To position your vehicle as far right as possible on the road",
+    "topic": "croisement_depassement",
+    "questionId": "croi-120"
   },
   {
     "wordFr": "sommet d'une côte",
@@ -2406,6 +2714,13 @@
     "definition": "Véhicule agricole à moteur circulant à faible vitesse",
     "topic": "croisement_depassement",
     "questionId": "croi-046"
+  },
+  {
+    "wordFr": "tunnel bidirectionnel",
+    "wordEn": "two-way tunnel",
+    "definition": "A tunnel with traffic in both directions",
+    "topic": "croisement_depassement",
+    "questionId": "croi-133"
   },
   {
     "wordFr": "vehicule a moteur",
@@ -2450,6 +2765,13 @@
     "questionId": "div-049"
   },
   {
+    "wordFr": "accident corporel",
+    "wordEn": "injury accident",
+    "definition": "An accident where people are physically hurt",
+    "topic": "notions_diverses",
+    "questionId": "div-109"
+  },
+  {
     "wordFr": "accident materiel",
     "wordEn": "property damage accident",
     "definition": "",
@@ -2462,6 +2784,13 @@
     "definition": "An accident causing damage to vehicles or property but no bodily injuries",
     "topic": "notions_diverses",
     "questionId": "div-051"
+  },
+  {
+    "wordFr": "air expiré",
+    "wordEn": "exhaled air",
+    "definition": "Breath used in breathalyser tests to measure alcohol",
+    "topic": "notions_diverses",
+    "questionId": "div-105"
   },
   {
     "wordFr": "alerter",
@@ -2576,6 +2905,13 @@
     "questionId": "media-099"
   },
   {
+    "wordFr": "conduite anticipative",
+    "wordEn": "anticipatory driving",
+    "definition": "Looking ahead and planning actions to avoid sudden braking or acceleration",
+    "topic": "notions_diverses",
+    "questionId": "div-107"
+  },
+  {
     "wordFr": "consentement présumé",
     "wordEn": "presumed consent",
     "definition": "The legal assumption that a person consents to organ donation unless they have explicitly refused",
@@ -2602,6 +2938,13 @@
     "definition": "A follow-up inspection required when the initial CT reveals serious defects",
     "topic": "notions_diverses",
     "questionId": "div-028"
+  },
+  {
+    "wordFr": "contrôle routier",
+    "wordEn": "traffic check",
+    "definition": "When police stop you to check your documents and vehicle",
+    "topic": "notions_diverses",
+    "questionId": "div-106"
   },
   {
     "wordFr": "controle technique",
@@ -2660,6 +3003,13 @@
     "questionId": "div-045"
   },
   {
+    "wordFr": "durée de validité",
+    "wordEn": "validity period",
+    "definition": "How long a document remains legally valid before needing renewal",
+    "topic": "notions_diverses",
+    "questionId": "div-115"
+  },
+  {
     "wordFr": "eCall",
     "wordEn": "eCall (emergency Call)",
     "definition": "An automatic emergency call system that contacts 112 after a serious accident",
@@ -2693,6 +3043,13 @@
     "definition": "Quantité de dioxyde de carbone rejetée par un véhicule dans l'atmosphère",
     "topic": "notions_diverses",
     "questionId": "div-041"
+  },
+  {
+    "wordFr": "éthylotest anti-démarrage",
+    "wordEn": "alcohol ignition interlock",
+    "definition": "A device that prevents a vehicle from starting if the driver's blood alcohol exceeds the limit",
+    "topic": "notions_diverses",
+    "questionId": "div-119"
   },
   {
     "wordFr": "feuillets autocopiants",
@@ -2751,11 +3108,25 @@
     "questionId": "div-045"
   },
   {
+    "wordFr": "infraction",
+    "wordEn": "infraction/offence",
+    "definition": "A violation of the rules of the highway code",
+    "topic": "notions_diverses",
+    "questionId": "div-103"
+  },
+  {
     "wordFr": "invalidation du permis",
     "wordEn": "licence invalidation",
     "definition": "Automatic cancellation of the driving licence when all points are lost",
     "topic": "notions_diverses",
     "questionId": "div-031"
+  },
+  {
+    "wordFr": "jours ouvrés",
+    "wordEn": "working days",
+    "definition": "Business days, excluding weekends and public holidays",
+    "topic": "notions_diverses",
+    "questionId": "div-112"
   },
   {
     "wordFr": "mise en circulation",
@@ -2793,11 +3164,25 @@
     "questionId": "div-014"
   },
   {
+    "wordFr": "PAS (Protéger Alerter Secourir)",
+    "wordEn": "PAS (Protect Alert Rescue)",
+    "definition": "The three-step emergency response protocol taught in French driving theory",
+    "topic": "notions_diverses",
+    "questionId": "div-109"
+  },
+  {
     "wordFr": "permis a points",
     "wordEn": "point-based license",
     "definition": "",
     "topic": "notions_diverses",
     "questionId": "media-029"
+  },
+  {
+    "wordFr": "permis B",
+    "wordEn": "B licence",
+    "definition": "The standard car driving licence in France",
+    "topic": "notions_diverses",
+    "questionId": "div-114"
   },
   {
     "wordFr": "permis de conduire",
@@ -2826,6 +3211,13 @@
     "definition": "The air pressure inside the tyres",
     "topic": "notions_diverses",
     "questionId": "div-011"
+  },
+  {
+    "wordFr": "procès-verbal",
+    "wordEn": "official report/fine",
+    "definition": "The formal document recording a traffic offence",
+    "topic": "notions_diverses",
+    "questionId": "div-101"
   },
   {
     "wordFr": "protéger",
@@ -2861,6 +3253,13 @@
     "definition": "Insurance covering damages you cause to other people and their property",
     "topic": "notions_diverses",
     "questionId": "div-021"
+  },
+  {
+    "wordFr": "rétention du véhicule",
+    "wordEn": "vehicle retention",
+    "definition": "The police keeping your vehicle on the spot after a serious offence",
+    "topic": "notions_diverses",
+    "questionId": "div-116"
   },
   {
     "wordFr": "RGPD",
@@ -2903,6 +3302,13 @@
     "definition": "When tyre pressure is below the recommended level",
     "topic": "notions_diverses",
     "questionId": "div-025"
+  },
+  {
+    "wordFr": "stage de récupération de points",
+    "wordEn": "points recovery course",
+    "definition": "A 2-day road safety course that restores up to 4 licence points",
+    "topic": "notions_diverses",
+    "questionId": "div-117"
   },
   {
     "wordFr": "telephone au volant",
@@ -2952,6 +3358,13 @@
     "definition": "A coloured sticker classifying a vehicle by its emissions",
     "topic": "notions_diverses",
     "questionId": "div-017"
+  },
+  {
+    "wordFr": "visite médicale",
+    "wordEn": "medical check",
+    "definition": "A health examination required for certain driving licence categories",
+    "topic": "notions_diverses",
+    "questionId": "div-114"
   },
   {
     "wordFr": "voie de covoiturage",
@@ -3192,6 +3605,13 @@
     "questionId": "prio-036"
   },
   {
+    "wordFr": "feu clignotant",
+    "wordEn": "flashing light",
+    "definition": "A traffic light that blinks on and off repeatedly",
+    "topic": "priorite",
+    "questionId": "prio-115"
+  },
+  {
     "wordFr": "feu de chantier",
     "wordEn": "roadworks traffic light",
     "definition": "A temporary traffic light installed at a construction zone to alternate traffic",
@@ -3234,6 +3654,13 @@
     "questionId": "prio-041"
   },
   {
+    "wordFr": "fin de route prioritaire",
+    "wordEn": "end of priority road",
+    "definition": "The road you are on is no longer a priority road",
+    "topic": "priorite",
+    "questionId": "media-115"
+  },
+  {
     "wordFr": "flèche de filtre",
     "wordEn": "filter arrow / green arrow",
     "definition": "A directional arrow on a traffic light allowing movement in one direction",
@@ -3246,6 +3673,13 @@
     "definition": "",
     "topic": "priorite",
     "questionId": "media-060"
+  },
+  {
+    "wordFr": "griller un feu rouge",
+    "wordEn": "to run a red light",
+    "definition": "To pass through a red traffic light illegally",
+    "topic": "priorite",
+    "questionId": "prio-116"
   },
   {
     "wordFr": "gyrophare",
@@ -3274,6 +3708,13 @@
     "definition": "Where two or more roads meet",
     "topic": "priorite",
     "questionId": "prio-001"
+  },
+  {
+    "wordFr": "intersection dégagée",
+    "wordEn": "clear intersection",
+    "definition": "An intersection free of vehicles and pedestrians blocking the way",
+    "topic": "priorite",
+    "questionId": "prio-109"
   },
   {
     "wordFr": "intersection sans signalisation",
@@ -3337,6 +3778,13 @@
     "definition": "",
     "topic": "priorite",
     "questionId": "media-001"
+  },
+  {
+    "wordFr": "panneau de cédez le passage",
+    "wordEn": "give way sign",
+    "definition": "An inverted triangle sign requiring you to yield to priority traffic",
+    "topic": "priorite",
+    "questionId": "prio-112"
   },
   {
     "wordFr": "panneau de priorité de passage",
@@ -3430,6 +3878,13 @@
     "questionId": "prio-057"
   },
   {
+    "wordFr": "sas vélo",
+    "wordEn": "bike box / advanced stop line",
+    "definition": "A marked area at traffic lights where cyclists wait ahead of cars",
+    "topic": "priorite",
+    "questionId": "prio-127"
+  },
+  {
     "wordFr": "se ranger",
     "wordEn": "to pull over",
     "definition": "To move your vehicle to the side of the road",
@@ -3512,6 +3967,13 @@
     "definition": "The lane where you increase speed before merging onto the motorway",
     "topic": "priorite",
     "questionId": "prio-027"
+  },
+  {
+    "wordFr": "voie d'insertion",
+    "wordEn": "slip road / merge lane",
+    "definition": "The lane used to enter a motorway",
+    "topic": "priorite",
+    "questionId": "prio-124"
   },
   {
     "wordFr": "voie principale",
@@ -3675,6 +4137,13 @@
     "questionId": "route-029"
   },
   {
+    "wordFr": "chaussée glissante",
+    "wordEn": "slippery road",
+    "definition": "A road surface with reduced grip due to rain, ice, oil, or other conditions",
+    "topic": "route",
+    "questionId": "media-145"
+  },
+  {
     "wordFr": "chaussee mouillee",
     "wordEn": "wet road surface",
     "definition": "",
@@ -3694,6 +4163,13 @@
     "definition": "To drive with one wheel on or over the line",
     "topic": "route",
     "questionId": "route-012"
+  },
+  {
+    "wordFr": "chute de pierres",
+    "wordEn": "falling rocks",
+    "definition": "A danger zone where rocks may fall from a cliff or hillside onto the road",
+    "topic": "route",
+    "questionId": "media-146"
   },
   {
     "wordFr": "conducteur confirme",
@@ -3724,6 +4200,13 @@
     "questionId": "rout-043"
   },
   {
+    "wordFr": "dépassement autorisé",
+    "wordEn": "overtaking allowed",
+    "definition": "OK to pass if safe",
+    "topic": "route",
+    "questionId": "route-056"
+  },
+  {
     "wordFr": "dépassement de chargement",
     "wordEn": "load overhang",
     "definition": "The portion of a load extending beyond the vehicle's bodywork",
@@ -3750,6 +4233,13 @@
     "definition": "Greater following distances required in confined or hazardous areas",
     "topic": "route",
     "questionId": "route-030"
+  },
+  {
+    "wordFr": "double sens",
+    "wordEn": "two-way",
+    "definition": "A road where traffic flows in both directions",
+    "topic": "route",
+    "questionId": "route-065"
   },
   {
     "wordFr": "éblouissement",
@@ -4074,6 +4564,13 @@
     "questionId": "rout-048"
   },
   {
+    "wordFr": "virage dangereux",
+    "wordEn": "dangerous curve",
+    "definition": "A sharp bend in the road requiring reduced speed",
+    "topic": "route",
+    "questionId": "media-120"
+  },
+  {
     "wordFr": "voie de décélération",
     "wordEn": "deceleration lane",
     "definition": "The exit slip road where you slow down",
@@ -4088,6 +4585,13 @@
     "questionId": "route-029"
   },
   {
+    "wordFr": "voie normale de circulation",
+    "wordEn": "normal driving lane",
+    "definition": "The right lane where you should drive by default",
+    "topic": "route",
+    "questionId": "route-061"
+  },
+  {
     "wordFr": "voyant",
     "wordEn": "warning light",
     "definition": "A dashboard indicator light that signals a vehicle condition or malfunction",
@@ -4100,6 +4604,13 @@
     "definition": "",
     "topic": "signalisation",
     "questionId": "media-031"
+  },
+  {
+    "wordFr": "balise de délinéation",
+    "wordEn": "delineation marker",
+    "definition": "Reflective studs or posts at road edges and between lanes to guide drivers",
+    "topic": "signalisation",
+    "questionId": "sign-060"
   },
   {
     "wordFr": "balise de virage",
@@ -4135,6 +4646,13 @@
     "definition": "",
     "topic": "signalisation",
     "questionId": "media-063"
+  },
+  {
+    "wordFr": "bord rouge",
+    "wordEn": "red border",
+    "definition": "Red edge indicating prohibition",
+    "topic": "signalisation",
+    "questionId": "sign-058"
   },
   {
     "wordFr": "bordure rouge",
@@ -4291,11 +4809,25 @@
     "questionId": "sign-034"
   },
   {
+    "wordFr": "ligne blanche continue",
+    "wordEn": "solid white line",
+    "definition": "An unbroken line on the road that must not be crossed",
+    "topic": "signalisation",
+    "questionId": "sign-066"
+  },
+  {
     "wordFr": "ligne continue",
     "wordEn": "continuous/solid line",
     "definition": "An unbroken line painted on the road",
     "topic": "signalisation",
     "questionId": "sign-003"
+  },
+  {
+    "wordFr": "ligne de dissuasion",
+    "wordEn": "dissuasion line",
+    "definition": "A dashed line with closely spaced dashes warning of an approaching continuous line",
+    "topic": "signalisation",
+    "questionId": "sign-063"
   },
   {
     "wordFr": "ligne de rive",
@@ -4331,6 +4863,13 @@
     "definition": "A certification mark indicating conformity with European health, safety, and environmental standards",
     "topic": "signalisation",
     "questionId": "sign-031"
+  },
+  {
+    "wordFr": "marquage en damier",
+    "wordEn": "chequered marking",
+    "definition": "Alternating coloured bands on the road surface marking a non-drivable zone",
+    "topic": "signalisation",
+    "questionId": "sign-061"
   },
   {
     "wordFr": "marquage zébré",
@@ -4480,6 +5019,20 @@
     "questionId": "sign-050"
   },
   {
+    "wordFr": "passage d'animaux sauvages",
+    "wordEn": "wild animal crossing",
+    "definition": "An area where wild animals frequently cross the road",
+    "topic": "signalisation",
+    "questionId": "media-144"
+  },
+  {
+    "wordFr": "plot réfléchissant",
+    "wordEn": "reflective stud",
+    "definition": "A small raised marker on the road surface that reflects headlights",
+    "topic": "signalisation",
+    "questionId": "sign-060"
+  },
+  {
     "wordFr": "plot rétroréfléchissant",
     "wordEn": "retroreflective road stud",
     "definition": "Dispositif au sol réfléchissant la lumière des phares pour guider les conducteurs",
@@ -4578,6 +5131,13 @@
     "questionId": "sign-050"
   },
   {
+    "wordFr": "triangulaire",
+    "wordEn": "triangular",
+    "definition": "Having three sides",
+    "topic": "signalisation",
+    "questionId": "sign-056"
+  },
+  {
     "wordFr": "valeur réglementaire",
     "wordEn": "regulatory value",
     "definition": "Force juridique obligeant les usagers à respecter l'indication affichée",
@@ -4590,6 +5150,13 @@
     "definition": "Voie de circulation immédiatement à côté de celle sur laquelle on circule",
     "topic": "signalisation",
     "questionId": "sign-046"
+  },
+  {
+    "wordFr": "zone tampon",
+    "wordEn": "buffer zone",
+    "definition": "A protected area on the road that vehicles must not enter",
+    "topic": "signalisation",
+    "questionId": "sign-061"
   },
   {
     "wordFr": "abri",
@@ -4618,6 +5185,13 @@
     "definition": "A stop requirement with no exceptions, different from a conditional stop",
     "topic": "tunnels_passages_niveau",
     "questionId": "tunn-034"
+  },
+  {
+    "wordFr": "balise",
+    "wordEn": "countdown marker",
+    "definition": "A sign with red bars indicating distance to a level crossing",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-097"
   },
   {
     "wordFr": "balise de passage a niveau",
@@ -4697,6 +5271,13 @@
     "questionId": "tunn-021"
   },
   {
+    "wordFr": "couper le moteur",
+    "wordEn": "to turn off the engine",
+    "definition": "To switch off the vehicle's engine",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-096"
+  },
+  {
     "wordFr": "croix de Saint-Andre",
     "wordEn": "St. Andrew's cross",
     "definition": "",
@@ -4737,6 +5318,20 @@
     "definition": "Turning your vehicle around to go in the opposite direction",
     "topic": "tunnels_passages_niveau",
     "questionId": "tunn-007"
+  },
+  {
+    "wordFr": "désenfumage",
+    "wordEn": "smoke extraction",
+    "definition": "A system that removes smoke from an enclosed space like a tunnel during a fire",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-108"
+  },
+  {
+    "wordFr": "distance de sécurité renforcée",
+    "wordEn": "increased safety distance",
+    "definition": "A greater following distance required in specific conditions like tunnels",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-101"
   },
   {
     "wordFr": "éclairage",
@@ -4907,6 +5502,13 @@
     "questionId": "tunn-051"
   },
   {
+    "wordFr": "lunettes de soleil",
+    "wordEn": "sunglasses",
+    "definition": "Tinted glasses that must be removed when entering a tunnel",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "media-134"
+  },
+  {
     "wordFr": "manoeuvrer",
     "wordEn": "to maneuver",
     "definition": "",
@@ -4942,6 +5544,13 @@
     "questionId": "tunn-042"
   },
   {
+    "wordFr": "panneaux lumineux",
+    "wordEn": "electronic signs",
+    "definition": "Variable message signs that display real-time information",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-101"
+  },
+  {
     "wordFr": "passage a niveau",
     "wordEn": "level crossing",
     "definition": "",
@@ -4961,6 +5570,13 @@
     "definition": "Passage à niveau dont les barrières et signaux fonctionnent automatiquement à l'approche d'un train",
     "topic": "tunnels_passages_niveau",
     "questionId": "tunn-049"
+  },
+  {
+    "wordFr": "passage à niveau non gardé",
+    "wordEn": "unprotected level crossing",
+    "definition": "A level crossing without automatic barriers or warning lights",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-102"
   },
   {
     "wordFr": "passage à niveau sans barrière",
@@ -5054,6 +5670,13 @@
     "questionId": "tunn-049"
   },
   {
+    "wordFr": "signal sonore d'alerte",
+    "wordEn": "alarm signal",
+    "definition": "An audible warning broadcast in a tunnel to alert drivers of an incident",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-106"
+  },
+  {
     "wordFr": "sortie de secours",
     "wordEn": "emergency exit",
     "definition": "A marked exit route for emergencies in a tunnel",
@@ -5068,11 +5691,25 @@
     "questionId": "tunn-020"
   },
   {
+    "wordFr": "trait de balisage",
+    "wordEn": "road marking line",
+    "definition": "Painted lines on the road surface used as distance references in tunnels",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-103"
+  },
+  {
     "wordFr": "tunnel",
     "wordEn": "tunnel",
     "definition": "An enclosed passage for traffic through a hill or under water",
     "topic": "tunnels_passages_niveau",
     "questionId": "tunn-003"
+  },
+  {
+    "wordFr": "tunnel éclairé",
+    "wordEn": "lit tunnel",
+    "definition": "A tunnel with artificial lighting",
+    "topic": "tunnels_passages_niveau",
+    "questionId": "tunn-098"
   },
   {
     "wordFr": "tunnel équipé",

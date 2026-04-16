@@ -76,7 +76,12 @@ const ACHIEVEMENTS = [
     { id: 'media_all', title: 'Eagle Eye', desc: 'Answer all photo scenario questions', icon: '🦅', category: 'practice', trigger: 'media_attempted', value: 10 },
 
     // Speed achievements
-    { id: 'speed_10', title: 'Speed Demon', desc: 'Answer 10 questions correctly in under 3 minutes', icon: '⚡', category: 'practice', trigger: 'speed_session', value: 1 }
+    { id: 'speed_10', title: 'Speed Demon', desc: 'Answer 10 questions correctly in under 3 minutes', icon: '⚡', category: 'practice', trigger: 'speed_session', value: 1 },
+
+    // B18: Additional milestone achievements
+    { id: 'questions_1000', title: 'Thousand Club', desc: 'Answer 1000 questions', icon: '🏅', category: 'practice', trigger: 'attempts', value: 1000 },
+    { id: 'high_score', title: 'Nearly Perfect', desc: 'Score 38+ on a mock exam', icon: '🥇', category: 'exam', trigger: 'exam_high_score', value: 38 },
+    { id: 'study_timer', title: 'Focused Mind', desc: 'Complete a study timer session', icon: '⏱️', category: 'practice', trigger: 'study_timer_complete', value: 1 }
 ];
 
 const CHALLENGE_TYPES = [
