@@ -2,7 +2,7 @@
    Service Worker — Offline Support
    ============================================ */
 
-const CACHE_NAME = 'code-de-la-route-v83';
+const CACHE_NAME = 'code-de-la-route-v84';
 
 // Use relative paths so caching works on GitHub Pages subdirectory (/code-de-la-route/)
 const URLS_TO_CACHE = [
@@ -509,7 +509,18 @@ const URLS_TO_CACHE = [
     './assets/images/signs/falling-rocks.webp',
     './assets/images/signs/traffic-light-sign.webp',
     './assets/images/signs/bicycle-lane-sign.webp',
-    './assets/images/signs/zone-30-sign.webp'
+    './assets/images/signs/zone-30-sign.webp',
+    // S41 B08: Scenario-based driving situation images
+    './assets/images/scenarios/roundabout.webp',
+    './assets/images/scenarios/intersection-red-light.webp',
+    './assets/images/scenarios/highway-merge.webp',
+    './assets/images/scenarios/rain-driving.webp',
+    './assets/images/scenarios/level-crossing.webp',
+    './assets/images/scenarios/night-deer.webp',
+    './assets/images/scenarios/school-zone.webp',
+    './assets/images/scenarios/tunnel-entry.webp',
+    './assets/images/scenarios/mountain-road.webp',
+    './assets/images/scenarios/cyclist-ahead.webp'
 ];
 
 // Install — cache core assets
