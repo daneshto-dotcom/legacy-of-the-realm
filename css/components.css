@@ -2589,6 +2589,66 @@
     }
 }
 
+/* B10: Weakness Alert */
+.weakness-alert {
+    margin: var(--space-sm) 0;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.weakness-alert-content {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.15), rgba(255, 87, 34, 0.1));
+    border: 1px solid rgba(255, 152, 0, 0.3);
+    border-radius: var(--radius-md);
+    flex-wrap: wrap;
+}
+
+.weakness-alert-icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.weakness-alert-text {
+    flex: 1;
+    font-size: 0.85rem;
+    min-width: 150px;
+}
+
+.weakness-alert-text strong {
+    color: #FF9800;
+}
+
+.weakness-ask-btn {
+    background: #FF9800;
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+}
+
+.weakness-ask-btn:hover {
+    background: #F57C00;
+}
+
+[data-theme="dark"] .weakness-alert-content {
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(255, 87, 34, 0.05));
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .weakness-alert-content {
+        background: linear-gradient(135deg, rgba(255, 152, 0, 0.1), rgba(255, 87, 34, 0.05));
+    }
+}
+
 /* Custom Practice Panel */
 .custom-practice {
     padding: 16px;

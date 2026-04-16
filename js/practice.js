@@ -563,6 +563,31 @@ const Practice = {
             };
         }
 
+        // B10: Weakness alert — show proactive tip offer when wrong in a weak topic
+        const weaknessAlert = document.getElementById('weakness-alert');
+        if (weaknessAlert) {
+            if (!correct && typeof Tutor !== 'undefined' && Tutor.isAvailable() && Tutor.isWeakTopic(q.topic)) {
+                const topicAccuracy = Tutor.getTopicAccuracy(q.topic);
+                const topicName = ETG_TOPICS.find(t => t.id === q.topic)?.nameFr || q.topic;
+                weaknessAlert.innerHTML = `
+                    <div class="weakness-alert-content">
+                        <span class="weakness-alert-icon">⚠️</span>
+                        <div class="weakness-alert-text">
+                            <strong>Weak area detected:</strong> ${topicName} (${topicAccuracy !== null ? Math.round(topicAccuracy * 100) + '%' : '—'})
+                        </div>
+                        <button class="weakness-ask-btn" id="weakness-ask-btn">Ask Dani for help 💬</button>
+                    </div>`;
+                weaknessAlert.classList.remove('hidden');
+                document.getElementById('weakness-ask-btn').onclick = () => {
+                    Tutor.askWeaknessTip(q, topicAccuracy || 0);
+                    weaknessAlert.classList.add('hidden');
+                };
+            } else {
+                weaknessAlert.classList.add('hidden');
+                weaknessAlert.innerHTML = '';
+            }
+        }
+
         // Next button — only advance index for non-retry questions
         document.getElementById('next-question-btn').onclick = () => {
             if (!this.isRetry) {

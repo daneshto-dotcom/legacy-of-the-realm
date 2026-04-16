@@ -173,6 +173,26 @@ const Tutor = {
                 context.topicMastery = weak.join(', ');
             }
 
+            // B10: Add Focus Areas data for weakness-aware tutoring
+            if (typeof Storage.getFocusAreas === 'function') {
+                const focus = Storage.getFocusAreas();
+                if (focus.totalAttempts >= 20) {
+                    context.focusAreas = {
+                        weakTopics: focus.weakTopics.map(t => ({
+                            topic: t.topic,
+                            accuracy: Math.round(t.accuracy * 100) + '%',
+                            attempts: t.attempts
+                        })),
+                        mostMissed: focus.mostMissed.map(m => ({
+                            id: m.questionId,
+                            wrongCount: m.wrongs,
+                            totalAttempts: m.attempts
+                        })).slice(0, 5),
+                        avgResponseMs: focus.avgResponseMs
+                    };
+                }
+            }
+
             // Enrich with knowledge graph insights
             if (typeof Knowledge !== 'undefined') {
                 Knowledge.enrichTutorContext(context);
@@ -254,5 +274,32 @@ const Tutor = {
 
         document.getElementById('tutor-input').value = prompt;
         this.sendMessage();
+    },
+
+    // B10: Proactive weakness tip — auto-triggered when wrong in a weak topic
+    askWeaknessTip(question, topicAccuracy) {
+        if (!this.isAvailable()) return;
+        if (!this.isOpen) this.toggle();
+
+        const topicName = ETG_TOPICS.find(t => t.id === question.topic)?.nameEn || question.topic;
+        const prompt = `I just got "${question.questionEn}" wrong. This is one of my weakest topics (${topicName}, ${Math.round(topicAccuracy * 100)}% accuracy). Give me a quick targeted tip to remember this rule better.`;
+
+        document.getElementById('tutor-input').value = prompt;
+        this.sendMessage();
+    },
+
+    // B10: Check if a topic is in the user's weak areas
+    isWeakTopic(topicId) {
+        if (typeof Storage.getWeakestTopics !== 'function') return false;
+        const weakTopics = Storage.getWeakestTopics(5);
+        return weakTopics.some(t => t.topic === topicId);
+    },
+
+    // B10: Get topic accuracy for weakness display
+    getTopicAccuracy(topicId) {
+        if (typeof Storage.getWeakestTopics !== 'function') return null;
+        const all = Storage.getWeakestTopics(10);
+        const match = all.find(t => t.topic === topicId);
+        return match ? match.accuracy : null;
     }
 };
