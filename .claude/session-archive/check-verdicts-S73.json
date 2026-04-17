@@ -1,0 +1,35 @@
+{
+  "session_id": "S73",
+  "schema_version": 1,
+  "verdicts": [
+    {
+      "priority_id": "P1",
+      "grok_verdict": "SKIPPED",
+      "grok_findings": {"critical": 0, "important": 0, "minor": 0, "good": 0},
+      "ralph_verdict": "CLEAN",
+      "timestamp": "2026-04-17T19:15:00Z"
+    },
+    {
+      "priority_id": "P2",
+      "grok_verdict": "CONDITIONAL PASS",
+      "grok_findings": {"critical": 0, "important": 1, "minor": 4, "good": 4},
+      "gemini_verdict": "PASS",
+      "gemini_scorecard": {"completeness": 5, "fidelity": 5, "robustness": 5, "efficiency": 5},
+      "ralph_verdict": "CLEAN",
+      "fixes_applied": ["empty-string activeTitle guard", "bestNew defensive reduce"],
+      "deferred": ["client sigil mapping sync mechanism — deferred, documented as manual"],
+      "timestamp": "2026-04-17T19:45:00Z"
+    },
+    {
+      "priority_id": "P3",
+      "grok_verdict": "CONDITIONAL PASS",
+      "grok_findings": {"critical": 0, "important": 2, "minor": 3, "good": 2},
+      "gemini_verdict": "SKIPPED (Micro tier)",
+      "ralph_verdict": "CLEAN",
+      "fixes_applied": ["audio element 'ended'/'error' null release", "voicePlayToken race guard"],
+      "deferred": ["localStorage quota check (low-risk, rare)", "console.warn logging for missing files"],
+      "scope_note": "MCP only exposes Chirp 3 HD (no Studio) — A/B simplified to voice selection per NPC",
+      "timestamp": "2026-04-17T20:00:00Z"
+    }
+  ]
+}
