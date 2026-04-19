@@ -635,15 +635,16 @@ const QUESTION_BANK = [
             C: { fr: "Vous devez circuler le plus à droite possible sauf pour dépasser", en: "You must drive as far right as possible except to overtake" },
             D: { fr: "La voie du milieu est interdite aux poids lourds", en: "The middle lane is prohibited for heavy vehicles" }
         },
-        correctAnswers: ["A"],
+        correctAnswers: ["C"],
         answerCount: 1,
-        explanationFr: "Sur une route à sens unique à trois voies, vous pouvez utiliser n'importe quelle voie. L'obligation de rouler à droite ne s'applique que sur les routes à double sens. Attention : sur autoroute à 3 voies en double sens, la voie de droite reste obligatoire sauf dépassement.",
-        explanationEn: "On a three-lane one-way road, you may use any lane freely. The obligation to drive on the right only applies on two-way roads. Note: on a 3-lane motorway with two-way traffic, the right lane rule still applies except for overtaking.",
-        trapNote: "Many candidates confuse one-way roads with dual carriageways. On one-way streets, there is no obligation to stay right.",
-        distractorNotes: { B: "There is no formal reservation of the right lane for slow vehicles on one-way roads.", C: "This rule applies on two-way roads and motorways, not one-way streets.", D: "There is no such prohibition on one-way three-lane roads." },
+        explanationFr: "L'article R412-9 du Code de la route impose à tout conducteur de maintenir son véhicule près du bord droit de la chaussée 'en marche normale', y compris sur les routes à sens unique. La voie de gauche est réservée au dépassement ou à la préparation d'un changement de direction. À noter : la sanction est plus sévère sur une route à double sens (4e classe, 3 points, suspension possible) que sur une voie à sens unique (2e classe), mais la règle 'rouler à droite' existe dans les deux cas.",
+        explanationEn: "Article R412-9 of the French Code de la route requires every driver to keep their vehicle near the right edge of the roadway 'in normal driving' — this applies on one-way roads too. The left lane is for overtaking or preparing a direction change. Note: the penalty is harsher on two-way roads (class-4 fine, 3 points, possible licence suspension) than on one-way (class-2 fine), but the keep-right rule exists in both cases.",
+        trapNote: "Piège fréquent : confondre la gravité de la sanction avec l'existence de la règle. Sur sens unique, rester en voie centrale sans raison reste une infraction (2e classe) — pas une liberté. L'erreur vient de ce que 'rouler sur la moitié gauche' (infraction de 4e classe avec suspension) ne vise que les routes à double sens ; mais la règle de base R412-9 'près du bord droit' est universelle.",
+        distractorNotes: { A: "Incorrect — R412-9 impose de rouler près du bord droit sur toute chaussée, sens unique inclus. La formulation permissive ('n'importe quelle voie') confond l'existence de la règle avec la sévérité de la sanction.", B: "Incorrect — aucune réservation formelle de la voie de droite pour les véhicules lents. La règle R412-9 s'applique à tous les véhicules.", D: "Incorrect — R412-25 restreint les véhicules > 3,5 t aux deux voies les plus à droite sur les routes à 3 voies ou plus ; la voie du milieu leur est donc autorisée, pas interdite." },
         vocabulary: [
             { wordFr: "sens unique", wordEn: "one-way", definition: "A road where all traffic flows in one direction only" },
-            { wordFr: "voie", wordEn: "lane", definition: "A marked section of road intended for a single line of vehicles" }
+            { wordFr: "voie", wordEn: "lane", definition: "A marked section of road intended for a single line of vehicles" },
+            { wordFr: "en marche normale", wordEn: "in normal driving", definition: "Key phrase in R412-9 — the keep-right rule applies by default, unless overtaking, turning, or road profile requires otherwise" }
         ]
     },
     {
