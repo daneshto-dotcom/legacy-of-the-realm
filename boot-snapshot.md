@@ -1,17 +1,18 @@
 # Boot Snapshot (auto-generated at handoff)
-Generated: 2026-04-20 | Session: S75
+Generated: 2026-04-20 | Session: S76
 
 ## Next Steps
-1. **Tier 3 #17 CI/CD Pipeline (M)** — GitHub Actions. Unlocks S74-deferred Lighthouse CI baseline + 12-screenshot matrix + axe-core WCAG automation.
-2. **Tier 4 #29 Dialogue lineId protocol (M)** — Server sends stable `lineId` alongside dialogue text; client uses lineId (not text) for TTS lookup. Unblocks localization. S75 Gemini CHECK identified as fundamental i18n blocker.
-3. **Tier 4 #30 Customize UX polish (S)** — Audio loading indicator + contrast veto for color×sigil + requestId tracking + cold-load async fallback. 4 items from S75 Triumvirate CHECK deferrals.
-4. **Tier 4 #20 Advanced Crafting & Masterworks (M)**
-5. **Tier 4 #21 Player Event Calendar + Chronicle Integration (M)**
-6. **Tier 4 #23.5 NPC TTS expansion (DONE S75)** — no action
+1. **S77 P1 — PROJECT AUDIT (MANDATORY FIRST)** — Before resuming any backlog work, run a full project health check: (a) git/submodule integrity (parent main + submodule master clean + pushed, no stragglers post-GitButler-deletion); (b) 549/549 tests still green; (c) `npm audit` clean; (d) BACKLOG.md priorities realistic vs actual codebase state; (e) Triple-AI review of current architecture for hidden tech debt or drift; (f) verify S74-deferred + S75-deferred items (#29, #30, apple-touch-icon, Lighthouse CI, etc.) are properly captured; (g) scan for stale TODOs/FIXMEs in src that might have accumulated. Confirm the project is in a "continue-effectively-and-correctly" state before pulling next priority.
+2. **Tier 3 #17 CI/CD Pipeline (M)** — GitHub Actions. Unlocks S74-deferred Lighthouse CI baseline + 12-screenshot matrix + axe-core WCAG automation.
+3. **Tier 4 #29 Dialogue lineId protocol (M)** — Server sends stable `lineId` alongside dialogue text; client uses lineId (not text) for TTS lookup. Unblocks localization. S75 Gemini CHECK identified as fundamental i18n blocker.
+4. **Tier 4 #30 Customize UX polish (S)** — Audio loading indicator + contrast veto for color×sigil + requestId tracking + cold-load async fallback. 4 items from S75 Triumvirate CHECK deferrals.
+5. **Tier 4 #20 Advanced Crafting & Masterworks (M)**
+6. **Tier 4 #21 Player Event Calendar + Chronicle Integration (M)**
 7. **Daniel action** — update `neshto.com` nameservers at registrar to `lara.ns.cloudflare.com` + `nick.ns.cloudflare.com` (CF zone PENDING)
-8. **VPS deploy on Hetzner** (blocked on Daniel) — unlocks Tier 3 #16 #18
-9. **Expansion** — Veo cutscene prototype (still untapped)
-10. **S74 deferred** — apple-touch-icon-180.png asset
+8. **Daniel action** — **GitButler app removed** (user action S76). Do NOT reopen for this project; if artifacts reappear, the global `/handoff` STEP 1.1 auto-prunes them.
+9. **VPS deploy on Hetzner** (blocked on Daniel) — unlocks Tier 3 #16 #18
+10. **Expansion** — Veo cutscene prototype (still untapped)
+11. **S74 deferred** — apple-touch-icon-180.png asset
 
 ## Blockers
 - VPS deploy (Daniel: Hetzner provision)
@@ -41,7 +42,14 @@ Generated: 2026-04-20 | Session: S75
 
 **Non-batch inherited:** Higher-res Chateau photos, fog-strip.webp wiring, fallback sprites, sprite atlas, sigil map client sync, **S74 deferred** (apple-touch-icon PNG, Lighthouse CI, screenshot matrix, axe-core, Veo prototype, T14 runtime sim), **S75 deferred** (i18n localization, Customize UX polish, full-file-diff CHECK protocol, convergence scan PDR tuning).
 
-## Recent Reflexion (last 2 sessions)
+## Recent Reflexion (last 3 sessions)
+
+### 2026-04-20 Session 76 (GitButler Dropped + Stale Worktree Cleanup, 1/1 shipped in ~15K)
+- P1 #infra: Consolidated scattered branches to main, pruned GitButler artifacts + 7 orphan worktree dirs. Pre-cleanup: 9 local branches / 3 remote / 8 worktree dirs. Post-cleanup: 2 local (main + active wt) / 1 remote (origin/main) / 1 worktree dir (active). 0 ff-merges needed (all branches already merged, ahead=0).
+- P1 #policy: Codified solo workflow in submodule CLAUDE.md § GIT WORKFLOW: "one session per project, commit to main, GitButler dropped, worktrees disabled by default". User confirmed they will fully uninstall the GitButler app to stop artifact regeneration.
+- P1 #global-verify: ~/.claude/skills/handoff/SKILL.md STEP 1.1 CONSOLIDATE-AND-PRUNE confirmed present with sub-steps A-G (scope guards, consolidate, prune branches, prune worktrees, GitButler notice, verification, error handling). Auto-runs every future session.
+- S76 #method: Pure git/fs cleanup, zero API spend. Scope guards (path validation before each rm, git -C "$PROJECT_ROOT" on every command) prevented any cross-repo leak.
+- S76 #followup: Next session MUST start with full project audit (git/tests/npm-audit/backlog-sanity/tech-debt-scan) before pulling any new backlog item — per user request.
 
 ### 2026-04-20 Session 75 (Customization Completion + NPC Voice Depth, 2/2 shipped in ~85K)
 - P1 #customization: Closed S74 #22.5. Server: CUSTOMIZE/CUSTOMIZE_RESULT + handler (whitelist enum + int 0..9 + 5s rate limit + pg UPDATE + PLAYER_LIST broadcast). Gateway direct-message dispatch (not GameAction) — PDR said registry.ts but correct mechanism is gateway.ts (like CREATE_CHARACTER). Scope clarification, not expansion.
