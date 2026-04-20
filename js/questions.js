@@ -2156,20 +2156,23 @@ const QUESTION_BANK = [
         questionFr: "Quelles sont vos obligations en cas de panne sur autoroute ? (2 réponses)",
         questionEn: "What are your obligations for a motorway breakdown? (2 answers)",
         options: {
-            A: { fr: "Allumer les feux de détresse et placer le triangle à 200 mètres", en: "Hazard lights on, triangle 200 meters behind" },
+            A: { fr: "Allumer les feux de détresse et enfiler le gilet de haute visibilité avant de sortir", en: "Switch on hazard lights and put on the high-visibility vest before exiting" },
             B: { fr: "Faire descendre tous les passagers derrière la glissière de sécurité", en: "Get all passengers behind the safety barrier" },
             C: { fr: "Rester dans le véhicule avec la ceinture attachée", en: "Stay in vehicle with seatbelt on" },
             D: { fr: "Placer le triangle à 30 mètres derrière le véhicule", en: "Place triangle 30 meters behind" }
         },
         correctAnswers: ["A", "B"],
         answerCount: 2,
-        explanationFr: "Sur autoroute: feux de détresse + triangle à 200 mètres. Tous les occupants sortent par la droite et se mettent derrière la glissière.",
-        explanationEn: "On motorway: hazard lights + triangle at 200m. All exit right and get behind the barrier.",
-        trapNote: "200m on motorway, 30m on normal roads. NEVER stay in the vehicle.",
-        distractorNotes: { C: "Staying in vehicle is extremely dangerous.", D: "30m is for normal roads — motorways need 200m." },
+        explanationFr: "Sur autoroute : feux de détresse, gilet haute visibilité, évacuation par la droite derrière la glissière, puis appel via la borne d'appel d'urgence (disponibles tous les 1 à 2 km selon le concessionnaire) ou au 112. Ne placez PAS le triangle sur l'autoroute — l'article R416-19 dispense de l'obligation lorsque la mise en place constitue un danger manifeste. La règle des 30 m ne s'applique qu'hors autoroute.",
+        explanationEn: "On motorway: hazard lights, high-vis vest, evacuate right behind the safety barrier, then call for help via the orange emergency roadside phone (spaced 1-2km apart depending on the operator) or 112. DO NOT deploy the triangle on the motorway — article R416-19 exempts you when placement constitutes a clear danger. The 30m rule only applies off-motorway.",
+        trapNote: "R416-19 exception: NEVER deploy the triangle on autoroute — the danger-exemption applies. 30m is the standard OFF motorway. The old \"200m on autoroute\" figure was never legally codified (pre-2015 driving-school shorthand) — it is NOT current guidance.",
+        distractorNotes: { C: "Staying in the vehicle is extremely dangerous — immediate evacuation behind the barrier is required.", D: "The 30m rule only applies OFF motorway. On the autoroute, R416-19's danger-exemption means you should NOT place the triangle at all — wind from passing vehicles knocks it over and walking in the traffic corridor is lethal." },
         vocabulary: [
             { wordFr: "glissière de sécurité", wordEn: "safety barrier", definition: "Metal guardrail beside the road" },
-            { wordFr: "triangle de présignalisation", wordEn: "warning triangle", definition: "Reflective triangle to warn of stopped vehicle" }
+            { wordFr: "triangle de présignalisation", wordEn: "warning triangle", definition: "Reflective triangle to warn of stopped vehicle" },
+            { wordFr: "gilet de haute visibilité", wordEn: "high-visibility vest", definition: "Reflective yellow vest legally required when exiting a stopped vehicle on the roadway" },
+            { wordFr: "borne d'appel d'urgence", wordEn: "emergency roadside phone", definition: "Orange phone every 2km on French motorways, connects directly to the road operator" },
+            { wordFr: "bande d'arrêt d'urgence", wordEn: "emergency shoulder", definition: "Emergency stopping lane on the right-hand side of a motorway — use only for genuine emergencies" }
         ]
     },
     {
