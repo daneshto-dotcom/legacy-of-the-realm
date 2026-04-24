@@ -5180,28 +5180,24 @@
     "difficulty": 2,
     "questionFr": "Quelles règles s'appliquent aux voies réservées aux bus en ville ?",
     "questionEn": "What rules apply to bus lanes in the city?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Les taxis et vélos peuvent les emprunter si indiqué",
-        "textEn": "Taxis and bicycles may use them if indicated"
+    "options": {
+      "A": {
+        "fr": "Les taxis et vélos peuvent les emprunter si indiqué",
+        "en": "Taxis and bicycles may use them if indicated"
       },
-      {
-        "letter": "B",
-        "text": "Tous les véhicules peuvent les utiliser aux heures creuses",
-        "textEn": "All vehicles may use them during off-peak hours"
+      "B": {
+        "fr": "Tous les véhicules peuvent les utiliser aux heures creuses",
+        "en": "All vehicles may use them during off-peak hours"
       },
-      {
-        "letter": "C",
-        "text": "Les voitures particulières ne peuvent pas y circuler",
-        "textEn": "Private cars may not drive in them"
+      "C": {
+        "fr": "Les voitures particulières ne peuvent pas y circuler",
+        "en": "Private cars may not drive in them"
       },
-      {
-        "letter": "D",
-        "text": "Elles n'existent que sur les boulevards principaux",
-        "textEn": "They only exist on main boulevards"
+      "D": {
+        "fr": "Elles n'existent que sur les boulevards principaux",
+        "en": "They only exist on main boulevards"
       }
-    ],
+    },
     "correctAnswers": [
       "A",
       "C"
@@ -31241,39 +31237,35 @@
     "difficulty": 2,
     "questionFr": "Dans quels cas le dépassement par la droite est-il autorisé ?",
     "questionEn": "In which cases is overtaking on the right permitted?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Quand le véhicule devant tourne à gauche",
-        "textEn": "When the vehicle ahead is turning left"
+    "options": {
+      "A": {
+        "fr": "Quand le véhicule devant tourne à gauche",
+        "en": "When the vehicle ahead is turning left"
       },
-      {
-        "letter": "B",
-        "text": "Sur autoroute quand on roule plus vite que la file de gauche",
-        "textEn": "On motorways when driving faster than the left lane"
+      "B": {
+        "fr": "Sur autoroute quand on roule plus vite que la file de gauche",
+        "en": "On motorways when driving faster than the left lane"
       },
-      {
-        "letter": "C",
-        "text": "Quand la circulation s'effectue en files parallèles",
-        "textEn": "When traffic is moving in parallel lanes"
+      "C": {
+        "fr": "Quand la circulation s'effectue en files parallèles",
+        "en": "When traffic is moving in parallel lanes"
       },
-      {
-        "letter": "D",
-        "text": "Quand on est pressé et que la voie de gauche est occupée",
-        "textEn": "When in a hurry and the left lane is occupied"
+      "D": {
+        "fr": "Quand on est pressé et que la voie de gauche est occupée",
+        "en": "When in a hurry and the left lane is occupied"
       }
-    ],
+    },
     "correctAnswers": [
-      "A",
-      "C"
+      "A"
     ],
-    "answerCount": 2,
-    "explanationFr": "Le dépassement par la droite est autorisé quand le véhicule devant tourne à gauche, ou en circulation en files parallèles (embouteillage).",
-    "explanationEn": "Overtaking on the right is allowed when the vehicle ahead turns left, or in parallel lane traffic (traffic jams).",
-    "trapNote": "Being in a hurry is never a valid reason. On motorways, you must use the left lane to overtake.",
+    "answerCount": 1,
+    "explanationFr": "Le dépassement par la droite est autorisé quand le véhicule devant tourne à gauche ou signale un virage à gauche (R414-6 par. II 1°). Le dépassement en files parallèles (C) est une technicalité de R414-6 par. III qui exige une circulation ininterrompue sur toutes les voies — l'ETG enseigne la règle stricte : interdit sauf cas de virage à gauche ou tramway.",
+    "explanationEn": "Right-overtake is authorized when the vehicle ahead turns left or signals a left turn (R414-6 par. II 1°). Parallel-file traffic (C) is a par. III technicality requiring uninterrupted queue traffic on all lanes — ETG teaches the strict rule: forbidden except for left-turn signal or tram on roadway.",
+    "trapNote": "Aligned with P2 treatment of croi-149 + croi-170: R414-6 par. III files-parallèles is a CONDITIONAL legal tolerance, not a broad authorization.",
     "distractorNotes": {
       "B": "Even on motorways, overtaking must be done on the left.",
-      "D": "Impatience is never a legal justification for right-side overtaking."
+      "D": "Impatience is never a legal justification for right-side overtaking.",
+      "C": "R414-6 par. III files-parallèles clause requires uninterrupted-queue density on ALL lanes, not general 'parallel files' traffic. ETG teaches the strict par. I reading."
     }
   },
   {
@@ -46038,12 +46030,12 @@
       }
     },
     "correctAnswers": [
-      "A"
+      "B"
     ],
     "answerCount": 1,
-    "explanationFr": "En France : vert = autoroutes, bleu = nationales, blanc = locales, jaune = temporaire.",
-    "explanationEn": "In France: green = motorways, blue = national roads, white = local, yellow = temporary.",
-    "trapNote": "French color coding is opposite to some countries.",
+    "explanationFr": "Code couleur officiel des panneaux de direction (R411-24) : Bleu = autoroute ; Vert = route nationale ou grand itinéraire ; Blanc = direction locale. L'option A inverse bleu/vert — c'est un piège classique.",
+    "explanationEn": "Official R411-24 color code: Blue = motorway; Green = national road or major route; White = local direction. Option A swaps blue/green — classic exam trap.",
+    "trapNote": "CRITICAL SWAP TRAP: some materials or tourists/expats confuse the color mapping. The correct rule is always Bleu=autoroute, Vert=nationale. Cross-reference sign-022, sign-034, sign-183, s42-009, rout-174, media-083, sign-016 — all unanimous.",
     "vocabulary": [
       {
         "wordFr": "panneau de direction",
@@ -46053,7 +46045,12 @@
         "wordFr": "route nationale",
         "wordEn": "national road"
       }
-    ]
+    ],
+    "distractorNotes": {
+      "A": "SWAPPED: Vert is NOT autoroute; Bleu is NOT nationale. The correct mapping is the REVERSE. R411-24.",
+      "C": "Colors have regulatory meaning per R411-24, not purely decorative.",
+      "D": "Vert/Bleu encode the road category (autoroute vs nationale), not sortie/direction function."
+    }
   },
   {
     "id": "media-031",
@@ -48032,28 +48029,24 @@
     "difficulty": 2,
     "questionFr": "Que signifient les panneaux de forme ronde à fond bleu ?",
     "questionEn": "What do round signs with a blue background mean?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Une obligation (vitesse minimale, direction obligatoire)",
-        "textEn": "An obligation (minimum speed, mandatory direction)"
+    "options": {
+      "A": {
+        "fr": "Une obligation (vitesse minimale, direction obligatoire)",
+        "en": "An obligation (minimum speed, mandatory direction)"
       },
-      {
-        "letter": "B",
-        "text": "Une interdiction spécifique",
-        "textEn": "A specific prohibition"
+      "B": {
+        "fr": "Une interdiction spécifique",
+        "en": "A specific prohibition"
       },
-      {
-        "letter": "C",
-        "text": "Ils prescrivent un comportement à adopter",
-        "textEn": "They prescribe a behavior to follow"
+      "C": {
+        "fr": "Ils prescrivent un comportement à adopter",
+        "en": "They prescribe a behavior to follow"
       },
-      {
-        "letter": "D",
-        "text": "Ils signalent un danger à proximité",
-        "textEn": "They signal a nearby danger"
+      "D": {
+        "fr": "Ils signalent un danger à proximité",
+        "en": "They signal a nearby danger"
       }
-    ],
+    },
     "correctAnswers": [
       "A",
       "C"
@@ -48073,28 +48066,24 @@
     "difficulty": 3,
     "questionFr": "Que signifie un panneau triangulaire rouge avec un point d'exclamation ?",
     "questionEn": "What does a triangular red sign with an exclamation mark mean?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Danger non précisé — redoubler de vigilance",
-        "textEn": "Unspecified danger — exercise extra caution"
+    "options": {
+      "A": {
+        "fr": "Danger non précisé — redoubler de vigilance",
+        "en": "Unspecified danger — exercise extra caution"
       },
-      {
-        "letter": "B",
-        "text": "Zone de travaux obligatoire",
-        "textEn": "Mandatory construction zone"
+      "B": {
+        "fr": "Zone de travaux obligatoire",
+        "en": "Mandatory construction zone"
       },
-      {
-        "letter": "C",
-        "text": "Un pannonceau en dessous peut préciser la nature du danger",
-        "textEn": "A supplementary plate below may specify the nature of the danger"
+      "C": {
+        "fr": "Un pannonceau en dessous peut préciser la nature du danger",
+        "en": "A supplementary plate below may specify the nature of the danger"
       },
-      {
-        "letter": "D",
-        "text": "Il indique un poste de police à proximité",
-        "textEn": "It indicates a police station nearby"
+      "D": {
+        "fr": "Il indique un poste de police à proximité",
+        "en": "It indicates a police station nearby"
       }
-    ],
+    },
     "correctAnswers": [
       "A",
       "C"
@@ -48114,28 +48103,24 @@
     "difficulty": 2,
     "questionFr": "Quelles informations les panneaux directionnels verts donnent-ils ?",
     "questionEn": "What information do green directional signs provide?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Les directions vers les autoroutes",
-        "textEn": "Directions to motorways"
+    "options": {
+      "A": {
+        "fr": "Les directions vers les autoroutes",
+        "en": "Directions to motorways"
       },
-      {
-        "letter": "B",
-        "text": "Les directions vers les hôpitaux",
-        "textEn": "Directions to hospitals"
+      "B": {
+        "fr": "Les directions vers les hôpitaux",
+        "en": "Directions to hospitals"
       },
-      {
-        "letter": "C",
-        "text": "Les numéros des autoroutes et distances",
-        "textEn": "Motorway numbers and distances"
+      "C": {
+        "fr": "Les numéros des autoroutes et distances",
+        "en": "Motorway numbers and distances"
       },
-      {
-        "letter": "D",
-        "text": "Les itinéraires de déviation",
-        "textEn": "Detour routes"
+      "D": {
+        "fr": "Les itinéraires de déviation",
+        "en": "Detour routes"
       }
-    ],
+    },
     "correctAnswers": [
       "A",
       "C"
@@ -48155,28 +48140,24 @@
     "difficulty": 2,
     "questionFr": "Que signifie une ligne blanche continue au sol ?",
     "questionEn": "What does a continuous white line on the road mean?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Interdiction de la franchir ou de la chevaucher",
-        "textEn": "Prohibited to cross or straddle"
+    "options": {
+      "A": {
+        "fr": "Interdiction de la franchir ou de la chevaucher",
+        "en": "Prohibited to cross or straddle"
       },
-      {
-        "letter": "B",
-        "text": "On peut la franchir pour dépasser un cycliste",
-        "textEn": "You can cross it to overtake a cyclist"
+      "B": {
+        "fr": "On peut la franchir pour dépasser un cycliste",
+        "en": "You can cross it to overtake a cyclist"
       },
-      {
-        "letter": "C",
-        "text": "Elle sépare les sens de circulation de façon permanente",
-        "textEn": "It permanently separates traffic directions"
+      "C": {
+        "fr": "Elle sépare les sens de circulation de façon permanente",
+        "en": "It permanently separates traffic directions"
       },
-      {
-        "letter": "D",
-        "text": "Elle peut être franchie si la route est dégagée",
-        "textEn": "It can be crossed if the road is clear"
+      "D": {
+        "fr": "Elle peut être franchie si la route est dégagée",
+        "en": "It can be crossed if the road is clear"
       }
-    ],
+    },
     "correctAnswers": [
       "A",
       "C"
@@ -48196,28 +48177,24 @@
     "difficulty": 3,
     "questionFr": "Que signifient les flèches directionnelles peintes au sol ?",
     "questionEn": "What do directional arrows painted on the road mean?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Elles indiquent la direction obligatoire de la voie",
-        "textEn": "They indicate the mandatory direction of the lane"
+    "options": {
+      "A": {
+        "fr": "Elles indiquent la direction obligatoire de la voie",
+        "en": "They indicate the mandatory direction of the lane"
       },
-      {
-        "letter": "B",
-        "text": "Elles sont seulement indicatives, pas obligatoires",
-        "textEn": "They are only indicative, not mandatory"
+      "B": {
+        "fr": "Elles sont seulement indicatives, pas obligatoires",
+        "en": "They are only indicative, not mandatory"
       },
-      {
-        "letter": "C",
-        "text": "Vous devez vous placer dans la voie correspondant à votre direction avant l'intersection",
-        "textEn": "You must position yourself in the lane matching your direction before the intersection"
+      "C": {
+        "fr": "Vous devez vous placer dans la voie correspondant à votre direction avant l'intersection",
+        "en": "You must position yourself in the lane matching your direction before the intersection"
       },
-      {
-        "letter": "D",
-        "text": "Elles ne s'appliquent qu'aux poids lourds",
-        "textEn": "They only apply to heavy trucks"
+      "D": {
+        "fr": "Elles ne s'appliquent qu'aux poids lourds",
+        "en": "They only apply to heavy trucks"
       }
-    ],
+    },
     "correctAnswers": [
       "A",
       "C"
@@ -48237,28 +48214,24 @@
     "difficulty": 2,
     "questionFr": "Que signifie un feu clignotant orange seul ?",
     "questionEn": "What does a single flashing orange light mean?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Attention, danger — ralentir et être prudent",
-        "textEn": "Caution, danger — slow down and be careful"
+    "options": {
+      "A": {
+        "fr": "Attention, danger — ralentir et être prudent",
+        "en": "Caution, danger — slow down and be careful"
       },
-      {
-        "letter": "B",
-        "text": "Le feu est en panne, vous pouvez passer",
-        "textEn": "The light is broken, you can pass"
+      "B": {
+        "fr": "Le feu est en panne, vous pouvez passer",
+        "en": "The light is broken, you can pass"
       },
-      {
-        "letter": "C",
-        "text": "La priorité à droite s'applique",
-        "textEn": "Priority to the right applies"
+      "C": {
+        "fr": "La priorité à droite s'applique",
+        "en": "Priority to the right applies"
       },
-      {
-        "letter": "D",
-        "text": "Vous devez vous arrêter obligatoirement",
-        "textEn": "You must stop mandatorily"
+      "D": {
+        "fr": "Vous devez vous arrêter obligatoirement",
+        "en": "You must stop mandatorily"
       }
-    ],
+    },
     "correctAnswers": [
       "A",
       "C"
@@ -48278,28 +48251,24 @@
     "difficulty": 2,
     "questionFr": "Que signifient les zigzags jaunes peints au bord de la chaussée ?",
     "questionEn": "What do yellow zigzag lines painted at the road edge mean?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Interdiction de stationner",
-        "textEn": "No parking"
+    "options": {
+      "A": {
+        "fr": "Interdiction de stationner",
+        "en": "No parking"
       },
-      {
-        "letter": "B",
-        "text": "Zone de livraison uniquement",
-        "textEn": "Delivery zone only"
+      "B": {
+        "fr": "Zone de livraison uniquement",
+        "en": "Delivery zone only"
       },
-      {
-        "letter": "C",
-        "text": "Arrêt de bus — interdiction de s'arrêter et de stationner",
-        "textEn": "Bus stop — no stopping or parking"
+      "C": {
+        "fr": "Arrêt de bus — interdiction de s'arrêter et de stationner",
+        "en": "Bus stop — no stopping or parking"
       },
-      {
-        "letter": "D",
-        "text": "Place réservée aux personnes handicapées",
-        "textEn": "Space reserved for disabled persons"
+      "D": {
+        "fr": "Place réservée aux personnes handicapées",
+        "en": "Space reserved for disabled persons"
       }
-    ],
+    },
     "correctAnswers": [
       "A",
       "C"
@@ -48319,28 +48288,24 @@
     "difficulty": 3,
     "questionFr": "Que signifie un panneau carré bleu avec un 'P' blanc et un pictogramme de voiture ?",
     "questionEn": "What does a blue square sign with a white 'P' and a car pictogram mean?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Parc relais (parking + transports en commun)",
-        "textEn": "Park and ride (parking + public transport)"
+    "options": {
+      "A": {
+        "fr": "Parc relais (parking + transports en commun)",
+        "en": "Park and ride (parking + public transport)"
       },
-      {
-        "letter": "B",
-        "text": "Parking privé réservé aux résidents",
-        "textEn": "Private parking for residents only"
+      "B": {
+        "fr": "Parking privé réservé aux résidents",
+        "en": "Private parking for residents only"
       },
-      {
-        "letter": "C",
-        "text": "Il incite à laisser sa voiture pour prendre les transports en commun",
-        "textEn": "It encourages leaving your car to take public transport"
+      "C": {
+        "fr": "Il incite à laisser sa voiture pour prendre les transports en commun",
+        "en": "It encourages leaving your car to take public transport"
       },
-      {
-        "letter": "D",
-        "text": "Parking gratuit illimité",
-        "textEn": "Unlimited free parking"
+      "D": {
+        "fr": "Parking gratuit illimité",
+        "en": "Unlimited free parking"
       }
-    ],
+    },
     "correctAnswers": [
       "A",
       "C"
@@ -48360,28 +48325,24 @@
     "difficulty": 2,
     "questionFr": "Que signifient les panneaux de fin d'interdiction (rond, blanc, barré de noir) ?",
     "questionEn": "What do end-of-prohibition signs (round, white, black diagonal stripe) mean?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Toutes les interdictions précédemment signalées prennent fin",
-        "textEn": "All previously signaled prohibitions end"
+    "options": {
+      "A": {
+        "fr": "Toutes les interdictions précédemment signalées prennent fin",
+        "en": "All previously signaled prohibitions end"
       },
-      {
-        "letter": "B",
-        "text": "La vitesse est limitée à 50 km/h",
-        "textEn": "Speed is limited to 50 km/h"
+      "B": {
+        "fr": "La vitesse est limitée à 50 km/h",
+        "en": "Speed is limited to 50 km/h"
       },
-      {
-        "letter": "C",
-        "text": "Les règles générales du code de la route s'appliquent à nouveau",
-        "textEn": "General traffic rules apply again"
+      "C": {
+        "fr": "Les règles générales du code de la route s'appliquent à nouveau",
+        "en": "General traffic rules apply again"
       },
-      {
-        "letter": "D",
-        "text": "On entre dans une zone sans aucune règle de circulation",
-        "textEn": "You enter a zone with no traffic rules"
+      "D": {
+        "fr": "On entre dans une zone sans aucune règle de circulation",
+        "en": "You enter a zone with no traffic rules"
       }
-    ],
+    },
     "correctAnswers": [
       "A",
       "C"
@@ -48401,28 +48362,24 @@
     "difficulty": 3,
     "questionFr": "Que signifie un panneau rectangulaire bleu avec une flèche blanche vers le bas et un vélo ?",
     "questionEn": "What does a rectangular blue sign with a white downward arrow and a bicycle mean?",
-    "options": [
-      {
-        "letter": "A",
-        "text": "Voie réservée aux cyclistes en contresens",
-        "textEn": "Lane reserved for cyclists going against traffic"
+    "options": {
+      "A": {
+        "fr": "Voie réservée aux cyclistes en contresens",
+        "en": "Lane reserved for cyclists going against traffic"
       },
-      {
-        "letter": "B",
-        "text": "Fin de piste cyclable",
-        "textEn": "End of cycle path"
+      "B": {
+        "fr": "Fin de piste cyclable",
+        "en": "End of cycle path"
       },
-      {
-        "letter": "C",
-        "text": "Les automobilistes doivent surveiller les cyclistes venant en face",
-        "textEn": "Motorists must watch for cyclists coming from the opposite direction"
+      "C": {
+        "fr": "Les automobilistes doivent surveiller les cyclistes venant en face",
+        "en": "Motorists must watch for cyclists coming from the opposite direction"
       },
-      {
-        "letter": "D",
-        "text": "Les cyclistes doivent descendre de vélo",
-        "textEn": "Cyclists must dismount"
+      "D": {
+        "fr": "Les cyclistes doivent descendre de vélo",
+        "en": "Cyclists must dismount"
       }
-    ],
+    },
     "correctAnswers": [
       "A",
       "C"

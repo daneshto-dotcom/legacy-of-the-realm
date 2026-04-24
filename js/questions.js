@@ -2483,13 +2483,13 @@ const QUESTION_BANK = [
         difficulty: 2,
         questionFr: "Quelles règles s'appliquent aux voies réservées aux bus en ville ?",
         questionEn: "What rules apply to bus lanes in the city?",
-        options: [
-            { letter: "A", text: "Les taxis et vélos peuvent les emprunter si indiqué", textEn: "Taxis and bicycles may use them if indicated" },
-            { letter: "B", text: "Tous les véhicules peuvent les utiliser aux heures creuses", textEn: "All vehicles may use them during off-peak hours" },
-            { letter: "C", text: "Les voitures particulières ne peuvent pas y circuler", textEn: "Private cars may not drive in them" },
-            { letter: "D", text: "Elles n'existent que sur les boulevards principaux", textEn: "They only exist on main boulevards" }
-        ],
-        correctAnswers: ["A", "C"],
+        options: {
+            A: { fr: "Les taxis et vélos peuvent les emprunter si indiqué", en: "Taxis and bicycles may use them if indicated" },
+            B: { fr: "Tous les véhicules peuvent les utiliser aux heures creuses", en: "All vehicles may use them during off-peak hours" },
+            C: { fr: "Les voitures particulières ne peuvent pas y circuler", en: "Private cars may not drive in them" },
+            D: { fr: "Elles n'existent que sur les boulevards principaux", en: "They only exist on main boulevards" }
+        },
+        correctAnswers: ["A","C"],
         answerCount: 2,
         explanationFr: "Les voies de bus sont réservées aux transports en commun. Les taxis et vélos peuvent les emprunter si un panneau l'autorise. Les voitures particulières y sont interdites.",
         explanationEn: "Bus lanes are reserved for public transport. Taxis and bicycles may use them if signage permits. Private cars are prohibited.",
@@ -17886,18 +17886,18 @@ const QUESTION_BANK = [
         difficulty: 2,
         questionFr: "Dans quels cas le dépassement par la droite est-il autorisé ?",
         questionEn: "In which cases is overtaking on the right permitted?",
-        options: [
-            { letter: "A", text: "Quand le véhicule devant tourne à gauche", textEn: "When the vehicle ahead is turning left" },
-            { letter: "B", text: "Sur autoroute quand on roule plus vite que la file de gauche", textEn: "On motorways when driving faster than the left lane" },
-            { letter: "C", text: "Quand la circulation s'effectue en files parallèles", textEn: "When traffic is moving in parallel lanes" },
-            { letter: "D", text: "Quand on est pressé et que la voie de gauche est occupée", textEn: "When in a hurry and the left lane is occupied" }
-        ],
-        correctAnswers: ["A", "C"],
-        answerCount: 2,
-        explanationFr: "Le dépassement par la droite est autorisé quand le véhicule devant tourne à gauche, ou en circulation en files parallèles (embouteillage).",
-        explanationEn: "Overtaking on the right is allowed when the vehicle ahead turns left, or in parallel lane traffic (traffic jams).",
-        trapNote: "Being in a hurry is never a valid reason. On motorways, you must use the left lane to overtake.",
-        distractorNotes: { B: "Even on motorways, overtaking must be done on the left.", D: "Impatience is never a legal justification for right-side overtaking." }
+        options: {
+            A: { fr: "Quand le véhicule devant tourne à gauche", en: "When the vehicle ahead is turning left" },
+            B: { fr: "Sur autoroute quand on roule plus vite que la file de gauche", en: "On motorways when driving faster than the left lane" },
+            C: { fr: "Quand la circulation s'effectue en files parallèles", en: "When traffic is moving in parallel lanes" },
+            D: { fr: "Quand on est pressé et que la voie de gauche est occupée", en: "When in a hurry and the left lane is occupied" }
+        },
+        correctAnswers: ["A"],
+        answerCount: 1,
+        explanationFr: "Le dépassement par la droite est autorisé quand le véhicule devant tourne à gauche ou signale un virage à gauche (R414-6 par. II 1°). Le dépassement en files parallèles (C) est une technicalité de R414-6 par. III qui exige une circulation ininterrompue sur toutes les voies — l'ETG enseigne la règle stricte : interdit sauf cas de virage à gauche ou tramway.",
+        explanationEn: "Right-overtake is authorized when the vehicle ahead turns left or signals a left turn (R414-6 par. II 1°). Parallel-file traffic (C) is a par. III technicality requiring uninterrupted queue traffic on all lanes — ETG teaches the strict rule: forbidden except for left-turn signal or tram on roadway.",
+        trapNote: "Aligned with P2 treatment of croi-149 + croi-170: R414-6 par. III files-parallèles is a CONDITIONAL legal tolerance, not a broad authorization.",
+        distractorNotes: { B: "Even on motorways, overtaking must be done on the left.", D: "Impatience is never a legal justification for right-side overtaking.", C: "R414-6 par. III files-parallèles clause requires uninterrupted-queue density on ALL lanes, not general 'parallel files' traffic. ETG teaches the strict par. I reading." }
     },
     {
         id: "croi-139",
@@ -26538,24 +26538,20 @@ const QUESTION_BANK = [
         id: "media-028",
         topic: "signalisation",
         difficulty: 2,
-        media: { type: "image", url: "data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22400%22%20height%3D%22300%22%3E%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22%2387CEEB%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22200%22%20width%3D%22400%22%20height%3D%22100%22%20fill%3D%22%23555%22%2F%3E%3Crect%20x%3D%220%22%20y%3D%22180%22%20width%3D%22400%22%20height%3D%2220%22%20fill%3D%22%234a8c3f%22%2F%3E%3Crect%20x%3D%22320%22%20y%3D%2250%22%20width%3D%225%22%20height%3D%22135%22%20fill%3D%22%23777%22%2F%3E%3Crect%20x%3D%22295%22%20y%3D%2230%22%20width%3D%2255%22%20height%3D%2230%22%20rx%3D%223%22%20fill%3D%22%232ecc71%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22322%22%20y%3D%2250%22%20text-anchor%3D%22middle%22%20font-size%3D%2211%22%20fill%3D%22white%22%20font-weight%3D%22bold%22%3E130%3C%2Ftext%3E%3Crect%20x%3D%22295%22%20y%3D%2265%22%20width%3D%2255%22%20height%3D%2230%22%20rx%3D%223%22%20fill%3D%22%233498db%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%2F%3E%3Ctext%20x%3D%22322%22%20y%3D%2285%22%20text-anchor%3D%22middle%22%20font-size%3D%2210%22%20fill%3D%22white%22%20font-weight%3D%22bold%22%3EN7%3C%2Ftext%3E%3Cg%20transform%3D%22translate(250%2C240)%22%3E%3Crect%20x%3D%22-12%22%20y%3D%22-20%22%20width%3D%2224%22%20height%3D%2240%22%20rx%3D%225%22%20fill%3D%22%233498db%22%2F%3E%3Crect%20x%3D%22-10%22%20y%3D%22-12%22%20width%3D%2220%22%20height%3D%2214%22%20rx%3D%222%22%20fill%3D%22rgba(200%2C230%2C255%2C0.6)%22%2F%3E%3C%2Fg%3E%3Ctext%20x%3D%22200%22%20y%3D%22290%22%20text-anchor%3D%22middle%22%20font-size%3D%2212%22%20fill%3D%22%23333%22%3EPanneaux%20de%20direction%20%3A%20vert%20%3D%20autoroute%2C%20bleu%20%3D%20nationale%3C%2Ftext%3E%3C%2Fsvg%3E", alt: "Direction signs: green (motorway) and blue (national road N7)." },
         questionFr: "Que signifient les couleurs des panneaux de direction ?",
-        questionEn: "What do the colors of direction signs mean?",
+        questionEn: "What do the colours of directional signs mean?",
         options: {
             A: { fr: "Vert = autoroute, Bleu = route nationale", en: "Green = motorway, Blue = national road" },
-            B: { fr: "Vert = route nationale, Bleu = autoroute", en: "Green = national, Blue = motorway" },
-            C: { fr: "Les couleurs sont decoratives", en: "Decorative" },
+            B: { fr: "Vert = route nationale, Bleu = autoroute", en: "Green = national road, Blue = motorway" },
+            C: { fr: "Les couleurs sont decoratives", en: "The colors are decorative" },
             D: { fr: "Vert = sortie, Bleu = direction", en: "Green = exit, Blue = direction" }
         },
-        correctAnswers: ["A"],
+        correctAnswers: ["B"],
         answerCount: 1,
-        explanationFr: "En France : vert = autoroutes, bleu = nationales, blanc = locales, jaune = temporaire.",
-        explanationEn: "In France: green = motorways, blue = national roads, white = local, yellow = temporary.",
-        trapNote: "French color coding is opposite to some countries.",
-        vocabulary: [
-            { wordFr: "panneau de direction", wordEn: "direction sign" },
-            { wordFr: "route nationale", wordEn: "national road" }
-        ]
+        explanationFr: "Code couleur officiel des panneaux de direction (R411-24) : Bleu = autoroute ; Vert = route nationale ou grand itinéraire ; Blanc = direction locale. L'option A inverse bleu/vert — c'est un piège classique.",
+        explanationEn: "Official R411-24 color code: Blue = motorway; Green = national road or major route; White = local direction. Option A swaps blue/green — classic exam trap.",
+        trapNote: "CRITICAL SWAP TRAP: some materials or tourists/expats confuse the color mapping. The correct rule is always Bleu=autoroute, Vert=nationale. Cross-reference sign-022, sign-034, sign-183, s42-009, rout-174, media-083, sign-016 — all unanimous.",
+        distractorNotes: { A: "SWAPPED: Vert is NOT autoroute; Bleu is NOT nationale. The correct mapping is the REVERSE. R411-24.", C: "Colors have regulatory meaning per R411-24, not purely decorative.", D: "Vert/Bleu encode the road category (autoroute vs nationale), not sortie/direction function." }
     },
     {
         id: "media-031",
@@ -27526,13 +27522,13 @@ const QUESTION_BANK = [
         difficulty: 2,
         questionFr: "Que signifient les panneaux de forme ronde à fond bleu ?",
         questionEn: "What do round signs with a blue background mean?",
-        options: [
-            { letter: "A", text: "Une obligation (vitesse minimale, direction obligatoire)", textEn: "An obligation (minimum speed, mandatory direction)" },
-            { letter: "B", text: "Une interdiction spécifique", textEn: "A specific prohibition" },
-            { letter: "C", text: "Ils prescrivent un comportement à adopter", textEn: "They prescribe a behavior to follow" },
-            { letter: "D", text: "Ils signalent un danger à proximité", textEn: "They signal a nearby danger" }
-        ],
-        correctAnswers: ["A", "C"],
+        options: {
+            A: { fr: "Une obligation (vitesse minimale, direction obligatoire)", en: "An obligation (minimum speed, mandatory direction)" },
+            B: { fr: "Une interdiction spécifique", en: "A specific prohibition" },
+            C: { fr: "Ils prescrivent un comportement à adopter", en: "They prescribe a behavior to follow" },
+            D: { fr: "Ils signalent un danger à proximité", en: "They signal a nearby danger" }
+        },
+        correctAnswers: ["A","C"],
         answerCount: 2,
         explanationFr: "Les panneaux ronds bleus sont des panneaux d'obligation : vitesse minimale, direction obligatoire, voie réservée, etc.",
         explanationEn: "Round blue signs are obligation signs: minimum speed, mandatory direction, reserved lane, etc.",
@@ -27545,13 +27541,13 @@ const QUESTION_BANK = [
         difficulty: 3,
         questionFr: "Que signifie un panneau triangulaire rouge avec un point d'exclamation ?",
         questionEn: "What does a triangular red sign with an exclamation mark mean?",
-        options: [
-            { letter: "A", text: "Danger non précisé — redoubler de vigilance", textEn: "Unspecified danger — exercise extra caution" },
-            { letter: "B", text: "Zone de travaux obligatoire", textEn: "Mandatory construction zone" },
-            { letter: "C", text: "Un pannonceau en dessous peut préciser la nature du danger", textEn: "A supplementary plate below may specify the nature of the danger" },
-            { letter: "D", text: "Il indique un poste de police à proximité", textEn: "It indicates a police station nearby" }
-        ],
-        correctAnswers: ["A", "C"],
+        options: {
+            A: { fr: "Danger non précisé — redoubler de vigilance", en: "Unspecified danger — exercise extra caution" },
+            B: { fr: "Zone de travaux obligatoire", en: "Mandatory construction zone" },
+            C: { fr: "Un pannonceau en dessous peut préciser la nature du danger", en: "A supplementary plate below may specify the nature of the danger" },
+            D: { fr: "Il indique un poste de police à proximité", en: "It indicates a police station nearby" }
+        },
+        correctAnswers: ["A","C"],
         answerCount: 2,
         explanationFr: "Le panneau danger avec point d'exclamation signale un danger non couvert par les autres panneaux. Un pannonceau peut préciser le danger (vent latéral, route dégradée, etc.).",
         explanationEn: "The danger sign with an exclamation mark signals a danger not covered by other signs. A supplementary plate may specify it (crosswind, poor road, etc.).",
@@ -27564,13 +27560,13 @@ const QUESTION_BANK = [
         difficulty: 2,
         questionFr: "Quelles informations les panneaux directionnels verts donnent-ils ?",
         questionEn: "What information do green directional signs provide?",
-        options: [
-            { letter: "A", text: "Les directions vers les autoroutes", textEn: "Directions to motorways" },
-            { letter: "B", text: "Les directions vers les hôpitaux", textEn: "Directions to hospitals" },
-            { letter: "C", text: "Les numéros des autoroutes et distances", textEn: "Motorway numbers and distances" },
-            { letter: "D", text: "Les itinéraires de déviation", textEn: "Detour routes" }
-        ],
-        correctAnswers: ["A", "C"],
+        options: {
+            A: { fr: "Les directions vers les autoroutes", en: "Directions to motorways" },
+            B: { fr: "Les directions vers les hôpitaux", en: "Directions to hospitals" },
+            C: { fr: "Les numéros des autoroutes et distances", en: "Motorway numbers and distances" },
+            D: { fr: "Les itinéraires de déviation", en: "Detour routes" }
+        },
+        correctAnswers: ["A","C"],
         answerCount: 2,
         explanationFr: "Les panneaux verts indiquent les directions autoroutières avec les numéros d'autoroute (A1, A6, etc.) et les distances jusqu'aux destinations.",
         explanationEn: "Green signs indicate motorway directions with motorway numbers (A1, A6, etc.) and distances to destinations.",
@@ -27583,13 +27579,13 @@ const QUESTION_BANK = [
         difficulty: 2,
         questionFr: "Que signifie une ligne blanche continue au sol ?",
         questionEn: "What does a continuous white line on the road mean?",
-        options: [
-            { letter: "A", text: "Interdiction de la franchir ou de la chevaucher", textEn: "Prohibited to cross or straddle" },
-            { letter: "B", text: "On peut la franchir pour dépasser un cycliste", textEn: "You can cross it to overtake a cyclist" },
-            { letter: "C", text: "Elle sépare les sens de circulation de façon permanente", textEn: "It permanently separates traffic directions" },
-            { letter: "D", text: "Elle peut être franchie si la route est dégagée", textEn: "It can be crossed if the road is clear" }
-        ],
-        correctAnswers: ["A", "C"],
+        options: {
+            A: { fr: "Interdiction de la franchir ou de la chevaucher", en: "Prohibited to cross or straddle" },
+            B: { fr: "On peut la franchir pour dépasser un cycliste", en: "You can cross it to overtake a cyclist" },
+            C: { fr: "Elle sépare les sens de circulation de façon permanente", en: "It permanently separates traffic directions" },
+            D: { fr: "Elle peut être franchie si la route est dégagée", en: "It can be crossed if the road is clear" }
+        },
+        correctAnswers: ["A","C"],
         answerCount: 2,
         explanationFr: "La ligne blanche continue est infranchissable. Elle sépare les sens de circulation et son franchissement est une infraction (3 points, 135 €).",
         explanationEn: "A continuous white line must not be crossed. It separates traffic directions and crossing it is an offense (3 points, €135).",
@@ -27602,13 +27598,13 @@ const QUESTION_BANK = [
         difficulty: 3,
         questionFr: "Que signifient les flèches directionnelles peintes au sol ?",
         questionEn: "What do directional arrows painted on the road mean?",
-        options: [
-            { letter: "A", text: "Elles indiquent la direction obligatoire de la voie", textEn: "They indicate the mandatory direction of the lane" },
-            { letter: "B", text: "Elles sont seulement indicatives, pas obligatoires", textEn: "They are only indicative, not mandatory" },
-            { letter: "C", text: "Vous devez vous placer dans la voie correspondant à votre direction avant l'intersection", textEn: "You must position yourself in the lane matching your direction before the intersection" },
-            { letter: "D", text: "Elles ne s'appliquent qu'aux poids lourds", textEn: "They only apply to heavy trucks" }
-        ],
-        correctAnswers: ["A", "C"],
+        options: {
+            A: { fr: "Elles indiquent la direction obligatoire de la voie", en: "They indicate the mandatory direction of the lane" },
+            B: { fr: "Elles sont seulement indicatives, pas obligatoires", en: "They are only indicative, not mandatory" },
+            C: { fr: "Vous devez vous placer dans la voie correspondant à votre direction avant l'intersection", en: "You must position yourself in the lane matching your direction before the intersection" },
+            D: { fr: "Elles ne s'appliquent qu'aux poids lourds", en: "They only apply to heavy trucks" }
+        },
+        correctAnswers: ["A","C"],
         answerCount: 2,
         explanationFr: "Les flèches au sol sont obligatoires. Elles imposent la direction de la voie et vous devez vous présélectionner dans la bonne voie avant l'intersection.",
         explanationEn: "Road arrows are mandatory. They impose the lane direction and you must pre-select the correct lane before the intersection.",
@@ -27621,13 +27617,13 @@ const QUESTION_BANK = [
         difficulty: 2,
         questionFr: "Que signifie un feu clignotant orange seul ?",
         questionEn: "What does a single flashing orange light mean?",
-        options: [
-            { letter: "A", text: "Attention, danger — ralentir et être prudent", textEn: "Caution, danger — slow down and be careful" },
-            { letter: "B", text: "Le feu est en panne, vous pouvez passer", textEn: "The light is broken, you can pass" },
-            { letter: "C", text: "La priorité à droite s'applique", textEn: "Priority to the right applies" },
-            { letter: "D", text: "Vous devez vous arrêter obligatoirement", textEn: "You must stop mandatorily" }
-        ],
-        correctAnswers: ["A", "C"],
+        options: {
+            A: { fr: "Attention, danger — ralentir et être prudent", en: "Caution, danger — slow down and be careful" },
+            B: { fr: "Le feu est en panne, vous pouvez passer", en: "The light is broken, you can pass" },
+            C: { fr: "La priorité à droite s'applique", en: "Priority to the right applies" },
+            D: { fr: "Vous devez vous arrêter obligatoirement", en: "You must stop mandatorily" }
+        },
+        correctAnswers: ["A","C"],
         answerCount: 2,
         explanationFr: "Un feu orange clignotant signifie attention et danger. En l'absence d'autre signalisation, c'est la priorité à droite qui s'applique.",
         explanationEn: "A flashing orange light means caution and danger. Without other signage, priority to the right applies.",
@@ -27640,13 +27636,13 @@ const QUESTION_BANK = [
         difficulty: 2,
         questionFr: "Que signifient les zigzags jaunes peints au bord de la chaussée ?",
         questionEn: "What do yellow zigzag lines painted at the road edge mean?",
-        options: [
-            { letter: "A", text: "Interdiction de stationner", textEn: "No parking" },
-            { letter: "B", text: "Zone de livraison uniquement", textEn: "Delivery zone only" },
-            { letter: "C", text: "Arrêt de bus — interdiction de s'arrêter et de stationner", textEn: "Bus stop — no stopping or parking" },
-            { letter: "D", text: "Place réservée aux personnes handicapées", textEn: "Space reserved for disabled persons" }
-        ],
-        correctAnswers: ["A", "C"],
+        options: {
+            A: { fr: "Interdiction de stationner", en: "No parking" },
+            B: { fr: "Zone de livraison uniquement", en: "Delivery zone only" },
+            C: { fr: "Arrêt de bus — interdiction de s'arrêter et de stationner", en: "Bus stop — no stopping or parking" },
+            D: { fr: "Place réservée aux personnes handicapées", en: "Space reserved for disabled persons" }
+        },
+        correctAnswers: ["A","C"],
         answerCount: 2,
         explanationFr: "Les zigzags jaunes marquent un arrêt de bus où il est interdit de stationner et de s'arrêter (sauf pour les bus).",
         explanationEn: "Yellow zigzag lines mark a bus stop where stopping and parking are prohibited (except for buses).",
@@ -27659,13 +27655,13 @@ const QUESTION_BANK = [
         difficulty: 3,
         questionFr: "Que signifie un panneau carré bleu avec un 'P' blanc et un pictogramme de voiture ?",
         questionEn: "What does a blue square sign with a white 'P' and a car pictogram mean?",
-        options: [
-            { letter: "A", text: "Parc relais (parking + transports en commun)", textEn: "Park and ride (parking + public transport)" },
-            { letter: "B", text: "Parking privé réservé aux résidents", textEn: "Private parking for residents only" },
-            { letter: "C", text: "Il incite à laisser sa voiture pour prendre les transports en commun", textEn: "It encourages leaving your car to take public transport" },
-            { letter: "D", text: "Parking gratuit illimité", textEn: "Unlimited free parking" }
-        ],
-        correctAnswers: ["A", "C"],
+        options: {
+            A: { fr: "Parc relais (parking + transports en commun)", en: "Park and ride (parking + public transport)" },
+            B: { fr: "Parking privé réservé aux résidents", en: "Private parking for residents only" },
+            C: { fr: "Il incite à laisser sa voiture pour prendre les transports en commun", en: "It encourages leaving your car to take public transport" },
+            D: { fr: "Parking gratuit illimité", en: "Unlimited free parking" }
+        },
+        correctAnswers: ["A","C"],
         answerCount: 2,
         explanationFr: "Le panneau P+R (parc relais) indique un parking à proximité d'une gare ou d'un arrêt de transport en commun pour encourager l'intermodalité.",
         explanationEn: "The P+R (park and ride) sign indicates parking near a station or public transport stop to encourage intermodal travel.",
@@ -27678,13 +27674,13 @@ const QUESTION_BANK = [
         difficulty: 2,
         questionFr: "Que signifient les panneaux de fin d'interdiction (rond, blanc, barré de noir) ?",
         questionEn: "What do end-of-prohibition signs (round, white, black diagonal stripe) mean?",
-        options: [
-            { letter: "A", text: "Toutes les interdictions précédemment signalées prennent fin", textEn: "All previously signaled prohibitions end" },
-            { letter: "B", text: "La vitesse est limitée à 50 km/h", textEn: "Speed is limited to 50 km/h" },
-            { letter: "C", text: "Les règles générales du code de la route s'appliquent à nouveau", textEn: "General traffic rules apply again" },
-            { letter: "D", text: "On entre dans une zone sans aucune règle de circulation", textEn: "You enter a zone with no traffic rules" }
-        ],
-        correctAnswers: ["A", "C"],
+        options: {
+            A: { fr: "Toutes les interdictions précédemment signalées prennent fin", en: "All previously signaled prohibitions end" },
+            B: { fr: "La vitesse est limitée à 50 km/h", en: "Speed is limited to 50 km/h" },
+            C: { fr: "Les règles générales du code de la route s'appliquent à nouveau", en: "General traffic rules apply again" },
+            D: { fr: "On entre dans une zone sans aucune règle de circulation", en: "You enter a zone with no traffic rules" }
+        },
+        correctAnswers: ["A","C"],
         answerCount: 2,
         explanationFr: "Le panneau de fin de toutes interdictions (fond blanc barré de noir) annule toutes les restrictions locales. Les règles générales reprennent (vitesse par défaut de la route, etc.).",
         explanationEn: "The end-of-all-restrictions sign (white background with black stripe) cancels all local restrictions. General rules resume (default speed for the road type, etc.).",
@@ -27697,13 +27693,13 @@ const QUESTION_BANK = [
         difficulty: 3,
         questionFr: "Que signifie un panneau rectangulaire bleu avec une flèche blanche vers le bas et un vélo ?",
         questionEn: "What does a rectangular blue sign with a white downward arrow and a bicycle mean?",
-        options: [
-            { letter: "A", text: "Voie réservée aux cyclistes en contresens", textEn: "Lane reserved for cyclists going against traffic" },
-            { letter: "B", text: "Fin de piste cyclable", textEn: "End of cycle path" },
-            { letter: "C", text: "Les automobilistes doivent surveiller les cyclistes venant en face", textEn: "Motorists must watch for cyclists coming from the opposite direction" },
-            { letter: "D", text: "Les cyclistes doivent descendre de vélo", textEn: "Cyclists must dismount" }
-        ],
-        correctAnswers: ["A", "C"],
+        options: {
+            A: { fr: "Voie réservée aux cyclistes en contresens", en: "Lane reserved for cyclists going against traffic" },
+            B: { fr: "Fin de piste cyclable", en: "End of cycle path" },
+            C: { fr: "Les automobilistes doivent surveiller les cyclistes venant en face", en: "Motorists must watch for cyclists coming from the opposite direction" },
+            D: { fr: "Les cyclistes doivent descendre de vélo", en: "Cyclists must dismount" }
+        },
+        correctAnswers: ["A","C"],
         answerCount: 2,
         explanationFr: "Ce panneau indique un double-sens cyclable : les cyclistes circulent en contresens sur cette rue à sens unique. Les automobilistes doivent être vigilants.",
         explanationEn: "This sign indicates a contraflow cycle lane: cyclists travel against traffic on this one-way street. Motorists must be vigilant.",
