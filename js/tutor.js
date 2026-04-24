@@ -1,303 +1,212 @@
 /* ============================================
-   Tutor Chat Integration
-   Connects to Cloudflare Worker backend
+   Study Notes — client-side rule-based tutor
+   ============================================
+   Replaces S46 CF Worker `Tutor` module. Rendering is composed from
+   each question's own `explanationFr/En`, `trapNote`, and
+   `distractorNotes` fields (see data/questions.json).
+
+   Council D3 (S46): deprecate CF Worker, fold into client-side.
+   Council CD-S47-1 (S47): rule-based content stitcher, rebranded
+   "Study Notes" (not "AI Tutor") to avoid illusion-of-LLM UX while
+   preserving pedagogical value from the existing structured fields.
+
+   Public API preserved for practice.js/app.js call sites:
+     Tutor.init()
+     Tutor.isAvailable()          — always true (offline, no gate)
+     Tutor.toggle()
+     Tutor.askAboutQuestion(q, isCorrect)
+     Tutor.askWeaknessTip(q, topicAccuracy)
+     Tutor.isWeakTopic(topicId)
+     Tutor.getTopicAccuracy(topicId)
+
+   No network calls. No conversation history. No API keys. No worker.
    ============================================ */
 
 const Tutor = {
-    DEFAULT_ENDPOINT: 'https://code-de-la-route-tutor.saras-fdtta.workers.dev',
+    // Legacy fields kept so app.js Settings handler does not crash when
+    // it writes `Tutor.ENDPOINT = …`. Value is intentionally ignored.
+    DEFAULT_ENDPOINT: '',
     ENDPOINT: null,
-    conversationHistory: [],
     isOpen: false,
-    isLoading: false,
+    _currentQ: null,
+    _weaknessBanner: null,
 
     init() {
-        // Load saved endpoint from settings or use default
-        const settings = Storage.getSettings();
-        this.ENDPOINT = settings.tutorEndpoint || this.DEFAULT_ENDPOINT;
-
-        // Generate or retrieve persistent session ID for conversation memory
-        this.sessionId = localStorage.getItem('tutorSessionId');
-        if (!this.sessionId) {
-            this.sessionId = crypto.randomUUID();
-            localStorage.setItem('tutorSessionId', this.sessionId);
-        }
-
-        // Create chat UI (hidden by default)
-        this.createChatUI();
-
-        // Wire FAB button
+        this.createUI();
         document.getElementById('tutor-fab')?.addEventListener('click', () => this.toggle());
     },
 
-    isAvailable() {
-        return this.ENDPOINT !== null && this.ENDPOINT !== '';
-    },
+    // Always available — no network, no auth.
+    isAvailable() { return true; },
 
-    createChatUI() {
-        // Create FAB (floating action button)
+    createUI() {
+        // Floating action button
         const fab = document.createElement('button');
         fab.id = 'tutor-fab';
         fab.className = 'tutor-fab';
-        fab.innerHTML = '💬';
-        fab.title = 'Ask Dani (AI Tutor)';
+        fab.innerHTML = '📖';
+        fab.title = 'Open Study Notes';
         document.body.appendChild(fab);
 
-        // Create chat panel
+        // Panel
         const panel = document.createElement('div');
         panel.id = 'tutor-panel';
         panel.className = 'tutor-panel hidden';
         panel.innerHTML = `
             <div class="tutor-header">
-                <div class="tutor-avatar">🎓</div>
+                <div class="tutor-avatar">📖</div>
                 <div class="tutor-title">
-                    <strong>Dani</strong>
-                    <span>Your Driving Tutor</span>
+                    <strong>Study Notes</strong>
+                    <span>Offline guidance from this question</span>
                 </div>
                 <button class="tutor-close" id="tutor-close">&times;</button>
             </div>
             <div class="tutor-messages" id="tutor-messages">
-                <div class="tutor-msg tutor-msg-bot">
-                    <p>Salut! I'm Dani, your driving theory tutor. Ask me anything about the Code de la route!</p>
+                <div class="tutor-msg tutor-msg-bot tutor-msg-placeholder">
+                    <p>Open any practice question and tap <strong>💬 Ask Dani</strong> to see detailed study notes here: rule citation, answer-by-answer reasoning, and exam-trap warnings — all offline.</p>
                 </div>
-            </div>
-            <div class="tutor-input-area">
-                <input type="text" id="tutor-input" placeholder="Ask about a question or topic..." autocomplete="off">
-                <button class="tutor-send" id="tutor-send">→</button>
-            </div>
-            <div class="tutor-offline-msg hidden" id="tutor-offline-msg">
-                Tutor not configured yet. Set the endpoint in Settings.
             </div>
         `;
         document.body.appendChild(panel);
 
-        // Wire events
         document.getElementById('tutor-close').addEventListener('click', () => this.toggle());
-        document.getElementById('tutor-send').addEventListener('click', () => this.sendMessage());
-        document.getElementById('tutor-input').addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') this.sendMessage();
-        });
     },
 
     toggle() {
         this.isOpen = !this.isOpen;
         const panel = document.getElementById('tutor-panel');
         const fab = document.getElementById('tutor-fab');
-
+        if (!panel || !fab) return;
         if (this.isOpen) {
             panel.classList.remove('hidden');
             fab.classList.add('active');
-
-            // Show offline message if not configured
-            const offlineMsg = document.getElementById('tutor-offline-msg');
-            if (!this.isAvailable()) {
-                offlineMsg.classList.remove('hidden');
-            } else {
-                offlineMsg.classList.add('hidden');
-            }
-
-            // Focus input
-            setTimeout(() => document.getElementById('tutor-input').focus(), 200);
+            if (this._currentQ) this._renderQuestion(this._currentQ, this._weaknessBanner);
         } else {
             panel.classList.add('hidden');
             fab.classList.remove('active');
         }
     },
 
-    async sendMessage() {
-        const input = document.getElementById('tutor-input');
-        const text = input.value.trim();
-        if (!text || this.isLoading) return;
-
-        input.value = '';
-
-        // Add user message to UI
-        this.addMessage(text, 'user');
-
-        // Add to conversation history
-        this.conversationHistory.push({ role: 'user', content: text });
-
-        if (!this.isAvailable()) {
-            this.addMessage("I'm not connected yet. Ask Daniel to set up the tutor endpoint in Settings!", 'bot');
-            return;
-        }
-
-        // Show loading
-        this.isLoading = true;
-        const loadingId = this.addMessage('...', 'bot', true);
-
-        try {
-            // Build context from current practice state
-            const context = {};
-            if (Practice.currentQuestion) {
-                context.question = Practice.currentQuestion;
-                context.userAnswer = Practice.selectedAnswers.join(', ');
-                context.isCorrect = Practice.answered ?
-                    Practice.selectedAnswers.sort().join(',') === [...Practice.currentQuestion.correctAnswers].sort().join(',') : null;
-            }
-
-            // Add session stats (streak, accuracy, total)
-            const stats = Storage.getOverallStats();
-            context.sessionStats = {
-                total: stats.total,
-                accuracy: stats.accuracy,
-                streak: stats.streak
-            };
-
-            // Add last exam result
-            const exams = Storage.getExamResults();
-            if (exams.length > 0) {
-                const last = exams[exams.length - 1];
-                const weakTopics = [];
-                if (last.results) {
-                    const topicScores = {};
-                    last.results.forEach(r => {
-                        if (!topicScores[r.topic]) topicScores[r.topic] = { correct: 0, total: 0 };
-                        topicScores[r.topic].total++;
-                        if (r.correct) topicScores[r.topic].correct++;
-                    });
-                    Object.entries(topicScores).forEach(([t, s]) => {
-                        if (s.total > 0 && (s.correct / s.total) < 0.5) weakTopics.push(t);
-                    });
-                }
-                context.lastExam = {
-                    score: `${last.correctCount}/${last.totalQuestions}`,
-                    passed: last.passed,
-                    weakTopics: weakTopics.join(', ') || 'none'
-                };
-            }
-
-            // Add weak topics
-            const mastery = Storage.getTopicMasteryArray();
-            const weak = mastery.filter(t => t.accuracy < 60 && t.totalAttempts > 0).map(t => t.nameEn);
-            if (weak.length > 0) {
-                context.topicMastery = weak.join(', ');
-            }
-
-            // B10: Add Focus Areas data for weakness-aware tutoring
-            if (typeof Storage.getFocusAreas === 'function') {
-                const focus = Storage.getFocusAreas();
-                if (focus.totalAttempts >= 20) {
-                    context.focusAreas = {
-                        weakTopics: focus.weakTopics.map(t => ({
-                            topic: t.topic,
-                            accuracy: Math.round(t.accuracy * 100) + '%',
-                            attempts: t.attempts
-                        })),
-                        mostMissed: focus.mostMissed.map(m => ({
-                            id: m.questionId,
-                            wrongCount: m.wrongs,
-                            totalAttempts: m.attempts
-                        })).slice(0, 5),
-                        avgResponseMs: focus.avgResponseMs
-                    };
-                }
-            }
-
-            // Enrich with knowledge graph insights
-            if (typeof Knowledge !== 'undefined') {
-                Knowledge.enrichTutorContext(context);
-            }
-
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 30000);
-
-            const response = await fetch(this.ENDPOINT, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    messages: this.conversationHistory,
-                    context,
-                    sessionId: this.sessionId,
-                }),
-                signal: controller.signal,
-            });
-
-            clearTimeout(timeoutId);
-            const data = await response.json();
-
-            // Remove loading message
-            this.removeMessage(loadingId);
-
-            if (response.ok && data.message) {
-                this.addMessage(data.message, 'bot');
-                this.conversationHistory.push({ role: 'assistant', content: data.message });
-            } else {
-                this.addMessage(data.error || 'Something went wrong. Try again!', 'bot');
-            }
-
-        } catch (err) {
-            this.removeMessage(loadingId);
-            if (err.name === 'AbortError') {
-                this.addMessage('Request timed out. The tutor took too long to respond. Try again!', 'bot');
-            } else {
-                this.addMessage('Connection error. Check your internet and try again.', 'bot');
-            }
-        }
-
-        this.isLoading = false;
-
-        // Keep history manageable
-        if (this.conversationHistory.length > 20) {
-            this.conversationHistory = this.conversationHistory.slice(-10);
-        }
+    askAboutQuestion(question, isCorrect) {
+        this._currentQ = question;
+        this._weaknessBanner = null;
+        if (!this.isOpen) this.toggle();
+        else this._renderQuestion(question, null);
     },
 
-    addMessage(text, sender, isLoading = false) {
-        const container = document.getElementById('tutor-messages');
-        const msg = document.createElement('div');
-        const id = `msg-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`;
-        msg.id = id;
-        msg.className = `tutor-msg tutor-msg-${sender}${isLoading ? ' loading' : ''}`;
-        msg.innerHTML = `<p>${this.escapeHtml(text)}</p>`;
-        container.appendChild(msg);
-        container.scrollTop = container.scrollHeight;
-        return id;
+    askWeaknessTip(question, topicAccuracy) {
+        const topicName = typeof ETG_TOPICS !== 'undefined'
+            ? (ETG_TOPICS.find(t => t.id === question.topic)?.nameEn || question.topic)
+            : question.topic;
+        const accPct = Math.round((topicAccuracy || 0) * 100);
+        const banner = `⚠️ Weak topic: <strong>${this._escape(topicName)}</strong> (${accPct}% accuracy). Study these notes carefully — the rule here is one you've been missing.`;
+        this._currentQ = question;
+        this._weaknessBanner = banner;
+        if (!this.isOpen) this.toggle();
+        else this._renderQuestion(question, banner);
     },
 
-    removeMessage(id) {
-        document.getElementById(id)?.remove();
+    _renderQuestion(q, weaknessBannerHtml) {
+        const msgs = document.getElementById('tutor-messages');
+        if (!msgs || !q) return;
+        msgs.innerHTML = '';
+
+        if (weaknessBannerHtml) {
+            const warn = document.createElement('div');
+            warn.className = 'tutor-msg tutor-msg-bot tutor-msg-weakness';
+            warn.innerHTML = `<p>${weaknessBannerHtml}</p>`;
+            msgs.appendChild(warn);
+        }
+
+        const qMsg = document.createElement('div');
+        qMsg.className = 'tutor-msg tutor-msg-bot';
+        qMsg.innerHTML = `
+            <p><strong>${this._escape(q.questionFr || '')}</strong></p>
+            ${q.questionEn ? `<p class="tutor-muted">${this._escape(q.questionEn)}</p>` : ''}
+        `;
+        msgs.appendChild(qMsg);
+
+        const correctSet = new Set(q.correctAnswers || []);
+        const distractorNotes = q.distractorNotes || {};
+        const options = q.options || {};
+        const answerRows = [];
+        for (const [letter, opt] of Object.entries(options)) {
+            if (!opt || typeof opt !== 'object') continue;
+            const isCorrect = correctSet.has(letter);
+            const icon = isCorrect ? '✅' : '❌';
+            const row = `
+                <li class="tutor-ans-row ${isCorrect ? 'tutor-ans-correct' : 'tutor-ans-wrong'}">
+                    <span class="tutor-ans-letter">${icon} ${this._escape(letter)}</span>
+                    <span class="tutor-ans-text">${this._escape(opt.fr || '')}</span>
+                    ${!isCorrect && distractorNotes[letter]
+                        ? `<div class="tutor-ans-note">${this._escape(distractorNotes[letter])}</div>`
+                        : ''}
+                </li>`;
+            answerRows.push(row);
+        }
+        if (answerRows.length) {
+            const ansMsg = document.createElement('div');
+            ansMsg.className = 'tutor-msg tutor-msg-bot';
+            ansMsg.innerHTML = `
+                <p><strong>Answer breakdown</strong></p>
+                <ul class="tutor-ans-list">${answerRows.join('')}</ul>
+            `;
+            msgs.appendChild(ansMsg);
+        }
+
+        if (q.trapNote) {
+            const trapMsg = document.createElement('div');
+            trapMsg.className = 'tutor-msg tutor-msg-bot tutor-msg-trap';
+            trapMsg.innerHTML = `
+                <p><strong>⚠️ Exam trap</strong></p>
+                <p>${this._escape(q.trapNote)}</p>
+            `;
+            msgs.appendChild(trapMsg);
+        }
+
+        if (q.explanationFr || q.explanationEn) {
+            const expMsg = document.createElement('div');
+            expMsg.className = 'tutor-msg tutor-msg-bot';
+            expMsg.innerHTML = `
+                <p><strong>📌 Règle</strong></p>
+                ${q.explanationFr ? `<p>${this._escape(q.explanationFr)}</p>` : ''}
+                ${q.explanationEn ? `<p class="tutor-muted">${this._escape(q.explanationEn)}</p>` : ''}
+            `;
+            msgs.appendChild(expMsg);
+        }
+
+        if (Array.isArray(q.vocabulary) && q.vocabulary.length) {
+            const vocabRows = q.vocabulary.map(v => `
+                <li><strong>${this._escape(v.wordFr || '')}</strong>
+                    ${v.wordEn ? ` <span class="tutor-muted">${this._escape(v.wordEn)}</span>` : ''}
+                    ${v.definition ? `<div class="tutor-muted">${this._escape(v.definition)}</div>` : ''}
+                </li>`).join('');
+            const vocMsg = document.createElement('div');
+            vocMsg.className = 'tutor-msg tutor-msg-bot';
+            vocMsg.innerHTML = `
+                <p><strong>📚 Vocabulaire</strong></p>
+                <ul class="tutor-vocab-list">${vocabRows}</ul>
+            `;
+            msgs.appendChild(vocMsg);
+        }
+
+        msgs.scrollTop = 0;
     },
 
-    escapeHtml(text) {
+    _escape(text) {
         const div = document.createElement('div');
-        div.textContent = text;
+        div.textContent = text == null ? '' : String(text);
         return div.innerHTML;
     },
 
-    // Quick-ask from explanation panel
-    askAboutQuestion(question, isCorrect) {
-        if (!this.isOpen) this.toggle();
-
-        const prompt = isCorrect
-            ? `Can you explain more about why ${question.correctAnswers.join(', ')} is correct for: "${question.questionEn}"?`
-            : `I got this wrong: "${question.questionEn}" — Can you help me understand?`;
-
-        document.getElementById('tutor-input').value = prompt;
-        this.sendMessage();
-    },
-
-    // B10: Proactive weakness tip — auto-triggered when wrong in a weak topic
-    askWeaknessTip(question, topicAccuracy) {
-        if (!this.isAvailable()) return;
-        if (!this.isOpen) this.toggle();
-
-        const topicName = ETG_TOPICS.find(t => t.id === question.topic)?.nameEn || question.topic;
-        const prompt = `I just got "${question.questionEn}" wrong. This is one of my weakest topics (${topicName}, ${Math.round(topicAccuracy * 100)}% accuracy). Give me a quick targeted tip to remember this rule better.`;
-
-        document.getElementById('tutor-input').value = prompt;
-        this.sendMessage();
-    },
-
-    // B10: Check if a topic is in the user's weak areas
     isWeakTopic(topicId) {
-        if (typeof Storage.getWeakestTopics !== 'function') return false;
-        const weakTopics = Storage.getWeakestTopics(5);
-        return weakTopics.some(t => t.topic === topicId);
+        if (typeof Storage === 'undefined' || typeof Storage.getWeakestTopics !== 'function') return false;
+        const weak = Storage.getWeakestTopics(5);
+        return weak.some(t => t.topic === topicId);
     },
 
-    // B10: Get topic accuracy for weakness display
     getTopicAccuracy(topicId) {
-        if (typeof Storage.getWeakestTopics !== 'function') return null;
+        if (typeof Storage === 'undefined' || typeof Storage.getWeakestTopics !== 'function') return null;
         const all = Storage.getWeakestTopics(10);
         const match = all.find(t => t.topic === topicId);
         return match ? match.accuracy : null;
