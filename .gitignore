@@ -17,6 +17,10 @@ build/
 .claude/session-approvals.json
 .claude/settings.local.json
 .claude/session-state.json
+# S77: systemic hook runtime state + backups (pattern vs single-file)
+.claude/*.tmp
+.claude/*.bak
+.claude/pdr-user-responded
 
 # OS
 .DS_Store
