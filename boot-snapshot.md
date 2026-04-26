@@ -1,5 +1,5 @@
 # Boot Snapshot (auto-generated at handoff)
-Generated: 2026-04-25 | Session: S78
+Generated: 2026-04-26 | Session: S79-pre
 
 ## Next Steps
 1. **S79 P1 — Remove v1 text-hash fallback** in `lookupVoiceFile` (dialogue-panel.js — "sunset S79" comment marks the spot). Micro, trivial.
@@ -29,6 +29,11 @@ Generated: 2026-04-25 | Session: S78
 
 ## Recent Reflexion (last 2 sessions)
 
+### S79-pre (2026-04-26)
+- SESSION #gotcha: save/festival.json on OneDrive path — OneDrive restores null-byte cloud version after reboot. Any save file on OneDrive is vulnerable to this race.
+- SESSION #fix: festival.ts load() null-byte strip + try-catch self-heal. Server starts cleanly with corrupt festival.json. 97badaf.
+- SESSION #meta: 3 reboots, 1 fix, 585/585 tests, game UP, login verified.
+
 ### S78 (2026-04-25)
 - P1 #worked: 4 S75 Customize deferrals — voice indicator (10s timeout), contrast veto table, requestId monotonic counter, manifest single-retry with navigator.onLine guard
 - P1 #council: Grok won single-retry; Gemini won build-time contrast table; 8 decisions resolved via domain-weighted voting
@@ -38,12 +43,6 @@ Generated: 2026-04-25 | Session: S78
 - SESSION #hooks: preview_start grabs parent launch.json when CWD = parent. Use bash background for game-server from parent CWD.
 - SESSION #meta: 5/5 complete, ~95K/150K GREEN, 585/585 tests, login verified
 
-### S72 (2026-04-17)
-- P1 #worked: Migration 007 — character.xp + quest.npc_giver_id columns, UPSERT update. 281/281 tests.
-- P2 #scope: Handoff said "EB Garamond" — actually Cormorant Garamond. Read actual HTML before planning.
-- P3 #gotcha: git checkout origin/dn-branch-1 silently skips U+00B7 middle-dot filenames on Windows. Recover with git add.
-- SESSION #meta: Trust git commits, not ephemeral state files. 4/4 ~56K GREEN.
-
 ## Key Facts for S79
 - Game server: `npm run server` from `Game/founding-realm/` — port 3000 (fixed, not port-managed)
 - Login: `daneshto@gmail.com / AdminLogin01!`
@@ -52,3 +51,4 @@ Generated: 2026-04-25 | Session: S78
 - Bundle: `npm run bundle` (285.9KB, gate <300KB)
 - Credentials: BRAIN/infrastructure/CREDENTIALS_VAULT.json (Tier 0) — rotated 2026-04-18
 - v1 sunset: search "sunset S79" in `public/js/ui/dialogue-panel.js`
+- festival.json self-heal: in place as of 97badaf — server no longer crashes on reboot
