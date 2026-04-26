@@ -1,57 +1,54 @@
 # Boot Snapshot (auto-generated at handoff)
-Generated: 2026-04-24 | Session: S77
+Generated: 2026-04-25 | Session: S78
 
 ## Next Steps
-1. **Tier 4 #29 Dialogue lineId protocol (M, ~25K)** — i18n unlock; server sends stable `lineId` instead of raw text for TTS lookup. Identified S75 Gemini CHECK.
-2. **Tier 4 #30 Customize UX polish (S, ~15K)** — 4 items from S75 Triumvirate CHECK deferrals (audio loading indicator + contrast veto + requestId + cold-load async).
-3. **Daniel actions (one-time)**:
-   - `SUBMODULE_PAT` secret on legacy-of-the-realm → unlocks parent submodule-bump-gate full mode
-   - GCP service account JSON + `BIGQUERY_DATASET` secrets → unlocks BigQuery quality metrics sink
-4. **CI Pass B-2** — game2d + customize a11y flows (needs live-server fixture + Phaser canvas rule scoping)
-5. **CI Pass C-2** — Linux baseline generation (Docker/WSL/act), 12-shot matrix, festival freeze fixture, optional GCS migration (>50 shots)
-6. **CI Pass C-3** — fix serious color-contrast violation on landing.html + tighten axe ratchet to serious-fail
-7. **S76 handoff STEP 1.1 detection gap** (ANALYZE) — root-cause how `awesome-golick-d4eb82` escaped S76 auto-prune
-8. **pdca-gate.sh stale-state-hash caching** (Micro) — hook blocked ~6x during S77 P2; workaround was `touch + rm state-hash.tmp`. Investigate pdca-context.sh write-after-edit race
-9. **public/dist bundle drift cleanup** — submodule tracks `public/dist/*.js` despite being in gitignore; decide `git rm --cached` vs one-time `-f` commit
-10. **resend v4 → v6.1.3 major upgrade** — Node floor review, drops Node 16 support; own dedicated session
-11. **VPS deploy on Hetzner** (blocked on Daniel) — unlocks Tier 3 #16 #18
-12. **neshto.com nameservers** — point to `lara/nick.ns.cloudflare.com`
+1. **S79 P1 — Remove v1 text-hash fallback** in `lookupVoiceFile` (dialogue-panel.js — "sunset S79" comment marks the spot). Micro, trivial.
+2. **S79 P2 — AI-generated lineId assignment** — give Anthropic dialogue stable IDs so TTS works for all paths (not just static lines). Standard tier.
+3. **S79 P3 — CI Pass B-2** — game2d + customize a11y flows with live-server fixture (deferred S77)
+4. **S79 P4 — CI Pass C-2** — festival + game2d visual matrix; GCS bucket migration if >50 baselines
+5. **S79 P5 — resend v4.x → v6.1.3 upgrade** + Node floor review
 
 ## Blockers
-- VPS deploy (Daniel: Hetzner provision)
-- neshto.com nameservers (Daniel: registrar)
-- Stripe account (Daniel: real-world attendance verification)
-- Admin/GM v2 + Monitoring (VPS)
+- VPS deploy (Hetzner) — Daniel action
+- SUBMODULE_PAT — Daniel action
+- BigQuery dataset + service account — Daniel action
 
-## Pending Backlog (founding-realm)
-**Tier 3 — Platform & Operations:**
-- [ ] #16 Admin/GM Tooling v2 (M) — blocked VPS
-- [x] ~~#17 CI/CD Pipeline~~ — **S77 P2 (DONE, end-to-end [ci full] GREEN)**
-- [ ] #18 Monitoring & Observability (M) — blocked VPS
-
-**Tier 4 — Depth & Polish:**
-- [ ] #20 Advanced crafting & masterworks (M)
-- [ ] #21 Player event calendar + Chronicle integration (M)
-- [ ] #29 Dialogue lineId protocol — i18n (S75 deferred)
-- [ ] #30 Customize UX polish bundle (S75 deferred)
-
-**Tier 5 — Growth & Scale (post-launch):** #24-28
+## Pending Backlog (LATER tier)
+- [ ] #16 Admin/GM Tooling v2 (BLOCKED: VPS deploy)
+- [ ] #18 Monitoring & Observability (BLOCKED: VPS deploy)
+- [ ] #20 Advanced Crafting & Masterworks
+- [ ] #21 Player Event Calendar + Chronicle Integration
+- [ ] #24 Referral Rewards (post-launch)
+- [ ] #25 Cosmetic Monetization (post-launch)
+- [ ] #26 Player-Generated Quests/Bounties (post-launch)
+- [ ] #27 Spectator Mode / Streaming (post-launch)
+- [ ] #28 Cross-Platform Save Sync (post-launch)
+- [ ] CI Pass B-2 / C-2 (deferred S77)
+- [ ] Linux baseline generation for CI visual gate
+- [ ] color-contrast a11y fix on landing.html
 
 ## Recent Reflexion (last 2 sessions)
 
-### 2026-04-24 Session 77 P2 (CI/CD Pipeline — Standard-tier Council, 4 passes shipped, ~35K)
-- Council: Gemini 2.5-flash 717KB-whitespace failure; retry 2.5-pro worked. Default to 2.5-pro for Council CHECK/PLAN.
-- Convergence: Grok + Gemini independently → single-matrix, external baselines, esbuild metafile. HIGH confidence.
-- P2-A: single-matrix ci.yml + parent gate (degraded w/o PAT) + esbuild metafile bundle (83KB gz / 300KB) + audit gate + badges.
-- P2-A bugs caught: LFS CI break since S73 (MP3 stubs); shell injection from commit-msg backticks; cross-repo private submodule auth.
-- P2-B: Lighthouse CI + axe-core with RATCHET design (critical-fails, serious+mod+minor logs). Landing.html has color-contrast serious — ratchet open for follow-up.
-- P2-C: platform-suffixed baselines trap → shipped advisory-only; festival.html flaked (video poster); fixed Quality job picking up visual tests via testMatch.
-- P2-D: BigQuery sink (degraded mode to stdout) + CI.md with broken-main recovery playbook (Gemini CRITICAL, 5 scenarios).
-- Hook friction: pdca-gate.sh blocked ~6x with "No in_progress priority". Workaround: touch state-file + rm state-hash.tmp.
-- Final [ci full]: fast 75s + quality 111s + visual 109s — all GREEN simultaneously.
+### S78 (2026-04-25)
+- P1 #worked: 4 S75 Customize deferrals — voice indicator (10s timeout), contrast veto table, requestId monotonic counter, manifest single-retry with navigator.onLine guard
+- P1 #council: Grok won single-retry; Gemini won build-time contrast table; 8 decisions resolved via domain-weighted voting
+- P2 #worked: lineId threaded crafting.ts→ACTION_RESULT→main.js→dialogue-panel; O(1) v2 lookup, v1 sunset S79; manifest schema 2
+- P2 #learned: fr_FR text → same lineId → same MP3 path. i18n-stable.
+- P3 #worked: Windows mv non-atomic race → orphan tmp files. Fixed || rm -f in router-telemetry.sh + pdca-context.sh
+- SESSION #hooks: preview_start grabs parent launch.json when CWD = parent. Use bash background for game-server from parent CWD.
+- SESSION #meta: 5/5 complete, ~95K/150K GREEN, 585/585 tests, login verified
 
-### 2026-04-24 Session 77 P1 + P1.5 (Audit + YELLOW Remediation, ~20K)
-- Audit YELLOW: orphan worktree (S76 miss) + 3 moderate npm audit (uuid<14 GHSA-w5hq-g745-h8pq). Effective exposure ZERO (svix calls uuid.v4() without buf).
-- P1.5 Council Standard: unanimous 2C override pin uuid@14 over 2A (defer) and 2B (resend v4→v6.1.3 breaking, Grok caught Node 16 drop).
-- P1.5: 7 atomic steps (grep → orphan delete → uuid pin → audit 0 → smoke test → gitignore pattern + rm --cached → commits 504c2c2 + 5797a7f).
-- Triumvirate CHECK: RALPH PASS, Grok CONDITIONAL (S76 handoff gap noted), Gemini PASS 5/5/5/5. SHIP.
+### S72 (2026-04-17)
+- P1 #worked: Migration 007 — character.xp + quest.npc_giver_id columns, UPSERT update. 281/281 tests.
+- P2 #scope: Handoff said "EB Garamond" — actually Cormorant Garamond. Read actual HTML before planning.
+- P3 #gotcha: git checkout origin/dn-branch-1 silently skips U+00B7 middle-dot filenames on Windows. Recover with git add.
+- SESSION #meta: Trust git commits, not ephemeral state files. 4/4 ~56K GREEN.
+
+## Key Facts for S79
+- Game server: `npm run server` from `Game/founding-realm/` — port 3000 (fixed, not port-managed)
+- Login: `daneshto@gmail.com / AdminLogin01!`
+- Admin URL: http://localhost:3000/admin.html
+- Tests: `npx ts-node --transpile-only tests/simulation.test.ts` (585 baseline)
+- Bundle: `npm run bundle` (285.9KB, gate <300KB)
+- Credentials: BRAIN/infrastructure/CREDENTIALS_VAULT.json (Tier 0) — rotated 2026-04-18
+- v1 sunset: search "sunset S79" in `public/js/ui/dialogue-panel.js`
