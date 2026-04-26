@@ -799,15 +799,6 @@ const App = {
             Storage.saveSetting('confidenceEnabled', confidence.checked);
         });
 
-        // Tutor endpoint
-        const tutorEndpoint = document.getElementById('setting-tutor-endpoint');
-        tutorEndpoint.value = settings.tutorEndpoint || '';
-        tutorEndpoint.addEventListener('change', () => {
-            Storage.saveSetting('tutorEndpoint', tutorEndpoint.value || null);
-            Tutor.ENDPOINT = tutorEndpoint.value || null;
-            showToast('Tutor endpoint updated!');
-        });
-
         // Brain-search URL
         const brainSearchUrl = document.getElementById('setting-brain-search-url');
         brainSearchUrl.value = settings.brainSearchUrl || '';
@@ -878,7 +869,6 @@ const App = {
         document.getElementById('setting-tts-speed').value = settings.ttsSpeed?.toString() || '1.0';
         document.getElementById('setting-exam-date').value = settings.examDate || '';
         document.getElementById('setting-confidence').checked = settings.confidenceEnabled;
-        document.getElementById('setting-tutor-endpoint').value = settings.tutorEndpoint || '';
         document.getElementById('setting-brain-search-url').value = settings.brainSearchUrl || '';
         document.getElementById('setting-theme').value = settings.theme || 'auto';
         document.getElementById('setting-reminder-time').value = settings.reminderTime || '19:00';
